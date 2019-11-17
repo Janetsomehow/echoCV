@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none
+}
+
+html {
+  font-family: 'europa', 'Nunito', sans-serif;;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 14.5rem;
+  position: fixed;
+  background: #39406D;
+  color: #cccccc;
+}
+
+.logo {
+  position: absolute;
+  width: 4.5rem;
+  height: 1.8rem;
+  left: 0.75rem;
+  top: 0.7rem;
+  background: url(icons/echoVC.png);
+  background-repeat: no-repeat;
+}
+
+/* .sidebar p {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: #CCCCCC;
+  position: absolute;
+  width: 119px;
+  height: 16px;
+  left: 12px;
+  top: 43px;
+} */
+
+.fa-search {
+  position: absolute;
+  width: 13rem;
+  height: 2rem;
+  left: 0.75rem;
+  top: 6rem;
+  background: #FFFFFF;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.sidebar hr {
+  position: relative;
+  width: 14.3rem;
+  height: 0px;
+  left: 0px;
+  top: 4rem;
+  border: 1px solid #292F59;
+}
+
+input.search {
+  position: absolute;
+  width: 11rem;
+  height: 1.8rem;
+  left: 1rem;
+  top: 0.1rem;
+  border-radius: 10px;
+  /* padding-left: 1rem; */
+  border: hidden;
+  background: #fff;
+}
+
+.fa-search img {
+  position: relative;
+  margin-left: 10.5rem;
+  padding-top: .4rem;
+}
+
+.sidebar-li {
+  display: flex;
+  position: relative;
+  width: 14.5rem;
+  height: 3rem;
+  font-family: 'europa';
+  font-size: 0.9rem;
+  line-height: 1rem;
+  top: 7rem;
+  padding: 1rem 0;
+  padding-left: 1.2rem;
+  cursor: pointer;
+}
+
+.sidebar-li:hover {
+  background: #293059;
+}
+
+.sidebar-li img {
+  padding-right: 0.3rem;
+  color: #cccccc;
+  height: 100%;
+}

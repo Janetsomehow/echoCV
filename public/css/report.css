@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-family: 'europa', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* For report onboarding */
+.onboard {
+  position: absolute;
+  left: 14.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rep {
+  position: relative;
+  width: 7vw;
+  height: 2rem;
+  left: 1.5rem;
+  top: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  cursor: pointer;
+}
+
+.newrep {
+  position: relative;
+  width: 26vw;
+  height: 17rem;
+  left: 23vw;
+  top: 25vh;
+  right: 30vw;
+}
+
+.newrep img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.newrep h3 {
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 28px;
+  line-height: 36px;
+  margin-top: -1.5rem;
+  color: #333;
+}
+
+.newrep p {
+  font-size: 0.8rem;
+  line-height: 18px;
+  text-align: center;
+  color: #666666;
+}
+
+.newrep button {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-left: 7.5vw;
+  background: linear-gradient(180deg, #2E7CFF 0%, #1B63DC 100%);
+  border-radius: 4px;
+}
+
+/* For received and sent reports */
+.wholeContent {
+  position: absolute;
+  left: 14.5rem;
+  width: 83vw;
+}
+
+.header {
+  position: absolute;
+  /* left: 1rem; */
+  display: flex;
+  justify-content: space-between;
+  width: 83vw;
+}
+
+.header button {
+  margin-top: 1.7rem;
+  width: 7rem;
+  margin-right: 2vw;
+}
+
+.searchReport {
+  position: absolute;
+  left: 1.5rem;
+  display: flex;
+  top: 5rem;
+  height: 41px;
+}
+
+.form-control {
+  width: 20rem;
+  background: #FFFFFF;
+  border: 1px solid #AAAAAA;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+
+.searchReport button {
+  height: 95%;
+  margin-left: 0.4rem;
+  border-radius: 4px;
+}
+
+.searchReport button img {
+  height: 101%;
+}
+
+.table {
+  position: relative;
+  top: 5rem;
+  left: 1.5rem;
+}
+
+
+
+/* For new report  */
+.newReport {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.7rem;
+  margin-left: 1rem;
+}
+
+.btn-default {
+  color: #19B9FD;
+}
+
+.newReport .btn-primary {
+  margin-right: 2rem;
+}
+
+.wholeContent textarea {
+  margin: 2rem;
+  border: solid 3px square;
+  width: 75vw;
+  height: 70vh;
+}
+
+
+/* For Metrics */
+.newMetr {
+  position: absolute;
+  top: 10rem;
+  left: 2rem;
+}
+
+.newMetr label {
+  width: 60px;
+  height: 24px;
+  left: 243px;
+  top: 259px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333;
+}
+
+.formG {
+  display: flex;
+  justify-content: space-around;
+}
+
+.formMet {
+
+  width: 19vw;
+  margin-right: 1vw
+}
+
+div.custom {
+  width: 25vw;
+}
+
+.formMett {
+  border: 0.5px solid #cccccc;
+  width: 19vw;
+  height: 2.6rem;
+  margin-right: 1vw;
+  border-radius: 4px;
+  padding: .4rem .7rem;
+  margin-bottom: 2rem;
+}
+
+.formMett .btn {
+  background: linear-gradient(359.47deg, #F5F6F9 10.29%, #FFFFFF 99.27%);
+  border: 1px solid #D5DCE6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #333333;
+  /* padding-top: -2rem; */
+  top: 0;
+  /* position: absolute; */
+  float: right;
+  height: 2rem;
+  /* left: 92.78%;
+  right: 5.49%;
+  top: 44.14%;
+  bottom: 53.91%; */
+  /* padding-top: -6rem; */
+  line-height: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.formMett .btn:hover {
+  
+}
