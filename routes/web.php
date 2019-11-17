@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('welcome'); });
+Route::get('/report', function () { return view('reports.report'); });
+Route::get('/new', function () { return view('reports.new_report'); });
+Route::get('/received', function () { return view('reports.received'); });
+Route::get('/sent', function () { return view('reports.sent'); });
+Route::get('/scheduled', function () { return view('reports.scheduled'); });
+Route::get('/sample', function () { return view('reports.sample'); });
+
+
+Route::get('/', function () { return view('welcome'); });
+
+Route::get('/create', function () { return view('metrics.create'); });
+Route::get('/create1', function () { return view('metrics.'); });
+Route::get('/', function () { return view('welcome'); });
