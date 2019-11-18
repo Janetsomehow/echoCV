@@ -18,10 +18,13 @@ Route::get('/received', function () { return view('reports.received'); });
 Route::get('/sent', function () { return view('reports.sent'); });
 Route::get('/scheduled', function () { return view('reports.scheduled'); });
 Route::get('/sample', function () { return view('reports.sample'); });
+Route::get('/reports', function () { return view('reports.all_reports'); });
 
 
 Route::get('/', function () { return view('welcome'); });
 
-Route::get('/create', function () { return view('metrics.create'); });
-Route::get('/create1', function () { return view('metrics.'); });
-Route::get('/', function () { return view('welcome'); });
+Route::get('/create_metrics', function () { return view('metrics.create'); });
+Route::get('/add_metrics', function () { return view('metrics.add'); });
+
+Route::get('/contacts', function () { return view('contact.contacts'); });
+Route::get('/add_contact', function () { return view('contact.add_contact'); });
