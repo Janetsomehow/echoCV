@@ -32,3 +32,7 @@ Route::get('/add_contact', function () { return view('contact.add_contact'); });
 Route::get('/add_company', function () { return view('company.add_company'); });
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
