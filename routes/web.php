@@ -18,24 +18,17 @@ Route::get('/received', function () { return view('reports.received'); });
 Route::get('/sent', function () { return view('reports.sent'); });
 Route::get('/scheduled', function () { return view('reports.scheduled'); });
 Route::get('/sample', function () { return view('reports.sample'); });
-<<<<<<< HEAD
 Route::get('/create', function () { return view('metrics.create'); });
 Route::get('/create1', function () { return view('metrics.'); });
 Route::get('/files', function () { return view('files.files'); });
 Route::get('/file_upload', function () { return view('files.file_upload'); });
 Route::get('/archives', function () { return view('archives.archives'); });
 Route::get('/add_chart', function () { return view('home.add_chart'); });
-=======
 Route::get('/reports', function () { return view('reports.all_reports'); });
->>>>>>> 09f1cc9f37ee1ebe381f455ae0f5dc835b9be22b
-
-
-
-<<<<<<< HEAD
-=======
 Route::get('/create_metrics', function () { return view('metrics.create'); });
 Route::get('/add_metrics', function () { return view('metrics.add'); });
-
 Route::get('/contacts', function () { return view('contact.contacts'); });
 Route::get('/add_contact', function () { return view('contact.add_contact'); });
->>>>>>> 09f1cc9f37ee1ebe381f455ae0f5dc835b9be22b
+Route::get('/add_company', function () { return view('company.add_company'); });
+
+
