@@ -13,8 +13,17 @@
         <link Ã¢â‚¬Å½href="https://fonts.googleapis.com/css?family=europa:200600" rel="stylesheet">
         <!--responsiveness-->
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>echoCV</title>
 </head>
 <body>
 @include('layouts.sidebar')
+<section class="onboard">
+        <div class="new">
+          <img src="{{ asset('css/icons/vector.png') }}" />
+          <h3>Build your Dashboard</h3>
+          <p>Put together a personal dashboard consisting of metrics that matter to you</p>
+         <a href="/add_chart"> <button type="button" name="button" class="btn btn-primary">Create dashboard</button></a>
+          </div>
+      </section>
+</body>
+</html>

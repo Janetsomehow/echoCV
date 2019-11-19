@@ -24,7 +24,7 @@
           <h3>Build your Dashboard</h3>
           <p>Your latest activity and report will automatically
           be shown here. Click the button below to create a chart</p>
-         <a href="/add_chart"> <button type="button" name="button" class="btn btn-primary">New chart</button></a>
+         <a href="/add_chart"> <button type="button" name="button" class="btn btn-primary">Create chart</button></a>
           </div>
       </section>
 </body>

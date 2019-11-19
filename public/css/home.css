@@ -12,9 +12,6 @@
     justify-content: flex-start;
 }
   
-  .new{
-
-  }
   .btn-primary{
 margin-right:;
   }
@@ -29,4 +26,18 @@ margin-right:;
     left: 571px;
     border-radius: 4px;
     background: linear-gradient(180deg, #2E7CFF 0%, #1B63DC 100%);
+}
+form{
+  width: 543px;
+  margin: 0 auto;
+
+}
+.tag{
+  position: relative;
+  width: 7vw;
+  height: 2rem;
+  left: 1.5rem;
+  top: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
 }

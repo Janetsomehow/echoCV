@@ -10,7 +10,7 @@
         <link href="{{ asset('css/home.css') }}" rel="stylesheet">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link â€Žhref="https://fonts.googleapis.com/css?family=europa:200600" rel="stylesheet">
+        <link Ã¢â‚¬Å½href="https://fonts.googleapis.com/css?family=europa:200600" rel="stylesheet">
         <!--responsiveness-->
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,11 +18,14 @@
 </head>
 <body>
 @include('layouts.sidebar')
-<div class="">
-<h3>Welcome back, Eniola Agboola</h3>
-<button class="btn btn-primary">Add chart</button>
-<button class="btn btn-primary">share</button>
-</div>
-<h5>Fund 1</h5>
-<h5>Fund </h5>
-<hr>
+<section class="onboard">
+        <div class="new">
+          <img src="{{ asset('css/icons/company.png') }}" />
+          <h3>Build your Dashboard</h3>
+          <p>Your latest activity and report will automatically
+          be shown here. Click the button below to create a chart</p>
+         <a href="/add_company"> <button type="button" name="button" class="btn btn-primary">New Company</button></a>
+          </div>
+      </section>
+</body>
+</html>
