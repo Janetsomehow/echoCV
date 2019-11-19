@@ -36,3 +36,7 @@ Route::get('/new_company', function () { return view('portfolio_company.new_comp
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
