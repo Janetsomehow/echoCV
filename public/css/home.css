@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/*home onboarding*/
+.onboard{
+    position: absolute;
+    left: 30.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+  
+  .new{
+
+  }
+  .btn-primary{
+margin-right:;
+  }
+ .btn{
+    font-family: Europa;
+    font-size: 84%;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    width: 117px;
+    height: 36px;
+    left: 571px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #2E7CFF 0%, #1B63DC 100%);
+}

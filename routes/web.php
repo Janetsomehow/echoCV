@@ -11,17 +11,19 @@
 |
 */
 
-Route::get('/', function () { return view('welcome'); });
+Route::get('/index', function () { return view('home.index'); });
 Route::get('/report', function () { return view('reports.report'); });
 Route::get('/new', function () { return view('reports.new_report'); });
 Route::get('/received', function () { return view('reports.received'); });
 Route::get('/sent', function () { return view('reports.sent'); });
 Route::get('/scheduled', function () { return view('reports.scheduled'); });
 Route::get('/sample', function () { return view('reports.sample'); });
-
-
-Route::get('/', function () { return view('welcome'); });
-
 Route::get('/create', function () { return view('metrics.create'); });
 Route::get('/create1', function () { return view('metrics.'); });
-Route::get('/', function () { return view('welcome'); });
+Route::get('/files', function () { return view('files.files'); });
+Route::get('/file_upload', function () { return view('files.file_upload'); });
+Route::get('/archives', function () { return view('archives.archives'); });
+Route::get('/add_chart', function () { return view('home.add_chart'); });
+
+
+
