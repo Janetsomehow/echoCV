@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Received Report</title>
+      <title>Contacts</title>
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
       <!-- Styles -->
@@ -20,41 +20,35 @@
 @include('layouts.sidebar')
       <main class="wholeContent">
 
-        <section class="header">
-          <div class="rep">Reports</div>
-          <button type="button" name="button" class="btn btn-primary">New Report</button>
+        <section class="header searchContact">
+          <div class="rep">Contacts</div>
+          <input type="submit" name="" class="btn btn-primary searchContact" value="Create Contact" />
         </section>
         <form class="searchReport" action="" method="post">
-          <input type="text" class="form-control form-group repSearch" placeholder="Search reports">
+          <input type="text" class="form-control form-group repSearch" placeholder="Search contacts">
           <button type="button" name="button"><img src={{ asset('css/icons/grsearch.png') }} /></button>
         </form>
         <section class="message">
-          <div class="">
 
-          </div>
-          <div class="title">
-
-          </div>
-          <div class="content">
+          <div class="tableHeader">
 
           </div>
           <div class="table">
-
-            <table class="table table-responsive table stripped">
+            <table class="table table-responsive table-stripped table-hover">
               <thead>
-                <th>we</th>
-                <th>ee</th>
-                <th>ee</th>
-                <th>ee</th>
-                <th>ee</th>
-                <th>ee</th>
+                <td></td>
+                <td>NAME</td>
+                <td>COMPANY</td>
+                <td>EMAIL</td>
+                <td>PHONE NUMBER</td>
+                <td>TAGS</td>
               </thead>
               <tbody>
                 <td><input type="checkbox" /></td>
-                <td>eeee</td>
-                <td>wee</td>
-                <td></td>
-                <td>q</td>
+                <td>Alrne Williams Johnson</td>
+                <td>EchoVC</td>
+                <td>alrne.williams@yahoo.com</td>
+                <td>234565444847575</td>
                 <td>eeee</td>
               </tbody>
             </table>

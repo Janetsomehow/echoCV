@@ -3,6 +3,37 @@
     <main class="sidebar">
       <a href="#"><div class="logo"></div></a>
       <!-- <p>Full name</p> -->
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item dropdown">
+          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+              Full Name <span class="caret"></span>
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/home">Home</a>
+            <a class="dropdown-item" href="/home">Account setting</a>
+            <a class="dropdown-item"
+               onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+
+            </a>
+
+          </div>
+        </li>
+      </ul>
+<!--
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div> -->
+
       <hr>
       <div class="fa fa-search">
         <input type="text" name="search" placeholder="Search" class="search" />
