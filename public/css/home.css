@@ -3,9 +3,42 @@
     padding: 0;
     box-sizing: border-box;
   }
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* 
+#sidebar.active {
+    margin-left: -12rem;
+}
+
+#sidebar {
+
+} */
+
+/* @media (max-width: 768px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+} */
 
 /*home onboarding*/
-.onboard{
+.onboard {
+    margin-left: 12rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+
+/* .onboard{
     position: absolute;
     left: 30.5rem;
     display: flex;
@@ -29,4 +62,4 @@ margin-right:;
     left: 571px;
     border-radius: 4px;
     background: linear-gradient(180deg, #2E7CFF 0%, #1B63DC 100%);
-}
+} */
