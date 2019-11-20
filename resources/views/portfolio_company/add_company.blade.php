@@ -43,25 +43,34 @@ Primary contact<br>
 
   Tags
   <input type="text" class="form-control form-group">
-Fund stage<br>
+Fund stage
+<div class="col-6">
 <select class="form-group" style="width:160px;">
                <option value = "1">one</option>
                <option value = "2">two</option>
                <option value = "3">three</option>
                <option value = "4">four</option>
              </select>
-
+</div>
 Investment status
+<div class="col-6">
 <select class="form-group" style="width:160px;">
                <option value = "1">one</option>
                <option value = "2">two</option>
                <option value = "3">three</option>
                <option value = "4">four</option>
              </select><br>
-Lead<br>
-<input type="text" class="form-group" style="width:180px;">
+</div>
+<div class="form-row ">
+Lead
+<div class="col-6">
+<input type="text" class="form-control">
+</div>
 analyst
-<input type="text" class="form-group" style="width:180px;"><br>
+<div class="col-6">
+<input type="text" class="form-control">
+</div>
+</div>
 <button type="button" class="btn btn-primary" onclick="/new_company">Save</button>
 <a href ="#">Cancel</a>
 </form>
