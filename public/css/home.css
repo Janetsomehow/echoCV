@@ -31,7 +31,7 @@
 .onboard {
     margin-left: 12rem;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     width: 100%;
 }
 
