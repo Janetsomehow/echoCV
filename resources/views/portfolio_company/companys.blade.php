@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
         <link href="{{ asset('css/home.css') }}" rel="stylesheet">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link â€Žhref="https://fonts.googleapis.com/css?family=europa:200600" rel="stylesheet">
+        <link Ã¢â‚¬Å½href="https://fonts.googleapis.com/css?family=europa:200600" rel="stylesheet">
         <!--responsiveness-->
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,11 +19,15 @@
 </head>
 <body>
 @include('layouts.sidebar')
-<div class="">
-<h3 class="tag">Welcome back, Eniola Agboola</h3>
-<button type="button" name="chart" class="btn btn-primary">Add chart</button>
-<button type="button" name="share" class="btn btn-primary">share</button>
+<div>
+<div class="tag">Portfolio Company</div>
+          <button type="button" name="button" class="btn btn-primary">Add company</button>
 </div>
-<h5>Fund 1</h5>
-<h5>Fund </h5>
-<hr>
+        <form class="cform" action="" method="post">
+          <input type="text" class="form-group" placeholder="Search for company">
+          <button type="button" name="button"><img src={{ asset('css/icons/grsearch.png') }} alt=""></button>
+          Filters <input type="text" class="form-group" placeholder="Enter Keyword">
+
+</div>
+        </form>
+       

@@ -19,72 +19,50 @@
 <body>
 @include('layouts.sidebar')
 <div class="tag">Add Company</div>
-<div class="Cform">
+<div class="cform">
 <form action="" method="post">
 Company Name<br>
-<input type="text" name="company" style= height:63%; ><br>
+<input type="text" class="form-control form-group">
 Company Website<br>
-<input type="text" name="companyw" style= height:63%;><br>
+<input type="text" class="form-control form-group">
 Country<br>
-<input list="browsers" name="browser" style= height:63%;><br>
-  <datalist id="browsers">
-    <option value="Internet Explorer">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-    <option value="Safari">
-  </datalist>
-Primary contact<br>
-<input list="browsers" name="browser" style= height:63%;>
-  <datalist id="browsers">
-    <option value="Internet Explorer">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-    <option value="Safari">
-  </datalist>
-  Tags<br>
-<input type="text" name="tag" style= height:63%;><br>
+<select class="form-control form-group">
+               <option value = "1">one</option>
+               <option value = "2">two</option>
+               <option value = "3">three</option>
+               <option value = "4">four</option>
+             </select><br>
 
-Fund stage
-<input list="browsers" name="browser" style= height:63%;>
-<datalist>
-  <option value="volvo">1</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">1</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">1</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-</datalist>
+Primary contact<br>
+<select class="form-control form-group">
+               <option value = "1">one</option>
+               <option value = "2">two</option>
+               <option value = "3">three</option>
+               <option value = "4">four</option>
+             </select><br>
+
+  Tags
+  <input type="text" class="form-control form-group">
+Fund stage<br>
+<select class="form-group" style="width:160px;">
+               <option value = "1">one</option>
+               <option value = "2">two</option>
+               <option value = "3">three</option>
+               <option value = "4">four</option>
+             </select>
 
 Investment status
-<input list="browsers" name="browser"style= height:63%;>
-<datalist>
-  <option value="volvo">1</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">1</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">1</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-</datalist>
-<br> 
-Lead
-<input type="text" name="company" style= height:63%;>
+<select class="form-group" style="width:160px;">
+               <option value = "1">one</option>
+               <option value = "2">two</option>
+               <option value = "3">three</option>
+               <option value = "4">four</option>
+             </select><br>
+Lead<br>
+<input type="text" class="form-group" style="width:180px;">
 analyst
-<input type="text" name="company"style= height:63%;>  <br>     
-<button>save</button>
-<button>cancel</button>
+<input type="text" class="form-group" style="width:180px;"><br>
+<button type="button" class="btn btn-primary" onclick="/new_company">Save</button>
+<a href ="#">Cancel</a>
 </form>
 </div>
