@@ -36,6 +36,10 @@ html {
   background-repeat: no-repeat;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .sidebar ul {
   font-size: 0.7rem;
   line-height: 1rem;
@@ -94,7 +98,7 @@ input.search {
   height: 3rem;
   font-family: 'Nunito';
   font-size: 0.67rem;
-  font-weight: 550;
+  font-weight: 500;
   line-height: 1rem;
   top: 7rem;
   padding: 1rem 0;

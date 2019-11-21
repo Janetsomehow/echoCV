@@ -10,9 +10,11 @@
               Full Name <span class="caret"></span>
           </a>
 
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background:#666; font-size:0.7rem">
+
             <a class="dropdown-item" href="/home">Home</a>
             <a class="dropdown-item" href="/home">Account setting</a>
+            <a class="dropdown-item" href="/home">Home</a>
             <a class="dropdown-item"
                onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
@@ -22,30 +24,18 @@
           </div>
         </li>
       </ul>
-<!--
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div> -->
-
       <hr>
       <div class="fa fa-search">
         <input type="text" name="search" placeholder="Search" class="search" />
         <img src="{{ asset('css/icons/search.png') }}" alt="" />
       </div>
-      <div class="sidebar-li home"><img src="{{ asset('css/icons/Vector.png') }}" /><a href="/index">HOME</a></div>
-      <div class="sidebar-li dashboard"><img src="{{ asset('css/icons/dash.png') }}" /><a href="/dashboard">DASHBOARD</a></div>
-      <div class="sidebar-li port"><img src="{{ asset('css/icons/port.png') }}" /><a href="/new_company">PORTIFOLIO COMPANIES</a></div>
-      <div class="sidebar-li report"><img src="{{ asset('css/icons/report.png') }}" />REPORTS</div>
-      <div class="sidebar-li metric"><img src="{{ asset('css/icons/metr.png') }}" />METRICS</div>
-      <div class="sidebar-li contact"><img src="{{ asset('css/icons/contact.png') }}" />CONTACT</div>
-      <div class="sidebar-li file"><img src="{{ asset('css/icons/file.png') }}" /><a href="/files">FILES</a></div>
-      <div class="sidebar-li archive"><img src="{{ asset('css/icons/arch.png') }}" /><a href="/archives">ARCHIVES</a></div>
-
+      <a href="/index" class="sidebar-li home"><img src="{{ asset('css/icons/Vector.png') }}" />HOME</a>
+      <a href="/dashboard" class="sidebar-li dashboard"><img src="{{ asset('css/icons/dash.png') }}" />DASHBOARD</a>
+      <a href="/new_company" class="sidebar-li port"><img src="{{ asset('css/icons/port.png') }}" />PORTIFOLIO COMPANIES</a>
+      <a href="/reports" class="sidebar-li report"><img src="{{ asset('css/icons/report.png') }}" />REPORTS</a>
+      <a href="/create_metrics" class="sidebar-li metric"><img src="{{ asset('css/icons/metr.png') }}" />METRICS</a>
+      <a href="/contacts" class="sidebar-li contact"><img src="{{ asset('css/icons/contact.png') }}" />CONTACT</a>
+      <a href="/files" class="sidebar-li file"><img src="{{ asset('css/icons/file.png') }}" />FILES</a>
+      <a href="/archives" class="sidebar-li archive"><img src="{{ asset('css/icons/arch.png') }}" />ARCHIVES</a>
+      
     </main>

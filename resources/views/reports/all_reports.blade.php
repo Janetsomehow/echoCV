@@ -22,7 +22,7 @@
 
         <section class="header">
           <div class="rep">Reports</div>
-          <button type="button" name="button" class="btn btn-primary">New Report</button>
+          <a href="/new" class="btn btn-primary">New Report</a>
         </section>
         <form class="searchReport" action="" method="post">
           <input type="text" class="form-control form-group repSearch" placeholder="Search reports">

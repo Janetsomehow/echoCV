@@ -12,7 +12,7 @@
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
       <link ‎href="https://fonts.googleapis.com/css?family=europa:200,600" rel="stylesheet">
-        
+
       <!-- Scripts -->
       <script src="{{ asset('js/app.js') }}" defer></script>
   </head>
@@ -21,10 +21,11 @@
     <main class="wholeContent">
 
       <section class="newReport">
-        <button type="button" name="button" class="btn btn-default">Back</button>
+        <a href="/reports" class="btn btn-default">Back</a>
+        <!-- <button type="button" name="button" class="btn btn-default">Back</button> -->
         <div class="">
-          <button type="button" name="button" class="btn btn-default">Save & Close</button>
-          <button type="button" name="button" class="btn btn-primary">Send now</button>
+          <button type="submit" name="button" class="btn btn-default">Save & Close</button>
+          <button type="submit" name="button" class="btn btn-primary">Send now</button>
         </div>
       </section>
       <textarea name="name"></textarea>
