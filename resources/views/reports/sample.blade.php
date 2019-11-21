@@ -17,7 +17,10 @@
 
   </head>
   <body>
-@include('layouts.sidebar')
+    <div class="wrapper">
+
+  @include('layouts.sidebar')
+    </div>
     <main class="wholeContent">
 
       <section class="newReport">
