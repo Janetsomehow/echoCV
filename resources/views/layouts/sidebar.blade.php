@@ -29,13 +29,13 @@
         <input type="text" name="search" placeholder="Search" class="search" />
         <img src="{{ asset('css/icons/search.png') }}" alt="" />
       </div>
-      <a href="#" class="sidebar-li home"><img src="{{ asset('css/icons/Vector.png') }}" />HOME</a>
-      <a href="#" class="sidebar-li dashboard"><img src="{{ asset('css/icons/dash.png') }}" />DASHBOARD</a>
-      <a href="#" class="sidebar-li port"><img src="{{ asset('css/icons/port.png') }}" />PORTIFOLIO COMPANIES</a>
+      <a href="/index" class="sidebar-li home"><img src="{{ asset('css/icons/Vector.png') }}" />HOME</a>
+      <a href="/dashboard" class="sidebar-li dashboard"><img src="{{ asset('css/icons/dash.png') }}" />DASHBOARD</a>
+      <a href="/new_company" class="sidebar-li port"><img src="{{ asset('css/icons/port.png') }}" />PORTIFOLIO COMPANIES</a>
       <a href="/reports" class="sidebar-li report"><img src="{{ asset('css/icons/report.png') }}" />REPORTS</a>
       <a href="/create_metrics" class="sidebar-li metric"><img src="{{ asset('css/icons/metr.png') }}" />METRICS</a>
       <a href="/contacts" class="sidebar-li contact"><img src="{{ asset('css/icons/contact.png') }}" />CONTACT</a>
-      <a href="#" class="sidebar-li file"><img src="{{ asset('css/icons/file.png') }}" />FILES</a>
-      <a href="#" class="sidebar-li archive"><img src="{{ asset('css/icons/arch.png') }}" />ARCHIVES</a>
-
+      <a href="/files" class="sidebar-li file"><img src="{{ asset('css/icons/file.png') }}" />FILES</a>
+      <a href="/archives" class="sidebar-li archive"><img src="{{ asset('css/icons/arch.png') }}" />ARCHIVES</a>
+      
     </main>
