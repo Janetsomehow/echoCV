@@ -22,7 +22,8 @@
 
         <section class="header">
           <div class="rep">Metrics</div>
-          <button type="button" name="button" class="btn btn-primary">New Metric</button>
+          <a href="/add_metrics" class="btn btn-primary">New Metric</a>
+          <!-- <button type="button" name="button" class="btn btn-primary">New Metric</button> -->
         </section>
         <form class="searchReport" action="" method="post">
           <input type="text" class="form-control form-group" placeholder="Search for metric">
