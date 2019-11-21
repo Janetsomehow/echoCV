@@ -37,5 +37,5 @@
       <a href="/contacts" class="sidebar-li contact"><img src="{{ asset('css/icons/contact.png') }}" />CONTACT</a>
       <a href="/files" class="sidebar-li file"><img src="{{ asset('css/icons/file.png') }}" />FILES</a>
       <a href="/archives" class="sidebar-li archive"><img src="{{ asset('css/icons/arch.png') }}" />ARCHIVES</a>
-      
+
     </main>
