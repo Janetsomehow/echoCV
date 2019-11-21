@@ -18,7 +18,10 @@
 
   </head>
   <body>
-@include('layouts.sidebar')
+    <div class="wrapper">
+
+  @include('layouts.sidebar')
+    </div>
 
     <section class="onboard">
         <div class="rep">Reports</div>
