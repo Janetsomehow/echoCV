@@ -19,59 +19,56 @@
 <body>
 @include('layouts.sidebar')
 <div class="tag">Add Company</div>
-<div class="cform">
 <form action="" method="post">
-Company Name<br>
-<input type="text" class="form-control form-group">
-Company Website<br>
-<input type="text" class="form-control form-group">
-Country<br>
-<select class="form-control form-group">
-               <option value = "1">one</option>
-               <option value = "2">two</option>
-               <option value = "3">three</option>
-               <option value = "4">four</option>
-             </select><br>
+            <div class="form-group">
+              <label for="">Select spreadsheets</label>
+              <select class="form-control form-group" name="">
+                <option value=""></option>
+                <option value="First">First</option>
+                <option value="Second">Second</option>
+                <option value="Third">Third</option>
+              </select>
+              <label for="">Select sheets</label>
+              <select class="form-control" name="">
+                <option value=""></option>
+                <option value="First">First</option>
+                <option value="Second">Second</option>
+                <option value="Third">Third</option>
+              </select>
+              <div class="bigSe">
+                <div class="">
+                  <label for="">Select rows(date and time period)</label>
+                  <select class="form-control" name="">
+                    <option value=""></option>
+                    <option value="First">First</option>
+                    <option value="Second">Second</option>
+                    <option value="Third">Third</option>
+                  </select>
+                </div>
+                <div class="">
+                  <label for="">Select metrics column (name)</label>
+                  <select class="form-control" name="">
+                    <option value=""></option>
+                    <option value="First">First</option>
+                    <option value="Second">Second</option>
+                    <option value="Third">Third</option>
+                  </select>
+                </div>
+                
+              </div>
+              <div class"form-row">
+   <div class="col-6">
+       <label>First Name<\label><br>
+       <input type="text" class="form-control">
+   </div>
+   
+    <div class="col-6">
+       <label>Last Name<\label><br>
+       <input type="text" class="form-control">
+   </div>
+<\div>
+            </div>
+            <input type="submit" name="submit" value="Save" class="btn btn-primary btns">
+            <input type="submit" name="submit" value="Cancel" class="btn btn-default btns btnCancel">
 
-Primary contact<br>
-<select class="form-control form-group">
-               <option value = "1">one</option>
-               <option value = "2">two</option>
-               <option value = "3">three</option>
-               <option value = "4">four</option>
-             </select><br>
-
-  Tags
-  <input type="text" class="form-control form-group">
-Fund stage
-<div class="col-6">
-<select class="form-group" style="width:160px;">
-               <option value = "1">one</option>
-               <option value = "2">two</option>
-               <option value = "3">three</option>
-               <option value = "4">four</option>
-             </select>
-</div>
-Investment status
-<div class="col-6">
-<select class="form-group" style="width:160px;">
-               <option value = "1">one</option>
-               <option value = "2">two</option>
-               <option value = "3">three</option>
-               <option value = "4">four</option>
-             </select><br>
-</div>
-<div class="form-row ">
-Lead
-<div class="col-6">
-<input type="text" class="form-control">
-</div>
-analyst
-<div class="col-6">
-<input type="text" class="form-control">
-</div>
-</div>
-<button type="button" class="btn btn-primary" onclick="/new_company">Save</button>
-<a href ="#">Cancel</a>
-</form>
-</div>
+          </form>

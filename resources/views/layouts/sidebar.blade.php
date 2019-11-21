@@ -29,7 +29,7 @@
         <input type="text" name="search" placeholder="Search" class="search" />
         <img src="{{ asset('css/icons/search.png') }}" alt="" />
       </div>
-      <a href="/index" class="sidebar-li home"><img src="{{ asset('css/icons/Vector.png') }}" />HOME</a>
+      <a href="/index" class="sidebar-li home"><img src="{{ asset('css/icons/homelogo.png') }}" />HOME</a>
       <a href="/dashboard" class="sidebar-li dashboard"><img src="{{ asset('css/icons/dash.png') }}" />DASHBOARD</a>
       <a href="/new_company" class="sidebar-li port"><img src="{{ asset('css/icons/port.png') }}" />PORTIFOLIO COMPANIES</a>
       <a href="/reports" class="sidebar-li report"><img src="{{ asset('css/icons/report.png') }}" />REPORTS</a>
