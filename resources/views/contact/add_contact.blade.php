@@ -39,7 +39,7 @@
           <!-- <input type="submit" name="" class="btn btn-primary searchContact" value="Create Contact" /> -->
         </div>
       </section>
-
+<br><br><br><br><br><br>
 
 
 <!-- Modal to create new contact -->
