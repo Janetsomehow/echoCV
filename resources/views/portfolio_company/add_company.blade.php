@@ -21,8 +21,8 @@
 <div class="tag">Add Company</div>
 <form action="" method="post">
             <div class="form-group">
-              <label for="">Select spreadsheets</label>
-              <select class="form-control form-group" name="">
+              <label for="company">Select spreadsheets</label>
+              <select class="form-control form-group" name="company">
                 <option value=""></option>
                 <option value="First">First</option>
                 <option value="Second">Second</option>
