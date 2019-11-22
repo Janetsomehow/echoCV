@@ -25,15 +25,18 @@
 
   </head>
   <body>
-@include('layouts.sidebar')
+    <div class="wrapper">
+
+  @include('layouts.sidebar')
+    </div>
 
     <section class="onboard">
         <div class="rep">Contacts</div>
         <div class="newrep">
-          <img src="{{ asset('css/icons/group.png') }}" />
-          <h3>Contacts</h3>
-          <p>Create and send out custom reports to your contacts
-            and portfolio companies</p>
+          <img src="{{ asset('css/icons/contactcentre.png') }}" />
+          <h3 class="centreCon">Contacts</h3>
+          <p>Add contacts to make sharing easier. You can also use tags
+            for easier grouping</p>
             <!-- <a href="#" onclick="modalForm()" class="btn btn-primary searchContact"> Experience</a> -->
             <button type="button" class="btn btn-primary searchContact" data-toggle="modal" data-target="#myModal" id="open">Create Contact</button>
           <!-- <input type="submit" name="" class="btn btn-primary searchContact" value="Create Contact" /> -->

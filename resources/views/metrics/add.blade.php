@@ -17,7 +17,11 @@
 
   </head>
   <body>
-@include('layouts.sidebar')
+
+    <div class="wrapper">
+    
+  @include('layouts.sidebar')
+    </div>
       <main class="wholeContent">
 
         <section class="header">
@@ -72,7 +76,10 @@
               </div>
             </div>
             <input type="submit" name="submit" value="Save" class="btn btn-primary btns">
-            <input type="submit" name="submit" value="Cancel" class="btn btn-default btns btnCancel">
+            <!-- <input value="Cancel" class="btn btn-default btns btnCancel"> -->
+
+            <button class="btn btn-default btns btnCancel"><a href="/create_metrics">Cancel</a></button>
+            <!-- <a type="submit" href="/create_metrics" class="btn btn-default btns btnCancel">Cancel</a> -->
 
           </form>
 
