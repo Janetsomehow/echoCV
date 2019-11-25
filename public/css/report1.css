@@ -95,7 +95,7 @@ h3.centreCon {
 .header .btn {
   margin-top: 1.7rem;
   width: 7rem;
-  margin-right: 1vw;
+  margin-right: 2vw;
 }
 
 .searchReport {
@@ -104,10 +104,6 @@ h3.centreCon {
   display: flex;
   top: 5rem;
   height: 41px;
-}
-
-.searchReport input {
-  width: 30vw;
 }
 
 .repSearch {
@@ -184,14 +180,6 @@ h3.centreCon {
   justify-content: space-around;
 }
 
-.newMetr .formMett {
-  font-size: 1.3vw;
-}
-
-.formG .formMett {
-  font-size: 1vw;
-}
-
 .formMet {
   /* width: 19vw; */
   /* margin-right: 1vw */
@@ -227,7 +215,7 @@ div.custom {
   padding-top: 0.5rem;
   border-radius: 4px;
   margin-bottom: 2rem;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 
 div.custom {
@@ -246,8 +234,6 @@ div.custom {
   line-height: 1rem;
   text-align: center;
   cursor: pointer;
-  font-size: 0.75rem;
-  position: relative;
 }
 
 .formMett .btn:hover {
@@ -257,7 +243,7 @@ div.custom {
 .formMett img {
   height: 1.5rem;
   margin-left: 0.3rem;
-  padding-right: 0.4rem;
+  padding-right: 0.5rem;
 }
 
 .forLabel label {
@@ -319,129 +305,26 @@ a.searchContact {
   border-color: #007bff;
 }
 
-.dropdownIcon a {
-  /* display: none; */
-}
+
 
 
 
 /* ----------------------- Mobile ----------------------*/
-@media (max-width: 680px){
-  .wholeContent {
-    width: 100%;
-    left: 0;
-  }
-}
 
-
-@media(max-width:700px){
+@media(max-width:440px){
 
 /*----- Metrics -------*/
 
-.header {
-  display: flex;
-  justify-content: flex-start;
-  /* margin-bottom: -2rem; */
-}
-
-/* .dropdownIcon a {
-  display: flex;
-  justify-content: flex-start;
-  color: #000;
-  font-weight: 800;
-  font-size: 1.7rem;
-  margin-top: 1.4rem;
-  cursor: pointer;
-  margin-left: 1.5rem;
-  margin-right: -1.2rem;
-} */
-
-.rep {
-  margin-left: 0;
-}
-
 .wholeContent {
   width: 100%;
-  left: 0;
-}
-
-form.searchReport {
-  display: none;
-}
-
-.newMetr {
-  top: 5rem;
-}
-
-.newMetr hr {
-  margin-top: 0.5rem;
-  margin-right: 1rem;
-}
-
-.metricDel {
-  display: inline !important;
-  margin-left: 1rem;
-}
-
-.newMetr .formG {
-  display: block;
-}
-
-.formMett, div.custom {
-  width: 90%;
-  margin-bottom: 1rem;
-}
-
-.formG .formMett,
-.newMetr .formMett {
-  font-size: 1rem;
-}
-
-.bigSe {
-  display: block;
-  /* margin-bottom: 1rem; */
-}
-
-.smallSe {
-  width: 100%;
-  /* margin-bottom: 1rem; */
-}
-
-.forLabel label {
-  margin-top: 1rem;
-}
-
-
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 
 
-/* Mobile */
 
 
-@media (max-width:992px) {
-  .sidebar{
-		/* width: 5rem; */
-	}
-}
-
-@media (max-width: 860px) {
-  .sidebar{
-	}
-}
-
-@media(max-width:767px) {
-
-}
-
-
-@media screen and (max-width: 680px){ ul.topnav li:not(:nth-child(1)){
-    display: none;
-    }
-
-@media(max-width:580px) {
-  .sidebar{
-
-  }
 
 }
