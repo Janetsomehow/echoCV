@@ -1,4 +1,7 @@
 @extends('layouts.empty-sidbar')
+
+
+
   @section('content')
 
             <div class="col-md-10 mt-5 mb-5 p-5">
@@ -12,3 +15,4 @@
             </div>
 
 @stop
+
