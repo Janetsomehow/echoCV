@@ -19,12 +19,15 @@
   <body>
 
     <div class="wrapper">
-    
+
   @include('layouts.sidebar')
     </div>
       <main class="wholeContent">
 
         <section class="header">
+          <!-- <div class="dropdownIcon">
+            <a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a>
+          </div> -->
           <div class="rep">Metrics</div>
 
         </section>
@@ -36,7 +39,8 @@
           <div class="newData">
             <a href="#"class="">+ New data source</a>
           </div><hr>
-          <div>Google Sheets</div>
+          <div>Google Sheets<a class="metricDel" href="#" style="display:none"><img src={{ asset('css/icons/metricdel.png') }} /></a>
+          </div>
 
           <form class="" action="" method="post">
             <div class="forLabel">
