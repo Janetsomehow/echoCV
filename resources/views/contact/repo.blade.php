@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>All Reports</title>
+      <title>Contacts</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
       <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
@@ -11,7 +11,7 @@
       <!-- Styles -->
       <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
       <link href="{{ asset('css/report.css') }}" rel="stylesheet">
-      <link href="{{ asset('css/dataTablesReport.bootstrap.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/dataTables.bootstrap.css') }}" rel="stylesheet">
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
       <link ‎href="https://fonts.googleapis.com/css?family=europa:200,600" rel="stylesheet">
@@ -20,18 +20,18 @@
 
   </head>
   <body>
-    <div class="wrapper">
-
-  @include('layouts.sidebar')
-    </div>
+@include('layouts.sidebar')
       <main class="wholeContent">
 
         <section class="header searchContact">
-          <div class="rep">Reports</div>
-          <a href="/new" class="btn btn-primary searchContact">New Report</a>
+          <div class="rep">Contacts</div>
+          <a href="/add_contact" class="btn btn-primary searchContact">Create Contact</a>
           <!-- <input type="submit" name="" class="btn btn-primary searchContact" value="Create Contact" /> -->
         </section>
-
+        <form class="searchReport" action="" method="post">
+          <input type="text" class="form-control form-group repSearch" placeholder="Search contacts">
+          <button type="button" name="button"><img src={{ asset('css/icons/grsearch.png') }} /></button>
+        </form>
         <section class="message">
 
           <div class="tableHeader">
@@ -45,28 +45,14 @@
 
             <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0" width="100%" style="margin-top:-0.5rem;">
             <!-- <table class="table table-responsive table-stripped table-hover"> -->
-              <!-- <thead>
+              <thead>
                 <td></td>
                 <td>NAME</td>
                 <td>COMPANY</td>
                 <td>EMAIL</td>
                 <td>PHONE NUMBER</td>
                 <td>TAGS</td>
-              </thead> -->
-              <thead class="" style="display:flex; justify-content:flex-start; margin-right:2rem">
-                <td></td>
-                <td><a href="#">All</a></td>
-                <td><a href="#">Sent</a></td>
-                <td><a href="#">Received</a></td>
-                <td><a href="#">Scheduled</a></td>
-                <td>TAGS</td>
               </thead>
-              <div class="" style="display:flex; justify-content:flex-start; margin-right:2rem">
-                <a href="#">All</a>
-                <a href="#">Sent</a>
-                <a href="#">Received</a>
-                <a href="#">Scheduled</a>
-              </div>
               <tbody>
             <tr>
               <td data-search="Tiger Nixon">T. Nixon</td>

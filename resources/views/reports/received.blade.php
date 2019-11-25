@@ -17,12 +17,16 @@
 
   </head>
   <body>
-@include('layouts.sidebar')
+    <div class="wrapper">
+
+  @include('layouts.sidebar')
+    </div>
       <main class="wholeContent">
 
         <section class="header">
           <div class="rep">Reports</div>
-          <button type="button" name="button" class="btn btn-primary">New Report</button>
+            <a href="/reports" class="btn btn-default">Back</a>
+          <!-- <button type="button" name="button" class="btn btn-primary">New Report</button> -->
         </section>
         <form class="searchReport" action="" method="post">
           <input type="text" class="form-control form-group repSearch" placeholder="Search reports">
@@ -42,20 +46,63 @@
 
             <table class="table table-responsive table stripped">
               <thead>
-                <th>we</th>
-                <th>ee</th>
-                <th>ee</th>
-                <th>ee</th>
-                <th>ee</th>
-                <th>ee</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
               </thead>
               <tbody>
-                <td><input type="checkbox" /></td>
-                <td>eeee</td>
-                <td>wee</td>
-                <td></td>
-                <td>q</td>
-                <td>eeee</td>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Subject of Report </td>
+                  <td>Name Name</td>
+                  <td>Sumary of the message is here to....... </td>
+                  <td>DateMonthHourMinuteSecond</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Subject of Report </td>
+                  <td>Name Name</td>
+                  <td>Sumary of the message is here to....... </td>
+                  <td>DateMonthHourMinuteSecond</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Subject of Report </td>
+                  <td>Name Name</td>
+                  <td>Sumary of the message is here to......................... </td>
+                  <td>DateMonthHourMinuteSecond</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Subject of Report </td>
+                  <td>Name Name</td>
+                  <td>Sumary of the message is here to.......................... </td>
+                  <td>DateMonthHourMinuteSecond</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Subject of Report </td>
+                  <td>Name Name</td>
+                  <td>Sumary of the message is here to........................... </td>
+                  <td>DateMonthHourMinuteSecond</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Subject of Report </td>
+                  <td>Name Name</td>
+                  <td>Sumary of the message is here to......................... </td>
+                  <td>DateMonthHourMinuteSecond</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Subject of Report </td>
+                  <td>Name Name</td>
+                  <td>Sumary of the message is here to.......................... </td>
+                  <td>DateMonthHourMinuteSecond</td>
+                </tr>
               </tbody>
             </table>
 

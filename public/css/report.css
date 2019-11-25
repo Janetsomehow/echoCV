@@ -7,6 +7,7 @@
 html {
   font-family: 'europa', sans-serif;
   font-style: normal;
+  font-size: 1rem!important;
 }
 
 /* For report onboarding */
@@ -33,7 +34,7 @@ html {
   width: 26vw;
   height: 15rem;
   left: 23vw;
-  top: 25vh;
+  top: 20vh;
   right: 30vw;
 }
 
@@ -53,6 +54,10 @@ html {
   color: #333;
 }
 
+h3.centreCon {
+  margin-top: 0;
+}
+
 .newrep p {
   font-size: 0.8rem;
   line-height: 18px;
@@ -60,7 +65,7 @@ html {
   color: #666666;
 }
 
-.newrep input {
+.newrep .btn {
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -262,6 +267,19 @@ div.custom {
 
 .btnCancel {
   color: #333333;
+  background: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  margin-left: .5rem;
+}
+
+.btnCancel a {
+  color: #333333;
+}
+
+.btnCancel:hover {
+  color: #222;
+  background: #eee;
 }
 
 
@@ -279,6 +297,8 @@ thead {
 
 
 /* Contact folder */
-.searchContact button {
-  width: 8.2rem;
+a.searchContact {
+  width: 8.3rem!important;
+  background-color: #007bff!important;
+  border-color: #007bff;
 }
