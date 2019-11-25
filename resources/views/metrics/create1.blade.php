@@ -25,7 +25,7 @@
 
         <section class="header">
           <div class="rep">Metrics</div>
-          <!-- <a href="/add_metrics" class="btn btn-primary">New Metric</a> -->
+          <a href="/add_metrics" class="btn btn-primary">New Metric</a>
           <!-- <button type="button" name="button" class="btn btn-primary">New Metric</button> -->
         </section>
         <form class="searchReport" action="" method="post">
@@ -64,6 +64,7 @@
                   <a href="#"class="btn btn-default">Link</a>
                 </div>
               </div>
+
         </section>
       </main>
 
