@@ -8,6 +8,15 @@
     align-items: stretch;
 }
 
+.btn-primary{
+  background: linear-gradient(180deg, #2E7CFF 0%, #1B63DC 100%, #1B63DC 100%);
+  border-radius: 4px;
+}
+
+.svg {
+    height: 15px;
+}
+
 /* 
 #sidebar.active {
     margin-left: -12rem;
