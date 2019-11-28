@@ -12,15 +12,14 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link ‎href="https://fonts.googleapis.com/css?family=europa:200600" rel="stylesheet">
+
+
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
 
   </head>
   <body>
-    <div class="wrapper">
 
-  @include('layouts.sidebar')
-    </div>
       <main class="wholeContent">
 
         <section class="header">
@@ -32,6 +31,7 @@
           <input type="text" class="form-control form-group" placeholder="Search for metric">
           <button type="button" name="button"><img src={{ asset('css/icons/grsearch.png') }} /></button>
         </form>
+
         <section class="newMetr">
           <div class="newData">
             <a href="#"class="">+ New data source</a>
@@ -67,5 +67,10 @@
         </section>
       </main>
 
+
+      <div class="wrapper">
+
+    @include('layouts.sidebar')
+      </div>
   </body>
 </html>
