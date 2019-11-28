@@ -58,48 +58,58 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="row">
-                  <div class="form-group col-md-10 mr-4 ml-2" style="display:flex; justify-content:space-between">
-                    <div class="fname">
-                      <label for="Name">First Name*:</label>
-                      <input type="text" class="hr" name="name" id="name" required>
-                    </div>
+              <div class="container">
+                <div class="row">
+                    <div class="form-group col-md-12 mr-2 ml-2" style="display:flex; justify-content:space-between">
+                      <div class="fname">
+                        <label for="Name">First Name*:</label>
+                        <input type="text" class="form-control" name="name" id="name" required style="
+                        border: 0px solid #AAAAAA; border-bottom: 1.3px solid #666; border-radius:0">
+                      </div>
                       <div class="lname">
-                        <label for="Name">Last Name*:</label>
-                        <input type="text" class="form-control" name="name" id="name" required>
+                          <label for="Name">Last Name*:</label>
+                          <input type="text" class="form-control" name="name" id="name" required style="
+                          border: 0px solid #AAAAAA; border-bottom: 1.3px solid #666; border-radius:0">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="form-group col-md-12 mr-2 ml-2">
+                        <label for="Club">Email*:</label>
+                        <input type="email" class="form-control" name="club" id="email" required style="
+                        border: 0px solid #AAAAAA; border-bottom: 1.3px solid #666; border-radius:0">
                       </div>
                   </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-10 mr-4 ml-2">
-                      <label for="Club">Email*:</label>
-                      <input type="email" class="form-control" name="club" id="email" required>
+                  <div class="row">
+                     <div class="form-group col-md-12 mr-2 ml-2">
+                        <label for="Phone">Phone:</label>
+                        <input type="tel" class="form-control" name="country" id="country" style="
+                        border: 0px solid #AAAAAA; border-bottom: 1.3px solid #666; border-radius:0">
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12 mr-2 ml-2">
+                      <label for="Company">Company:</label>
+                      <input type="text" class="form-control" name="score" id="score" style="
+                      border: 0px solid #AAAAAA; border-bottom: 1.3px solid #666; border-radius:0">
                     </div>
-                </div>
-                <div class="row">
-                   <div class="form-group col-md-10 mr-4 ml-2">
-                      <label for="Phone">Phone:</label>
-                      <input type="tel" class="form-control" name="country" id="country">
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12 mr-2 ml-2">
+                      <label for="Title">Title:</label>
+                      <input type="text" class="form-control" name="score" id="score" style="
+                      border: 0px solid #AAAAAA; border-bottom: 1.3px solid #666; border-radius:0">
                     </div>
-                </div>
-                <div class="row">
-                  <div class="form-group col-md-10 mr-4 ml-2">
-                    <label for="Company">Company:</label>
-                    <input type="text" class="form-control" name="score" id="score">
                   </div>
-                </div>
-                <div class="row">
-                  <div class="form-group col-md-10 mr-4 ml-2">
-                    <label for="Title">Title:</label>
-                    <input type="text" class="form-control" name="score" id="score">
+                  <div class="row">
+                    <div class="form-group col-md-12 mr-2 ml-2">
+                      <label for="Tags">Tags:</label>
+                      <input type="text" class="form-control" name="score" id="score" style="
+                      border: 0px solid #AAAAAA; border-bottom: 1.3px solid #666; border-radius:0">
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="form-group col-md-10 mr-4 ml-2">
-                    <label for="Tags">Tags:</label>
-                    <input type="text" class="form-control" name="score" id="score">
-                  </div>
-                </div>
+              </div>
+
             </div>
             <div class="modal-footer" style="justify-content:flex-start!important; padding:1.5rem!important">
               <button type="submit" class="btn btn-save" id="ajaxSubmit" style="background:#ddd; float:left!important">Save</button>

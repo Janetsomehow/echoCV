@@ -33,16 +33,8 @@
           <button type="button" name="button"><img src={{ asset('css/icons/grsearch.png') }} alt=""></button>
         </form>
         <section class="message">
-          <div class="">
 
-          </div>
-          <div class="title">
-
-          </div>
-          <div class="content">
-
-          </div>
-          <div class="table">
+          <div class="table table-responsive">
 
             <table class="table table-responsive table stripped">
               <thead>

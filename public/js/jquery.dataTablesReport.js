@@ -11709,7 +11709,7 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.searchPlaceholder
 			 */
-			"sSearchPlaceholder": "Search repots",
+			"sSearchPlaceholder": "Search reports",
 
 
 			/**

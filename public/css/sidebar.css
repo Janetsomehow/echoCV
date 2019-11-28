@@ -16,6 +16,8 @@ a:hover {
 html {
   font-family: 'europa', 'Nunito', sans-serif;;
   font-style: normal;
+  scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 .sidebar {
@@ -122,41 +124,148 @@ ul li .sidebar-li img {
   height: 100%;
 }
 
-.dropdownIcon a {
-  /* display: none; */
+
+/* Begin New */
+#mobile-bars
+{
+    position: absolute;
+    left: -35vw;
+	/* top: 3vh; */
+	  top: 14px;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
 }
 
-
-@media(max-width:700px){
-
-/*----- Sidebar Responsiveness -------*/
-
-ul.sidebar-ul .dropdownIcon a {
-  /* width: 2rem; */
-  display: flex !important;
-  justify-content: flex-start;
-  color: #000;
-  font-weight: 800;
-  font-size: 1.7rem;
-  margin-top: 1.4rem;
-  cursor: pointer;
-  margin-left: 1.5rem;
-  margin-right: -1.2rem;
+#mobile-bars-check
+{
+    display: none;
 }
 
+.stix
+{
+    border-radius: 3px;
+    height: 3px;
+    width: 30px;
+    background-color: dimgray;
+    margin: 5px 0;
+    transition: 0.4s ease;
 }
 
+@media (max-width: 700px)
+{
 
-@media (max-width: 1180px){
-  ul.sidebar-ul li:not(:nth-last-child()){
-    display: block;
+	.sidebar
+	{
+  		width: 12rem;
+  		left: -100vw;
+  		transition: 0.4s ease-out;
+  		z-index: 5;
+  		padding-top: 4rem;
+  		position: fixed;
+	}
+
+	#mobile-bars
+	{
+        display: block;
+        margin-left: 38vw;
+        z-index: 10;
+        padding-top: 3px;
+        padding-left: 3px;
+        top: 3.5rem;
     }
+
+
+    #mobile-bars-check:checked ~ #mobile-bars > #stik1
+    {
+        transform: rotate(45deg) translateY(7px) translateX(5px);
+    }
+
+    #mobile-bars-check:checked ~ #mobile-bars > #stik2
+    {
+        width: 0;
+        opacity: 0;
+    }
+
+    #mobile-bars-check:checked ~ #mobile-bars > #stik3
+    {
+        transform: rotate(-45deg) translateY(-8px) translateX(5px);
+    }
+
+    #mobile-bars-check:checked ~ #sidebar
+    {
+        left: 0;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      .sidebar ul {
+        font-size: 0.7rem;
+        line-height: 1rem;
+        letter-spacing: 0.05em;
+        color: #CCCCCC;
+        position: absolute;
+        width: 11.5rem;
+        height: 1rem;
+        left: 0.75rem;
+        top: 2.5rem;
+      }
+
+      .sidebar-ul {
+        list-style: none;
+        margin-left: -0.9rem;
+      }
+
+      ul li .sidebar-li {
+        display: flex;
+        position: relative;
+        width: 12rem;
+        height: 2.4rem;
+        font-family: 'Nunito';
+        font-size: 0.67rem;
+        font-weight: 550;
+        line-height: 1rem;
+        top: 6rem;
+        padding: 0.8rem 0;
+        padding-left: 0.5rem;
+        cursor: pointer;
+      }
+
+      ul li .sidebar-li:hover {
+        background: #293059;
+      }
+
+      ul li .sidebar-li img {
+        padding-right: 0.3rem;
+        margin-top: 0rem;
+        color: #cccccc;
+        height: 100%;
+      }
+
+
 }
 
-
-@media(max-width:700px){
+@media(max-width:580px){
 	.sidebar{
-		 display: none;
+		width: 12rem;
+	}
+}
+@media(max-width:440px){
+	.sidebar{
+		width: 12rem;
 	}
 
 }
+@media(max-width:360px){
+	.sidebar{
+		width: 75vw;
+	}
+}
+
+
+/* End new */

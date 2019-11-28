@@ -31,22 +31,12 @@
           <a href="/add_contact" class="btn btn-primary searchContact">Create Contact</a>
           <!-- <input type="submit" name="" class="btn btn-primary searchContact" value="Create Contact" /> -->
         </section>
-        <!-- <form class="searchReport" action="" method="post">
-          <input type="text" class="form-control form-group repSearch" placeholder="Search contacts">
-          <button type="button" name="button"><img src={{ asset('css/icons/grsearch.png') }} /></button>
-        </form> -->
         <section class="message">
 
-          <div class="tableHeader">
+        <div class="widget-wrapper container-fluid" style="padding:0; margin:0">
+          <div class="section-wrap-b table-responsive">
 
-          </div>
-          <!-- <div class="table"> -->
-
-
-        <div class="widget-wrapper">
-          <div class="section-wrap-b">
-
-            <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0" width="100%" style="margin-top:-0.5rem;">
+            <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0" style="margin-top:-0.5rem; padding: 0 0.6rem;">
             <!-- <table class="table table-responsive table-stripped table-hover"> -->
               <thead>
                 <tr>
@@ -61,7 +51,7 @@
               <tbody>
                 <tr>
                   <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Tiger Paul">Abram Paul</td>
+                  <td data-search="Abram Paul">Abram Paul</td>
                   <td data-search="EchoCV">EchoCV</td>
                   <td>abc.gthh@gmail.com</td>
                   <td data-order="">2348056976975</td>

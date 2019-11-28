@@ -18,10 +18,7 @@
 
   </head>
   <body>
-    <div class="wrapper">
 
-  @include('layouts.sidebar')
-    </div>
 
     <section class="onboard">
         <div class="rep">Reports</div>
@@ -31,10 +28,23 @@
           <h3>Create a report</h3>
           <p>Create and send out custom reports to your contacts
             and portfolio companies</p>
-          <input type="button" name="button" class="btn btn-primary" value="New Report" />
-          <a href="/new" class="btn btn-primary">New Report</a>
+          <!-- <input type="button" name="button" class="btn btn-primary" value="New Report" /> -->
+          <a href="/new_report" class="btn btn-primary">New Report</a>
         </div>
       </section>
+
+
+<!--
+      <input type="checkbox" id="mobile-bars-check" />
+      <label for="mobile-bars-check" id="mobile-bars">
+          <div class="stix" id="stik1"></div>
+          <div class="stix" id="stik2"></div>
+          <div class="stix" id="stik3"></div>
+      </label> -->
+      <!-- <div class="wrapper"> -->
+
+    @include('layouts.sidebar')
+      <!-- </div> -->
 
     </body>
 </html>
