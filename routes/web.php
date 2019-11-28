@@ -13,7 +13,7 @@
 Route::get('/welcome', function () { return view('welcome'); });
 Route::get('/index', function () { return view('home.index'); });
 Route::get('/report', function () { return view('reports.report'); });
-Route::get('/new', function () { return view('reports.new_report'); });
+Route::get('/new_report', function () { return view('reports.new_report'); });
 Route::get('/received', function () { return view('reports.received'); });
 Route::get('/sent', function () { return view('reports.sent'); });
 Route::get('/scheduled', function () { return view('reports.scheduled'); });

@@ -79,8 +79,13 @@ h3.centreCon {
 .wholeContent {
   position: absolute;
   left: 12rem;
-  width: 78vw;
+  width: 82vw;
   /* width: 78vw; */
+}
+
+div.widget-wrapper {
+  width: 83vw;
+  margin-left: -1rem;
 }
 
 .header {
@@ -88,7 +93,7 @@ h3.centreCon {
   /* left: 1rem; */
   display: flex;
   justify-content: space-between;
-  width: 78vw;
+  width: 82vw;
   /* width: 87vw; */
 }
 
@@ -119,7 +124,7 @@ h3.centreCon {
 }
 
 .searchReport button {
-  height: 95%;
+  height: 100%;
   margin-left: 0.4rem;
   border-radius: 4px;
 }
@@ -134,8 +139,6 @@ h3.centreCon {
   top: 5rem;
   left: 1.5rem;
 }
-
-
 
 /* For new report  folder */
 .newReport {
@@ -185,11 +188,11 @@ h3.centreCon {
 }
 
 .newMetr .formMett {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
 }
 
 .formG .formMett {
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 
 .formMet {
@@ -324,12 +327,76 @@ a.searchContact {
 }
 
 
-
 /* ----------------------- Mobile ----------------------*/
-@media (max-width: 680px){
+@media (max-width: 1100px){
+  .wholeContent {
+    left: 12rem;
+    width: 79vw;
+    margin-right: 0;
+  }
+
+  .newMetr .formG {
+    display: block;
+  }
+
+  .formMett, div.custom {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .header {
+    width: 78vw;
+  }
+
+  div.widget-wrapper {
+    width: 79vw;
+  }
+}
+
+@media (max-width: 920px){
+  .wholeContent {
+    left: 12rem;
+    width: 75vw;
+    margin-right: 0;
+  }
+
+  .header {
+    width: 73vw;
+  }
+
+  div.widget-wrapper {
+    width: 76vw;
+  }
+}
+
+@media (max-width: 780px){
+  .wholeContent {
+    left: 12rem;
+    width: 70vw;
+    margin-right: 0;
+  }
+
+  .header {
+    width: 68vw;
+  }
+
+  div.widget-wrapper {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 700px){
   .wholeContent {
     width: 100%;
     left: 0;
+  }
+
+  div.widget-wrapper {
+    width: 100%;
+  }
+
+  .searchContact {
+    display: none;
   }
 }
 
@@ -357,12 +424,13 @@ a.searchContact {
 } */
 
 .rep {
-  margin-left: 0;
+  margin-left: 3rem;
 }
 
 .wholeContent {
   width: 100%;
   left: 0;
+  top: 1.9rem;
 }
 
 form.searchReport {
@@ -431,17 +499,5 @@ form.searchReport {
 }
 
 @media(max-width:767px) {
-
-}
-
-
-@media screen and (max-width: 680px){ ul.topnav li:not(:nth-child(1)){
-    display: none;
-    }
-
-@media(max-width:580px) {
-  .sidebar{
-
-  }
 
 }
