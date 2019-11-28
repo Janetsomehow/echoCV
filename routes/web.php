@@ -32,7 +32,9 @@ Route::get('/add_contact', function () { return view('contact.add_contact'); });
 Route::get('/add_company', function () { return view('portfolio_company.add_company'); });
 Route::get('/dashboard', function () { return view('home.dashboard'); });
 Route::get('/new_company', function () { return view('portfolio_company.new_company'); });
-Route::get('/companys', function () { return view('portfolio_company.companys'); });
+Route::get('/add_company', function () { return view('portfolio_company.add_company'); });
+Route::get('/dashboard1', function () { return view('home.dashboard1'); });
+
 
 
 
@@ -41,3 +43,4 @@ Route::get('/companys', function () { return view('portfolio_company.companys');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('company', 'companyController');
