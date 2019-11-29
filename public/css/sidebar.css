@@ -109,7 +109,7 @@ ul li .sidebar-li {
   line-height: 1rem;
   top: 6rem;
   padding: 0.8rem 0;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
   cursor: pointer;
 }
 
@@ -175,7 +175,7 @@ ul li .sidebar-li img {
         z-index: 10;
         padding-top: 3px;
         padding-left: 3px;
-        top: 3.5rem;
+        /* top: 3.5rem; */
     }
 
 
@@ -200,53 +200,10 @@ ul li .sidebar-li img {
         left: 0;
       }
 
-      a:hover {
-        text-decoration: none;
-      }
+      .logo {
+      left: 6rem;
 
-      .sidebar ul {
-        font-size: 0.7rem;
-        line-height: 1rem;
-        letter-spacing: 0.05em;
-        color: #CCCCCC;
-        position: absolute;
-        width: 11.5rem;
-        height: 1rem;
-        left: 0.75rem;
-        top: 2.5rem;
       }
-
-      .sidebar-ul {
-        list-style: none;
-        margin-left: -0.9rem;
-      }
-
-      ul li .sidebar-li {
-        display: flex;
-        position: relative;
-        width: 12rem;
-        height: 2.4rem;
-        font-family: 'Nunito';
-        font-size: 0.67rem;
-        font-weight: 550;
-        line-height: 1rem;
-        top: 6rem;
-        padding: 0.8rem 0;
-        padding-left: 0.5rem;
-        cursor: pointer;
-      }
-
-      ul li .sidebar-li:hover {
-        background: #293059;
-      }
-
-      ul li .sidebar-li img {
-        padding-right: 0.3rem;
-        margin-top: 0rem;
-        color: #cccccc;
-        height: 100%;
-      }
-
 
 }
 
