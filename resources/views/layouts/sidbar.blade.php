@@ -15,7 +15,7 @@
         <!-- Styles -->
         <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
         <link href="{{ asset('css/home.css') }}" rel="stylesheet">
-        <script  src="{{ asset('js/dash.js') }}"></script>
+        <script  src="{{ asset('js/dash.js') }}" defer></script>
 
         @yield('styles')
 
