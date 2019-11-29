@@ -262,3 +262,19 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 	cursor: pointer!important;
 	background: rgba(40,44,42,0.8);
 }
+
+
+
+@media(max-width:700px){
+
+  div.dataTables_wrapper div.dataTables_paginate {
+    float: right;
+    margin-top: 6rem;
+    padding-bottom: 1rem;
+  }
+
+  div.dataTables_wrapper div.dataTables_info {
+    float: left;
+  }
+
+}

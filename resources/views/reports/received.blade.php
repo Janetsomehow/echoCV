@@ -25,7 +25,7 @@
 
         <section class="header">
           <div class="rep">Reports</div>
-            <a href="/reports" class="btn btn-default">Back</a>
+            <a href="/reports" class="btn btn-default repTopBtn">Back</a>
           <!-- <button type="button" name="button" class="btn btn-primary">New Report</button> -->
         </section>
         <form class="searchReport" action="" method="post">
