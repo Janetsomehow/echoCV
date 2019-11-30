@@ -72,17 +72,10 @@ a:hover {
   border: 1px solid #292F59;
 }
 
-input.search {
-  position: absolute;
-  width: 9rem;
-  height: 1.8rem;
-  left: 1rem;
-  top: 0.1rem;
-  font-size: 0.8rem;
-  border-radius: 10px;
-  /* padding-left: 1rem; */
-  border: hidden;
-  background: #fff;
+.search-div{
+  position: relative;
+  /* top: .5rem; */
+  /* padding: .3rem;   */
 }
 
 .fa-search img {
