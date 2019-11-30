@@ -7,44 +7,40 @@
     width: 100%;
     align-items: stretch;
 }
-/* 
+
 .btn-primary{
   background: linear-gradient(180deg, #2E7CFF 0%, #1B63DC 100%, #1B63DC 100%);
   border-radius: 4px;
-  background: non
-} */
+}
 
 .svg {
     height: 15px;
 }
 
+/* 
+#sidebar.active {
+    margin-left: -12rem;
+}
+
+#sidebar {
+
+} */
+
+/* @media (max-width: 768px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+} */
 
 /*home onboarding*/
 .onboard {
     margin-left: 12rem;
-    display: grid;
-    justify-items: center;
+    display: flex;
+    /* justify-content: center; */
     width: 100%;
-}
-
-@media (max-width: 425px){
-  .onboard{
-    margin: 0 auto;
-    /* display: none; */
-    /* background-color: red; */
-    display: grid;
-
-  }
-  .p-5{
-    padding: 0;
-  }
-}
-@media(max-width: 320px){
-  p{
-    width: 80%;
-    margin-left: 2rem;
-
-  }
 }
 
 .cform{
