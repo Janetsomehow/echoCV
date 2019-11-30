@@ -2,7 +2,7 @@
 @extends('layouts.empty-sidbar')
   @section('content')
 
-            <div class="col-md-10 mt-5 mb-5 p-5 ">
+            <div class="col-md-10 col-sm mt-5 mb-5 p-5 ">
 
                <div class="empty text-center">
                  <img src="{{ asset('css/icons/vector.png') }}" class="mx-auto d-block" />
