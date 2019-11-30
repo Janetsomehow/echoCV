@@ -25,22 +25,11 @@
         </li>
       </ul>
       <hr>
-      
-        <!-- <input type="text" name="search" placeholder="Search" class="" /> -->
-       
-
-       
-    
+      <div class="fa fa-search">
+        <input type="text" name="search" placeholder="Search" class="search" />
+        <img src="{{ asset('css/icons/search.png') }}" alt="" />
+      </div>
       <ul class="sidebar-ul">
-      <li>
-       <div class="input-group p-2 " style="position: relative; top: 3.5rem;">
-          <input type="text" class="form-control" placeholder="Search" aria-label="" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <span class="input-group-text" id="basic-addon2" style="color: white; background-color: #39406D">  <img src="{{ asset('css/icons/search.png') }}" style="filter: invert(100%)" alt="" /></span>
-          </div>
-        </div>
-       </li>
-       <div class="mt-n5">
         <li><a href="/index" class="sidebar-li home"><img src="{{ asset('css/icons/homelogo.png') }}" />HOME</a></li>
         <li><a href="/dashboard" class="sidebar-li dashboard"><img src="{{ asset('css/icons/dash.png') }}" />DASHBOARD</a></li>
         <li><a href="/new_company" class="sidebar-li port"><img src="{{ asset('css/icons/port.png') }}" />PORTIFOLIO COMPANIES</a></li>
@@ -49,7 +38,6 @@
         <li><a href="/contacts" class="sidebar-li contact"><img src="{{ asset('css/icons/contact.png') }}" />CONTACTS</a></li>
         <li><a href="/files" class="sidebar-li file"><img src="{{ asset('css/icons/file.png') }}" />FILES</a></li>
         <li><a href="/archives" class="sidebar-li archive"><img src="{{ asset('css/icons/arch.png') }}" />ARCHIVES</a></li>
-       </div>
       </ul>
 
 
