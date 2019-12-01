@@ -9,7 +9,7 @@
     <main class="sidebar" id="sidebar">
       <a href="#"><div class="logo"></div></a>
       <!-- <p>Full name</p> -->
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav name-section ml-auto">
 
         <li class="nav-item dropdown">
           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -39,11 +39,10 @@
     
       <ul class="sidebar-ul">
       <li>
-       <div class="input-group p-2 " style="position: relative; top: 3.5rem;">
-          <input type="text" class="form-control" placeholder="Search" aria-label="" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <span class="input-group-text" id="basic-addon2" style="color: white; background-color: #39406D">  <img src="{{ asset('css/icons/search.png') }}" style="filter: invert(100%)" alt="" /></span>
-          </div>
+       <div class="input-group p-2 search-group" style="position: relative; top: 3rem;">
+          <input type="text" class="form-control " style="border-radius: 50px; width: 11rem"  placeholder="Search" aria-label="" aria-describedby="basic-addon2">
+             <span class="search-icon ml-auto"> <img src="{{ asset('css/icons/search.png') }}"   alt="" /> </span>
+          <!-- <span class="fas fa-search"> -->
         </div>
        </li>
        <div class="mt-n5">
