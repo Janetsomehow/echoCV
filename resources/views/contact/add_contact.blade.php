@@ -13,12 +13,9 @@
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
       <link ‎href="https://fonts.googleapis.com/css?family=europa:200,600" rel="stylesheet">
 
-            <script src="http://code.jquery.com/jquery-3.3.1.min.js"
-                           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-                           crossorigin="anonymous">
-                  </script>
+      <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
                   <!-- Latest compiled and minified JavaScript -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
       <!-- Scripts -->
       <script src="{{ asset('js/app.js') }}" defer></script>
@@ -38,6 +35,7 @@
           <p>Add contacts to make sharing easier. You can also use tags
             for easier grouping</p>
             <button type="button" class="btn btn-primary searchContact" data-toggle="modal" data-target="#myModal" id="open">Create Contact</button>
+
         </div>
       </section>
 
@@ -58,60 +56,44 @@
                       <div class="row">
                           <div class="form-group col-md-12 mr-2 ml-2" style="display:flex; justify-content:space-between">
                             <div class="fname">
-                              <!-- <label for="Name">First Name*:</label> -->
-                              <input type="text" class="form-control" name="name" id="name" required style="
-                              border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="First Name*">
+                              <input type="text" class="form-control conForm" name="" required placeholder="First Name*">
                             </div>
                             <div class="lname">
-                                <!-- <label for="Name">Last Name*:</label> -->
-                                <input type="text" class="form-control" name="name" id="name" required style="
-                                border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Last Name">
+                                <input type="text" class="form-control conForm" name="" required placeholder="Last Name">
                             </div>
                           </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12 mr-2 ml-2">
-                              <!-- <label for="Club">Email*:</label> -->
-                              <input type="email" class="form-control" name="club" id="email" required style="
-                              border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Email*">
+                              <input type="email" class="form-control conForm" name="" required placeholder="Email*">
                             </div>
                         </div>
                         <div class="row">
                            <div class="form-group col-md-12 mr-2 ml-2">
-                              <!-- <label for="Phone">Phone:</label> -->
-                              <input type="tel" class="form-control" name="country" id="country" style="
-                              border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Phone">
+                              <input type="tel" class="form-control conForm" name="" placeholder="Phone">
                             </div>
                         </div>
                         <div class="row">
                           <div class="form-group col-md-12 mr-2 ml-2">
-                            <!-- <label for="Company">Company:</label> -->
-                            <input type="text" class="form-control" name="score" id="score" style="
-                            border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Company">
+                            <input type="text" class="form-control conForm" name="" placeholder="Company">
                           </div>
                         </div>
                         <div class="row">
                           <div class="form-group col-md-12 mr-2 ml-2">
-                            <!-- <label for="Title">Title:</label> -->
-                            <input type="text" class="form-control" name="score" id="score" style="
-                            border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Title">
+                            <input type="text" class="form-control conForm" name="" placeholder="Title">
                           </div>
                         </div>
                         <div class="row">
                           <div class="form-group col-md-12 mr-2 ml-2">
-                            <!-- <label for="Tags">Tags:</label> -->
-                            <input type="text" class="form-control" name="score" id="score" style="
-                            border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Tags">
+                            <input type="text" class="form-control conForm" name="" placeholder="Tags">
                           </div>
                         </div>
                     </div>
 
                   </div>
                   <div class="modal-footer" style="justify-content:flex-start!important; padding:1.5rem!important">
-                    <!-- <input type="submit" name="" class="btn btn-save" value="Save"> -->
                     <button type="submit" class="btn btn-save" id="ajaxSubmit" style="background:#ddd; float:left!important">Save</button>
                     <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
-                    <!-- <button type="button" class="btn btn-cancel" data-dismiss="modal" onclick="closeForm()">Cancel</button> -->
                   </div>
                 </div>
               </div>
