@@ -1,5 +1,5 @@
 var ctx = document.getElementById('lineid');
-var piechart = new Chart(ctx, {
+var linechart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
@@ -8,73 +8,51 @@ var piechart = new Chart(ctx, {
             label: '# of Votes',
             backgroundColor: "transparent",
             fill: 'false',
-            data: [1,2,3,4 ], 
+            data: [100,50,300,20,189,300,19], 
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-            ],
+                "#19B9FD",    
+                    ],
             borderWidth: 1
         },
     ]
     },
     options: {
+        layout: {
+            padding: {
+                left: 50,
+                right: 0,
+                top: 0,
+                bottom: 0
+            }
+        },
+
+        title:{
+            display: true,
+        },
         scales: {
+            bezierCurve : false,
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                min:0,
                   },
                   gridLines: {
                     display: false,
-                    color: "black"
                   }
               }],
   
               xAxes: [{
                 gridLines: {
                   display: false,
-                  color: "black"
                 }
-              }]
-  
+              }],
+                pointDot :false,
+                bezierCurve : false,
                 }
             
         
     }
+
 });
-
-
-// var myChart = new Chart(ctx, {
-//     type: 'bar',
-//     data: {
-//         labels: ["Chocolate", "Vanilla", "Strawberry"],
-//         datasets: [
-//             {
-//                 label: "Blue",
-//                 backgroundColor: "blue",
-//                 data: [3,7,4]
-//             },
-//             {
-//                 label: "Red",
-//                 backgroundColor: "red",
-//                 data: [4,3,5]
-//             },
-//             {
-//                 label: "Green",
-//                 backgroundColor: "green",
-//                 data: [7,2,6]
-//             }
-//         ]
-//     },
-//     options: {
-//         barValueSpacing: 20,
-//         scales: {
-//             yAxes: [{
-//                 ticks: {
-//                     min: 0,
-//                 }
-//             }]
-//         }
-//     }
-// });
 
 
 //get the bar chart canvas
@@ -87,19 +65,19 @@ var myChart = new Chart(ctx, {
           {
             label: 'Exit',
             data: ['',100000, '', 250000, '', 300000, '', 57000],
-            backgroundColor: "green",
+            backgroundColor: "#7AEF1F",
             borderWidth: 0.5
           },
           {
             label: 'Investment',
             data: ['',800000, '', 600000, '', 400000, '', 200000],
-            backgroundColor: "blue",
+            backgroundColor: "#19B9FD",
             borderWidth: 0.5
           }
         ] 
     },
     options: {
-        barValueSpacing: 20,
+        barValueSpacing: 1,
         scales: {
             yAxes: [{
                 ticks: {
@@ -113,7 +91,7 @@ var myChart = new Chart(ctx, {
                 gridLines: {
                     display: false,
                 categoryPercentage: 1.0,
-                barPercentage: 1.0
+                barPercentage: 0.5
                 }
             }]
         }
@@ -169,12 +147,12 @@ var myChart = new Chart(ctx, {
         labels: ['success'],
         datasets: [{
             label: 'Customer success',
-            data: [100],
+            data: ['100'],
             backgroundColor: [
-                'rgba(54, 162, 235, 0.2)',
+                '#19B9FD',
             ],
             borderColor: [
-                'rgba(54, 162, 235, 1)',
+                '#19B9FD',
             ],
             borderWidth: 1
         }]
