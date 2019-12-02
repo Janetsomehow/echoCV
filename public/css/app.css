@@ -2313,6 +2313,32 @@ textarea.form-control.is-valid {
   color: #e3342f;
 }
 
+@media (max-width: 425px){
+  .forget-link{
+    position: relative !important;
+    left: 6.7rem !important;
+  }
+  .btn-signin{
+    width: 90.5% !important;
+  }
+}
+
+@media (max-width: 375px){
+  .forget-link{
+    position: relative !important;
+    left: 3.8rem !important;
+  }
+}
+
+@media (max-width: 320px){
+  .forget-link{
+    position: relative !important;
+    left: .65rem !important;
+  }
+}
+
+
+
 .invalid-tooltip {
   position: absolute;
   top: 100%;
