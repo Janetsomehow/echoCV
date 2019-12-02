@@ -29,13 +29,23 @@ html {
   cursor: pointer;
 }
 
-.newrep {
-  display: flex;
-  flex-direction: column;
-  margin-left: 16rem;
-  margin-top: 5rem;
+/* .newrep {
+  position: relative;
+  width: 26vw;
+  height: 15rem;
+  left: 23vw;
+  top: 20vh;
+  right: 30vw;
+} */
 
-  /* justify-content: center; */
+
+.newrep {
+  position: relative;
+  width: 35vw;
+  height: 15rem;
+  left: 13vw;
+  top: 20vh;
+  right: 25vw;
 }
 
 .newrep img {
@@ -70,7 +80,7 @@ h3.centreCon {
   line-height: 18px;
   text-align: center;
   letter-spacing: 0.05em;
-  margin-left: 6.5vw;
+  margin-left: 12vw;
   /* background: linear-gradient(180deg, #2E7CFF 0%, #1B63DC 100%); */
   border-radius: 4px;
 }
@@ -182,7 +192,7 @@ div.widget-wrapper {
   color: #333;
 }
 
-.formG {
+.newMetr .formG {
   display: flex;
   justify-content: space-around;
 }
@@ -339,16 +349,26 @@ td img {
   display: none;
 }
 
+.conForm {
+  border: 0px solid #AAAAAA;
+  border-bottom: 1px solid #ccc;
+  border-radius:0;
+
+  }
+
+/* For modal */
+  .modal-backdrop
+{
+    opacity:0.5 !important;
+}
+
 /* ----------------------- Mobile ----------------------*/
+
 @media (max-width: 1100px){
   .wholeContent {
     left: 12rem;
     width: 79vw;
     margin-right: 0;
-  }
-
-  .newMetr .formG {
-    display: block;
   }
 
   .formMett, div.custom {
@@ -374,6 +394,10 @@ td img {
 
   .header {
     width: 73vw;
+  }
+
+  .newMetr .formG {
+    display: block;
   }
 
   div.widget-wrapper {
@@ -467,7 +491,8 @@ form.searchReport {
 
 .bigSe {
   display: block;
-  /* margin-bottom: 1rem; */
+  width: 85vw;
+  margin-right: : 1rem;
 }
 
 .smallSe {
@@ -488,29 +513,57 @@ form.searchReport {
   top: -0.7rem;
 }
 
+.newrep {
+  position: absolute;
+  width: 70vw;
+  height: 15rem;
+  left: 15vw;
+  right: 15vw;
+  /* margin-left: 4vw; */
+  top: 20vh;
+  /* right: 5vw */
+}
+
+.newrep .searchContact {
+  margin-left: 18vw;
+}
 
 .tdOthers {
   display: none;
 }
 
+#mySearchableData {
+  width: 90vw !important;
+  border: 0;
+}
+
 .tdName {
   display: flex;
-  width: 70vw;
+  width: 60vw;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.tdTag {
+border-left: 0;
+border-bottom: 0 solid #ddd;
 }
 
 .mobileBtn {
   display: block;
   float: right;
   font-size: 3rem;
+  /* font-weight: bolder; */
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
   color: #999;
-  margin-right: 1.2rem;
-  line-height: 2rem;
-  padding-right: 2.5rem;
+  margin-right: 1.5rem;
+  line-height: 1rem;
+  padding: 0.5rem 0.3rem 1rem 0.3rem;
   position: sticky;
-  bottom: 5vh
+  bottom: 5vh;
+
 }
 
 
@@ -549,7 +602,7 @@ form.searchReport {
   .text-contact{
     width: 90%;
     text-align: center;
-    margin-left: 1rem;  
+    margin-left: 1rem;
     font-size: 1rem !important;
   }
 }
