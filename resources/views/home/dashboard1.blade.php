@@ -1,10 +1,9 @@
 @extends('layouts.sidbar')
 
 @section('content')
+<section class="chart-container">
 <div>
-<div>
-<a href="#"><p>Dashboard 1</p></a>
-<p style="text-align:left;"><a href="#">Dashboard 2</a></p>
+<p>Dashboard 1</p>
 <div style="text-align:right;">
 <input type="submit" class="btn btn-primary" name="Add chart" />
 <button>share</button>
@@ -12,9 +11,11 @@
 </div>
 <hr>
 <div>
-<canvas id="barChart"></canvas>
-<canvas id="pieChart" width="299" height="250"></canvas>
-<canvas id="lineid"></canvas>
+<canvas id="barchart" width="130" height="90"></canvas>
+<canvas id="lineid" width="130" height="90"></canvas>
+<div>
+<canvas id="piechart" width="90" height="40"></canvas>
 </div>
 </div>
+</section>
 @stop
