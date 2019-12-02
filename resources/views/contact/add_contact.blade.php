@@ -30,9 +30,9 @@
     <section class="onboard">
         <div class="rep">Contacts</div>
         <div class="newrep">
-          <img src="{{ asset('css/icons/contactcentre.png') }}" />
+          <img src="{{ asset('css/icons/contactcentre.png') }}" class="mx-auto d-block" />
           <h3 class="centreCon">Contacts</h3>
-          <p>Add contacts to make sharing easier. You can also use tags
+          <p class="text-contact">Add contacts to make sharing easier. You can also use tags
             for easier grouping</p>
             <button type="button" class="btn btn-primary searchContact" data-toggle="modal" data-target="#myModal" id="open">Create Contact</button>
 

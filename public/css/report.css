@@ -263,6 +263,12 @@ div.custom {
   position: relative;
 }
 
+.btn-contact{
+  width: 10rem;
+  position: relative;
+  left: 13%;
+}
+
 .formMett .btn:hover {
   background: #eeeeee;
 }
@@ -534,13 +540,13 @@ form.searchReport {
 .tdName {
   display: flex;
   width: 60vw;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-right: 0;
+  border-bottom: 0;
 }
 
 .tdTag {
-border-left: 1px solid #ddd;
-border-bottom: 1px solid #ddd;
+border-left: 0;
+border-bottom: 0 solid #ddd;
 }
 
 .mobileBtn {
@@ -575,17 +581,28 @@ border-bottom: 1px solid #ddd;
 /* Mobile */
 
 
-@media (max-width:992px) {
-  .sidebar{
-		/* width: 5rem; */
-	}
-}
-
-@media (max-width: 860px) {
-  .sidebar{
-	}
-}
-
-@media(max-width:767px) {
-
+@media (max-width: 425px){
+  .newrep{
+    margin: 0;
+    margin-left: -4.05rem;
+    margin-top: 5rem;
+  }
+  .onboard{
+    margin: 0 auto;
+  }
+  .btn-report{
+    position: relative !important;
+    left: 0 !important;
+  }
+  .btn-contact{
+    width: 10rem;
+    position: relative;
+    left: 15%;
+  }
+  .text-contact{
+    width: 90%;
+    text-align: center;
+    margin-left: 1rem;
+    font-size: 1rem !important;
+  }
 }
