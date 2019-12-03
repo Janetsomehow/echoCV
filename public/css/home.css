@@ -67,4 +67,40 @@
   font-family: Europa;
 
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 7px;
+  background: #FFFFFF;
+    padding: 20px;
+}
 
+.grid-container > div {
+  background: #FFFFFF;
+  border: 1px solid #F4F4F4;
+  text-align: center;
+  font-size: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px #E7E4E2;
+  border-radius: 4px;
+  border: 0.75px solid #E5E5E5;
+  text-align: left;
+}
+@media only screen and (max-width: 500px) {
+	.grid-container {
+		grid-template-columns: auto;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.grid-container {
+		grid-template-columns: auto auto;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.grid-container {
+		grid-template-columns: auto auto auto;
+	}
+}

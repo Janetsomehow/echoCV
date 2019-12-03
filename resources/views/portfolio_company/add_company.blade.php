@@ -7,10 +7,11 @@
 <div class="mt-4">
   <div class="row justify-content-center">
   <div class="col-md-8">
-<form action="" method="post">
+<form action="companies.store" method="post">
+@csrf
               <label for="name">Company Name</label>
     <input type="text" class="form-control" id="companyname">
-    <label for="web">Company Website</label>
+    <label for="website">Company Website</label>
     <input type="text" class="form-control" id="companyweb">
               <div class="bigSe">
                 <div>
@@ -35,10 +36,10 @@
                 </div>
 
               <label for="tags">Tags</label>
-    <input type="text" class="form-control" id="companyname" placeholder="type in one or more tags to select"><br>
+    <input type="text" class="form-control" name="tags" placeholder="type in one or more tags to select"><br>
               <div class="form-row">
    <div class="col-6">
-       <label for="First Name">Fund Stage</label><br>
+       <label for="Fund_stage">Fund Stage</label><br>
        <select class="form-control" name="">
                     <option value=""></option>
                     <option value="First">First</option>
@@ -47,7 +48,7 @@
                   </select>   </div>
    
     <div class="col-6">
-       <label for="Last Name">Investment Status</label><br>
+       <label for="inv_status">Investment Status</label><br>
        <select class="form-control" name="">
                     <option value=""></option>
                     <option value="First">First</option>
@@ -55,13 +56,13 @@
                     <option value="Third">Third</option>
                   </select><br>   </div>
    <div class="col-6">
-       <label for="First Name">Lead</label><br>
-       <input type="text" class="form-control">
+       <label for="lead">Lead</label><br>
+       <input type="text" class="form-control" name="lead">
    </div>
    
     <div class="col-6">
-       <label for="Last Name">Analyst</label><br>
-       <input type="text" class="form-control"><br>
+       <label for="analyst">Analyst</label><br>
+       <input type="text" class="form-control" name="analyst"><br>
    </div>
                <input type="submit" name="submit" value="Save" class="btn btn-primary btns">
             <input type="submit" name="submit" value="Cancel" class="btn btn-default btns btnCancel">

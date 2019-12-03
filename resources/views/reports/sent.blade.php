@@ -25,8 +25,7 @@
 
         <section class="header">
           <div class="rep">Reports</div>
-            <a href="/new" class="btn btn-primary repTopBtn">New Report</a>
-          <!-- <button type="button" name="button" class="btn btn-primary">New Report</button> -->
+          <a href="/new_report" class="btn btn-primary searchContact repTopBtn">New Report</a>
         </section>
         <form class="searchReport" action="" method="post">
           <input type="text" class="form-control form-group repSearch" placeholder="Search reports">
