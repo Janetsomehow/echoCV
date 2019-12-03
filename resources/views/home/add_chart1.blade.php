@@ -1,8 +1,8 @@
 @extends('layouts.sidbar')
 
 @section('content')
-<div class="row"> 
- <div col-sm-8>
+<div class="grid-container"> 
+ <div class="col-lg">
  <canvas id="barchart"></canvas>
  </div>
 
