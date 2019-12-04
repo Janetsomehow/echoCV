@@ -60,7 +60,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-12 col-sm-12">
-                                <button type="submit" style="width: 29.2rem" class="btn btn-lg btn-signin btn-block btn-primary">
+                                <button type="submit" style="width: 41rem" class="btn btn-lg btn-signin btn-block btn-primary">
                                     {{ __('Sign in') }}
                                 </button>
 
