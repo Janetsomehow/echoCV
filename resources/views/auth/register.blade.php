@@ -7,17 +7,17 @@
             <div class="card">
            
 
-                <div class="card-body">
-                <h3 class="ml-"> {{ __('Register') }} </h3>
+                <div class="card-body ">
+                <h3 class="ml-1"> {{ __('Register') }} </h3>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
 
 
-                        <div class="form-group ml-n3 col-md-12 row">    
+                        <div class="form-group ml-n4 col-md-12 row">    
                             <div class="col-md-6">
                                 <label for="name" >{{ __('First name') }}</label>
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" style="width: 100%" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -38,13 +38,13 @@
                                 </div>
                         </div>
 
-                        <div class="form-group col-md-12 row">
+                        <div class="form-group col-md-12 ml-n4 row">
                           
 
                             <div class="col-md-12">
-                                 <label for="email">{{ __('E-Mail Address') }}</label>
+                                 <label for="email">{{ __('Email Address') }}</label>
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-                                <small> A verification mail will be sent to this email address </small>
+                                <small style="color:#888888;"> A verification mail will be sent to this email address </small>
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -53,7 +53,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-md-12 row">
+                        <div class="form-group ml-n4 col-md-12 row">
                            
                             <div class="col-md-6">
                                 <label for="password" class="">{{ __('Password') }}</label>
@@ -76,9 +76,9 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                            <div class="col-md-6 offset-md-3 ">
+                                <button type="submit" class="btn btn-block btn-register  mr-4 btn-primary" >
+                                    {{ __('Create Account') }}
                                 </button>
                             </div>
 
@@ -89,6 +89,10 @@
                         </div>
                     </form>
                 </div>
+                
+            </div>
+            <div class="d-flex justify-content-center mt-2">
+                <small style="color: #666666;"> Already have an account? <a href=" {{ route('login') }}" > Sign in </a> </small>
             </div>
         </div>
     </div>

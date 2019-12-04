@@ -73,7 +73,7 @@
             </div>
             
             <div class="d-flex justify-content-center mt-1">    
-                <p> Don't have an account yet? <a href="#"> Create One </a> </p>
+                <small> Don't have an account yet? <a href="{{ route('register') }}"> Create One </a> </small>
             </div>
         </div>
     </div>
