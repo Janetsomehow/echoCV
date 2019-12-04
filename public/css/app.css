@@ -2313,27 +2313,41 @@ textarea.form-control.is-valid {
   color: #e3342f;
 }
 
-@media (max-width: 425px){
+
+@media (max-width: 768px){
   .forget-link{
-    position: relative !important;
-    left: 6.7rem !important;
+    margin-left: -5.7rem !important;
   }
   .btn-signin{
-    width: 90.5% !important;
+    width: 23.8rem !important ;
   }
 }
+
+@media (max-width: 425px){
+  .forget-link{
+    margin-left: -7.5rem !important ;
+  }
+  .btn-signin{
+    width: 21.9rem !important;
+  }
+}
+
 
 @media (max-width: 375px){
   .forget-link{
-    position: relative !important;
-    left: 3.8rem !important;
+    margin-left: -10.5rem !important;
+  }
+  .btn-signin{
+    width: 19rem !important;
   }
 }
 
-@media (max-width: 320px){
+@media (max-width: 320px ) {
   .forget-link{
-    position: relative !important;
-    left: .65rem !important;
+    margin-left: -13.8rem !important;
+  }
+  .btn-signin{
+    width: 15.8rem !important;
   }
 }
 

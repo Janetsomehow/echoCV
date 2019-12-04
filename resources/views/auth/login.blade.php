@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-5 pt-5">
     <div class="row d-flex justify-content-center">
-        <div class="col-md-6 ">
+        <div class="col-md-8 col-sm-6 ">
             <div class="card">
               
                 <div class="card-body">
@@ -30,7 +30,7 @@
                             <label for="password" class="">
                             {{ __('Password') }}
                             @if (Route::has('password.request'))
-                                    <a class=" forget-link" style="position: relative; left: 15rem" href="{{ route('password.request') }}" >
+                                    <a class=" forget-link" style="position: relative; left: 16rem" href="{{ route('password.request') }}" >
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
