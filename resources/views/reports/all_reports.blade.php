@@ -33,6 +33,27 @@
 
         <section class="message">
 
+          <div class="container-fluid" style="background:#efefef; height:2rem; width:100vw; top:13.5rem; position:relative">
+            <div class="row ">
+              <div class="col-sm-1 mt-1 ml-3">
+                <a href="#" style="color:#000; font-size:0.7rem; padding-top:0.1rem; font-weight:600">ALL</a>
+              </div>
+              <div class="col-sm-1 mt-1">
+                <a href="#" style="color:#000; font-size:0.7rem; padding-top:0.1rem; font-weight:600">SENT</a>
+              </div>
+              <div class="col-sm-1 mt-1">
+                <a href="#" style="color:#000; font-size:0.7rem; padding-top:0.1rem; font-weight:600">RECEIVED</a>
+              </div>
+              <div class="col-sm-1 mt-1">
+                <a href="#" style="color:#000; font-size:0.7rem; padding-top:0.1rem; font-weight:600">SCHEDULED</a>
+              </div>
+              <div class="col-sm-1 mt-1">
+                <a href="#" style="color:#000; font-size:0.7rem; padding-top:0.1rem; font-weight:600">DRAFT</a>
+              </div>
+            </div>
+          </div>
+
+
 
         <div class="widget-wrapper container-fluid" style="padding:0; margin:0">
           <div class="section-wrap-b table-responsive">
@@ -47,13 +68,13 @@
                 <td>PHONE NUMBER</td>
                 <td>TAGS</td>
               </thead> -->
-              <thead>
+              <thead style="background:transparent; color:transparent">
                 <td></td>
-                <td><a href="#">All</a></td>
-                <td><a href="#">Sent</a></td>
-                <td><a href="#">Received</a></td>
-                <td><a href="#">Scheduled</a></td>
-                <td>TAGS</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </thead>
 
               <tbody>
