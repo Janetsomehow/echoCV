@@ -33,22 +33,30 @@
 
         <section class="message">
 
-          <div class="container-fluid" style="background:#efefef; height:2rem; width:100vw; top:13.5rem; position:relative">
-            <div class="row ">
-              <div class="col-sm-1 mt-1 ml-3">
-                <a href="#" style="color:#000; font-size:0.7rem; padding-top:0.1rem; font-weight:600">ALL</a>
+          <div class="container-fluid reportStatus">
+            <div class="row">
+              <div class="col-sm-1 ml-3 reportAction">
+                <a href="#">ALL</a>
               </div>
-              <div class="col-sm-1 mt-1">
-                <a href="#" style="color:#000; font-size:0.7rem; padding-top:0.1rem; font-weight:600">SENT</a>
+              <div class="col-sm-2 reportAction">
+                <a href="#">
+                  <img src="{{ asset('css/icons/repSent.png') }}" style="margin-right:0.3rem;">SENT
+                </a>
               </div>
-              <div class="col-sm-1 mt-1">
-                <a href="#" style="color:#000; font-size:0.7rem; padding-top:0.1rem; font-weight:600">RECEIVED</a>
+              <div class="col-sm-2 reportAction">
+                <a href="#">
+                  <img src="{{ asset('css/icons/repRec.png') }}" style="margin-right:0.3rem;">RECEIVED
+                </a>
               </div>
-              <div class="col-sm-1 mt-1">
-                <a href="#" style="color:#000; font-size:0.7rem; padding-top:0.1rem; font-weight:600">SCHEDULED</a>
+              <div class="col-sm-2 reportAction">
+                <a href="#">
+                  <img src="{{ asset('css/icons/repSch.png') }}" style="margin-right:0.3rem;">SCHEDULED
+                </a>
               </div>
-              <div class="col-sm-1 mt-1">
-                <a href="#" style="color:#000; font-size:0.7rem; padding-top:0.1rem; font-weight:600">DRAFT</a>
+              <div class="col-sm-2 reportAction">
+                <a href="#">
+                  <img src="{{ asset('css/icons/repDra.png') }}" style="margin-right:0.3rem;">DRAFT
+                </a>
               </div>
             </div>
           </div>
@@ -74,138 +82,121 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
               </thead>
 
               <tbody>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Tiger Nixon">T. Nixon</td>
               <td>System Architect</td>
               <td>Edinburgh</td>
               <td>61</td>
-              <td data-order="1303689600">Mon 25th Apr 11</td>
-              <td data-order="320800">$320,800/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Garrett Winters">G. Winters</td>
               <td>Accountant</td>
               <td>Tokyo</td>
               <td>63</td>
-              <td data-order="1311552000">Mon 25th Jul 11</td>
-              <td data-order="170750">$170,750/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Ashton Cox">A. Cox</td>
               <td>Junior Technical Author</td>
               <td>San Francisco</td>
               <td>66</td>
-              <td data-order="1231718400">Mon 12th Jan 09</td>
-              <td data-order="86000">$86,000/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Cedric Kelly">C. Kelly</td>
               <td>Senior Javascript Developer</td>
               <td>Edinburgh</td>
               <td>22</td>
-              <td data-order="1332979200">Thu 29th Mar 12</td>
-              <td data-order="433060">$433,060/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Tiger Nixon">T. Nixon</td>
               <td>System Architect</td>
               <td>Edinburgh</td>
               <td>61</td>
-              <td data-order="1303689600">Mon 25th Apr 11</td>
-              <td data-order="320800">$320,800/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Tiger Nixon">T. Nixon</td>
               <td>System Architect</td>
               <td>Edinburgh</td>
               <td>61</td>
-              <td data-order="1303689600">Mon 25th Apr 11</td>
-              <td data-order="320800">$320,800/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Garrett Winters">G. Winters</td>
               <td>Accountant</td>
               <td>Tokyo</td>
               <td>63</td>
-              <td data-order="1311552000">Mon 25th Jul 11</td>
-              <td data-order="170750">$170,750/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Ashton Cox">A. Cox</td>
               <td>Junior Technical Author</td>
               <td>San Francisco</td>
               <td>66</td>
-              <td data-order="1231718400">Mon 12th Jan 09</td>
-              <td data-order="86000">$86,000/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Cedric Kelly">C. Kelly</td>
               <td>Senior Javascript Developer</td>
               <td>Edinburgh</td>
               <td>22</td>
-              <td data-order="1332979200">Thu 29th Mar 12</td>
-              <td data-order="433060">$433,060/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Tiger Nixon">T. Nixon</td>
               <td>System Architect</td>
               <td>Edinburgh</td>
               <td>61</td>
-              <td data-order="1303689600">Mon 25th Apr 11</td>
-              <td data-order="320800">$320,800/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Tiger Nixon">T. Nixon</td>
               <td>System Architect</td>
               <td>Edinburgh</td>
               <td>61</td>
-              <td data-order="1303689600">Mon 25th Apr 11</td>
-              <td data-order="320800">$320,800/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Garrett Winters">G. Winters</td>
               <td>Accountant</td>
               <td>Tokyo</td>
               <td>63</td>
-              <td data-order="1311552000">Mon 25th Jul 11</td>
-              <td data-order="170750">$170,750/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Ashton Cox">A. Cox</td>
               <td>Junior Technical Author</td>
               <td>San Francisco</td>
               <td>66</td>
-              <td data-order="1231718400">Mon 12th Jan 09</td>
-              <td data-order="86000">$86,000/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Cedric Kelly">C. Kelly</td>
               <td>Senior Javascript Developer</td>
               <td>Edinburgh</td>
               <td>22</td>
-              <td data-order="1332979200">Thu 29th Mar 12</td>
-              <td data-order="433060">$433,060/y</td>
             </tr>
             <tr>
+              <td><input type="checkbox" name="" value=""></td>
               <td data-search="Tiger Nixon">T. Nixon</td>
               <td>System Architect</td>
               <td>Edinburgh</td>
               <td>61</td>
-              <td data-order="1303689600">Mon 25th Apr 11</td>
-              <td data-order="320800">$320,800/y</td>
             </tr>
             <tfoot>
             <tr>
-              <th>Name</th>
-              <th>Position</th>
-              <th>Office</th>
-              <th>Age</th>
-              <th>Start date</th>
-              <th>Salary</th>
+              <th>N</th>
+              <th>P</th>
+              <th>O</th>
+              <th>A</th>
+              <th>A</th>
             </tr>
           </tfoot>
               </tbody>

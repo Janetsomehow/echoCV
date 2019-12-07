@@ -85,6 +85,36 @@ h3.centreCon {
   border-radius: 4px;
 }
 
+.reportStatus {
+   background:#efefef;
+   height:2rem;
+   width:100vw;
+   top:13.5rem;
+   position:relative;
+}
+
+.reportAction {
+  /* width: 11vw; */
+  max-width: 11vw;
+  height: 100%;
+  height: 2rem;
+}
+
+.reportAction a {
+  color:#000;
+  font-size:0.7rem;
+  padding-top:0.5rem;
+  font-weight:600;
+  max-width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.reportAction:hover {
+  background: #ccc;
+  color:#fff;
+}
+
 /* For received and sent reports */
 .wholeContent {
   position: absolute;

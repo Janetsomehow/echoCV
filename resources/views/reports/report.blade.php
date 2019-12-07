@@ -28,9 +28,9 @@
           <div class="text-center">
             <h3 class="text-center">Create a report</h3>
             <p class="text-center">Create and send out custom reports to your contacts and portfolio companies</p>
-            <button href="/new_report" class="btn btn-primary btn-report" style="position: relative; left: -3.5rem">New Report</button>
+            <a href="/new_report" class="btn btn-primary btn-report" style="position: relative; left: -3.5rem">New Report</a>
           </div>
-      
+
         </div>
       </section>
 
