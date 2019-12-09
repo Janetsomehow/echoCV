@@ -17,6 +17,10 @@ var linechart = new Chart(ctx, {
     ]
     },
     options: {
+        responsive:true,
+        legend:{
+            display: false
+        },
         layout: {
             padding: {
                 left: 50,
@@ -46,7 +50,7 @@ var linechart = new Chart(ctx, {
                 }
               }],
                 pointDot :false,
-                bezierCurve : false,
+                bezierCurve : true,
                 }
             
         

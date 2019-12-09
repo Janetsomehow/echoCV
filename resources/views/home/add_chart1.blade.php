@@ -1,3 +1,5 @@
+@extends('layouts.empty-sidbar')
+
 @section('content')
 <div class="container">
     <div class="row"> 
