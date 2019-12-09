@@ -42,14 +42,14 @@ html {
 .newrep {
   position: relative;
   width: 35vw;
-  height: 15rem;
-  left: 13vw;
+  height: 35vh;
+  left: 18vw;
   top: 20vh;
-  right: 25vw;
+  /* right: 25vw; */
 }
 
 .newrep img {
-  width: 100%;
+  width: 30vw;
   height: 100%;
   cursor: pointer;
 }
@@ -57,7 +57,7 @@ html {
 .newrep h3 {
   text-align: center;
   font-family: 'nunito';
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 36px;
   margin-top: -1.5rem;
@@ -69,10 +69,11 @@ h3.centreCon {
 }
 
 .newrep p {
-  font-size: 0.8rem;
-  line-height: 18px;
+  font-size: 1rem;
+  /* line-height: 18px; */
   text-align: center;
   color: #666666;
+  font-weight: 550;
 }
 
 .newrep .btn {
@@ -386,11 +387,45 @@ td img {
 
   }
 
+  .tdName, .tdOthers {
+    width: 18vw;
+  }
+
+  td {
+    border: 0px solid #AAAAAA !important;
+  }
+
+  td.tdName img {
+    font-weight: 650;
+  }
+
+  .tdTags {
+    background: #b5dcf5;
+    color: #1A73E8;
+    display: flex;
+    justify-content: center;
+    width: 4vw;
+    /* height: 2vh; */
+    margin-left: 1vw;
+    border-radius: 5px;
+    font-size: 1vw;
+    font-weight: 550;
+    margin-top: 0.5rem;
+    padding: 0 auto 5px;
+  }
+
+  .display::after {
+    margin-bottom: 2rem;
+  }
+
+
 /* For modal */
   .modal-backdrop
 {
-    opacity:0.5 !important;
+    opacity:0.2 !important;
 }
+
+
 
 /* ----------------------- Mobile ----------------------*/
 
@@ -414,6 +449,7 @@ td img {
     width: 79vw;
   }
 }
+
 
 @media (max-width: 920px){
   .wholeContent {
@@ -544,14 +580,28 @@ form.searchReport {
 }
 
 .newrep {
-  position: absolute;
-  width: 70vw;
+  /* position: absolute; */
+  width: 80vw;
   height: 15rem;
-  left: 15vw;
-  right: 15vw;
+  left: 10vw;
+  right: 10vw;
   /* margin-left: 4vw; */
-  top: 20vh;
+  top: 7vh;
   /* right: 5vw */
+}
+
+.newrep img {
+  /* position: absolute; */
+  width: 90%;
+  height: 90%;
+}
+
+.newrep h3 {
+  font-size: 1.7rem;
+}
+
+.newrep p {
+  font-size: 0.8rem;
 }
 
 .newrep .searchContact {
@@ -621,8 +671,8 @@ border-bottom: 0 solid #ddd;
     margin: 0 auto;
   }
   .btn-report{
-    position: relative !important;
-    left: 0 !important;
+    /* position: relative !important;
+    left: 0 !important; */
   }
   .btn-contact{
     width: 10rem;
@@ -633,6 +683,10 @@ border-bottom: 0 solid #ddd;
     width: 90%;
     text-align: center;
     margin-left: 1rem;
-    font-size: 1rem !important;
+    /* font-size: 1rem !important; */
+  }
+
+  .newrep .btn {
+    margin-left: 21vw;
   }
 }
