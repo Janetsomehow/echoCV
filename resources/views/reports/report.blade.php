@@ -18,23 +18,27 @@
 
   </head>
   <body>
-    <div class="wrapper">
 
-  @include('layouts.sidebar')
-    </div>
 
     <section class="onboard">
         <div class="rep">Reports</div>
-        <div class="newrep">
-          <img src="{{ asset('css/icons/group.png') }}" class="img-fluid" alt="Responsive image">
+        <div class="newrep ">
+          <img src="{{ asset('css/icons/group.png') }}" class="mx-auto d-block" alt="Responsive image">
           <!-- <img src="{{ asset('css/icons/group.png') }}" /> -->
-          <h3>Create a report</h3>
-          <p>Create and send out custom reports to your contacts
-            and portfolio companies</p>
-          <input type="button" name="button" class="btn btn-primary" value="New Report" />
-          <a href="/new" class="btn btn-primary">New Report</a>
+          <div class="text-center">
+            <h3 class="text-center">Create a report</h3>
+            <p class="text-center">Create and send out custom reports to your contacts and portfolio companies</p>
+            <button href="/new_report" class="btn btn-primary btn-report" style="position: relative; left: -3.5rem">New Report</button>
+          </div>
+      
         </div>
       </section>
+
+
+      <div class="wrapper">
+
+    @include('layouts.sidebar')
+      </div>
 
     </body>
 </html>

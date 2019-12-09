@@ -25,24 +25,15 @@
 
         <section class="header">
           <div class="rep">Reports</div>
-            <a href="/new" class="btn btn-primary">New Report</a>
-          <!-- <button type="button" name="button" class="btn btn-primary">New Report</button> -->
+          <a href="/new_report" class="btn btn-primary searchContact repTopBtn">New Report</a>
         </section>
         <form class="searchReport" action="" method="post">
           <input type="text" class="form-control form-group repSearch" placeholder="Search reports">
           <button type="button" name="button"><img src={{ asset('css/icons/grsearch.png') }} alt=""></button>
         </form>
         <section class="message">
-          <div class="">
 
-          </div>
-          <div class="title">
-
-          </div>
-          <div class="content">
-
-          </div>
-          <div class="table">
+          <div class="table table-responsive">
 
             <table class="table table-responsive table stripped">
               <thead>

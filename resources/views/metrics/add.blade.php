@@ -18,10 +18,6 @@
   </head>
   <body>
 
-    <div class="wrapper">
-
-  @include('layouts.sidebar')
-    </div>
       <main class="wholeContent">
 
         <section class="header">
@@ -35,12 +31,14 @@
           <input type="text" class="form-control form-group" placeholder="Search for metric">
           <button type="button" name="button"><img src={{ asset('css/icons/grsearch.png') }} /></button>
         </form>
+
         <section class="newMetr">
           <div class="newData">
             <a href="#"class="">+ New data source</a>
           </div><hr>
           <div>Google Sheets<a class="metricDel" href="#" style="display:none"><img src={{ asset('css/icons/metricdel.png') }} /></a>
           </div>
+
 
           <form class="" action="" method="post">
             <div class="forLabel">
@@ -58,6 +56,7 @@
                 <option value="Second">Second</option>
                 <option value="Third">Third</option>
               </select>
+
               <div class="bigSe">
                 <div class="">
                   <label for="">Select rows(date and time period)</label>
@@ -89,6 +88,12 @@
 
         </section>
       </main>
+
+
+            <div class="wrapper">
+
+          @include('layouts.sidebar')
+            </div>
 
   </body>
 </html>

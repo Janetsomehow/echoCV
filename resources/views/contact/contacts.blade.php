@@ -6,7 +6,7 @@
       <title>Contacts</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-      <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
       <!-- Styles -->
       <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
@@ -28,181 +28,164 @@
 
         <section class="header searchContact">
           <div class="rep">Contacts</div>
-          <a href="/add_contact" class="btn btn-primary searchContact">Create Contact</a>
+          <a href="/add_contact" class="btn btn-primary searchContact conTopBtn">Create Contact</a>
           <!-- <input type="submit" name="" class="btn btn-primary searchContact" value="Create Contact" /> -->
         </section>
-        <!-- <form class="searchReport" action="" method="post">
-          <input type="text" class="form-control form-group repSearch" placeholder="Search contacts">
-          <button type="button" name="button"><img src={{ asset('css/icons/grsearch.png') }} /></button>
-        </form> -->
         <section class="message">
 
-          <div class="tableHeader">
+        <div class="widget-wrapper container-fluid" style="padding:0; margin:0">
+          <div class="section-wrap-b table-responsive">
 
-          </div>
-          <!-- <div class="table"> -->
-
-
-        <div class="widget-wrapper">
-          <div class="section-wrap-b">
-
-            <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0" width="100%" style="margin-top:-0.5rem;">
+            <table id="mySearchableData" class="display table table-hover table-responsive" style="margin-top:-0.5rem; padding: 0 0.6rem;">
             <!-- <table class="table table-responsive table-stripped table-hover"> -->
               <thead>
                 <tr>
                   <td></td>
-                  <td>NAME</td>
-                  <td>COMPANY</td>
-                  <td>EMAIL</td>
-                  <td>PHONE NUMBER</td>
-                  <td>TAGS</td>
+                  <td class="tdOthers">NAME</td>
+                  <td class="tdOthers">COMPANY</td>
+                  <td class="tdOthers">EMAIL</td>
+                  <td class="tdOthers">PHONE NUMBER</td>
+                  <td class="tdOthers">TAGS</td>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Tiger Paul">Abram Paul</td>
-                  <td data-search="EchoCV">EchoCV</td>
-                  <td>abc.gthh@gmail.com</td>
-                  <td data-order="">2348056976975</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Abram Paul" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=AP" />Abram Paul</td>
+                  <td data-search="EchoCV" class="tdOthers">EchoCV</td>
+                  <td class="tdOthers">abc.gthh@gmail.com</td>
+                  <td data-order="" class="tdOthers">234856976975</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Abbey Lawal">Abbey Lawal</td>
-                  <td data-search="HNG Tech">HNG Tech</td>
-                  <td>abbey@hng.com</td>
-                  <td data-order="">234092287377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Abbey Lawal" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=AL" />Abbey Lawal</td>
+                  <td data-search="HNG Tech" class="tdOthers">HNG Tech</td>
+                  <td class="tdOthers">abbey@hng.com</td>
+                  <td data-order="" class="tdOthers">234092287377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="James Obi">James Obi</td>
-                  <td data-search="HNG Internship">HNG Internship</td>
-                  <td>careers@hngi.io</td>
-                  <td data-order="">234092287377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="James Obi" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=JO" />James Obi</td>
+                  <td data-search="HNG Internship" class="tdOthers">HNG Internship</td>
+                  <td class="tdOthers">careers@hngi.io</td>
+                  <td data-order="" class="tdOthers">234092287377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Tom Hary">Tom Hary</td>
-                  <td data-search="Zenith Pillars">Zenith Pillars</td>
-                  <td>teepay@yahoo.com</td>
-                  <td data-order="">234098575757</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Tom Hary" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=TH" />Tom Hary</td>
+                  <td data-search="Zenith Pillars" class="tdOthers">Zenith Pillars</td>
+                  <td class="tdOthers">teepay@yahoo.com</td>
+                  <td data-order="" class="tdOthers">234098575757</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun">Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah">Jingo & Sabainah</td>
-                  <td>jingo@jns.com</td>
-                  <td data-order="">234092287377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
+                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
+                  <td class="tdOthers">jingo@jns.com</td>
+                  <td data-order="" class="tdOthers">234092287377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wole Chukwunen">Wole Chukwunen</td>
-                  <td data-search="Oando Gadgets">Oando Gadgets</td>
-                  <td>wole.chukws@oando.xyz</td>
-                  <td data-order="">234092295862</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Wole Chukwunen" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WC" />Wole Chukwunen</td>
+                  <td data-search="Oando Gadgets" class="tdOthers">Oando Gadgets</td>
+                  <td class="tdOthers">wole.chukws@oando.xyz</td>
+                  <td data-order="" class="tdOthers">234092295862</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Janet Hassan">Janet Hassan</td>
-                  <td data-search="House of Whoops">House of Whoops</td>
-                  <td>beau.queen@aa.com</td>
-                  <td data-order="">234090123377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Janet Hassan" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=JH" />Janet Hassan</td>
+                  <td data-search="House of Whoops" class="tdOthers">House of Whoops</td>
+                  <td class="tdOthers">beau.queen@aa.com</td>
+                  <td data-order="" class="tdOthers">23490123377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun">Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah">Jingo & Sabainah</td>
-                  <td>jingo@jns.com</td>
-                  <td data-order="">234092287377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
+                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
+                  <td class="tdOthers">jingo@jns.com</td>
+                  <td data-order="" class="tdOthers">234092287377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Abdul John">Abdul John</td>
-                  <td data-search="Nuture">Nuture</td>
-                  <td>hr@nutns.com</td>
-                  <td data-order="">234075487377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Abdul John" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=AJ" />Abdul John</td>
+                  <td data-search="Nuture" class="tdOthers">Nuture</td>
+                  <td class="tdOthers">hr@nutns.com</td>
+                  <td data-order="" class="tdOthers">234075487377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun">Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah">Jingo & Sabainah</td>
-                  <td>jingo@jns.com</td>
-                  <td data-order="">234092287377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
+                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
+                  <td class="tdOthers">jingo@jns.com</td>
+                  <td data-order="" class="tdOthers">234092287377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun">Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah">Jingo & Sabainah</td>
-                  <td>jingo@jns.com</td>
-                  <td data-order="">234092287377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
+                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
+                  <td class="tdOthers">jingo@jns.com</td>
+                  <td data-order="" class="tdOthers">234092287377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun">Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah">Jingo & Sabainah</td>
-                  <td>jingo@jns.com</td>
-                  <td data-order="">234092287377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
+                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
+                  <td class="tdOthers">jingo@jns.com</td>
+                  <td data-order="" class="tdOthers">234092287377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun">Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah">Jingo & Sabainah</td>
-                  <td>jingo@jns.com</td>
-                  <td data-order="">234092287377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
+                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
+                  <td class="tdOthers">jingo@jns.com</td>
+                  <td data-order="" class="tdOthers">234092287377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun">Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah">Jingo & Sabainah</td>
-                  <td>jingo@jns.com</td>
-                  <td data-order="">234092287377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
+                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
+                  <td class="tdOthers">jingo@jns.com</td>
+                  <td data-order="" class="tdOthers">234092287377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun">Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah">Jingo & Sabainah</td>
-                  <td>jingo@jns.com</td>
-                  <td data-order="">234092287377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
+                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
+                  <td class="tdOthers">jingo@jns.com</td>
+                  <td data-order="" class="tdOthers">234092287377</td>
+                  <td class="tdOthers"></td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun">Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah">Jingo & Sabainah</td>
-                  <td>jingo@jns.com</td>
-                  <td data-order="">234092287377</td>
-                  <td></td>
+                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
+                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
+                  <td class="tdOthers">jingo@jns.com</td>
+                  <td data-order="" class="tdOthers">234092287377</td>
+                  <td class="tdOthers"></td>
                 </tr>
-            <!-- <tr>
-              <td data-search="Tiger Nixon">T. Nixon</td>
-              <td>System Architect</td>
-              <td>Edinburgh</td>
-              <td>61</td>
-              <td data-order="1303689600">Mon 25th Apr 11</td>
-              <td data-order="320800">$320,800/y</td>
-            </tr> -->
+
             <tfoot>
               <tr>
                 <td></td>
-                <td>NAME</td>
-                <td>COMPANY</td>
-                <td>EMAIL</td>
-                <td>PHONE NUMBER</td>
-                <td>TAGS</td>
+                <td class="tdOthers">NAME</td>
+                <td class="tdOthers">COMPANY</td>
+                <td class="tdOthers">EMAIL</td>
+                <td class="tdOthers">PHONE NUMBER</td>
+                <td class="tdOthers">TAGS</td>
               </tr>
             </tfoot>
           </tbody>
@@ -211,10 +194,94 @@
           </div>
         </div>
         </section>
+        <button type="button" class="btn btn-default mobileBtn" data-toggle="modal" data-target="#myModal" id="open">+</button>
+
         <br><br><br><br>
       </main>
-  <!-- </body>
-</html> -->
+
+
+
+
+
+
+<!-- Modal to create new contact -->
+      <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+
+
+              <h5 class="modal-title">Create Contact</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                    <div class="form-group col-md-12 mr-2 ml-2" style="display:flex; justify-content:space-between">
+                      <div class="fname">
+                        <!-- <label for="Name">First Name*:</label> -->
+                        <input type="text" class="form-control" name="name" id="name" required style="
+                        border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="First Name*">
+                      </div>
+                      <div class="lname">
+                          <!-- <label for="Name">Last Name*:</label> -->
+                          <input type="text" class="form-control" name="name" id="name" required style="
+                          border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Last Name">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="form-group col-md-12 mr-2 ml-2">
+                        <!-- <label for="Club">Email*:</label> -->
+                        <input type="email" class="form-control" name="club" id="email" required style="
+                        border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Email*">
+                      </div>
+                  </div>
+                  <div class="row">
+                     <div class="form-group col-md-12 mr-2 ml-2">
+                        <!-- <label for="Phone">Phone:</label> -->
+                        <input type="tel" class="form-control" name="country" id="country" style="
+                        border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Phone">
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12 mr-2 ml-2">
+                      <!-- <label for="Company">Company:</label> -->
+                      <input type="text" class="form-control" name="score" id="score" style="
+                      border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Company">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12 mr-2 ml-2">
+                      <!-- <label for="Title">Title:</label> -->
+                      <input type="text" class="form-control" name="score" id="score" style="
+                      border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Title">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12 mr-2 ml-2">
+                      <!-- <label for="Tags">Tags:</label> -->
+                      <input type="text" class="form-control" name="score" id="score" style="
+                      border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Tags">
+                    </div>
+                  </div>
+              </div>
+
+            </div>
+            <div class="modal-footer" style="justify-content:flex-start!important; padding:1.5rem!important">
+
+              <button type="submit" class="btn btn-save" style="background:#ddd; float:left!important">Save</button>
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- </form>
+      </div> -->
+
 
 
 
@@ -224,8 +291,6 @@
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
-<!-- EVERYTHING BELOW THIS YOU WILL NEED -->
 <script src="{{ asset('js/jquery.dataTables.js') }}" defer></script>
   </script>
 
