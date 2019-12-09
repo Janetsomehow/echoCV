@@ -20,6 +20,12 @@
     width: 100%;
 }
 
+/* For modal */
+  .modal-backdrop
+{
+    opacity:0.2 !important;
+}
+
 @media (max-width: 425px){
   .onboard{
     margin: 0 auto;
