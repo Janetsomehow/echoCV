@@ -11,7 +11,7 @@
 |
 */
 Route::get('/', function () { return view('auth.login'); });
-Route::get('/index', function () { return view('home.index'); });
+Route::get('/home', function () { return view('home.index'); });
 Route::get('/report', function () { return view('reports.report'); });
 Route::get('/new_report', function () { return view('reports.new_report'); });
 Route::get('/received', function () { return view('reports.received'); });
@@ -42,5 +42,5 @@ Route::get('/dashboard1', function () { return view('home.dashboard1'); });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('company', 'companyController');
