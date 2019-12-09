@@ -28,7 +28,7 @@
       </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="chartmodal" tabindex="-1" role="dialog" aria-labelledby="chartmodalLabel" aria-hidden="true">
+<div class="modal" id="chartmodal" tabindex="-1" role="dialog" aria-labelledby="chartmodalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -63,4 +63,3 @@
 
 </div>
 @stop
-
