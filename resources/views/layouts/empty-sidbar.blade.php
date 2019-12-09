@@ -20,7 +20,7 @@
 <body>
 
 <div class="wrapper">
-
+    
 
 
         @include('layouts.sidebar')

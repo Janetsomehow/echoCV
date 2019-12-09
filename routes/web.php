@@ -10,8 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/welcome', function () { return view('welcome'); });
-Route::get('/index', function () { return view('home.index'); });
+Route::get('/', function () { return view('auth.login'); });
+Route::get('/home', function () { return view('home.index'); });
 Route::get('/report', function () { return view('reports.report'); });
 Route::get('/new_report', function () { return view('reports.new_report'); });
 Route::get('/received', function () { return view('reports.received'); });
@@ -32,6 +32,8 @@ Route::get('/dashboard', function () { return view('home.dashboard'); });
 Route::get('/new_company', function () { return view('portfolio_company.new_company'); });
 Route::get('/add_company', function () { return view('portfolio_company.add_company'); });
 Route::get('/dashboard1', function () { return view('home.dashboard1'); });
+Route::get('/add_chart1', function () { return view('home.add_chart1'); });
+
 
 
 
@@ -40,6 +42,7 @@ Route::get('/dashboard1', function () { return view('home.dashboard1'); });
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('company', 'companyController');
+Route::resource('company_store', 'companyController');
 Route::resource('contact', 'ContactsController');
