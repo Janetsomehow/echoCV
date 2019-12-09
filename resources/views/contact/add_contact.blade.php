@@ -52,7 +52,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <div class="container">
+                  <div class="container">
                       <div class="row">
                           <div class="form-group col-md-12 mr-2 ml-2" style="display:flex; justify-content:space-between">
                             <div class="fname">
