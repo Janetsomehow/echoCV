@@ -43,6 +43,6 @@ Route::get('/add_chart1', function () { return view('home.add_chart1'); });
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('company_store', 'companyController');
 Route::resource('contact', 'ContactsController');
