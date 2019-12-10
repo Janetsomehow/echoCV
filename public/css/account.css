@@ -1,0 +1,73 @@
+
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+.account_header{
+    margin-left: 2.4rem;
+    margin-top: 2.4rem;
+    font-size: 1.7rem;
+}
+
+.side{
+    margin-top: 6rem;
+     margin-left: 6rem
+}
+
+.border-right{
+    min-height: 100vh !important;
+    margin-left: -3rem;
+}
+
+.list-group-item{
+    width: 12rem;
+    text-align: center;
+    border: none;
+}
+
+.profile-form{
+    margin-top: 6rem;
+}
+
+.btn-profile{
+    background: linear-gradient(180deg, #2E7CFF 0%, #1B63DC 100%, #1B63DC 100%) !important;
+    border-radius: 4px;
+    width: 6rem;
+}
+
+.profile-form a{
+    /* font-family: Europa; */
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+
+    color: #2E7CFF;
+
+}
+
+.upload{
+    margin-top: 8rem;
+    margin-left: 5rem;
+}
+.box{
+    background: #FFFFFF;
+    height: 7.625rem;
+    width: 7.625rem;
+    border: 1px solid #AAAAAA;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.btn-upload{
+    background: linear-gradient(359.75deg, #F5F6F9 10.29%, #FFFFFF 99.27%);
+/* secondary button border */
+
+    border: 1px solid #D5DCE6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 1rem;
+    width: 7.625rem;
+    color:  #333333;
+    font-size: .85rem;
+}
