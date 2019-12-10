@@ -25,10 +25,11 @@
   @include('layouts.sidebar')
     </div>
       <main class="wholeContent">
+        @include('inc.messages')
 
         <section class="header searchContact">
           <div class="rep">Contacts</div>
-          <a href="/add_contact" class="btn btn-primary searchContact conTopBtn">Create Contact</a>
+          <a href="/contact/add" class="btn btn-primary searchContact conTopBtn">Create Contact</a>
           <!-- <input type="submit" name="" class="btn btn-primary searchContact" value="Create Contact" /> -->
         </section>
         <section class="message">
@@ -36,253 +37,52 @@
         <div class="widget-wrapper container-fluid" style="padding:0; margin:0">
           <div class="section-wrap-b table-responsive">
 
-            <table id="mySearchableData" class="display table table-hover table-responsive" style="margin-top:-0.5rem; padding: 0 0.6rem;">
+            <table id="mySearchableData" class="display table table-hover table-responsive" style="margin-top:-0.5rem; padding: 0 0.6rem; width:100vw">
             <!-- <table class="table table-responsive table-stripped table-hover"> -->
-              <thead>
+              <thead style="width:100vw">
                 <tr>
                   <td></td>
                   <td class="tdOthers">NAME</td>
-                  <td class="tdOthers">COMPANY</td>
+                  <td class="tdCop">COMPANY</td>
                   <td class="tdOthers">EMAIL</td>
-                  <td class="tdOthers">PHONE NUMBER</td>
+                  <td class="tdOthers">PHONE</td>
                   <td class="tdOthers">TAGS</td>
+                  <td class="tdDel"></td>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Abram Paul" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=AP" />Abram Paul</td>
-                  <td data-search="EchoCV" class="tdOthers">EchoCV</td>
-                  <td class="tdOthers">abc.gthh@gmail.com</td>
-                  <td data-order="" class="tdOthers">234856976975</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Abbey Lawal" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=AL" />Abbey Lawal</td>
-                  <td data-search="HNG Tech" class="tdOthers">HNG Tech</td>
-                  <td class="tdOthers">abbey@hng.com</td>
-                  <td data-order="" class="tdOthers">234092287377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="James Obi" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=JO" />James Obi</td>
-                  <td data-search="HNG Internship" class="tdOthers">HNG Internship</td>
-                  <td class="tdOthers">careers@hngi.io</td>
-                  <td data-order="" class="tdOthers">234092287377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Tom Hary" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=TH" />Tom Hary</td>
-                  <td data-search="Zenith Pillars" class="tdOthers">Zenith Pillars</td>
-                  <td class="tdOthers">teepay@yahoo.com</td>
-                  <td data-order="" class="tdOthers">234098575757</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
-                  <td class="tdOthers">jingo@jns.com</td>
-                  <td data-order="" class="tdOthers">234092287377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wole Chukwunen" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WC" />Wole Chukwunen</td>
-                  <td data-search="Oando Gadgets" class="tdOthers">Oando Gadgets</td>
-                  <td class="tdOthers">wole.chukws@oando.xyz</td>
-                  <td data-order="" class="tdOthers">234092295862</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Janet Hassan" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=JH" />Janet Hassan</td>
-                  <td data-search="House of Whoops" class="tdOthers">House of Whoops</td>
-                  <td class="tdOthers">beau.queen@aa.com</td>
-                  <td data-order="" class="tdOthers">23490123377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
-                  <td class="tdOthers">jingo@jns.com</td>
-                  <td data-order="" class="tdOthers">234092287377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Abdul John" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=AJ" />Abdul John</td>
-                  <td data-search="Nuture" class="tdOthers">Nuture</td>
-                  <td class="tdOthers">hr@nutns.com</td>
-                  <td data-order="" class="tdOthers">234075487377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
-                  <td class="tdOthers">jingo@jns.com</td>
-                  <td data-order="" class="tdOthers">234092287377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
-                  <td class="tdOthers">jingo@jns.com</td>
-                  <td data-order="" class="tdOthers">234092287377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
-                  <td class="tdOthers">jingo@jns.com</td>
-                  <td data-order="" class="tdOthers">234092287377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
-                  <td class="tdOthers">jingo@jns.com</td>
-                  <td data-order="" class="tdOthers">234092287377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
-                  <td class="tdOthers">jingo@jns.com</td>
-                  <td data-order="" class="tdOthers">234092287377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
-                  <td class="tdOthers">jingo@jns.com</td>
-                  <td data-order="" class="tdOthers">234092287377</td>
-                  <td class="tdOthers"></td>
-                </tr>
-                <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
-                  <td data-search="Wale Olusegun" class="tdName"><img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text=WO" />Wale Olusegun</td>
-                  <td data-search="Jingo & Sabainah" class="tdOthers">Jingo & Sabainah</td>
-                  <td class="tdOthers">jingo@jns.com</td>
-                  <td data-order="" class="tdOthers">234092287377</td>
-                  <td class="tdOthers"></td>
-                </tr>
+              <tbody style="width:100vw">
+                @if(count($contacts) > 0)
+                @foreach ($contacts as $contact)
 
-            <tfoot>
-              <tr>
-                <td></td>
-                <td class="tdOthers">NAME</td>
-                <td class="tdOthers">COMPANY</td>
-                <td class="tdOthers">EMAIL</td>
-                <td class="tdOthers">PHONE NUMBER</td>
-                <td class="tdOthers">TAGS</td>
-              </tr>
-            </tfoot>
-          </tbody>
-        </table>
-
+                <tr>
+                  <td class="tdCheck"><input type="checkbox" name="" value=""></td>
+                  <td data-search="{{ $contact->fname }} {{ $contact->lname }}" class="tdName">
+                    <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
+                    {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}</td>
+                  <td data-search="{{ $contact->company }}" class="tdCop">{{ $contact->company }}</td>
+                  <td class="tdOthers">{{ $contact->email }}</td>
+                  <td data-order="" class="tdOthers">{{ $contact->phoneNo }}</td>
+                  <td class="tdOthers tdTags">{{ $contact->tags }}</td>
+                  <td class="tdDel">
+                    <form action="{{ route('contact.destroy', $contact->id) }}" method="POST">
+                        @csrf
+                            @method('DELETE')
+                        <input type="submit" class="delContact">
+                    </form>
+                  </td>
+                </tr>
+                @endforeach
+                @endif
+              </tbody>
+            </table>
           </div>
         </div>
         </section>
-        <button type="button" class="btn btn-default mobileBtn" data-toggle="modal" data-target="#myModal" id="open">+</button>
+        <!-- <button type="button" class="btn btn-default mobileBtn">+</button> -->
+        <a href="/contact/add" class="btn btn-default mobileBtn">+</a>
 
         <br><br><br><br>
       </main>
-
-
-
-
-
-
-<!-- Modal to create new contact -->
-      <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-
-
-              <h5 class="modal-title">Create Contact</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-                    <div class="form-group col-md-12 mr-2 ml-2" style="display:flex; justify-content:space-between">
-                      <div class="fname">
-                        <!-- <label for="Name">First Name*:</label> -->
-                        <input type="text" class="form-control" name="name" id="name" required style="
-                        border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="First Name*">
-                      </div>
-                      <div class="lname">
-                          <!-- <label for="Name">Last Name*:</label> -->
-                          <input type="text" class="form-control" name="name" id="name" required style="
-                          border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Last Name">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                      <div class="form-group col-md-12 mr-2 ml-2">
-                        <!-- <label for="Club">Email*:</label> -->
-                        <input type="email" class="form-control" name="club" id="email" required style="
-                        border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Email*">
-                      </div>
-                  </div>
-                  <div class="row">
-                     <div class="form-group col-md-12 mr-2 ml-2">
-                        <!-- <label for="Phone">Phone:</label> -->
-                        <input type="tel" class="form-control" name="country" id="country" style="
-                        border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Phone">
-                      </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-12 mr-2 ml-2">
-                      <!-- <label for="Company">Company:</label> -->
-                      <input type="text" class="form-control" name="score" id="score" style="
-                      border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Company">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-12 mr-2 ml-2">
-                      <!-- <label for="Title">Title:</label> -->
-                      <input type="text" class="form-control" name="score" id="score" style="
-                      border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Title">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-12 mr-2 ml-2">
-                      <!-- <label for="Tags">Tags:</label> -->
-                      <input type="text" class="form-control" name="score" id="score" style="
-                      border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Tags">
-                    </div>
-                  </div>
-              </div>
-
-            </div>
-            <div class="modal-footer" style="justify-content:flex-start!important; padding:1.5rem!important">
-
-              <button type="submit" class="btn btn-save" style="background:#ddd; float:left!important">Save</button>
-              <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
-            </div>
-          </div>
-        </div>
-      </div>
-        <!-- </form>
-      </div> -->
-
-
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

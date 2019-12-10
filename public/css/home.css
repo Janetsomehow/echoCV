@@ -7,13 +7,6 @@
     width: 100%;
     align-items: stretch;
 }
-/* 
-.btn-primary{
-  background: linear-gradient(180deg, #2E7CFF 0%, #1B63DC 100%, #1B63DC 100%);
-  border-radius: 4px;
-  background: non
-} */
-
 .svg {
     height: 15px;
 }
@@ -27,11 +20,15 @@
     width: 100%;
 }
 
+/* For modal */
+  .modal-backdrop
+{
+    opacity:0.2 !important;
+}
+
 @media (max-width: 425px){
   .onboard{
     margin: 0 auto;
-    /* display: none; */
-    /* background-color: red; */
     display: grid;
 
   }
@@ -87,7 +84,7 @@
   border: 0.75px solid #E5E5E5;
   text-align: left;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
 	.grid-container {
 		grid-template-columns: auto;
 	}
@@ -101,6 +98,30 @@
 
 @media only screen and (max-width: 1200px) {
 	.grid-container {
-		grid-template-columns: auto auto auto;
+		grid-template-columns: auto auto auto auto auto;
 	}
+}
+.dashbtn{
+text-align:right;
+}
+.chart-container{
+  width:80%;
+  height:150%;
+  position: absolute;
+  background-color: rgb(236, 136, 4);
+}
+.flex-container {
+  display: grid;
+  flex-direction: column-reverse;
+  grid-template-columns: auto auto;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: rgb(243, 245, 243);
+}
+.flex-container > canvas {
+  width: 100%;
+  margin: 10px;
+  text-align: left;
+  line-height: 75px;
+  font-size: 14px;
 }

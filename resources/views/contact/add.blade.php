@@ -25,6 +25,7 @@
     <div class="wrapper">
 
   @include('layouts.sidebar')
+  @include('inc.messages')
     </div>
 
     <section class="onboard">
@@ -42,8 +43,10 @@
 
 
       <!-- Modal to create new contact -->
-            <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
-              <div class="modal-dialog" role="document">
+          <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <form method="post" action="{{ route('contact.store') }}">
+                @csrf
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title">Create Contact</h5>
@@ -56,48 +59,49 @@
                       <div class="row">
                           <div class="form-group col-md-12 mr-2 ml-2" style="display:flex; justify-content:space-between">
                             <div class="fname">
-                              <input type="text" class="form-control conForm" name="" required placeholder="First Name*">
+                              <input type="text" class="form-control conForm" name="fname" required placeholder="First Name*">
                             </div>
                             <div class="lname">
-                                <input type="text" class="form-control conForm" name="" required placeholder="Last Name">
+                              <input type="text" class="form-control conForm" name="lname" required placeholder="Last Name">
                             </div>
                           </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12 mr-2 ml-2">
-                              <input type="email" class="form-control conForm" name="" required placeholder="Email*">
+                              <input type="email" class="form-control conForm" name="email" required placeholder="Email*">
                             </div>
                         </div>
                         <div class="row">
                            <div class="form-group col-md-12 mr-2 ml-2">
-                              <input type="tel" class="form-control conForm" name="" placeholder="Phone">
+                            <input type="tel" class="form-control conForm" name="phoneNo" placeholder="Phone">
                             </div>
                         </div>
                         <div class="row">
                           <div class="form-group col-md-12 mr-2 ml-2">
-                            <input type="text" class="form-control conForm" name="" placeholder="Company">
+                            <input type="text" class="form-control conForm" name="company" placeholder="Company">
                           </div>
                         </div>
                         <div class="row">
                           <div class="form-group col-md-12 mr-2 ml-2">
-                            <input type="text" class="form-control conForm" name="" placeholder="Title">
+                            <input type="text" class="form-control conForm" name="title" placeholder="Title">
                           </div>
                         </div>
                         <div class="row">
                           <div class="form-group col-md-12 mr-2 ml-2">
-                            <input type="text" class="form-control conForm" name="" placeholder="Tags">
+                          <input type="text" class="form-control conForm" name="tags" placeholder="Tags">
                           </div>
                         </div>
                     </div>
 
                   </div>
                   <div class="modal-footer" style="justify-content:flex-start!important; padding:1.5rem!important">
-                    <button type="submit" class="btn btn-save" id="ajaxSubmit" style="background:#ddd; float:left!important">Save</button>
+                    <button type="submit" class="btn btn-save" style="background:#ddd; float:left!important">Save</button>
                     <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
+          </div>
 
 
     </body>

@@ -1,46 +1,62 @@
 var ctx = document.getElementById('lineid');
-var piechart = new Chart(ctx, {
+var linechart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
-        datasets: [{
+        datasets: [
+            {
             label: '# of Votes',
             backgroundColor: "transparent",
             fill: 'false',
-            data: [1,2,3,4 ], 
+            data: [100,50,300,20,189,300,19], 
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-            ],
+                "#19B9FD",    
+                    ],
             borderWidth: 1
-        }]
+        },
+    ]
     },
     options: {
+        responsive:true,
+        legend:{
+            display: false
+        },
+        layout: {
+            padding: {
+                left: 50,
+                right: 0,
+                top: 0,
+                bottom: 0
+            }
+        },
+
+        title:{
+            display: true,
+        },
         scales: {
+            bezierCurve : false,
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                min:0,
                   },
                   gridLines: {
                     display: false,
-                    color: "black"
                   }
               }],
   
               xAxes: [{
                 gridLines: {
                   display: false,
-                  color: "black"
                 }
-              }]
-  
+              }],
+                pointDot :false,
+                bezierCurve : true,
                 }
             
         
     }
+
 });
-
-
-
 
 
 //get the bar chart canvas
@@ -48,39 +64,39 @@ var ctx = document.getElementById('barchart');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+        labels: ['','Q1 2018', '', 'Q2 2018', '', 'Q3 2018', '', 'Q4 2018'],
         datasets: [
           {
             label: 'Exit',
-            data: [2018, 2018, 2018, 2018],
-            backgroundColor: "green",
+            data: ['',100000, '', 250000, '', 300000, '', 57000],
+            backgroundColor: "#7AEF1F",
             borderWidth: 0.5
           },
           {
             label: 'Investment',
-            data: [800000, 600000, 400000, 200000],
-            backgroundColor: "blue",
+            data: ['',800000, '', 600000, '', 400000, '', 200000],
+            backgroundColor: "#19B9FD",
             borderWidth: 0.5
           }
         ] 
     },
     options: {
+        barValueSpacing: 1,
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
-                },
-                gridLines: {
-                  display: false,
-                  color: "black"
+                    min: 0,
+                    },
+                    gridLines: {
+                        display: false,
                 }
             }],
-
             xAxes: [{
-              gridLines: {
-                display: false,
-                color: "black"
-              }
+                gridLines: {
+                    display: false,
+                categoryPercentage: 1.0,
+                barPercentage: 0.5
+                }
             }]
         }
     }
@@ -135,14 +151,24 @@ var myChart = new Chart(ctx, {
         labels: ['success'],
         datasets: [{
             label: 'Customer success',
-            data: [100],
+            data: ['100'],
             backgroundColor: [
-                'rgba(54, 162, 235, 0.2)',
+                '#19B9FD',
             ],
             borderColor: [
-                'rgba(54, 162, 235, 1)',
+                '#19B9FD',
             ],
             borderWidth: 1
         }]
     }
 });
+$('#chartmodal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('.modal-title').text('New message to ' + recipient)
+    modal.find('.modal-body input').val(recipient)
+  })
+  

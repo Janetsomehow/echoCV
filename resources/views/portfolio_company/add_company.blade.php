@@ -3,6 +3,7 @@
  @section('content')
  <div class="header">
 <div class="d-flex">
+
 <div class="p-2"><h4>Add Company</h4></div>
 <div class="mt-4">
   <div class="row justify-content-center">
@@ -16,7 +17,7 @@
               <div class="bigSe">
                 <div>
                   <label for="country">Country</label>
-                  <select class="form-control" name="">
+                  <select class="form-control">
                   <option selected>Select Country</option>
                     <option value=""></option>
                     <option value="First">First</option>
