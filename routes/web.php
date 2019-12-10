@@ -27,8 +27,6 @@ Route::get('/add_chart', function () { return view('home.add_chart'); });
 Route::get('/reports', function () { return view('reports.all_reports'); });
 Route::get('/create_metrics', function () { return view('metrics.create'); });
 Route::get('/add_metrics', function () { return view('metrics.add'); });
-Route::get('/contacts', function () { return view('contact.contacts'); });
-Route::get('/add_contact', function () { return view('contact.add_contact'); });
 Route::get('/add_company', function () { return view('portfolio_company.add_company'); });
 Route::get('/dashboard', function () { return view('home.dashboard'); });
 Route::get('/new_company', function () { return view('portfolio_company.new_company'); });
@@ -45,6 +43,6 @@ Route::get('/add_chart1', function () { return view('home.add_chart1'); });
 Auth::routes();
 
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('company_store', 'companyController');
-
+Route::resource('contact', 'ContactsController');

@@ -47,7 +47,6 @@
                   <td class="tdOthers">EMAIL</td>
                   <td class="tdOthers">PHONE</td>
                   <td class="tdOthers">TAGS</td>
-                  <td class="tdDel"></td>
                 </tr>
               </thead>
               <tbody style="width:100vw">
@@ -63,13 +62,6 @@
                   <td class="tdOthers">{{ $contact->email }}</td>
                   <td data-order="" class="tdOthers">{{ $contact->phoneNo }}</td>
                   <td class="tdOthers tdTags">{{ $contact->tags }}</td>
-                  <td class="tdDel">
-                    <form action="{{ route('contact.destroy', $contact->id) }}" method="POST">
-                        @csrf
-                            @method('DELETE')
-                        <input type="submit" class="delContact">
-                    </form>
-                  </td>
                 </tr>
                 @endforeach
                 @endif
