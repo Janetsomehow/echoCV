@@ -29,7 +29,7 @@
 
         <section class="header searchContact">
           <div class="rep">Contacts</div>
-          <a href="/add_contact" class="btn btn-primary searchContact conTopBtn">Create Contact</a>
+          <a href="/contact/add" class="btn btn-primary searchContact conTopBtn">Create Contact</a>
           <!-- <input type="submit" name="" class="btn btn-primary searchContact" value="Create Contact" /> -->
         </section>
         <section class="message">
@@ -43,10 +43,11 @@
                 <tr>
                   <td></td>
                   <td class="tdOthers">NAME</td>
-                  <td class="tdOthers">COMPANY</td>
+                  <td class="tdCop">COMPANY</td>
                   <td class="tdOthers">EMAIL</td>
                   <td class="tdOthers">PHONE</td>
                   <td class="tdOthers">TAGS</td>
+                  <td class="tdDel"></td>
                 </tr>
               </thead>
               <tbody style="width:100vw">
@@ -54,14 +55,21 @@
                 @foreach ($contacts as $contact)
 
                 <tr>
-                  <td class="tdTag"><input type="checkbox" name="" value=""></td>
+                  <td class="tdCheck"><input type="checkbox" name="" value=""></td>
                   <td data-search="{{ $contact->fname }} {{ $contact->lname }}" class="tdName">
                     <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
                     {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}</td>
-                  <td data-search="{{ $contact->company }}" class="tdOthers">{{ $contact->company }}</td>
+                  <td data-search="{{ $contact->company }}" class="tdCop">{{ $contact->company }}</td>
                   <td class="tdOthers">{{ $contact->email }}</td>
                   <td data-order="" class="tdOthers">{{ $contact->phoneNo }}</td>
                   <td class="tdOthers tdTags">{{ $contact->tags }}</td>
+                  <td class="tdDel">
+                    <form action="{{ route('contact.destroy', $contact->id) }}" method="POST">
+                        @csrf
+                            @method('DELETE')
+                        <input type="submit" class="delContact">
+                    </form>
+                  </td>
                 </tr>
                 @endforeach
                 @endif
@@ -70,91 +78,11 @@
           </div>
         </div>
         </section>
-        <button type="button" class="btn btn-default mobileBtn" data-toggle="modal" data-target="#myModal" id="open">+</button>
+        <!-- <button type="button" class="btn btn-default mobileBtn">+</button> -->
+        <a href="/contact/add" class="btn btn-default mobileBtn">+</a>
 
         <br><br><br><br>
       </main>
-
-
-<!-- Modal to create new contact -->
-      <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-
-
-              <h5 class="modal-title">Create Contact</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <div class="row">
-                    <div class="form-group col-md-12 mr-2 ml-2" style="display:flex; justify-content:space-between">
-                      <div class="fname">
-                        <!-- <label for="Name">First Name*:</label> -->
-                        <input type="text" class="form-control" name="name" id="name" required style="
-                        border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="First Name*">
-                      </div>
-                      <div class="lname">
-                          <!-- <label for="Name">Last Name*:</label> -->
-                          <input type="text" class="form-control" name="name" id="name" required style="
-                          border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Last Name">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                      <div class="form-group col-md-12 mr-2 ml-2">
-                        <!-- <label for="Club">Email*:</label> -->
-                        <input type="email" class="form-control" name="club" id="email" required style="
-                        border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Email*">
-                      </div>
-                  </div>
-                  <div class="row">
-                     <div class="form-group col-md-12 mr-2 ml-2">
-                        <!-- <label for="Phone">Phone:</label> -->
-                        <input type="tel" class="form-control" name="country" id="country" style="
-                        border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Phone">
-                      </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-12 mr-2 ml-2">
-                      <!-- <label for="Company">Company:</label> -->
-                      <input type="text" class="form-control" name="score" id="score" style="
-                      border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Company">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-12 mr-2 ml-2">
-                      <!-- <label for="Title">Title:</label> -->
-                      <input type="text" class="form-control" name="score" id="score" style="
-                      border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Title">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-12 mr-2 ml-2">
-                      <!-- <label for="Tags">Tags:</label> -->
-                      <input type="text" class="form-control" name="score" id="score" style="
-                      border: 0px solid #AAAAAA; border-bottom: 1px solid #ccc; border-radius:0" placeholder="Tags">
-                    </div>
-                  </div>
-              </div>
-
-            </div>
-            <div class="modal-footer" style="justify-content:flex-start!important; padding:1.5rem!important">
-
-              <button type="submit" class="btn btn-save" style="background:#ddd; float:left!important">Save</button>
-              <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
-            </div>
-          </div>
-        </div>
-      </div>
-        <!-- </form>
-      </div> -->
-
-
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

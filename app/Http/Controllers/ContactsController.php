@@ -18,8 +18,8 @@ class ContactsController extends Controller
     {
         //
         // $contacts = Contact::orderBy('created_at', 'desc')->paginate(10);
-
-        $contacts = Contact::orderBy('created_at', 'desc');
+        $contacts = Contact::all();
+        // $contacts = Contact::orderBy('created_at', 'desc');
         return view('contact.index')->with('contacts', $contacts);
 
     }
@@ -31,7 +31,7 @@ class ContactsController extends Controller
      */
     public function create()
     {
-      return view('contact.contacts');
+      return view('contact.add');
     }
 
     /**
@@ -65,7 +65,7 @@ class ContactsController extends Controller
     // $contact->user_id = auth()->user()->id;
     $contact->save();
 
-    return redirect('/contact/contacts')->with('success', 'Contact Successful Created');
+    return redirect('/contact')->with('success', 'Contact Successful Created');
     }
 
     /**
@@ -80,7 +80,7 @@ class ContactsController extends Controller
 
       $contacts = Contact::all();
       // $contacts = Contact::orderBy('created_at', 'desc');
-      return view('contact.contacts')->with('contacts', $contacts);
+      return view('contact.add')->with('contacts', $contacts);
     }
 
     /**
