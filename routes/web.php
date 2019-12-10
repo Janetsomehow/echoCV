@@ -37,11 +37,6 @@ Route::get('/profile', function () { return view('account_settings.profile'); })
 Route::get('/permissions', function () { return view('account_settings.permissions'); });
 
 
-
-
-
-
-
 Auth::routes();
 
 

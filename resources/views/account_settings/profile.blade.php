@@ -7,7 +7,7 @@
     <title>Account Settings</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     {{-- <link ‎href="https://fonts.adobe.com/fonts/europa" rel="stylesheet"> --}}
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,600" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/report.css') }}">
     <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/account.css') }}" rel="stylesheet">
@@ -18,21 +18,21 @@
 <body>
     <section class =" onboard">
         <div class="header">
-            <h3 class="account_header"> Account settings</h3>
+            <h3 class="account_header font-weight-bolder"> Account settings</h3>
         </div>
 
         <div class="row" style="">
             <div class="col  side">
                 <aside>
                     <div class="list-group list-group-flush border-right">
-                         <a href="" class="list-group-item list-group-item-action " style="color: #333333"> My profile</a></li>
-                         <a href="" class="list-group-item list-group-item-action border-none" style="color: #333333"> Permissions</a></li>
+                         <a href="#" class="list-group-item list-group-item-action permission " style="color: #333333"> My profile</a></li>
+                         <a href="/permissions" class="list-group-item list-group-item-action border-none permission" style="color: #333333"> Permissions</a></li>
                     </ul>
                 </aside>
             </div>
 
             <div class="profile-form">
-                <h4> My profile</h4>
+                <h4 class="font-weight-bold"> My profile</h4>
 
                 <form action="" >
                         <div class="form-group ml-n3 col-md-12" style="width: 33rem">

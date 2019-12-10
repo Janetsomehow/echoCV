@@ -1,5 +1,4 @@
 
-
 body{
     font-family: 'Nunito', sans-serif;
 }
@@ -71,3 +70,8 @@ body{
     color:  #333333;
     font-size: .85rem;
 }
+
+.permission:hover{
+    padding-right: 2rem !important;
+}
+
