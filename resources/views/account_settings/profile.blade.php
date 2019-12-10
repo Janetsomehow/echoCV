@@ -24,7 +24,7 @@
         <div class="row" style="">
             <div class="col  side">
                 <aside>
-                    <div class="list-group list-group-flush border-right">
+                    <div class="list-group list-group-flush border-ri">
                          <a href="#" class="list-group-item list-group-item-action permission " style="color: #333333"> My profile</a></li>
                          <a href="/permissions" class="list-group-item list-group-item-action border-none permission" style="color: #333333"> Permissions</a></li>
                     </ul>
@@ -35,31 +35,31 @@
                 <h4 class="font-weight-bold"> My profile</h4>
 
                 <form action="" >
-                        <div class="form-group ml-n3 col-md-12" style="width: 33rem">
+                        <div class="form-group ml-n3 col-md-12 input-style" >
                             <label for="">    First name</label>
                             <input type="text" placeholder="Bosun " class="form-control">
                         </div>
 
-                        <div class="form-group ml-n3 col-md-12" style="width: 33rem">
+                        <div class="form-group ml-n3 col-md-12 input-style" >
                                 <label for="">    Last name</label>
                                 <input type="text" placeholder="Osamudiamen  " class="form-control">
                         </div>
 
-                        <div class="form-group ml-n3 col-md-12" style="width: 33rem">
+                        <div class="form-group ml-n3 col-md-12 input-style">
                                 <label for="">   Phone number</label>
                                 <input type="tel" placeholder="" id="phone" class="form-control">
                         </div>
 
-                        <div class="form-group ml-n3 col-md-12" style="width: 33rem">
+                        <div class="form-group ml-n3 col-md-12 input-style"  >
                                 <label for="">   Email 
-                                    <a href=""  style="position: relative; left: 22rem"> Change email</a>
+                                    <a href="" class="changeEmail" style="position: relative; left: 22rem"> Change email</a>
                                 </label>
                                 <input type="email" placeholder="bosunosas@something.com " class="form-control">
                         </div>
 
-                        <div class="form-group ml-n3 col-md-12" style="width: 33rem">
+                        <div class="form-group ml-n3 col-md-12 input-style" >
                                 <label for=""> Current Password
-                                        <a href=""  style="position: relative; left: 15.2rem"> Change password</a>    
+                                        <a href=""  class="changePass"  style="position: relative; left: 15.2rem"> Change password</a>    
                                 </label>
                                 <input type="password" placeholder="******echo " class="form-control">
                         </div>
@@ -72,7 +72,10 @@
             <div class="upload ">
                 <p> Profile picture</p>
                 <div class="box"></div>
-                <button class="btn btn-default btn-upload"> Upload picture</button>
+                <div class="upload-btn">
+                    <button class="btn btn-default btn-upload" > Upload Picture </button>
+                    <input type="file"  accept="image/png, image/jpeg" name="avatar" title="Upload an image">
+                </div>
             </div>
             
         </div>

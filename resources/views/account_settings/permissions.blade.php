@@ -25,7 +25,7 @@
         <div class="row" style="">
             <div class="col  side">
                 <aside>
-                    <div class="list-group list-group-flush border-right">
+                    <div class="list-group list-group-flush permission-right">
                             <a href="/profile" class="list-group-item list-group-item-action permission " style="color: #333333"> My profile</a></li>
                             <a href="#" class="list-group-item list-group-item-action border-none permission" style="color: #333333"> Permissions</a></li>
                     </ul>
@@ -43,11 +43,11 @@
                             <p class="col-9">
                                     Can view dashboards, portfolio company data, upload files and cannot manage users
                             </p>
-                            <label for="">
-                                <input type="checkbox" class="m-1 mb-2 d-inline checkbox-custom " style="width: 4rem" name="" checked id="">
-                                <span class="checkmark">
-                                </span>
-                            </label>
+                            <label for="checkbox"> </label>
+                            <input type="checkbox" class="m-1 mb-2 d-inline regular-checkbox "  name=""  checked id="">
+                            <span class="checkmark">
+                            </span>
+                        
                         </div>
 
                         <h6> Collaborate </h6>
@@ -55,11 +55,11 @@
                             <p class="col-9">
                                     Can create and edit shared assets like dashboards and portfolio company data
                             </p>
-                            <label for="">
-                                <input type="checkbox" class="m-1 mb-2 d-inline checkbox-custom " style="width: 4rem" name="" disabled checked id="">
+                            <label for="checkbox"> </label>
+                                <input type="checkbox" class="m-1 mb-2 d-inline regular-checkbox "  name="" disabled checked id="">
                                 <span class="checkmark">
                                 </span>
-                            </label>
+                            
                         </div>
                         
                         <h6> Manage Users </h6>
@@ -67,17 +67,16 @@
                             <p class="col-9">
                                     Can create and edit shared assets like dashboards and portfolio company data
                             </p>
-                            <label for="">
-                                <input type="checkbox" class="m-1 mb-2 d-inline checkbox-custom " style="width: 4rem" name="" disabled checked id="">
-                                <span class="checkmark">
-                                </span>
-                            </label>
+                            <label for="checkbox"> </label>
+                            <input type="checkbox" class="m-1 mb-2 d-inline regular-checkbox "  name="" disabled checked id="">
+                            <span class="checkmark">
+                            </span>
                         </div>
 
                         <div class="manage mt-5">
                             <h4 class="font-weight-bold"> Manage users </h4>
                             <div class="table ">
-                                <table class=" table-responsive table-borderless table-hover" style="margin-top: -4rem">
+                                <table class="  table-responsive table-borderless table-hover" style="margin-top: -4rem">
                                     <thead>
                                         <tr>
                                             <th> Name </th>
@@ -92,21 +91,42 @@
                                             {{-- <th scope="row">1</th> --}}
                                             <td>Anne Thompson</td>
                                             <td>annethompson@echocv.com</td>
-                                            <td> can view   </td>
+                                            <td>
+                                                <div class="form-group">
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option>can view</option>
+                                                            <option>can edit</option>
+                                                        </select>
+                                                </div>    
+                                            </td>
                                         </tr>
 
                                         <tr >
                                             {{-- <th scope="row">1</th> --}}
                                             <td>John Samuel</td>
                                             <td>john.samuel@echocv.com</td>
-                                            <td> can view   </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option>can view</option>
+                                                        <option>can edit</option>
+                                                    </select>
+                                                </div>       
+                                            </td>
                                         </tr>
 
                                         <tr >
                                             {{-- <th scope="row">1</th> --}}
                                             <td>Anne Thompson</td>
                                             <td>annethompson@echocv.com</td>
-                                            <td> can view   </td>
+                                            <td> 
+                                                <div class="form-group">
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option>can view</option>
+                                                        <option>can edit</option>
+                                                    </select>
+                                                </div>    
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
