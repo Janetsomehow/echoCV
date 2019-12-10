@@ -40,6 +40,6 @@ Route::get('/permissions', function () { return view('account_settings.permissio
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('company_store', 'companyController');
 Route::resource('contact', 'ContactsController');
