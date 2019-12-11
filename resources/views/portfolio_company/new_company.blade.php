@@ -1,4 +1,4 @@
-@extends('layouts.empty-sidbar')
+@extends('layouts.sidebar')
   @section('content')
 
             <div class="col-md-10 mt-5 mb-5 p-5">
@@ -11,4 +11,5 @@
          <a href="/add_company"> <button type="button" name="button" class="btn btn-primary">New Company</button></a>
           </div>
 </div>
+
 @stop
