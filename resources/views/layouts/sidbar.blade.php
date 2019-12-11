@@ -17,6 +17,7 @@
         <link href="{{ asset('css/home.css') }}" rel="stylesheet">
         <script  src="{{ asset('js/dash.js') }}" defer></script>
 
+
         @yield('styles')
 
 
@@ -34,13 +35,13 @@
             <section class="onboard">
 
                 @yield('content')
-                    
+
             </section>
 
 
-           
 
-</div>       
+
+</div>
 <!--chart js-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
     <!--Pop up modal jquery script-->
