@@ -33,16 +33,13 @@ Route::get('/new_company', function () { return view('portfolio_company.new_comp
 Route::get('/add_company', function () { return view('portfolio_company.add_company'); });
 Route::get('/dashboard1', function () { return view('home.dashboard1'); });
 Route::get('/add_chart1', function () { return view('home.add_chart1'); });
-
-
-
-
-
+Route::get('/profile', function () { return view('account_settings.profile'); });
+Route::get('/permissions', function () { return view('account_settings.permissions'); });
 
 
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('company_store', 'companyController');
 Route::resource('contact', 'ContactsController');
