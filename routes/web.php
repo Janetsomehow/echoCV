@@ -23,6 +23,7 @@ Route::get('/create1', function () { return view('metrics.'); });
 Route::get('/files', function () { return view('files.files'); });
 Route::get('/file_upload', function () { return view('files.file_upload'); });
 Route::get('/archives', function () { return view('archives.archives'); });
+Route::get('/archivelist', function () { return view('archives.archivelist'); });
 Route::get('/add_chart', function () { return view('home.add_chart'); });
 Route::get('/reports', function () { return view('reports.all_reports'); });
 Route::get('/create_metrics', function () { return view('metrics.create'); });
