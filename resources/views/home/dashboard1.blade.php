@@ -14,8 +14,6 @@
 <button class="btn">share</button>
 </div>
 <hr>
-<div class="flex-container">
-  <div class="chart-container">
 <div style="width:39vw; height:29vw;">
 <canvas id="barchart"  width="200" height="130"></canvas>
 </div>
@@ -25,21 +23,50 @@
 <div  style="width:39vw; height:29vh;">
 <canvas id="piechart"  width="200" height="130"></canvas>
   </div>
-      </div>
 <!-- Modal -->
 <div class="modal" id="chartmodal" tabindex="-1" role="dialog" aria-labelledby="chartmodalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-          <span aria-hidden="true">&times;</span>
-      </div>
       <div class="modal-body">
       <div class="row">
           <div class="col-8 ">
-          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="chart-container">
+          <div>
+<canvas id="barchart"  width="200" height="130"></canvas>
+        </div>
           </div>
+      </div>
           <div class="col-4">
-          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <nav class="navbar-expand-sm navbar-light">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Metric</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Export</a>
+    </li>
+    <li class="nav-item">
+    <button type="submit" class="btn btn-sm btn-primary">Save</button>
+    </li>
+    <li class="nav-item">
+    <button type="button" class="btn" data-dismiss="modal">Cancel</button>
+    </li>
+  </ul>
+</nav>
+      <div>
+size<br>
+<select class="col-10 dropdown-toggle" data-toggle="dropdown">
+<option>Powerpoint</option>
+<option class="dropdown-item">standard(600 x 400)</option>
+<option class="dropdown-item">powerpoint (16:1)</option>
+</select>
+Format<br>
+<input type="radio">Microsoft excel(.xlxs)
+<input type="radio">PNG
+<input type="radio">PDF
+<br>
+<input type="checkbox">Save to Google drive as CSV file<br>
+<button type="button" class="btn btn-light">Export sales and exit</button>
           </div>
         </div>
       </div>
