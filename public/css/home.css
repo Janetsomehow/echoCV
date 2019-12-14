@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
   }
@@ -21,8 +21,7 @@
 }
 
 /* For modal */
-  .modal-backdrop
-{
+  .modal-backdrop{
     opacity:0.2 !important;
 }
 
@@ -127,25 +126,14 @@ text-align:right;
   line-height: 75px;
   font-size: 14px;
 }*/
-.modal{
-  background-color: rgb(25, 194, 75);
-  width: 55%;
-  height: 89%;
-  position: relative;
-
-}
 .col-4{
   border-radius: 0px 4px 4px 0px;
 box-shadow: -2px 0px 4px rgba(0, 0, 0, 0.15);
 background-color: rgb(49, 66, 216);
 
-
 }
-.col-8{
-  background-color: rgb(212, 18, 28);
-
-}
-.modal-content{
-  background-color: rgb(145, 177, 56);
-
+.modal.metex{
+  font-size: 0.9rem;
+  font-weight: 100;
+height:
 }

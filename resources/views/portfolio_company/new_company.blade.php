@@ -1,4 +1,4 @@
-@extends('layouts.sidebar')
+@extends('layouts.sidbar')
   @section('content')
 
             <div class="col-md-10 mt-5 mb-5 p-5">
