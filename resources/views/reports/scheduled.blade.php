@@ -35,7 +35,7 @@
           <ul class="nav nav-tabs nav-lg repStatus" role="tablist">
 <!--                <ul class="nav nav-tabs nav-line nav-white nav-lg nav-mob-inline" role="tablist">-->
             <li role="presentation">
-              <a class="repTitle"  href="/reps">
+              <a class="repTitle"  href="/reports">
                 ALL</a>
             </li>
             <li role="presentation">
