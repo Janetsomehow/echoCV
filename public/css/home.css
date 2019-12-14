@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
   }
+  html {
+    font-family: 'europa', sans-serif;
+    font-style: normal;
+    font-size: 1rem!important;
+  }
+  
 .wrapper {
     display: flex;
     width: 100%;
@@ -109,23 +115,7 @@ text-align:right;
   background-color: rgb(236, 136, 4);
   margin-top: 10%;
   margin-left: 10%;
-
 }
-/*.flex-container {
-  display: grid;
-  flex-direction: column-reverse;
-  grid-template-columns: auto auto;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  background-color: rgb(243, 245, 243);
-}
-.flex-container > canvas {
-  width: 100%;
-  margin: 10px;
-  text-align: left;
-  line-height: 75px;
-  font-size: 14px;
-}*/
 .col-4{
   border-radius: 0px 4px 4px 0px;
 box-shadow: -2px 0px 4px rgba(0, 0, 0, 0.15);
@@ -135,5 +125,12 @@ background-color: rgb(49, 66, 216);
 .modal.metex{
   font-size: 0.9rem;
   font-weight: 100;
-height:
+}
+.filter{
+  width:10%;
+   position:absolute;
+    left:27rem; 
+    height:2rem; 
+    top:10;
+   bottom:38rem;
 }

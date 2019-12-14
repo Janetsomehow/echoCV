@@ -1,17 +1,25 @@
 @extends('layouts.sidbar')
 
 @section('content')
-<div  class="container-fluid">
-<div>
-<ul class="nav nav-pills">
-    <li class="active"><a data-toggle="pill" href="#">Dashboard 1</a></li>
-    <li><a  data-toggle="pill" href="#">Dashboard 2</a></li>
-    <li><a  data-toggle="pill" href="#">&plus;</a></li>
+<div  class="container">
+  <div>
+<nav  class="navbar-expand-sm navbar-light"  style="bottom:40rem; top:0.9rem; position:absolute; width:40rem;">
+<ul class="navbar-nav">
+    <li class="nav-item active">
+      <a  class="nav-link" href="#">Dashboard 1</a>
+    </li>
+    <li class="nav-item active">
+      <a   class="nav-link"href="#">Dashboard 2</a>
+    </li>
+    <li class="nav-item active">
+      <a   class="nav-link" href="#">&plus;</a>
+  </li>
   </ul>
-  </div>
+</nav>
   <div class="dashbtn">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chartmodal">Add chart</button>
 <button class="btn">share</button>
+</div>
 </div>
 <hr>
 <div style="width:39vw; height:29vw;">
