@@ -35,7 +35,7 @@
           <h3 class="centreCon">Contacts</h3>
           <p class="text-contact">Add contacts to make sharing easier. You can also use tags
             for easier grouping</p>
-            <button type="button" class="btn btn-primary searchContact" data-toggle="modal" data-target="#myModal" id="open">Create Contact</button>
+          <button type="button" class="btn btn-primary searchContact" data-toggle="modal" data-target="#myModal" id="open">Create Contact</button>
 
         </div>
       </section>

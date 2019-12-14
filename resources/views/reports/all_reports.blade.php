@@ -66,7 +66,7 @@
         <div class="widget-wrapper container-fluid" style="padding:0; margin:0">
           <div class="section-wrap-b table-responsive">
 
-            <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0" style="margin-top:-0.5rem;">
+            <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0">
             <!-- <table class="table table-responsive table-stripped table-hover"> -->
               <!-- <thead>
                 <td></td>
