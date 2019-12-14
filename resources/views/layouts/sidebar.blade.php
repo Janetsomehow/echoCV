@@ -6,11 +6,11 @@
       <div class="stix" id="stik3"></div>
   </label>
 
-    <section class="sidebar" id="">
-    
+    <section class="sidebar" id="sidebar">
+
       <a href="#"><div class="logo"></div></a>
       <!-- <p>Full name</p> -->
-   
+
       <hr>
 
         <!-- <input type="text" name="search" placeholder="Search" class="" /> -->
@@ -19,7 +19,7 @@
 
 
       <ul class="sidebar-ul">
-          
+
       <li>
        <div class="input-group p-2 search-group" style="position: relative; top: 3rem;">
           <input type="text" class="form-control " style="border-radius: 50px; width: 11rem"  placeholder="Search" aria-label="" aria-describedby="basic-addon2">
@@ -42,24 +42,24 @@
       <ul class="navbar-nav name-section
        ml-auto">
 
-        
+
           <li class="nav-item dropdown ">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-              Full Name 
+              Full Name
               {{-- <span class="caret"></span> --}}
             </a>
-      
+
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background:#666; font-size:0.7rem">
-      
+
             <a class="dropdown-item" href="/home">Home</a>
             <a class="dropdown-item" href="/profile">Account setting</a>
             <a class="dropdown-item" href="/home">Home</a>
             {{-- <a class="dropdown-item"
                onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">
-      
+
             </a> --}}
-      
+
             </div>
             </li>
          </ul>

@@ -31,7 +31,12 @@
           <button type="submit" name="button" class="btn btn-primary">Send now</button>
         </div>
       </section>
-      <textarea name="name"></textarea>
+      <section class="repSec">
+        <form action="" method="post">
+          <input class="form-control form-group" type="text" name="subject_title" placeholder="Subject Title">
+          <textarea name="report_body" placeholder="New Report"></textarea>
+        </form>
+      </section>
     </main>
     </body>
 </html>

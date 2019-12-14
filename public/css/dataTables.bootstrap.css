@@ -22,8 +22,7 @@ table.dataTable.nowrap td {
 
 /* CONTROLS FOR AMOUNT OF ROWS SHOWN*/
 div.dataTables_wrapper div.dataTables_length {
-
-	margin-top: 90px;
+	margin-top: 2.5rem;
   display: inline-block;
 	font-size: 15px;
 /*	background: PINK;*/

@@ -8,7 +8,6 @@
 @endif
 
 
-<!-- This message created here is called from PostsController@store -->
 @if (session('success'))
     <div class="alert alert-success">
       {{ session('success')}}

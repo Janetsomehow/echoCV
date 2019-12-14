@@ -29,64 +29,55 @@
 
         <section class="header searchContact">
           <div class="rep">Contacts</div>
-          <a href="/contact/add" class="btn btn-primary searchContact conTopBtn">Create Contact</a>
-          <!-- <input type="submit" name="" class="btn btn-primary searchContact" value="Create Contact" /> -->
+          <a href="/contact/create" class="btn btn-primary searchContact conTopBtn">Create Contact</a>
         </section>
-        <section class="message">
-
-        <div class="widget-wrapper container-fluid" style="padding:0; margin:0">
-          <div class="section-wrap-b table-responsive">
-
-            <table id="mySearchableData" class="display table table-hover table-responsive" style="margin-top:-0.5rem; padding: 0 0.6rem; width:100vw">
-            <!-- <table class="table table-responsive table-stripped table-hover"> -->
-              <thead style="width:100vw">
-                <tr>
-                  <td></td>
-                  <td class="tdOthers">NAME</td>
-                  <td class="tdCop">COMPANY</td>
-                  <td class="tdOthers">EMAIL</td>
-                  <td class="tdOthers">PHONE</td>
-                  <td class="tdOthers">TAGS</td>
-                </tr>
-              </thead>
-              <tbody style="width:100vw">
-                @if(count($contacts) > 0)
-                @foreach ($contacts as $contact)
-
-                <tr>
-                  <td class="tdCheck"><input type="checkbox" name="" value=""></td>
-                  <td data-search="{{ $contact->fname }} {{ $contact->lname }}" class="tdName">
-                    <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
-                    {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}</td>
-                  <td data-search="{{ $contact->company }}" class="tdCop">{{ $contact->company }}</td>
-                  <td class="tdOthers">{{ $contact->email }}</td>
-                  <td data-order="" class="tdOthers">{{ $contact->phoneNo }}</td>
-                  <td class="tdOthers tdTags">{{ $contact->tags }}</td>
-                </tr>
-                @endforeach
-                @endif
-              </tbody>
-            </table>
+        <section class="contactMain">
+          <div class="widget-wrapper container-fluid" style="padding:0; margin:0">
+            <div class="section-wrap-b table-responsive">
+              <table id="mySearchableData" class="display table table-hover table-responsive" style="margin-top:-0.5rem; padding: 0 0.6rem; width:100vw">
+                <thead style="width:100vw">
+                  <tr>
+                    <td></td>
+                    <td class="tdOthers">NAME</td>
+                    <td class="tdCop">COMPANY</td>
+                    <td class="tdOthers">EMAIL</td>
+                    <td class="tdOthers">PHONE</td>
+                    <td class="tdOthers">TAGS</td>
+                    <td></td>
+                  </tr>
+                </thead>
+                <tbody style="width:100vw">
+                  @if(count($contacts) > 0)
+                  @foreach ($contacts as $contact)
+                  <tr>
+                      <td class="tdCheck"><input type="checkbox" name="{{ $contact->id }}" value=""></td>
+                      <td data-search="{{ $contact->fname }} {{ $contact->lname }}" class="tdName">
+                        <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
+                        {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}</td>
+                      <td data-search="{{ $contact->company }}" class="tdCop">{{ $contact->company }}</td>
+                      <td class="tdOthers">{{ $contact->email }}</td>
+                      <td data-order="" class="tdOthers">{{ $contact->phoneNo }}</td>
+                      <td class="tdOthers tdTags">{{ $contact->tags }}</td>
+                      <td><a class="btn btn-default" href="/contact/{{ $contact->id }}">Update</a></td>
+                  </tr>
+                  @endforeach
+                  @endif
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-        </section>
-        <!-- <button type="button" class="btn btn-default mobileBtn">+</button> -->
-        <a href="/contact/add" class="btn btn-default mobileBtn">+</a>
+        </section><br><br>
+        <a href="/contact/create" class="btn btn-default mobileBtn">+</a>
 
-        <br><br><br><br>
       </main>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<script src="{{ asset('js/jquery.dataTables.js') }}" defer></script>
+  <script src="{{ asset('js/jquery.dataTables.js') }}" defer></script>
   </script>
-
-
 
   <!--searchable table start -->
   <script type="text/javascript" language="javascript" class="init">
@@ -123,7 +114,6 @@
     });
   });
 
-
   function validateForm()
   {
   formObj = document.login;
@@ -140,7 +130,6 @@
   formObj.btnLogin.innerHTML='Wait..';
   formObj.btnLogin.disabled=true;
   }
-
 
   function Iforgot()
   {
@@ -173,5 +162,5 @@
 </script>
 
 
-  </body>
-  </html>
+</body>
+</html>

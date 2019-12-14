@@ -33,14 +33,13 @@
 
         <section class="message">
           <ul class="nav nav-tabs nav-lg repStatus" role="tablist">
-<!--                <ul class="nav nav-tabs nav-line nav-white nav-lg nav-mob-inline" role="tablist">-->
-            <li role="presentation">
-              <a class="repTitle"  href="/reps">
-                <img src="{{ asset('css/icons/repAll.png') }}" style="margin-right:0.3rem;">ALL</a>
-            </li>
             <li class="active" role="presentation">
+              <a class="repTitle"  href="/reps">
+                <img src="{{ asset('css/icons/repAll1.png') }}" style="margin-right:0.3rem;">ALL</a>
+            </li>
+            <li role="presentation">
               <a class="repTitle"  href="/sent">
-                <img src="{{ asset('css/icons/repSent1.png') }}" style="margin-right:0.3rem;">SENT</a>
+                <img src="{{ asset('css/icons/repSent.png') }}" style="margin-right:0.3rem;">SENT</a>
             </li>
             <li role="presentation">
               <a class="repTitle" href="/received">
@@ -57,7 +56,7 @@
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="SearchAreaTabs-1" role="tab-panel">
-              <div class="widget-wrapper container-fluid table-responsive">
+              <div class="widget-wrapper container-fluid table-responsive ">
                 <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0">
                   <thead style="background:transparent; color:transparent">
                     <td></td>
@@ -66,7 +65,99 @@
                     <td></td>
                     <td></td>
                   </thead>
-                  <tbody>
+                  <tbody style="width:100vw">
+                    <tr>
+                    <!-- <tr style="width:100%"> -->
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
+                    <tr style="width:100%">
+                      <td><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
+                      <td class="tdTime">Timestamp</td>
+                    </tr>
                     <tr style="width:100%">
                       <td><input type="checkbox" name="" value=""></td>
                       <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>

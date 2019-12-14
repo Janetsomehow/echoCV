@@ -86,13 +86,14 @@ h3.centreCon {
   border-radius: 4px;
 }
 
-.reportStatus {
+/* .reportStatus {
    background:#efefef;
-   height:2rem;
+   height:3rem;
    width:100vw;
    top:13.5rem;
    position:relative;
-}
+} */
+
 
 .reportAction {
   /* width: 11vw; */
@@ -116,7 +117,7 @@ h3.centreCon {
   color:#fff;
 }
 
-/* For received and sent reports */
+/* For reports */
 .wholeContent {
   position: absolute;
   left: 12rem;
@@ -175,12 +176,6 @@ div.widget-wrapper {
   cursor: pointer;
 }
 
-.table {
-  position: relative;
-  top: 5rem;
-  left: 1.5rem;
-}
-
 /* For new report  folder */
 .newReport {
   display: flex;
@@ -195,6 +190,11 @@ div.widget-wrapper {
 
 .newReport .btn-primary {
   margin-right: 2rem;
+}
+
+.repSec {
+  margin-top: 1.7rem;
+  margin-left: 1rem;
 }
 
 .wholeContent textarea {
@@ -351,6 +351,12 @@ div.table {
   margin-left: -1.5rem;
 }
 
+.table {
+  position: relative;
+  top: 5rem;
+  left: 1rem;
+}
+
 thead {
   background: #eeeeee;
 }
@@ -358,19 +364,23 @@ thead {
    cursor: pointer;
  }
 
+ td img {
+   height: 2rem;
+   width: 2rem;
+   border-radius: 50%;
+   margin-right: 0.5rem;
+ }
+
+
+
 
 /* Contact folder */
 a.searchContact {
   width: 8.3rem!important;
   background-color: #007bff!important;
   border-color: #007bff;
-}
-
-td img {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  margin-right: 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
 }
 
 .mobileBtn {
@@ -381,7 +391,6 @@ td img {
   border: 0px solid #AAAAAA;
   border-bottom: 1px solid #ccc;
   border-radius:0;
-
   }
 
 .tdName, .tdOthers {
@@ -396,19 +405,70 @@ td img {
     width: 5vw;
   }
 
+.contactMain {
+  position: relative;
+  top: 3.5rem;
+  font-size: 0.8rem;
+}
+
+.message {
+  position: relative;
+  top: 6rem;
+  font-size: 0.8rem;
+}
+
+.repStatus {
+   background:#eee;
+   margin-top: 7rem;
+   /* margin-bottom: 2rem; */
+}
+
+.repTitle {
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.repTitle:hover {
+    color: #999;
+    border-bottom: 2px solid #19B9FD;
+}
+
+.nav-tabs > li.active > a.repTitle {
+    color: #19B9FD;
+    background: #cdcdcd;
+    border-bottom: 2px solid #19B9FD;
+}
+
+.tab-content {
+  margin-top: -10rem;
+}
+
+.tdSender, .tdDept  {
+    width: 20%;
+  }
+
+.tdTime {
+    width: 10%;
+  }
+
+.tdMsg {
+  width: 43%;
+}
+
 .delContact img{
     border-radius: 0;
     width: 1rem;
     height: 1.5rem;
   }
 
-  .delContact {
-      border-radius: 0;
-      width: 1rem;
-      height: 1.5rem;
-      border: 0px solid #AAAAAA !important;
-      background: url(icons/metricdel.png);
-    }
+.delContact {
+    border-radius: 0;
+    width: 1rem;
+    height: 1.5rem;
+    border: 0px solid #AAAAAA !important;
+    background: url(icons/metricdel.png);
+  }
 
 td {
     border: 0px solid #AAAAAA !important;
@@ -418,7 +478,7 @@ td.tdName img {
     font-weight: 650;
   }
 
-  .tdTags {
+.tdTags {
     background: #b5dcf5;
     color: #1A73E8;
     display: inline-block;
@@ -437,6 +497,14 @@ td.tdName img {
     margin-bottom: 2rem;
   }
 
+.display {
+  /* top: 12rem; */
+}
+
+.eachContact {
+  margin-top: 6rem;
+  margin-left: 1.5rem;
+}
 
 /* For modal */
   .modal-backdrop

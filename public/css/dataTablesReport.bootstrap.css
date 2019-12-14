@@ -1,6 +1,6 @@
 table.dataTable {
   clear: both;
-  /* margin-top: 6px !important; */
+  margin-top: 1.6rem !important;
   margin-bottom: 6px !important;
   /* max-width: none !important; */
   border-collapse: separate !important;
@@ -23,7 +23,7 @@ table.dataTable.nowrap td {
 /* CONTROLS FOR AMOUNT OF ROWS SHOWN*/
 div.dataTables_wrapper div.dataTables_length {
 
-	margin-top: 90px;
+	/* margin-top: -8rem; */
   display: inline-block;
 	font-size: 15px;
 /*	background: PINK;*/
@@ -37,6 +37,7 @@ div.dataTables_wrapper div.dataTables_length label {
   margin-left: 1.5rem;
 
 }
+
 div.dataTables_wrapper div.dataTables_length select {
   width: 75px;
   height: 30px;
@@ -52,7 +53,9 @@ div.dataTables_wrapper div.dataTables_length select {
 div.dataTables_wrapper div.dataTables_filter {
   text-align: right;
 	margin-left: 1.5rem;
-  position: absolute;margin-top: 0.5rem;
+  position: absolute;
+  margin-top: 0.5rem;
+  /* margin-bottom: 1.5rem */
 }
 
 div.dataTables_wrapper div.dataTables_filter label {
@@ -78,7 +81,7 @@ div.dataTables_wrapper div.dataTables_info {
   /* padding-top: 8px; */
   white-space: nowrap;
   margin-top: 6rem;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
 
 div.dataTables_wrapper div.dataTables_paginate {
@@ -86,6 +89,7 @@ div.dataTables_wrapper div.dataTables_paginate {
   margin-top: -1rem;
   white-space: nowrap;
   text-align: right;
+  margin-bottom: 1rem;
 }
 
 div.dataTables_wrapper div.dataTables_paginate ul.pagination {
@@ -184,6 +188,10 @@ div.dataTables_scrollBody > table > tbody > tr:first-child > td {
 div.dataTables_scrollFoot > table {
   margin-top: 0 !important;
   border-top: none;
+}
+
+.widget-wrapper {
+  margin-left: 0;
 }
 
 @media screen and (max-width: 767px) {
