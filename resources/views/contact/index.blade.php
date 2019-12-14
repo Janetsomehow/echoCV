@@ -34,8 +34,8 @@
         <section class="contactMain">
           <div class="widget-wrapper container-fluid" style="padding:0; margin:0">
             <div class="section-wrap-b table-responsive">
-              <table id="mySearchableData" class="display table table-hover table-responsive" style="margin-top:-0.5rem; padding: 0 0.6rem; width:100vw">
-                <thead style="width:100vw">
+              <table id="mySearchableData" class="display table table-hover table-responsive">
+                <thead class="tdHead">
                   <tr>
                     <td></td>
                     <td class="tdOthers">NAME</td>
@@ -46,7 +46,7 @@
                     <td></td>
                   </tr>
                 </thead>
-                <tbody style="width:100vw">
+                <tbody class="tdBody">
                   @if(count($contacts) > 0)
                   @foreach ($contacts as $contact)
                   <tr>
@@ -58,8 +58,14 @@
                       <td class="tdOthers">{{ $contact->email }}</td>
                       <td data-order="" class="tdOthers">{{ $contact->phoneNo }}</td>
                       <td class="tdOthers tdTags">{{ $contact->tags }}</td>
-                      <td><a class="btn btn-default" href="/contact/{{ $contact->id }}">Update</a></td>
+                      <td class="tdUpdate"><a class="btn btn-default" href="/contact/{{ $contact->id }}">Update</a></td>
+                      <!-- <td class="conMobDisplay"><a href="/contact/{{ $contact->id }}">
+                        <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
+                        {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}
+                        </a>
+                      </td> -->
                   </tr>
+
                   @endforeach
                   @endif
                 </tbody>
@@ -67,7 +73,7 @@
             </div>
           </div>
         </section><br><br>
-        <a href="/contact/create" class="btn btn-default mobileBtn">+</a>
+        <a href="/contact/create" class="btn btn-default mobileBtn"></a>
 
       </main>
 
