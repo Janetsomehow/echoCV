@@ -39,6 +39,12 @@
     margin-top: -5px;
     /* padding-top: 1rem; */
     }
+
+    @media (max-width: 1440px){
+        .mobileOnly{
+            display: none;
+        }
+    }
     @media(max-width: 425px){
     .search-form{
       width: 17rem !important;
@@ -79,6 +85,7 @@
     }
  
   }
+    
   
   @media(max-width: 375px){
     .search-form{
@@ -98,10 +105,15 @@
     td.mobileHide{
       display: none;
       border: none;
+      /* margin-top: 5rem !important; */
     }
     .table-mobile{
-      margin-top: -1rem;
+      margin-top: -1.1rem;
       font-size: 4rem !important;
+
+    }
+    hr{
+        margin-top: -2rem;
     }
     .table-items{
       font-size: 1.4rem;
@@ -118,6 +130,7 @@
     .search-btn{
       margin-left: 1rem;
     }
+
  
   }
 
@@ -135,15 +148,15 @@
 <div class="container-fluid">
 <div class="header">
 <div class="d-flex mt-4">
-  <div class="p-2 header_file"><h2 >Files</h2></div>
-  <div class="ml-auto p-2"><a class="btn btn-primary upload-btn text-white  mb-1"> Upload file </a></div>
+  <div class="p-2 header_file"><h2 > Archive</h2></div>
+  {{-- <div class="ml-auto p-2"><a class="btn btn-primary upload-btn text-white  mb-1"> Upload file </a></div> --}}
 </div>
 </div>
 
 <div>
 <form class="form-inline">
   <label class="sr-only" for="inlineFormInputName2"></label>
-  <input type="search" class="form-control search-form mb-2  mr-sm-2" style="width: 24rem"="inlineFormInputName2" placeholder="Search files">
+  <input type="search" class="form-control search-form mb-2  mr-sm-2" style="width: 24rem"="inlineFormInputName2" placeholder="Search archive">
 
   <button type="submit" class="btn btn-primary search-btn btn-sm mb-2 p-2">
     <svg class="svg" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -179,58 +192,75 @@
       <div class="p-2 bd-highlight text-right">
         <span>1-5 of 5</span></div>
 </div>
+<hr class="shadow">
 
-<table class="table table-hover table-mobile table-borderless ">
-              <thead class="thead-light table-head">
-                <th>{{--  --}}</th>
-                <th>NAME</th>
-                <th>OWNER</th>
-                <th>FILE SIZE</th>
-                <th>LAST MODIFIED</th>
-              </thead>
+<table class="table table-hover table-mobile table-borderless">
+              
               <tbody class="table-items">
-               <tr>
+               <tr class="">
                   <td><input type="checkbox" /></td>
-                  <td><span> <img src="{{ asset('css/icons/xls.png') }}" />  Form1.xls </span> </td>
-                  <td class="mobileHide">me</td>
-                  <td class="mobileHide">88KB</td>
-                  <td class="mobileHide">Aug 19</td>
+                  <td > August Investor Update </td>
+                  <p class="text-wrap mobileOnly"> 
+                        Hello All, I hope your month is off to a good start! Last month was a big month for...
+                  </p>
+                  <td class="mobileHide"> </td>
+                  <td class="text-wrap mobileHide">Hello All, I hope your month is off to a good start! Last month was a big month for... </td>
+                
+                  <td class="mobileHide">2 hours Ago</td>
                </tr>
 
                <tr>
                   <td><input type="checkbox" /></td>
-                  <td><span> <img src="{{ asset('css/icons/xls.png') }}" />  Form1.xls </span> </td>
-                  <td class="mobileHide">me</td>
-                  <td class="mobileHide">88KB</td>
+                  <td> Sales KPI </td>
+                  <td class="mobileHide"> Jane from Magnesys </td>
+                  <td class="mobileHide">
+                        Hi Deji, please find the Sales KPI attached in this message. Thank you 
+                  </td>
                   <td class="mobileHide">Aug 19</td>
                </tr>
 
 
                 <tr>
-                <td><input type="checkbox" /></td>
-                <td><span> <img src="{{ asset('css/icons/pdf.png') }}" />  Gillette </span> </td>
-                <td class="mobileHide">Gillette</td>
-                <td class="mobileHide">25KB</td>
-                <td class="mobileHide">Aug 19</td>
-               </tr>
-
-                <tr>
-                <td><input type="checkbox" /></td>
-                <td><span> <img src="{{ asset('css/icons/pdf.png') }}" />  CreditBin </span> </td>
-                <td class="mobileHide">Bank of America</td>
-                <td class="mobileHide">1.1GB</td>
-                <td class="mobileHide">Aug 19</td>
+                <td><input type="checkbox" checked aria-checked="true" /></td>
+                <td> August Team Update</td>
+                <td class="mobileHide"></td>
+                <td class="mobileHide">
+                        Hi guys, we’ve had a tremendous month and i recall i saw lots of smiles more than...
+                </td>
+                <td class="mobileHide">Aug 21</td>
                </tr>
 
                <tr>
-                <td><input type="checkbox" /></td>
-                <td><span> <img src="{{ asset('css/icons/pdf.png') }}" />  Greg Mckinney  </span> </td>
-                <td class="mobileHide"> me </td>
-                <td class="mobileHide"> - </td>
-                <td class="mobileHide">Aug 19</td>
-               </tr>
-              </tbody>
+                    <td><input type="checkbox" /></td>
+                    <td> Sales KPI </td>
+                    <td class="mobileHide"> Yemi from Arla </td>
+                    <td class="mobileHide">
+                          Hi Deji, please find the Sales KPI attached in this message. Thank you 
+                    </td>
+                    <td class="mobileHide">Aug 19</td>
+                 </tr>
+  
+
+                 <tr>
+                        <td><input type="checkbox" checked /></td>
+                        <td> August Investor Update </td>
+                        <td class="mobileHide"> </td>
+                        <td class="mobileHide text-wrap">Hello All, I hope your month is off to a good start! Last month was a big month for... </td>
+                        <td class="mobileHide">2 hours Ago</td>
+                </tr>
+
+                <tr>
+                        <td><input type="checkbox" /></td>
+                        <td> Sales KPI </td>
+                        <td class="mobileHide"> Cindy from AOL </td>
+                        <td class="mobileHide">
+                              Hi Deji, please find the Sales KPI attached in this message. Thank you 
+                        </td>
+                        <td class="mobileHide">Aug 19</td>
+                </tr>
+      
+
+           </tbody>
             </table>
 </div>
 @stop
-
