@@ -18,8 +18,8 @@ class ContactsController extends Controller
     {
         //
         // $contacts = Contact::orderBy('created_at', 'desc')->paginate(10);
-        $contacts = Contact::all();
         // $contacts = Contact::orderBy('created_at', 'desc');
+        $contacts = Contact::all();
         return view('contact.index')->with('contacts', $contacts);
 
     }
@@ -31,7 +31,7 @@ class ContactsController extends Controller
      */
     public function create()
     {
-      return view('contact.add');
+      return view('contact.create');
     }
 
     /**
@@ -76,11 +76,12 @@ class ContactsController extends Controller
      */
     public function show($id)
     {
-      // $contact = Contact::find($id);
-
-      $contacts = Contact::all();
+      // dd($contacts);
+      // $contacts = Contact::all($id);
       // $contacts = Contact::orderBy('created_at', 'desc');
-      return view('contact.add')->with('contacts', $contacts);
+      $contacts = Contact::find($id);
+      return view('contact.show')->with('contacts', $contacts);
+
     }
 
     /**
@@ -91,7 +92,8 @@ class ContactsController extends Controller
      */
     public function edit($id)
     {
-        //
+      $contacts = Contact::find($id);
+      return view('contact.show')->with('contacts', $contacts);
     }
 
     /**
@@ -103,7 +105,31 @@ class ContactsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->validate($request, [
+        'fname' => 'required',
+        'lname' => 'required',
+        'email' => 'required',
+        'phoneNo' => 'required',
+        'company' => 'required',
+        'title' => 'required',
+        'tags' => 'required'
+      ]);
+
+
+      //Create Contact
+      $contact = Contact::find($id);;
+      $contact->fname =$request->input('fname');
+      $contact->lname =$request->input('lname');
+      $contact->email =$request->input('email');
+      $contact->phoneNo =$request->input('phoneNo');
+      $contact->company =$request->input('company');
+      $contact->title =$request->input('title');
+      $contact->tags =$request->input('tags');
+      // $contact->user_id = auth()->user()->id;
+
+      $contact->save();
+
+      return redirect('/contact')->with('success', 'Contact Successful Updated');
     }
 
     /**
@@ -117,6 +143,6 @@ class ContactsController extends Controller
       $contact = Contact::find($id);
 
       $contact->delete();
-      return redirect('/contact/contacts')->with('success', 'Contact Removed');
+      return redirect('/contact')->with('success', 'Contact Removed');
     }
 }
