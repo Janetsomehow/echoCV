@@ -23,7 +23,7 @@
 </div>
 <hr>
 <div style="width:39vw; height:29vw;">
-<canvas id="barchart"  width="150" height="100"></canvas>
+<canvas class="barchart"  width="150" height="100"></canvas>
 </div>
 <div style="width:39vw; height:49vh;">
 <canvas id="lineid"  width="150" height="100"></canvas>
@@ -31,19 +31,18 @@
 <div  style="width:39vw; height:29vh;">
 <canvas id="piechart"  width="150" height="100"></canvas>
   </div>
+  </div>
 <!-- Modal -->
-<div class="modal metex" id="chartmodal" tabindex="-1" role="dialog" aria-labelledby="chartmodalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div class="modal fade" id="chartmodal" tabindex="-1" role="dialog" aria-labelledby="chartmodalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="background-colour:pink;">
     <div class="modal-content">
       <div class="modal-body">
       <div class="row">
-          <div class="col-8 ">
-          <div class="chart-container">
-          <div style="width:39vw; height:29vw;">
-<canvas id="barchart"  width="150" height="100"></canvas>
+          <div class="col-8">
+          <div>
+<canvas class="barchart"  width="100" height="80"></canvas>
 </div>
           </div>
-      </div>
           <div class="col-4">
             <div>
             <nav class="navbar-expand-sm navbar-light">
@@ -54,11 +53,11 @@
     <li class="nav-item">
       <a class="nav-link" href="#">Export</a>
     </li>
+    <li><button type="submit" class="btn btn-sm btn-primary">Save</button></li>
+   <li> <button type="button" class="btn" data-dismiss="modal">Cancel</button></li>
     </ul>
-    </nav>
-    <button type="submit" class="btn btn-sm btn-primary">Save</button>
-    <button type="button" class="btn" data-dismiss="modal">Cancel</button>
-</div>
+  </nav>
+  </div>
       <div>
 size<br>
 <select class="col-10 dropdown-toggle" data-toggle="dropdown">
@@ -79,5 +78,4 @@ Format<br>
     </div>
       </div>
     </div>
-</div>
 @stop
