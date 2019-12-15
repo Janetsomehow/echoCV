@@ -220,7 +220,7 @@ ul li .sidebar-li img {
 }
 @media(max-width:360px){
 	.sidebar{
-		width: 75vw;
+		width: 12rem;
 	}
 }
 

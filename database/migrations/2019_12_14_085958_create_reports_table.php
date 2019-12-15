@@ -17,6 +17,8 @@ class CreateReportsTable extends Migration
             $table->bigIncrements('id');
             $table->string('report_title');
             $table->string('content');
+            $table->integer('status')->default(0);
+            $table->string('receiver');
             $table->timestamps();
         });
     }
