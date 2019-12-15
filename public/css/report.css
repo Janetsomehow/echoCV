@@ -465,7 +465,7 @@ a.searchContact {
   width: 43%;
 }
 
-.delContact img{
+.delContact>img{
     border-radius: 0;
     width: 1rem;
     height: 1.5rem;
@@ -483,7 +483,7 @@ td {
     border: 0px solid #AAAAAA !important;
   }
 
-td.tdName img {
+td.tdName>img {
     font-weight: 650;
   }
 
@@ -514,8 +514,53 @@ td.tdName img {
 }
 
 .eachContact {
-  margin-top: 6rem;
-  margin-left: 1.5rem;
+  margin-top: 5rem;
+  /* margin-left: 1.5rem; */
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.conName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conName>img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  font-weight: bolder;
+}
+
+.actionBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnDelCon {
+  border: 0;
+  background: #fff;
+  margin-right: 1rem;
+}
+
+.btnBack {
+  color: #000;
+  font-size: 2rem;
+  margin-top: -1rem;
+}
+
+.btnBack:hover {
+  color: #000;
+}
+
+.conDetails>img {
+  margin-right: 1rem;
+}
+
+.conEmailPhone {
+  color: #19B9FD;
 }
 
 /* For modal */
@@ -524,6 +569,12 @@ td.tdName img {
     opacity:0.2 !important;
 }
 
+
+/* div.dataTables_wrapper div.dataTables_filter input::after {
+  background: yellow !important;
+  height: 2rem;
+  width: 2rem;
+} */
 
 
 /* ----------------------- Mobile ----------------------*/
@@ -594,15 +645,30 @@ td.tdName img {
 
   div.widget-wrapper {
     width: 95vw;
+    border: 0!important;
+  }
+
+  div.section-wrap-b {
+    border: 0!important;
   }
 
   .conTopBtn {
     display: none;
   }
-}
 
+  .conName img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
 
-@media(max-width:700px){
+  .eachContact {
+    margin-top: 5rem;
+    margin-left: 1.5rem;
+    margin-right: 2rem;
+  }
+
 
 /*----- Metrics -------*/
 

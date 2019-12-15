@@ -34,7 +34,7 @@
         <section class="message">
           <ul class="nav nav-tabs nav-lg repStatus" role="tablist">
             <li class="active" role="presentation">
-              <a class="repTitle"  href="/reps">
+              <a class="repTitle"  href="/reports">
                 <img src="{{ asset('css/icons/repAll1.png') }}" style="margin-right:0.3rem;">ALL</a>
             </li>
             <li role="presentation">

@@ -33,24 +33,30 @@
         <div class="rep">Contacts</div>
       </section>
       <section class="eachContact">
-        <a href="/contact" class="btn btn-default">Back</a>
-        <h1>{{ ucwords($contacts->fname) }} {{ ucwords($contacts->lname) }}</h1>
-        <div class=""> <strong>Company: </strong>
-          {{  ucwords($contacts->company) }}
+        <div class="actionBtn">
+          <a href="/contact" class="btnBack">&times;</a>
+          <form action="{{ route('contact.destroy', $contacts->id) }}" method="POST" class="formDelCon">
+            <button type="button" class="btnDelCon" data-toggle="modal" data-target="#myModal" id="open">
+              <img src="{{ asset('css/icons/contactEdit.png') }}"/></button>
+                 @csrf
+                 @method('DELETE')
+            <button type="submit" class="btnDelCon"><img src="{{ asset('css/icons/contactDel.png') }}"/></button>
+           </form>
         </div>
-        <div class=""><strong>Email: </strong>{{ $contacts->email }}</div>
-        <div class=""><strong>Phone Number: </strong>{{ $contacts->phoneNo }}</div>
-        <div class=""><strong>Title: </strong>{{ $contacts->title }}</div>
-        <div class=""><strong>Tags: </strong>{{ $contacts->tags }}</div>
-        <hr>
-        <small>Updated last on {{ $contacts->updated_at }}</small>
-        <hr>
-        <form action="{{ route('contact.destroy', $contacts->id) }}" method="POST">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="open">Update</button>
-               @csrf
-               @method('DELETE')
-          <button type="submit" class="btn btn-danger">Delete</button>
-         </form>
+        <div class="conName">
+          <img src="https://via.placeholder.com/150x150/50E3C2/FFFFFF.png?text={{ ucwords($contacts->fname[0]) }}{{ ucwords($contacts->lname[0]) }}" />
+          <h4>{{ ucwords($contacts->fname) }} {{ ucwords($contacts->lname) }}</h4>
+        </div>
+        <div class="">
+          <h5>Details</h5>
+          <div class="conDetails conEmailPhone"><img src="{{ asset('css/icons/contactMail.png') }}"/> {{ $contacts->email }}</div>
+          <div class="conDetails conEmailPhone"><img src="{{ asset('css/icons/contactPhoneNo.png') }}"/> {{ $contacts->phoneNo }}</div>
+          <div class="conDetails"><img src="{{ asset('css/icons/contactCompany.png') }}"/> {{ ucwords($contacts->company) }}</div>
+          <div class="conDetails"><img src="{{ asset('css/icons/contactTitle.png') }}"/> {{ $contacts->title }}, {{ $contacts->tags }}</div>
+          <hr>
+          <small>Updated last on {{ $contacts->updated_at }}</small>
+          <hr>
+        </div>
       </section>
     </main>
 
