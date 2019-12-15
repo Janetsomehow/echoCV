@@ -13,8 +13,8 @@ class CreateFilesTable extends Migration {
 			$table->string('size')->nullable();
 			$table->string('type')->nullable();
 			$table->enum('status', array('active', 'archive'))->nullable();
-			$table->bigInteger('company_id')->unsigned();
-			$table->bigInteger('user_id')->unsigned();
+			$table->bigInteger('company_id')->nullable();
+			$table->bigInteger('user_id')->nullable();
 			$table->timestamps();
 		});
 	}
