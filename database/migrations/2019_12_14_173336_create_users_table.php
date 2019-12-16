@@ -8,7 +8,7 @@ class CreateUsersTable extends Migration {
 	public function up()
 	{
 		Schema::create('users', function(Blueprint $table) {
-			$table->increments('id');
+		$table->increments('id');
             $table->string('fname');
             $table->string('lname');
             $table->string('email')->unique();
@@ -16,9 +16,7 @@ class CreateUsersTable extends Migration {
             $table->string('password');
             $table->string('avatar')->default('avatar.png')->nullable();
             $table->string('phone_no')->nullable();            
-            $table->string('password');
-            $table->timestamp('email_verified_at');
-            $table->enum('type', array('owner', 'client'))->nullable();
+            $table->enum('type', array('echovc', 'client'))->nullable();
             $table->enum('permission', array('view', 'edit', 'admin'))->nullable();
             $table->rememberToken();
 			$table->timestamps();
