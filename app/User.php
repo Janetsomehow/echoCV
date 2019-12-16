@@ -7,7 +7,7 @@ use Illuminate\Notifications\Notifiable;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model 
+class User extends Authenticatable
 {
            use Notifiable;
 
@@ -59,6 +59,14 @@ class User extends Model
      public function getAvatarUrlAttribute()
     {
         return Storage::url('avatars/'.$this->id.'/'.$this->avatar);
+    }
+
+    **
+     * Add a mutator to ensure hashed passwords
+     */
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
     }
 
 }
