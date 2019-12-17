@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>All Reports</title>
+      <title>Scheduled Reports</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,7 +11,7 @@
       <!-- Styles -->
       <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
       <link href="{{ asset('css/report.css') }}" rel="stylesheet">
-      <link href="{{ asset('css/dataTablesReport.bootstrap.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/reportTable.css') }}" rel="stylesheet">
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
       <link ‎href="https://fonts.googleapis.com/css?family=europa:200,600" rel="stylesheet">
@@ -25,15 +25,13 @@
   </div>
 
       <main class="wholeContent">
-
         <section class="header searchContact">
           <div class="rep">Reports</div>
           <a href="/new_report" class="btn btn-primary searchContact repTopBtn">New Report</a>
         </section>
 
         <section class="message">
-          <ul class="nav nav-tabs nav-lg repStatus" role="tablist">
-<!--                <ul class="nav nav-tabs nav-line nav-white nav-lg nav-mob-inline" role="tablist">-->
+          <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist" style="margin-bottom:1.2rem;">
             <li role="presentation">
               <a class="repTitle"  href="/reports">
                 ALL</a>
@@ -55,24 +53,56 @@
                 <img src="{{ asset('css/icons/repDra.png') }}" style="margin-right:0.3rem;">DRAFT</a>
             </li>
           </ul>
+          <div class="repMobParent">
+            <ul class="navbar-nav repStatus repMobile">
+              <li class="nav-item dropdown repMobActive">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle repTitle" href="/reports" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>SCHEDULED
+                </a>
+                <div class="dropdown-menu repMobDropdown" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item repTitle" href="/scheduled">ALL</a>
+                  <a class="dropdown-item repTitle" href="/sent">SENT</a>
+                  <a class="dropdown-item repTitle" href="/received">RECEIVED</a>
+                  <a class="dropdown-item repTitle" href="#">DRAFT</a>
+                </div>
+              </li>
+            </ul>
+            <a href="/new_report" ><img src="{{ asset('css/icons/repMobCreate.png') }}" /></a>
+          </div>
           <div class="tab-content">
             <div class="tab-pane active" id="SearchAreaTabs-1" role="tab-panel">
               <div class="widget-wrapper container-fluid table-responsive">
                 <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0">
-                  <thead style="background:transparent; color:transparent">
+                  <thead style="background:#fff; margin-top:0.5rem; width:2.5rem; color:#333">
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>To</td>
+                    <td>Type</td>
+                    <td>Message</td>
+                    <td>Next send date</td>
+                    <td>Actions</td>
                   </thead>
-                  <tbody>
+                  <tbody class="repMainTable" style="width:100vw">
                     <tr style="width:100%">
                       <td><input type="checkbox" name="" value=""></td>
-                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
-                      <td class="tdName">System Architect</td>
-                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
-                      <td class="tdTime">Timestamp</td>
+                      <td data-search="Tiger Nixon" class="tdDept conEmailPhone">20 receipients</td>
+                      <td class="tdName">Monthly</td>
+                      <td class="tdName">Message.... Message.... </td>
+                      <td class="tdName">2 Nov 2020 12:00am</td>
+                      <td class="tdTime">settings</td>
+                    </tr>
+                  </tbody>
+                  <tbody class="repMobTable" style="width:100vw">
+                    <tr style="display:flex!important; justify-content:flex-start;">
+                      <td class="tdt" style="display:flex!important; justify-content:flex-start; margin-top:1rem">
+                        <input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept" style="display:flex!important; flex-direction:column; width:90vw; margin-right:0.5rem">
+                        <div class="" style="display:flex!important; justify-content:space-between">
+                          <div class="conEmailPhone">T. Nixon</div>
+                          <div class="">Timestamp</div>
+                        </div>
+                        <div class="">System Arc</div>
+                        <div class="">Message.... Message.... Message....</div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -91,7 +121,7 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="{{ asset('js/jquery.dataTablesReport.js') }}" defer></script>
+    <script src="{{ asset('js/report.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

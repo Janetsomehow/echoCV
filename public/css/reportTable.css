@@ -285,4 +285,9 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
     float: left;
   }
 
+  div.dataTables_wrapper div.dataTables_filter input {
+    width: 60vw;
+  }
+
+
 }

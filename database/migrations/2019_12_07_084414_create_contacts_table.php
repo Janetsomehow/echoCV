@@ -14,6 +14,7 @@ class CreateContactsTable extends Migration
     public function up()
     {
         Schema::create('contacts', function (Blueprint $table) {
+    		$table->engine = 'MYISAM';
             $table->bigIncrements('id');
             $table->string('fname');
             $table->string('lname');
@@ -22,6 +23,7 @@ class CreateContactsTable extends Migration
             $table->string('company');
             $table->string('title');
             $table->string('tags');
+      			$table->bigInteger('user_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }

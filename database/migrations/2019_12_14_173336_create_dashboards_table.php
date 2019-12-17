@@ -8,6 +8,7 @@ class CreateDashboardsTable extends Migration {
 	public function up()
 	{
 		Schema::create('dashboards', function(Blueprint $table) {
+		$table->engine = 'MYISAM';
 			$table->increments('id');
 			$table->string('name');
 			$table->bigInteger('user_id')->unsigned();

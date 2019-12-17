@@ -14,11 +14,14 @@ class CreateReportsTable extends Migration
     public function up()
     {
         Schema::create('reports', function (Blueprint $table) {
+    		$table->engine = 'MYISAM';
             $table->bigIncrements('id');
             $table->string('report_title');
             $table->string('content');
-            $table->integer('status')->default(0);
+            $table->bigInteger('status')->unsigned()->default(0);
             $table->string('receiver');
+      			$table->bigInteger('user_id')->unsigned();
+      			$table->bigInteger('company_id')->unsigned();
             $table->timestamps();
         });
     }
