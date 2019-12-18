@@ -38,7 +38,6 @@ html {
   right: 30vw;
 } */
 
-
 .newrep {
   position: relative;
   width: 35vw;
@@ -521,14 +520,12 @@ td.tdName>img {
 .display::after {
     margin-bottom: 2rem;
   }
-
 .display {
   /* top: 12rem; */
    margin-top:-0.5rem;
    padding: 0;
    width:100%!important;
 }
-
 .eachContact {
   margin-top: 5rem;
   /* margin-left: 1.5rem; */
