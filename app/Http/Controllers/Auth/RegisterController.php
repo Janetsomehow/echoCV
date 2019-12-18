@@ -67,8 +67,8 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        $avatar = Avatar::create($data['fname'] $data['lname'])->getImageObject()->encode('png');
-        Storage::put('avatars/'.$user->id.'/avatar.png', (string) $avatar);
+        // $avatar = Avatar::create($data['fname'] $data['lname'])->getImageObject()->encode('png');
+        // Storage::put('avatars/'.$user->id.'/avatar.png', (string) $avatar);
 
         return User::create([
             'fname' => $data['fname'],
