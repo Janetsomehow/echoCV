@@ -60,8 +60,8 @@ var linechart = new Chart(ctx, {
 
 
 //get the bar chart canvas
-var ctx = document.getElementsByClassName('barchart');
-console.log(ctx);
+var ctx = document.querySelector('barchart');
+document.write(ctx);
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
