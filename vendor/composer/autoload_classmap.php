@@ -40,8 +40,15 @@ return array(
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Report' => $baseDir . '/app/Report.php',
+<<<<<<< HEAD
     'App\\User' => $baseDir . '/app/old app/User.php',
     'App\\company' => $baseDir . '/app/old app/company.php',
+||||||| merged common ancestors
+    'App\\User' => $baseDir . '/app/User.php',
+    'App\\company' => $baseDir . '/app/company.php',
+=======
+    'App\\User' => $baseDir . '/app/User.php',
+>>>>>>> f3e520d455b4eef77e38207fad36e1dd613746c7
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonImmutable' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
     'Carbon\\CarbonInterface' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterface.php',
@@ -76,6 +83,7 @@ return array(
     'Carbon\\Traits\\Units' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Units.php',
     'Carbon\\Traits\\Week' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Week.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
+    'CreateReportsTable' => $baseDir . '/database/seeds/2019_12_14_085958_create_reports_table.php',
     'Cron\\AbstractField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
     'Cron\\DayOfMonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',

@@ -45,4 +45,5 @@ class ReportsController extends Controller
     public function sent() {
       return view('reports.sent');
     }
+
 }

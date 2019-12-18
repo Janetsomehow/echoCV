@@ -126,7 +126,8 @@ h3.centreCon {
 
 div.widget-wrapper {
   width: 83vw;
-  margin-left: -1rem;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .header {
@@ -234,8 +235,6 @@ div.widget-wrapper {
 .formG .formMett {
   font-size: 1.2vw;
 }
-
-
 
 .newData {
   display: flex;
@@ -353,7 +352,12 @@ div.table {
 .table {
   position: relative;
   top: 5rem;
-  left: 1rem;
+}
+
+.tdt>input {
+  margin-left: 0.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 thead {
@@ -420,10 +424,22 @@ a.searchContact {
   font-size: 0.8rem;
 }
 
+.repMobTable {
+  display: none;
+}
+
 .repStatus {
    background:#eee;
    margin-top: 7rem;
    /* margin-bottom: 2rem; */
+}
+
+.repMobParent {
+  display: none;
+}
+
+.repMobile {
+  /* display: none; */
 }
 
 .repTitle {
@@ -507,7 +523,7 @@ td.tdName>img {
 .display {
   /* top: 12rem; */
    margin-top:-0.5rem;
-   padding: 0 0.6rem;
+   padding: 0;
    width:100%!important;
 }
 .eachContact {
@@ -640,9 +656,14 @@ td.tdName>img {
     left: 0;
   }
 
+  .message {
+    font-size: 0.8rem;
+  }
+
   div.widget-wrapper {
-    width: 95vw;
+    width: 100vw;
     border: 0!important;
+    padding-right: 0;
   }
 
   div.section-wrap-b {
@@ -775,9 +796,11 @@ form.searchReport {
 }
 
 #mySearchableData {
-  width: 90vw !important;
+  width: 100vw !important;
   border: 0;
 }
+
+
 
 .tdName {
   /* display: flex; */
@@ -792,6 +815,7 @@ form.searchReport {
   width: 20vw;
   border-right: 0;
   border-bottom: 0;
+  margin-right: 0.8rem;
 }
 
 .tdUpdate a {
@@ -836,7 +860,60 @@ border-bottom: 0 solid #ddd;
   display: none;
 }
 
+.display {
+  /* top: 0; */
+}
 
+.repMainTable {
+  display: none;
+}
+
+.repMobTable {
+  display: block;
+}
+
+.repMain {
+  display: none;
+}
+
+.repMobParent {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  background:#eee;
+  margin-top: 7rem;
+  margin-left: 1rem;
+}
+
+.repStatus {
+  margin-top: 0;
+  margin-left: 0.5rem;
+}
+
+.repMobParent>a>img {
+  height: 2rem;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+.repMobParent>a {
+  margin-right: 1rem;
+}
+
+.repMobDropdown {
+  background:#fff;
+  font-size:0.7rem;
+}
+
+.repMobActive {
+  margin-left: 1rem;
+}
+
+.nav-tabs > li.active > a.repTitle {
+    color: #19B9FD;
+    background: #cdcdcd;
+    border-bottom: 2px solid #eee;
+}
 
 }
 

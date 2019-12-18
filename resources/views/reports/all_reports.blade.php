@@ -11,7 +11,7 @@
       <!-- Styles -->
       <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
       <link href="{{ asset('css/report.css') }}" rel="stylesheet">
-      <link href="{{ asset('css/dataTablesReport.bootstrap.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/reportTable.css') }}" rel="stylesheet">
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
       <link ‎href="https://fonts.googleapis.com/css?family=europa:200,600" rel="stylesheet">
@@ -217,7 +217,7 @@
 
 
 <!-- EVERYTHING BELOW THIS YOU WILL NEED -->
-<script src="{{ asset('js/jquery.dataTablesReport.js') }}" defer></script>
+<script src="{{ asset('js/report.js') }}" defer></script>
   </script>
 
 

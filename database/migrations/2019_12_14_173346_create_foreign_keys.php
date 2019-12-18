@@ -7,7 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class CreateForeignKeys extends Migration {
 
 	public function up()
+
 	{
+		Schema::table('contacts', function(Blueprint $table) {
+			$table->foreign('user_id')->references('id')->on('users')
+						->onDelete('restrict')
+						->onUpdate('restrict');
+			});
 		Schema::table('companies', function(Blueprint $table) {
 			$table->foreign('user_id')->references('id')->on('users')
 						->onDelete('restrict')

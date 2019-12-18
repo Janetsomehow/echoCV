@@ -42,3 +42,25 @@ Route::get('/received', 'ReportsController@received');
 Route::get('/sent', 'ReportsController@sent');
 Route::get('/scheduled', 'ReportsController@scheduled');
 Route::get('/new_report', 'ReportsController@create');
+
+
+
+
+
+
+
+
+
+// Route::namespace('Auth')->group(function(){
+        
+//     //Login Routes
+//     Route::get('/','LoginController@index')->name('login');
+//     Route::post('/login','LoginController@login');
+//     Route::post('/logout','LoginController@logout')->name('logout');
+//     //Forgot Password Routes
+//     Route::get('/password/reset','ForgotPasswordController@showLinkRequestForm')->name('password.request');
+//     Route::post('/password/email','ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+//     //Reset Password Routes
+//     Route::get('/password/reset/{token}','ResetPasswordController@showResetForm')->name('password.reset');
+//     Route::post('/password/reset','ResetPasswordController@reset')->name('password.update');
+// });

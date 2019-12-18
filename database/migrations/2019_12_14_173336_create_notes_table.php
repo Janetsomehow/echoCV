@@ -8,6 +8,7 @@ class CreateNotesTable extends Migration {
 	public function up()
 	{
 		Schema::create('notes', function(Blueprint $table) {
+		$table->engine = 'MYISAM';
 			$table->increments('id');
 			$table->timestamps();
 			$table->string('content')->nullable();
