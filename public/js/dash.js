@@ -3,22 +3,20 @@ var linechart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
-        datasets: [
-            {
+        datasets: [{
             label: '# of Votes',
             backgroundColor: "transparent",
             fill: 'false',
-            data: [100,50,300,20,189,300,19], 
+            data: [100, 50, 300, 20, 189, 300, 19],
             borderColor: [
-                "#19B9FD",    
-                    ],
+                "#19B9FD",
+            ],
             borderWidth: 1
-        },
-    ]
+        }, ]
     },
     options: {
-        responsive:true,
-        legend:{
+        responsive: true,
+        legend: {
             display: false
         },
         layout: {
@@ -30,56 +28,55 @@ var linechart = new Chart(ctx, {
             }
         },
 
-        title:{
+        title: {
             display: true,
         },
         scales: {
-            bezierCurve : false,
+            bezierCurve: false,
             yAxes: [{
                 ticks: {
-                min:0,
-                  },
-                  gridLines: {
-                    display: false,
-                  }
-              }],
-  
-              xAxes: [{
+                    min: 0,
+                },
                 gridLines: {
-                  display: false,
+                    display: false,
                 }
-              }],
-                pointDot :false,
-                bezierCurve : true,
+            }],
+
+            xAxes: [{
+                gridLines: {
+                    display: false,
                 }
-            
-        
+            }],
+            pointDot: false,
+            bezierCurve: true,
+        }
+
+
     }
 
 });
 
 
 //get the bar chart canvas
-var ctx = document.querySelector('barchart');
+var sourceCanvas = document.querySelector('.barchart');
 document.write(ctx);
-var myChart = new Chart(ctx, {
+var myChart = new Chart(sourceCanvas, {
     type: 'bar',
     data: {
-        labels: ['','Q1 2018', '', 'Q2 2018', '', 'Q3 2018', '', 'Q4 2018'],
-        datasets: [
-          {
-            label: 'Exit',
-            data: ['',100000, '', 250000, '', 300000, '', 57000],
-            backgroundColor: "#7AEF1F",
-            borderWidth: 0.5
-          },
-          {
-            label: 'Investment',
-            data: ['',800000, '', 600000, '', 400000, '', 200000],
-            backgroundColor: "#19B9FD",
-            borderWidth: 0.5
-          }
-        ] 
+        labels: ['', 'Q1 2018', '', 'Q2 2018', '', 'Q3 2018', '', 'Q4 2018'],
+        datasets: [{
+                label: 'Exit',
+                data: ['', 100000, '', 250000, '', 300000, '', 57000],
+                backgroundColor: "#7AEF1F",
+                borderWidth: 0.5
+            },
+            {
+                label: 'Investment',
+                data: ['', 800000, '', 600000, '', 400000, '', 200000],
+                backgroundColor: "#19B9FD",
+                borderWidth: 0.5
+            }
+        ]
     },
     options: {
         barValueSpacing: 1,
@@ -87,22 +84,38 @@ var myChart = new Chart(ctx, {
             yAxes: [{
                 ticks: {
                     min: 0,
-                    },
-                    gridLines: {
-                        display: false,
+                },
+                gridLines: {
+                    display: false,
                 }
             }],
             xAxes: [{
                 gridLines: {
                     display: false,
-                categoryPercentage: 1.0,
-                barPercentage: 0.5
+                    categoryPercentage: 1.0,
+                    barPercentage: 0.5
                 }
             }]
         }
     }
 });
 
+function cloneCanvas(sourceCanvas) {
+    let modalInner = $('#modal-content')
+    let destinationCanvas = document.createElement("canvas");
+    destinationCanvas.width = sourceCanvas.width;
+    destinationCanvas.height = sourceCanvas.height;
+    modalInner.html(destinationCanvas)
+        //grab the context from your destination canvas
+    let destCtx = destinationCanvas.getContext("2d");
+    //call its drawImage() function passing it the source canvas directly
+    destCtx.drawImage(sourceCanvas, 0, 0);
+}
+
+// let sourceCanvas = new Chart(ctx, config)
+$("#chartmodal").on("show.bs.modal", e => {
+    cloneCanvas(sourceCanvas);
+});
 /*        var url = "{{url('stock/chart')}}";
         var Years = new Array();
         var Labels = new Array();
@@ -163,4 +176,3 @@ var myChart = new Chart(ctx, {
         }]
     }
 });
-  
