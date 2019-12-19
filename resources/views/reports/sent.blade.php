@@ -36,36 +36,36 @@
           <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist">
             <li class="active" role="presentation">
               <a class="repTitle"  href="/reports">
-                <img src="{{ asset('css/icons/repAll1.png') }}" style="margin-right:0.3rem;">ALL</a>
+                <img src="{{ asset('css/icons/repAll1.png') }}">ALL</a>
             </li>
             <li role="presentation">
-              <a class="repTitle"  href="/sent">
-                <img src="{{ asset('css/icons/repSent.png') }}" style="margin-right:0.3rem;">SENT</a>
+              <a class="repTitle"  href="/sent_report">
+                <img src="{{ asset('css/icons/repSent.png') }}">SENT</a>
             </li>
             <li role="presentation">
-              <a class="repTitle" href="/received">
-                <img src="{{ asset('css/icons/repRec.png') }}" style="margin-right:0.3rem;">RECEIVED</a>
+              <a class="repTitle" href="/received_report">
+                <img src="{{ asset('css/icons/repRec.png') }}">RECEIVED</a>
             </li>
             <li role="presentation">
-              <a class="repTitle" href="/scheduled">
-                <img src="{{ asset('css/icons/repSch.png') }}" style="margin-right:0.3rem;">SCHEDULED</a>
+              <a class="repTitle" href="/scheduled_report">
+                <img src="{{ asset('css/icons/repSch.png') }}">SCHEDULED</a>
             </li>
             <li role="presentation">
               <a class="repTitle" href="/new_report">
-                <img src="{{ asset('css/icons/repDra.png') }}" style="margin-right:0.3rem;">DRAFT</a>
+                <img src="{{ asset('css/icons/repDra.png') }}">DRAFT</a>
             </li>
           </ul>
           <!-- Mobile view tags -->
           <div class="repMobParent">
             <ul class="navbar-nav repStatus repMobile">
               <li class="nav-item dropdown repMobActive">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle repTitle" href="/reports" role="button"
+                <a id="navbarDropdown" class="nav-link dropdown-toggle repTitle" href="/sent_report" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>SENT
                 </a>
                 <div class="dropdown-menu repMobDropdown" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item repTitle" href="/sent">ALL</a>
-                  <a class="dropdown-item repTitle" href="/received">RECEIVED</a>
-                  <a class="dropdown-item repTitle" href="/scheduled">SCHEDULED</a>
+                  <a class="dropdown-item repTitle" href="/reports">ALL</a>
+                  <a class="dropdown-item repTitle" href="/received_report">RECEIVED</a>
+                  <a class="dropdown-item repTitle" href="/scheduled_report">SCHEDULED</a>
                   <a class="dropdown-item repTitle" href="#">DRAFT</a>
                 </div>
               </li>

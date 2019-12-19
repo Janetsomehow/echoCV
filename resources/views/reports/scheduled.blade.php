@@ -34,35 +34,35 @@
           <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist" style="margin-bottom:1.2rem;">
             <li role="presentation">
               <a class="repTitle"  href="/reports">
-                ALL</a>
+                <img src="{{ asset('css/icons/repAll.png') }}">ALL</a>
             </li>
             <li role="presentation">
-              <a class="repTitle"  href="/sent">
-                <img src="{{ asset('css/icons/repSent.png') }}" style="margin-right:0.3rem;">SENT</a>
+              <a class="repTitle"  href="/sent_report">
+                <img src="{{ asset('css/icons/repSent.png') }}">SENT</a>
             </li>
             <li role="presentation">
-              <a class="repTitle" href="/received">
-                <img src="{{ asset('css/icons/repRec.png') }}" style="margin-right:0.3rem;">RECEIVED</a>
+              <a class="repTitle" href="/received_report">
+                <img src="{{ asset('css/icons/repRec.png') }}">RECEIVED</a>
             </li>
             <li class="active" role="presentation">
-              <a class="repTitle" href="/scheduled">
-                <img src="{{ asset('css/icons/repSch1.png') }}" style="margin-right:0.3rem;">SCHEDULED</a>
+              <a class="repTitle" href="/scheduled_report">
+                <img src="{{ asset('css/icons/repSch1.png') }}">SCHEDULED</a>
             </li>
             <li role="presentation">
               <a class="repTitle" href="/new_report">
-                <img src="{{ asset('css/icons/repDra.png') }}" style="margin-right:0.3rem;">DRAFT</a>
+                <img src="{{ asset('css/icons/repDra.png') }}">DRAFT</a>
             </li>
           </ul>
           <div class="repMobParent">
             <ul class="navbar-nav repStatus repMobile">
               <li class="nav-item dropdown repMobActive">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle repTitle" href="/reports" role="button"
+                <a id="navbarDropdown" class="nav-link dropdown-toggle repTitle" href="/scheduled_report" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>SCHEDULED
                 </a>
                 <div class="dropdown-menu repMobDropdown" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item repTitle" href="/scheduled">ALL</a>
-                  <a class="dropdown-item repTitle" href="/sent">SENT</a>
-                  <a class="dropdown-item repTitle" href="/received">RECEIVED</a>
+                <a class="dropdown-item repTitle" href="/reports">ALL</a>
+                  <a class="dropdown-item repTitle" href="/sent_report">SENT</a>
+                  <a class="dropdown-item repTitle" href="/received_report">RECEIVED</a>
                   <a class="dropdown-item repTitle" href="#">DRAFT</a>
                 </div>
               </li>
@@ -73,7 +73,7 @@
             <div class="tab-pane active" id="SearchAreaTabs-1" role="tab-panel">
               <div class="widget-wrapper container-fluid table-responsive">
                 <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0">
-                  <thead style="background:#fff; margin-top:0.5rem; width:2.5rem; color:#333">
+                  <thead class="tdSchHead">
                     <td></td>
                     <td>To</td>
                     <td>Type</td>
@@ -88,10 +88,10 @@
                       <td class="tdName">Monthly</td>
                       <td class="tdName">Message.... Message.... </td>
                       <td class="tdName">2 Nov 2020 12:00am</td>
-                      <td class="tdTime">settings</td>
+                      <td class="tdSettings"><img src="{{ asset('css/icons/repSchSettings.png') }}" /></td>
                     </tr>
                   </tbody>
-                  <tbody class="repMobTable" style="width:100vw">
+                  <tbody class="repMobTable tdSchBody" style="width:100vw">
                     <tr style="display:flex!important; justify-content:flex-start;">
                       <td class="tdt" style="display:flex!important; justify-content:flex-start; margin-top:1rem">
                         <input type="checkbox" name="" value=""></td>

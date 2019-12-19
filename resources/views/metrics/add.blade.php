@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Create Metrics</title>
+        <title>Add Metrics</title>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
         <!-- Styles -->
@@ -34,7 +34,7 @@
 
         <section class="newMetr">
           <div class="newData">
-            <a href="#"class="">+ New data source</a>
+            <a href="#"class="btn">+ New data source</a>
           </div><hr>
           <div>Google Sheets<a class="metricDel" href="#" style="display:none"><img src={{ asset('css/icons/metricdel.png') }} /></a>
           </div>
@@ -59,12 +59,14 @@
 
               <div class="bigSe">
                 <div class="">
-                  <label for="">Select rows(date and time period)</label>
+                  <label for="">Select rows (date and time period)</label>
                   <select class="form-control smallSe" name="">
                     <option value=""></option>
-                    <option value="First">First</option>
-                    <option value="Second">Second</option>
-                    <option value="Third">Third</option>
+                    <option value="First">Daily</option>
+                    <option value="Second">Weekly</option>
+                    <option value="Third">Monthly</option>
+                    <option value="Third">Quarterly</option>
+                    <option value="Third">Annually</option>
                   </select>
                 </div>
                 <div class="">
