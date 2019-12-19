@@ -61,7 +61,7 @@ class User extends Authenticatable
         return Storage::url('avatars/'.$this->id.'/'.$this->avatar);
     }
 
-    **
+   /**
      * Add a mutator to ensure hashed passwords
      */
     public function setPasswordAttribute($password)

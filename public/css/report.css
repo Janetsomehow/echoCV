@@ -38,7 +38,6 @@ html {
   right: 30vw;
 } */
 
-
 .newrep {
   position: relative;
   width: 35vw;
@@ -582,8 +581,8 @@ td.tdSettings {
  }
 
 .display::after {
-  margin-bottom: 2rem;
-}
+    margin-bottom: 2rem;
+  }
 
 .display {
   /* top: 12rem; */
@@ -591,7 +590,6 @@ td.tdSettings {
    padding: 0;
    width:100%!important;
 }
-
 .eachContact {
   margin-top: 5rem;
   /* margin-left: 1.5rem; */
