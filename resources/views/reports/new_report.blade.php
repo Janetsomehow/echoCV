@@ -22,21 +22,69 @@
   @include('layouts.sidebar')
     </div>
     <main class="wholeContent">
-
+      <h3 class="newRepNav">Reports</h3>
       <section class="newReport">
         <a href="/reports" class="btn btn-default">Back</a>
-        <!-- <button type="button" name="button" class="btn btn-default">Back</button> -->
-        <div class="">
+        <a href="/reports" class="btn btnClose">Close</a>
+        <div class="newRepNavBtns">
           <button type="submit" name="button" class="btn btn-default">Save & Close</button>
           <button type="submit" name="button" class="btn btn-primary">Send now</button>
         </div>
       </section>
-      <section class="repSec">
-        <form action="" method="post">
-          <input class="form-control form-group" type="text" name="subject_title" placeholder="Subject Title">
-          <textarea name="report_body" placeholder="New Report"></textarea>
+        <form action="" method="post" class="repSec">
+          <input class="form-control" type="text" name="subject_title" placeholder="|Add a subject title">
+          <div class="container repMobNewbtn">
+            <button type="button" name="button" class="btn" data-toggle="modal" data-target="#myModal" id="open">Add text request</button>
+            <button type="button" name="button" class="btn" >Add metrics request</button>
+            <button type="button" name="button" class="btn" >Add file request</button>
+          </div>
+
         </form>
-      </section>
+
+        <article class="breaditor ember-view">
+          <form action="">
+            Select images: <input type="file" name="img" multiple>
+            <input type="submit">
+          </form>
+        </article>
     </main>
+
+
+
+
+    <!-- Modal to add text request -->
+        <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <form method="post" action="">
+              @csrf
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Add Text for Report</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <div class="row">
+                       <div class="form-group col-md-12 mr-2 ml-2">
+                         <textarea name="name" rows="5" cols="55" placeholder="Enter Text" class="repTextarea"></textarea>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer" style="justify-content:flex-start!important; padding:1.5rem!important">
+                  <button type="submit" class="btn btn-save" style="background:#ddd; float:left!important">Save</button>
+                  <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+
+
     </body>
 </html>

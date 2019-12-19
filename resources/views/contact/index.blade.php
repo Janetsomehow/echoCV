@@ -16,6 +16,12 @@
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
       <link ‎href="https://fonts.googleapis.com/css?family=europa:200,600" rel="stylesheet">
       <!-- Scripts -->
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="{{ asset('js/jquery.contact.js') }}" defer></script>
       <script src="{{ asset('js/app.js') }}" defer></script>
 
   </head>
@@ -58,14 +64,9 @@
                       <td class="tdOthers">{{ $contact->email }}</td>
                       <td data-order="" class="tdOthers">{{ $contact->phoneNo }}</td>
                       <td class="tdOthers tdTags">{{ $contact->tags }}</td>
-                      <td class="tdUpdate"><a class="btn btn-default" href="/contact/{{ $contact->id }}">Update</a></td>
-                      <!-- <td class="conMobDisplay"><a href="/contact/{{ $contact->id }}">
-                        <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
-                        {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}
-                        </a>
-                      </td> -->
+                      <td class="tdSettings"><a class="" href="/contact/{{ $contact->id }}">
+                        <img src="{{ asset('css/icons/repSchSettings.png') }}" /></a></td>
                   </tr>
-
                   @endforeach
                   @endif
                 </tbody>
@@ -78,11 +79,6 @@
       </main>
 
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="{{ asset('js/jquery.contact.js') }}" defer></script>
   </script>
 
   <!--searchable table start -->
