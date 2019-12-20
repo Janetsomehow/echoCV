@@ -1,0 +1,194 @@
+
+/* Add company styles */
+
+.Twrapper{
+    display: flex;
+    justify-content: center;
+    margin-left: 10rem;
+}
+
+
+
+/* View Company Styles */
+.form{
+    margin-top: -3rem !important;
+}
+
+.reboard{
+
+        position: relative;
+        margin-left: 12rem;
+            display: block;
+            /* justify-content: flex-start; */
+}
+  
+body{
+    font-family: 'Nunito' sans-serif;
+    font-weight: 400;
+}
+
+.btn-company{
+    /* font-size: normal ; */
+    /* line-height: 18px; */
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-left: 0 !important;
+    /* background: linear-gradient(180deg, #2E7CFF 0%, #1B63DC 100%); */
+    border-radius: 4px;
+    background: linear-gradient(180deg, #2E7CFF 0%, #1B63DC 100%, #1B63DC 100%);
+    width: 5rem;
+}
+
+.text{
+    position: relative;
+    left: -5rem;
+    top: 5.3rem;
+}
+.head {
+    position: relative;
+    width: auto !important;
+    /* height: 2rem; */
+
+    left: 1.5rem;
+    top: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    cursor: pointer;
+  }
+
+
+.card{
+    margin-bottom: 3rem;
+    min-width: 21rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid #F4F4F4;
+}
+
+@media (max-width: 425px){
+    .reboard{
+        position: relative;
+        margin-left: 1.6rem;
+        margin-top: -.8rem;
+
+    }
+    .small{
+        display: none;
+    }
+    .back{
+        position: relative;
+        left: 8rem;
+        font-size: 1.4rem;
+        margin-top: -2.8rem;
+        margin-left: 5rem;
+    }
+    .btn-add{
+      margin-top: 8rem;
+      margin-bottom: 4rem;
+      position: relative;
+      left: -14rem;
+      padding: .8rem;
+     
+    }
+
+    .filter{
+      margin-top: -4.5rem;
+      margin-bottom: 4rem;
+      position: relative;
+      left: -3.5rem !important;
+      padding: 1.7rem;
+      width: 10rem;
+    }
+    .card{
+      min-width: 18rem;
+      margin-left: -1rem !important;
+    }
+   
+    h3{
+        font-size: 1.85rem;
+    }
+    .search-form{
+        margin-left: 2rem;
+      
+        font-size: 1.8rem;
+        width: 24.5rem !important;
+    }
+    .search-btn{
+        margin-left: -5rem;
+        height: 4rem;
+        width: 5rem;
+    }
+    .text{
+        display: none;
+    }
+    hr{
+        margin-top: -7rem;
+        width: 25rem;
+        /* margin-left: -3rem; */
+    }
+}
+
+    
+  
+  @media (max-width: 375px){
+      .reboard{
+          position: relative;
+          margin-left: 1.6rem;
+          margin-top: -.8rem;
+
+      }
+      .small{
+          display: none;
+      }
+      .back{
+          position: relative;
+          left: 8rem;
+          font-size: 1.4rem;
+          margin-top: -2.8rem;
+          margin-left: 5rem;
+      }
+      .btn-add{
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+        position: relative;
+        left: -11rem;
+        padding: .8rem;
+       
+      }
+
+      .filter{
+        margin-top: -4.5rem;
+        margin-bottom: 4rem;
+        position: relative;
+        left: -4.6rem !important;
+        padding: 1.7rem;
+        width: 10rem;
+      }
+      .card{
+        min-width: 18rem;
+        margin-left: -1rem !important;
+      }
+     
+      h3{
+          font-size: 1.85rem;
+      }
+      .search-form{
+          margin-left: 2rem;
+        
+          font-size: 1.8rem;
+          width: 21.5rem !important;
+      }
+      .search-btn{
+          margin-left: -5rem;
+          height: 4rem;
+          width: 5rem;
+      }
+      .text{
+          display: none;
+      }
+      hr{
+          margin-top: -7rem;
+          width: 23.5rem;
+          margin-left: -1.35rem;
+      }
+  }
+
