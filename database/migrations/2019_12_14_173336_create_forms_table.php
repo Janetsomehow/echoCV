@@ -8,6 +8,7 @@ class CreateFormsTable extends Migration {
 	public function up()
 	{
 		Schema::create('forms', function(Blueprint $table) {
+		$table->engine = 'MYISAM';
 			$table->increments('id');
 			$table->bigInteger('report_id')->unsigned();
 			$table->string('type')->nullable();

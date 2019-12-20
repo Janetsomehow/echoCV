@@ -38,7 +38,6 @@ html {
   right: 30vw;
 } */
 
-
 .newrep {
   position: relative;
   width: 35vw;
@@ -127,7 +126,8 @@ h3.centreCon {
 
 div.widget-wrapper {
   width: 83vw;
-  margin-left: -1rem;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .header {
@@ -177,11 +177,19 @@ div.widget-wrapper {
 }
 
 /* For new report  folder */
+.newRepNav {
+  display: none;
+}
+
 .newReport {
   display: flex;
   justify-content: space-between;
   margin-top: 1.7rem;
   margin-left: 1rem;
+}
+
+.newReport>.btnClose {
+  display: none;
 }
 
 .btn-default {
@@ -193,16 +201,38 @@ div.widget-wrapper {
 }
 
 .repSec {
-  margin-top: 1.7rem;
-  margin-left: 1rem;
+  margin-top: 3rem;
+  /* margin-left: 3rem; */
+  /* margin-left: 20vw; */
 }
 
-.wholeContent textarea {
-  margin: 2rem;
-  border: solid 3px square;
-  width: 75vw;
-  height: 70vh;
+.repSec>input {
+  border: 0;
+  height: 4rem;
+  width: 40vw;
+  margin-left: 15vw;
+  font-size: 1.5rem;
 }
+
+.repSec>.container {
+  /* margin: 2rem; */
+  margin-top: 5rem;
+  width: 60vw;
+  margin-left: 15vw;
+}
+
+.repSec>.container>button {
+  margin-right: 0.5rem;
+  max-width: 17vw;
+  height: 2.3rem;
+  background: #eee;
+  border: 1px #ccc solid;
+}
+
+.repTextarea {
+  border:0;
+  /* width:80vw; */
+  }
 
 
 /* For Metrics folder*/
@@ -235,8 +265,6 @@ div.widget-wrapper {
 .formG .formMett {
   font-size: 1.2vw;
 }
-
-
 
 .newData {
   display: flex;
@@ -354,7 +382,12 @@ div.table {
 .table {
   position: relative;
   top: 5rem;
-  left: 1rem;
+}
+
+.tdt>input {
+  margin-left: 0.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 thead {
@@ -376,7 +409,7 @@ thead {
 
 /* Contact folder */
 a.searchContact {
-  width: 8.3rem!important;
+  max-width: 8.3rem!important;
   background-color: #007bff!important;
   border-color: #007bff;
   cursor: pointer;
@@ -421,10 +454,22 @@ a.searchContact {
   font-size: 0.8rem;
 }
 
+.repMobTable {
+  display: none;
+}
+
 .repStatus {
    background:#eee;
    margin-top: 7rem;
    /* margin-bottom: 2rem; */
+}
+
+.repMobParent {
+  display: none;
+}
+
+.repMobile {
+  /* display: none; */
 }
 
 .repTitle {
@@ -438,6 +483,10 @@ a.searchContact {
     border-bottom: 2px solid #19B9FD;
 }
 
+.repTitle>img {
+  margin-right: 0.3rem;
+}
+
 .nav-tabs > li.active > a.repTitle {
     color: #19B9FD;
     background: #cdcdcd;
@@ -447,6 +496,13 @@ a.searchContact {
 .tdHead, .tdBody {
   width: 100vw;
   margin: 0;
+}
+
+.tdSchHead {
+   style="background:#fff;
+   margin-top:0.5rem;
+   width:2.5rem;
+   color:#333
 }
 
 .tab-content {
@@ -502,6 +558,28 @@ td.tdName>img {
     text-align: center;
   }
 
+td.tdSettings {
+   max-width: 3rem;
+   height: 1.5rem;
+}
+
+.tdSettings>a {
+   width: 1.5rem;
+   height: 1.5rem;
+   padding: 0;
+}
+
+.tdSettings>a:checked {
+   border: 0;
+   border-color: #fff;
+}
+
+.tdSettings>a>img {
+   width: 1.5rem;
+   height: 1.5rem;
+   margin: 0;
+ }
+
 .display::after {
     margin-bottom: 2rem;
   }
@@ -509,10 +587,9 @@ td.tdName>img {
 .display {
   /* top: 12rem; */
    margin-top:-0.5rem;
-   padding: 0 0.6rem;
+   padding: 0;
    width:100%!important;
 }
-
 .eachContact {
   margin-top: 5rem;
   /* margin-left: 1.5rem; */
@@ -543,6 +620,11 @@ td.tdName>img {
   border: 0;
   background: #fff;
   margin-right: 1rem;
+  outline: none;
+}
+
+.btnDelCon:active {
+  outline: none;
 }
 
 .btnBack {
@@ -643,9 +725,14 @@ td.tdName>img {
     left: 0;
   }
 
+  .message {
+    font-size: 0.8rem;
+  }
+
   div.widget-wrapper {
-    width: 95vw;
+    width: 100vw;
     border: 0!important;
+    padding-right: 0;
   }
 
   div.section-wrap-b {
@@ -778,8 +865,16 @@ form.searchReport {
 }
 
 #mySearchableData {
-  width: 90vw !important;
+  width: 100vw !important;
   border: 0;
+}
+
+.tdSchHead {
+   display: none;
+}
+
+.tdSchBody {
+   margin-top: 1rem;
 }
 
 .tdName {
@@ -790,15 +885,12 @@ form.searchReport {
   font-size: 1rem;
 }
 
-.tdUpdate {
+.tdSettings {
   display: flex;
-  width: 20vw;
+  width: 10vw;
   border-right: 0;
   border-bottom: 0;
-}
-
-.tdUpdate a {
-  font-size: 0.8rem;
+  margin-right: 0.8rem;
 }
 
 .conMobDisplay {
@@ -839,6 +931,113 @@ border-bottom: 0 solid #ddd;
   display: none;
 }
 
+.display {
+  /* top: 0; */
+}
+
+.repMainTable {
+  display: none;
+}
+
+.repMobTable {
+  display: block;
+}
+
+.repMain {
+  display: none;
+}
+
+.repMobParent {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  background:#eee;
+  margin-top: 7rem;
+  margin-left: 1rem;
+}
+
+.repStatus {
+  margin-top: 0;
+  margin-left: 0.5rem;
+}
+
+.repMobParent>a>img {
+  height: 2rem;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+.repMobParent>a {
+  margin-right: 1rem;
+}
+
+.repMobDropdown {
+  background:#fff;
+  font-size:0.7rem;
+}
+
+.repMobActive {
+  margin-left: 1rem;
+}
+
+.nav-tabs > li.active > a.repTitle {
+    color: #19B9FD;
+    background: #cdcdcd;
+    border-bottom: 2px solid #eee;
+}
+
+.newRepNav {
+  display: block;
+  margin-left: 4rem;
+  margin-top: 1.5rem;
+}
+
+.newReport {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.newReport>.btn-default {
+  display: none;
+}
+
+.newReport>.btnClose {
+  display: flex;
+  max-width: 20vw;
+  height: 2.3rem;
+  background: linear-gradient(359.8deg, #F5F6F9 10.29%, #FFFFFF 99.27%);
+  border: 1px solid #D5DCE6;
+}
+
+.newRepNavBtns>.btn-default {
+  display: none;
+}
+
+.repSec>input {
+  width: 70vw;
+  margin-left: 15vw;
+}
+
+.repSec>.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin-left: 0;
+}
+
+.repSec>.container>button {
+  margin-bottom: 1rem;
+  max-width: 50vw;
+  height: 2.3rem;
+  background: linear-gradient(359.8deg, #F5F6F9 10.29%, #FFFFFF 99.27%);
+  border: 1px solid #D5DCE6;
+}
+
+.repTextarea {
+  /* border:0; */
+  width: 75vw;
+  }
 
 
 }

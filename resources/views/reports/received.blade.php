@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>All Reports</title>
+      <title>Received Reports</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,7 +11,7 @@
       <!-- Styles -->
       <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
       <link href="{{ asset('css/report.css') }}" rel="stylesheet">
-      <link href="{{ asset('css/dataTablesReport.bootstrap.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/reportTable.css') }}" rel="stylesheet">
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
       <link ‎href="https://fonts.googleapis.com/css?family=europa:200,600" rel="stylesheet">
@@ -32,28 +32,47 @@
         </section>
 
         <section class="message">
-          <ul class="nav nav-tabs nav-lg repStatus" role="tablist">
-            <li role="presentation">
-              <a class="repTitle"  href="/reports">
-                <img src="{{ asset('css/icons/repAll.png') }}" style="margin-right:0.3rem;">ALL</a>
-            </li>
-            <li role="presentation">
-              <a class="repTitle"  href="/sent">
-                <img src="{{ asset('css/icons/repSent.png') }}" style="margin-right:0.3rem;">SENT</a>
-            </li>
+          <!-- Main screen tags -->
+          <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist">
             <li class="active" role="presentation">
-              <a class="repTitle" href="/received">
-                <img src="{{ asset('css/icons/repRec1.png') }}" style="margin-right:0.3rem;">RECEIVED</a>
+              <a class="repTitle"  href="/reports">
+                <img src="{{ asset('css/icons/repAll1.png') }}">ALL</a>
             </li>
             <li role="presentation">
-              <a class="repTitle" href="/scheduled">
-                <img src="{{ asset('css/icons/repSch.png') }}" style="margin-right:0.3rem;">SCHEDULED</a>
+              <a class="repTitle"  href="/sent_report">
+                <img src="{{ asset('css/icons/repSent.png') }}">SENT</a>
+            </li>
+            <li role="presentation">
+              <a class="repTitle" href="/received_report">
+                <img src="{{ asset('css/icons/repRec.png') }}">RECEIVED</a>
+            </li>
+            <li role="presentation">
+              <a class="repTitle" href="/scheduled_report">
+                <img src="{{ asset('css/icons/repSch.png') }}">SCHEDULED</a>
             </li>
             <li role="presentation">
               <a class="repTitle" href="/new_report">
-                <img src="{{ asset('css/icons/repDra.png') }}" style="margin-right:0.3rem;">DRAFT</a>
+                <img src="{{ asset('css/icons/repDra.png') }}">DRAFT</a>
             </li>
           </ul>
+          <!-- Mobile view tags -->
+          <div class="repMobParent">
+            <ul class="navbar-nav repStatus repMobile">
+              <li class="nav-item dropdown repMobActive">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle repTitle" href="/received_report" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>RECEIVED
+                </a>
+                <div class="dropdown-menu repMobDropdown" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item repTitle" href="/reports">ALL</a>
+                  <a class="dropdown-item repTitle" href="/sent_report">SENT</a>
+                  <a class="dropdown-item repTitle" href="/scheduled_report">SCHEDULED</a>
+                  <a class="dropdown-item repTitle" href="#">DRAFT</a>
+                </div>
+              </li>
+            </ul>
+            <a href="/new_report" ><img src="{{ asset('css/icons/repMobCreate.png') }}" /></a>
+          </div>
+
           <div class="tab-content">
             <div class="tab-pane active" id="SearchAreaTabs-1" role="tab-panel">
               <div class="widget-wrapper container-fluid table-responsive">
@@ -65,13 +84,27 @@
                     <td></td>
                     <td></td>
                   </thead>
-                  <tbody>
+                  <tbody class="repMainTable" style="width:100vw">
                     <tr style="width:100%">
                       <td><input type="checkbox" name="" value=""></td>
                       <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
                       <td class="tdName">System Architect</td>
                       <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
                       <td class="tdTime">Timestamp</td>
+                    </tr>
+                  </tbody>
+                  <tbody class="repMobTable" style="width:100vw">
+                    <tr style="display:flex!important; justify-content:flex-start;">
+                      <td class="tdt" style="display:flex!important; justify-content:flex-start; margin-top:1rem">
+                        <input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept" style="display:flex!important; flex-direction:column; width:90vw; margin-right:0.5rem">
+                        <div class="" style="display:flex!important; justify-content:space-between">
+                          <div class="conEmailPhone">T. Nixon</div>
+                          <div class="">Timestamp</div>
+                        </div>
+                        <div class="">System Arc</div>
+                        <div class="">Message.... Message.... Message....</div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -90,7 +123,7 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="{{ asset('js/jquery.dataTablesReport.js') }}" defer></script>
+    <script src="{{ asset('js/report.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
