@@ -7,12 +7,52 @@
     margin-left: 10rem;
 }
 
-@media (max-width: 375px){
+@media (max-width: 425px){
     .Twrapper{
         margin-top: 5rem !important;
     }
+    .empty{
+        margin-left: -13.8rem;
+    }
+    p.company-text{
+        width: 70%;
+        margin-left: 4.5rem;
+    }
+    .company-image{
+         width: 70%;
+        /* margin-left: 5rem; */
+        position: relative;
+        left: 2rem;
+    }
+    .con{
+        margin-left: 2.4rem;
+    }
+    .company-btn{
+        position: relative;
+        left: 1rem;
+    }
 }
 
+/* Add company styles */
+
+
+.heading{
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+}
+.newrep{
+    position: relative;
+    left: 26rem !important;
+}
+
+@media (max-width: 425px){
+    .newrep{
+        position: relative;
+        left: 3rem !important;
+        width: 21rem !important;
+    }
+}
 
 /* View Company Styles */
 .form{

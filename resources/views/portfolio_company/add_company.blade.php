@@ -24,8 +24,12 @@
       @include('layouts.sidebar')
     </div>
 
-      <section class="onboard">
-        <div class="rep">Add Company</div>
+      <section class="reboard">
+        <div class="heading">
+          <h3>
+            Add Company
+          </h3>
+          </div>
         <div class="newrep ">
           <div class="form">
             <form action="">

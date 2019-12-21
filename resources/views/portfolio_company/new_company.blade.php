@@ -21,12 +21,14 @@
         <div class="col-md-12 mt-5 mb-5 p-5 Twrapper">
 
           <div class="empty text-center">
-              <img src="{{ asset('css/icons/company.png') }}"  class="mx-auto d-block"  />
+              <img src="{{ asset('css/icons/company.png') }}"  class="mx-auto d-block company-image"  />
+            <div class="con">
               <h3>Build your Dashboard</h3>
-              <p>Your latest activity and report will automatically
+              <p class="text-center company-text">Your latest activity and report will automatically
               be shown here. Click the button below to create a chart</p>
+            </div>
             <a href="/add_company">
-              <button type="button" name="button" class="btn btn-primary">
+              <button type="button" name="button" class="btn btn-primary company-btn">
                <i class="fas fa-plus"> </i> New Company
               </button>
           </a>
