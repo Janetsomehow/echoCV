@@ -7,6 +7,11 @@
     margin-left: 10rem;
 }
 
+@media (max-width: 375px){
+    .Twrapper{
+        margin-top: 5rem !important;
+    }
+}
 
 
 /* View Company Styles */
