@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Avatar;
 use Storage;
+use App\Company;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -30,7 +32,30 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    // protected $redirectTo = '/home';
+
+    public function redirectTo()
+    {
+        $loguser = Auth::user();
+        $company = Company::where('user_id', $loguser->id)->first();
+ 
+
+       if($loguser->type == 'client' && !is_null($company))
+                {
+                    return redirect()->to($company->uuid.'/home');
+                }
+
+                if($loguser->type == 'client' && is_null($company))
+                {
+                    return redirect()->to('/add_company');
+                }
+
+
+                if($loguser->type == 'echovc' )
+                {
+                    return redirect()->to('/home');
+                }
+    }
 
     /**
      * Create a new controller instance.
@@ -74,6 +99,8 @@ class RegisterController extends Controller
             'fname' => $data['fname'],
             'lname' => $data['lname'],
             'email' => $data['email'],
+            'type'=>'client', 
+            'permission'  => 'admin',
             'password' => Hash::make($data['password']),
         ]);
     }

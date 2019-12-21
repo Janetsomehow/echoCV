@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Middleware;
-use Auth;
-use App\User;
 
 use Closure;
+use Auth;
+use App\User;
+use App\Company;
 
-class Admin
+class Client
 {
     /**
      * Handle an incoming request.
@@ -21,8 +22,13 @@ class Admin
         return redirect()->route('/');
          }
 
+          if($loguser->type == 'client' && is_null($company))
+            {
+                    return redirect()->to('/add_company');
+            }
 
-         if(auth()->user()->type == 'echovc' )
+
+         if(auth()->user()->type == 'client' && !is_null($company))
             {
                 return $next($request);
             }
@@ -34,5 +40,6 @@ class Admin
          {
             abort('404')
          }
+        // return $next($request);
     }
 }
