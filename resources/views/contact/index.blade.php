@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Contacts</title>
+      <link rel="icon" href="{{ asset('css/icons/echoVC.png') }}" />
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -56,7 +57,7 @@
                   @if(count($contacts) > 0)
                   @foreach ($contacts as $contact)
                   <tr>
-                      <td class="tdCheck"><input type="checkbox" name="{{ $contact->id }}" value=""></td>
+                      <td class="tdt"><input type="checkbox" name="" value="{{ $contact->id }}"></td>
                       <td data-search="{{ $contact->fname }} {{ $contact->lname }}" class="tdName">
                         <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
                         {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}</td>

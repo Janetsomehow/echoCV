@@ -9,6 +9,12 @@ use App\Contact;
 class ContactsController extends Controller
 {
 
+    // ********Access control for Contacts********
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+
     /**
      * Display a listing of the resource.
      *
