@@ -100,6 +100,12 @@
     margin-top: -3rem !important;
 }
 
+.filter{
+    width: 60%;
+    margin-left: 27rem;
+    margin-top: -8.3rem;
+}
+
 .reboard{
 
         position: relative;
@@ -181,9 +187,10 @@ body{
       margin-top: 0.2rem !important;
       margin-bottom: 3rem;
       position: relative;
+      margin-left: 0;
       left: 5rem !important;
       padding: 1.7rem;
-      width: 10rem;
+      width: 10rem !important;
     }
     .card{
       min-width: 18rem;
@@ -247,11 +254,12 @@ body{
 
       .filter{
         margin-top: .1rem !important;
-        margin-bottom: 4rem;
+        margin-bottom: 4rem !important;
         position: relative;
         left: 4rem !important;
         padding: 1.7rem;
-        width: 10rem;
+        margin-left: 0;
+        width: 10rem !important;
       }
       .card{
         min-width: 18rem;
