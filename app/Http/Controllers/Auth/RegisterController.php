@@ -99,6 +99,7 @@ class RegisterController extends Controller
             'fname' => $data['fname'],
             'lname' => $data['lname'],
             'email' => $data['email'],
+            'avatar' => 'avatar.png',
             'type'=>'client', 
             'permission'  => 'admin',
             'password' => Hash::make($data['password']),
