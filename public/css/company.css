@@ -290,3 +290,92 @@ body{
       }
   }
 
+  /* Single Company styles */
+
+  .page-setup{
+    margin-left: 14rem;
+    position: relative; 
+    top: 2rem
+  }
+
+  .life-img{
+      width: 10rem;
+      border-radius: 5px;
+  }
+
+  .info{
+      margin-left: 1rem;
+  }
+
+  .toggle{
+    margin-left: 11rem;
+    margin-top: 3.5rem;
+  }
+
+  .toggler{
+    font-size: 2rem;
+    color: #7AEF1F;
+  }
+
+  ul > li > a{
+      color: #000000;
+
+  }
+  
+  ul > li > a:hover{
+    color: #000000;
+    
+}
+ul > li > a.active{
+    border-bottom:2px solid #19B9FD;
+}
+
+.btn-share{
+    background: linear-gradient(359.6deg, #F5F6F9 10.29%, #FFFFFF 99.27%);
+/* secondary button border */
+
+    border: 1px solid #D5DCE6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: black;
+    width: 6rem;
+    margin-top: -.4rem;
+}
+
+.details{
+    /* width: 90rem; */
+    overflow-x: auto;
+    max-height: 100vw;
+    background-color: #FDFDFD;
+    padding: 15px;
+}
+/* width */
+.details ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .details ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .details  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  .details ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .rounded-circle{
+      background-color: #6DA544;
+      /* background: none; */
+      border: none;
+      font-size: 1.4rem;
+  }
+
+  .rounded-p{
+      border-radius: 1.7rem !important;
+  }
