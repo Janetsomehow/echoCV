@@ -17,9 +17,9 @@
                         <div class="form-group ml-n4 col-md-12 row">    
                             <div class="col-md-6">
                                 <label for="name" >{{ __('First name') }}</label>
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" style="width: 100%" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="fname" type="text" class="form-control @error('fname') is-invalid @enderror" style="width: 100%" name="fname" value="{{ old('fname') }}" required autocomplete="fname" autofocus>
 
-                                    @error('name')
+                                    @error('fname')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -27,10 +27,10 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="name" >{{ __('Last name') }}</label>
-                                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <label for="lname" >{{ __('Last name') }}</label>
+                                        <input id="lname" type="text" class="form-control @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="lname" autofocus>
 
-                                        @error('name')
+                                        @error('lname')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>

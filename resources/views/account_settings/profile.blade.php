@@ -37,12 +37,12 @@
                 <form action="" >
                         <div class="form-group ml-n3 col-md-12 input-style" >
                             <label for="">    First name</label>
-                            <input type="text" placeholder="Bosun " class="form-control">
+                            <input type="text" placeholder="Bosun " class="form-control" value="{{$user->fname}}">
                         </div>
 
                         <div class="form-group ml-n3 col-md-12 input-style" >
                                 <label for="">    Last name</label>
-                                <input type="text" placeholder="Osamudiamen  " class="form-control">
+                                <input type="text" placeholder="Osamudiamen" class="form-control" value="{{$user->lname}}">
                         </div>
 
                         <div class="form-group ml-n3 col-md-12 input-style">
@@ -71,7 +71,10 @@
 
             <div class="upload ">
                 <p> Profile picture</p>
-                <div class="box"></div>
+                <div class="box">
+                    {{-- <img src="{{ Avatar::create('Joko Widodo')->toBase64() }}" /> --}}
+                    <img src="{{asset('storage/avatars/'.$user->id.'/'.$user->avatar)}}" alt="">
+                </div>
                 <div class="upload-btn">
                     <button class="btn btn-default btn-upload" > Upload Picture </button>
                     <input type="file"  accept="image/png, image/jpeg" name="avatar" title="Upload an image">

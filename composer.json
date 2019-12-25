@@ -10,10 +10,14 @@
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
+        "intervention/image": "^2.5",
         "laravel/framework": "^6.2",
+        "laravel/helpers": "^1.1",
         "laravel/tinker": "^1.0",
         "laravel/ui": "^1.1",
         "laravolt/avatar": "^3.0",
+        "lasserafn/php-initial-avatar-generator": "^4.0",
+        "realrashid/sweet-alert": "^3.0",
         "webpatser/laravel-uuid": "^3.0"
     },
     "require-dev": {

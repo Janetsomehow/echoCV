@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 use Avatar;
 use Storage;
 use App\Company;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -61,4 +62,39 @@ class RegisterController extends Controller
         
         
     }
+
+
+    	  public function login()
+	    {
+	        if (auth()->attempt(request(['email', 'password'])) == false) 
+	        {
+            return back()->withErrors([
+                'message' => 'The email or password is incorrect, please try again'
+            ]);
+            }
+        
+              $loguser = Auth::user();
+
+              if($loguser->type == 'client' && !is_null($company))
+        		{
+        			return redirect()->to($company->uuid.'/home');
+        		}
+
+        		if($loguser->type == 'client' && is_null($company))
+        		{
+        			return redirect()->to('/add_company');
+        		}
+
+	    }
+
+
+
+
+
+	     public function logout()
+	    {
+	        auth()->logout();
+	        
+	        return redirect()->to('/');
+	    }
 }
