@@ -22,7 +22,6 @@ Route::get('/add_chart', function () { return view('home.add_chart'); });
 Route::get('/create_metrics', function () { return view('metrics.create'); });
 Route::get('/add_metrics', function () { return view('metrics.add'); });
 Route::get('/add_company', function () { return view('portfolio_company.add_company'); });
-Route::get('/view_companies', function () { return view('portfolio_company.view_companies'); });
 Route::get('/dashboard', function () { return view('home.dashboard'); });
 Route::get('/new_company', function () { return view('portfolio_company.new_company'); });
 Route::get('/add_company', function () { return view('portfolio_company.add_company'); });
