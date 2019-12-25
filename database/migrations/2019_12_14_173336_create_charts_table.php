@@ -8,6 +8,7 @@ class CreateChartsTable extends Migration {
 	public function up()
 	{
 		Schema::create('charts', function(Blueprint $table) {
+		$table->engine = 'MYISAM';
 			$table->increments('id');
 			$table->string('name');
 			$table->enum('type', array('column', 'bar', 'funnel', 'pie', 'spline'))->nullable();

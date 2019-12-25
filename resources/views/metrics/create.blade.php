@@ -34,12 +34,12 @@
 
         <section class="newMetr">
           <div class="newData">
-            <a href="#"class="">+ New data source</a>
+            <a href="/add_metrics" class="btn">+ New data source</a>
           </div><hr>
           <label for="">Custom</label>
           <div class="formMett custom">
             User provided metric
-            <a href="#"class="btn btn-default">Create</a>
+            <a href="/add_metrics" class="btn btn-default">Create</a>
           </div>
             <label for="">Link</label>
               <div class="formG">
@@ -51,17 +51,17 @@
                 <div class="formMett ">
                   <img src="{{ asset('css/icons/xero.png') }}" />
                   Xero
-                  <a href="#"class="btn btn-default">Link</a>
+                  <a href="https://login.xero.com/identity/user/login"class="btn btn-default">Link</a>
                 </div>
                 <div class="formMett ">
                   <img src="{{ asset('css/icons/airtable.png') }}" />
                   Airtable
-                  <a href="#"class="btn btn-default">Link</a>
+                  <a href="https://airtable.com/login"class="btn btn-default">Link</a>
                 </div>
                 <div class="formMett ">
                   <img src="{{ asset('css/icons/trello.png') }}" />
                   Trello
-                  <a href="#"class="btn btn-default">Link</a>
+                  <a href="https://trello.com/en/login"class="btn btn-default">Link</a>
                 </div>
               </div>
         </section>

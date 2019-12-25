@@ -44,14 +44,15 @@ Auth::routes();
 Route::resource('company_store', 'companyController');
 Route::resource('contact', 'ContactsController');
 Route::get('/reports', 'ReportsController@index');
-Route::get('/received', 'ReportsController@received');
-Route::get('/sent', 'ReportsController@sent');
-Route::get('/scheduled', 'ReportsController@scheduled');
+Route::get('/received_report', 'ReportsController@received');
+Route::get('/sent_report', 'ReportsController@sent');
+Route::get('/scheduled_report', 'ReportsController@scheduled');
 Route::get('/new_report', 'ReportsController@create');
 
 
 
 Route::get('/profile', 'ProfileController@profileindex');
+
 
 
 
@@ -78,4 +79,17 @@ Route::get('/profile', 'ProfileController@profileindex');
 // Route::get('/add_chart1', function () { return view('home.add_chart1'); });
 // Route::get('/profile', function () { return view('account_settings.profile'); });
 // Route::get('/permissions', function () { return view('account_settings.permissions'); });
+
+// Route::namespace('Auth')->group(function(){
+
+//     //Login Routes
+//     Route::get('/','LoginController@index')->name('login');
+//     Route::post('/login','LoginController@login');
+//     Route::post('/logout','LoginController@logout')->name('logout');
+//     //Forgot Password Routes
+//     Route::get('/password/reset','ForgotPasswordController@showLinkRequestForm')->name('password.request');
+//     Route::post('/password/email','ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+//     //Reset Password Routes
+//     Route::get('/password/reset/{token}','ResetPasswordController@showResetForm')->name('password.reset');
+//     Route::post('/password/reset','ResetPasswordController@reset')->name('password.update');
 // });

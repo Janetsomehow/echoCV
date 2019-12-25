@@ -279,10 +279,16 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
     float: right;
     margin-top: 6rem;
     padding-bottom: 1rem;
+    margin-right: 1rem;
   }
 
   div.dataTables_wrapper div.dataTables_info {
     float: left;
   }
+
+  div.dataTables_wrapper div.dataTables_filter input {
+    width: 60vw;
+  }
+
 
 }

@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Contacts</title>
+      <link rel="icon" href="{{ asset('css/icons/echoVC.png') }}" />
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,11 +12,17 @@
       <!-- Styles -->
       <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
       <link href="{{ asset('css/report.css') }}" rel="stylesheet">
-      <link href="{{ asset('css/dataTables.bootstrap.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/contactTable.css') }}" rel="stylesheet">
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
       <link ‎href="https://fonts.googleapis.com/css?family=europa:200,600" rel="stylesheet">
       <!-- Scripts -->
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="{{ asset('js/jquery.contact.js') }}" defer></script>
       <script src="{{ asset('js/app.js') }}" defer></script>
 
   </head>
@@ -50,7 +57,7 @@
                   @if(count($contacts) > 0)
                   @foreach ($contacts as $contact)
                   <tr>
-                      <td class="tdCheck"><input type="checkbox" name="{{ $contact->id }}" value=""></td>
+                      <td class="tdt"><input type="checkbox" name="" value="{{ $contact->id }}"></td>
                       <td data-search="{{ $contact->fname }} {{ $contact->lname }}" class="tdName">
                         <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
                         {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}</td>
@@ -58,14 +65,9 @@
                       <td class="tdOthers">{{ $contact->email }}</td>
                       <td data-order="" class="tdOthers">{{ $contact->phoneNo }}</td>
                       <td class="tdOthers tdTags">{{ $contact->tags }}</td>
-                      <td class="tdUpdate"><a class="btn btn-default" href="/contact/{{ $contact->id }}">Update</a></td>
-                      <!-- <td class="conMobDisplay"><a href="/contact/{{ $contact->id }}">
-                        <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
-                        {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}
-                        </a>
-                      </td> -->
+                      <td class="tdSettings"><a class="" href="/contact/{{ $contact->id }}">
+                        <img src="{{ asset('css/icons/repSchSettings.png') }}" /></a></td>
                   </tr>
-
                   @endforeach
                   @endif
                 </tbody>
@@ -78,11 +80,6 @@
       </main>
 
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="{{ asset('js/jquery.dataTables.js') }}" defer></script>
   </script>
 
   <!--searchable table start -->
