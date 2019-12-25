@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Hash;
+// use Hash;
 use Carbon\Carbon;
 
 class CreateUsersTable extends Migration {
@@ -34,19 +34,20 @@ class CreateUsersTable extends Migration {
             'fname' => 'Eniola',
             'lname' => 'James',
             'type' => 'echovc',
+            'avatar' => 'avatar',
             'email' => 'admin@domain.com',
-            'email_verified_at' => Carbon::now();
+            'email_verified_at' => Carbon::now(),
             'password' =>  Hash::make('password'),
 
             //$2y$10$7c/JJ6v8qgHKmITv1fC1KuYeDyY8fsoUhqpHvWAoaveFQsFwbncj6
         ));
 
-        DB::table('users')->insert(array(
-            'name' => 'Teacher',
-            'role' => 'teacher',
-            'email' => 'teacher@domain.com',
-            'password' =>  Hash::make('password'),
-       ));
+       //  DB::table('users')->insert(array(
+       //      'name' => 'Teacher',
+       //      'role' => 'teacher',
+       //      'email' => 'teacher@domain.com',
+       //      'password' =>  Hash::make('password'),
+       // ));
 	}
 
 	public function down()
