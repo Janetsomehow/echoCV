@@ -7,24 +7,29 @@ namespace Composer\Autoload;
 class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
 {
     public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
-        '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'dc1275c308c5b416beb314b6317daca2' => __DIR__ . '/..' . '/overtrue/pinyin/src/const.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
+        '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        '17d016dc52a631c1e74d2eb8fdd57342' => __DIR__ . '/..' . '/laravel/helpers/src/helpers.php',
+        '6b34c85f7b1ad6faa15aa12109e030f2' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -69,9 +74,11 @@ class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'SVG\\' => 4,
         ),
         'R' => 
         array (
+            'RealRashid\\SweetAlert\\' => 22,
             'Ramsey\\Uuid\\' => 12,
         ),
         'P' => 
@@ -86,6 +93,7 @@ class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
         ),
         'O' => 
         array (
+            'Overtrue\\Pinyin\\' => 16,
             'Opis\\Closure\\' => 13,
         ),
         'N' => 
@@ -99,6 +107,9 @@ class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
         'L' => 
         array (
             'League\\Flysystem\\' => 17,
+            'LasseRafn\\Initials\\' => 19,
+            'LasseRafn\\InitialAvatarGenerator\\' => 33,
+            'LasseRafn\\' => 10,
             'Laravolt\\Avatar\\' => 16,
             'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
@@ -152,8 +163,8 @@ class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -259,6 +270,14 @@ class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'SVG\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/meyfa/php-svg/src',
+        ),
+        'RealRashid\\SweetAlert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/realrashid/sweet-alert/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -291,6 +310,10 @@ class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'Overtrue\\Pinyin\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/overtrue/pinyin/src',
+        ),
         'Opis\\Closure\\' => 
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
@@ -306,6 +329,18 @@ class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
+        ),
+        'LasseRafn\\Initials\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lasserafn/php-initials/src',
+        ),
+        'LasseRafn\\InitialAvatarGenerator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lasserafn/php-initial-avatar-generator/src',
+        ),
+        'LasseRafn\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lasserafn/php-string-script-language/src',
         ),
         'Laravolt\\Avatar\\' => 
         array (
@@ -455,13 +490,18 @@ class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
+<<<<<<< HEAD
+        'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
+=======
+>>>>>>> 515d47029e62912ea93bb72b7d02e30ebb28d743
         'App\\Http\\Controllers\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegisterController.php',
         'App\\Http\\Controllers\\ReportsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReportsController.php',
-        'App\\Http\\Controllers\\companycontroller' => __DIR__ . '/../..' . '/app/Http/Controllers/companycontroller.php',
+        'App\\Http\\Controllers\\companycontroller' => __DIR__ . '/../..' . '/app/Http/Controllers/CompanyController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Admin' => __DIR__ . '/../..' . '/app/Http/Middleware/Admin.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
+        'App\\Http\\Middleware\\Client' => __DIR__ . '/../..' . '/app/Http/Middleware/Client.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
@@ -2291,6 +2331,12 @@ class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
         'Laravolt\\Avatar\\Generator\\GeneratorInterface' => __DIR__ . '/..' . '/laravolt/avatar/src/Generator/GeneratorInterface.php',
         'Laravolt\\Avatar\\LumenServiceProvider' => __DIR__ . '/..' . '/laravolt/avatar/src/LumenServiceProvider.php',
         'Laravolt\\Avatar\\ServiceProvider' => __DIR__ . '/..' . '/laravolt/avatar/src/ServiceProvider.php',
+        'LasseRafn\\InitialAvatarGenerator\\InitialAvatar' => __DIR__ . '/..' . '/lasserafn/php-initial-avatar-generator/src/InitialAvatar.php',
+        'LasseRafn\\InitialAvatarGenerator\\Translator\\Base' => __DIR__ . '/..' . '/lasserafn/php-initial-avatar-generator/src/Translator/Base.php',
+        'LasseRafn\\InitialAvatarGenerator\\Translator\\En' => __DIR__ . '/..' . '/lasserafn/php-initial-avatar-generator/src/Translator/En.php',
+        'LasseRafn\\InitialAvatarGenerator\\Translator\\ZhCN' => __DIR__ . '/..' . '/lasserafn/php-initial-avatar-generator/src/Translator/ZhCN.php',
+        'LasseRafn\\Initials\\Initials' => __DIR__ . '/..' . '/lasserafn/php-initials/src/Initials.php',
+        'LasseRafn\\StringScript' => __DIR__ . '/..' . '/lasserafn/php-string-script-language/src/StringScript.php',
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',
@@ -2563,6 +2609,11 @@ class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
         'Opis\\Closure\\SecurityProvider' => __DIR__ . '/..' . '/opis/closure/src/SecurityProvider.php',
         'Opis\\Closure\\SelfReference' => __DIR__ . '/..' . '/opis/closure/src/SelfReference.php',
         'Opis\\Closure\\SerializableClosure' => __DIR__ . '/..' . '/opis/closure/src/SerializableClosure.php',
+        'Overtrue\\Pinyin\\DictLoaderInterface' => __DIR__ . '/..' . '/overtrue/pinyin/src/DictLoaderInterface.php',
+        'Overtrue\\Pinyin\\FileDictLoader' => __DIR__ . '/..' . '/overtrue/pinyin/src/FileDictLoader.php',
+        'Overtrue\\Pinyin\\GeneratorFileDictLoader' => __DIR__ . '/..' . '/overtrue/pinyin/src/GeneratorFileDictLoader.php',
+        'Overtrue\\Pinyin\\MemoryFileDictLoader' => __DIR__ . '/..' . '/overtrue/pinyin/src/MemoryFileDictLoader.php',
+        'Overtrue\\Pinyin\\Pinyin' => __DIR__ . '/..' . '/overtrue/pinyin/src/Pinyin.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/AssertionFailedError.php',
@@ -3541,6 +3592,55 @@ class ComposerStaticInit7b9d6751135369ab53c35b8dc59b74ba
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
+        'RealRashid\\SweetAlert\\Facades\\Alert' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/Facades/Alert.php',
+        'RealRashid\\SweetAlert\\Storage\\AlertSessionStore' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/Storage/AlertSessionStore.php',
+        'RealRashid\\SweetAlert\\Storage\\SessionStore' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/Storage/SessionStore.php',
+        'RealRashid\\SweetAlert\\SweetAlertServiceProvider' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/SweetAlertServiceProvider.php',
+        'RealRashid\\SweetAlert\\ToSweetAlert' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/ToSweetAlert.php',
+        'RealRashid\\SweetAlert\\Toaster' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/Toaster.php',
+        'SVG\\Nodes\\Embedded\\SVGImage' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Embedded/SVGImage.php',
+        'SVG\\Nodes\\SVGGenericNodeType' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/SVGGenericNodeType.php',
+        'SVG\\Nodes\\SVGNode' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/SVGNode.php',
+        'SVG\\Nodes\\SVGNodeContainer' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/SVGNodeContainer.php',
+        'SVG\\Nodes\\Shapes\\SVGCircle' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Shapes/SVGCircle.php',
+        'SVG\\Nodes\\Shapes\\SVGEllipse' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Shapes/SVGEllipse.php',
+        'SVG\\Nodes\\Shapes\\SVGLine' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Shapes/SVGLine.php',
+        'SVG\\Nodes\\Shapes\\SVGPath' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Shapes/SVGPath.php',
+        'SVG\\Nodes\\Shapes\\SVGPolygon' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Shapes/SVGPolygon.php',
+        'SVG\\Nodes\\Shapes\\SVGPolygonalShape' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Shapes/SVGPolygonalShape.php',
+        'SVG\\Nodes\\Shapes\\SVGPolyline' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Shapes/SVGPolyline.php',
+        'SVG\\Nodes\\Shapes\\SVGRect' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Shapes/SVGRect.php',
+        'SVG\\Nodes\\Structures\\SVGClipPath' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Structures/SVGClipPath.php',
+        'SVG\\Nodes\\Structures\\SVGDefs' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Structures/SVGDefs.php',
+        'SVG\\Nodes\\Structures\\SVGDocumentFragment' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Structures/SVGDocumentFragment.php',
+        'SVG\\Nodes\\Structures\\SVGFont' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Structures/SVGFont.php',
+        'SVG\\Nodes\\Structures\\SVGGroup' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Structures/SVGGroup.php',
+        'SVG\\Nodes\\Structures\\SVGLinkGroup' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Structures/SVGLinkGroup.php',
+        'SVG\\Nodes\\Structures\\SVGStyle' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Structures/SVGStyle.php',
+        'SVG\\Nodes\\Texts\\SVGText' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Texts/SVGText.php',
+        'SVG\\Nodes\\Texts\\SVGTextPath' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Texts/SVGTextPath.php',
+        'SVG\\Nodes\\Texts\\SVGTitle' => __DIR__ . '/..' . '/meyfa/php-svg/src/Nodes/Texts/SVGTitle.php',
+        'SVG\\Rasterization\\Path\\SVGArcApproximator' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Path/SVGArcApproximator.php',
+        'SVG\\Rasterization\\Path\\SVGBezierApproximator' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Path/SVGBezierApproximator.php',
+        'SVG\\Rasterization\\Path\\SVGPathApproximator' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Path/SVGPathApproximator.php',
+        'SVG\\Rasterization\\Path\\SVGPathParser' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Path/SVGPathParser.php',
+        'SVG\\Rasterization\\Path\\SVGPolygonBuilder' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Path/SVGPolygonBuilder.php',
+        'SVG\\Rasterization\\Renderers\\SVGEllipseRenderer' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Renderers/SVGEllipseRenderer.php',
+        'SVG\\Rasterization\\Renderers\\SVGImageRenderer' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Renderers/SVGImageRenderer.php',
+        'SVG\\Rasterization\\Renderers\\SVGLineRenderer' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Renderers/SVGLineRenderer.php',
+        'SVG\\Rasterization\\Renderers\\SVGPolygonRenderer' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Renderers/SVGPolygonRenderer.php',
+        'SVG\\Rasterization\\Renderers\\SVGRectRenderer' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Renderers/SVGRectRenderer.php',
+        'SVG\\Rasterization\\Renderers\\SVGRenderer' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Renderers/SVGRenderer.php',
+        'SVG\\Rasterization\\Renderers\\SVGTextRenderer' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/Renderers/SVGTextRenderer.php',
+        'SVG\\Rasterization\\SVGRasterizer' => __DIR__ . '/..' . '/meyfa/php-svg/src/Rasterization/SVGRasterizer.php',
+        'SVG\\Reading\\SVGReader' => __DIR__ . '/..' . '/meyfa/php-svg/src/Reading/SVGReader.php',
+        'SVG\\SVG' => __DIR__ . '/..' . '/meyfa/php-svg/src/SVG.php',
+        'SVG\\Utilities\\Colors\\Color' => __DIR__ . '/..' . '/meyfa/php-svg/src/Utilities/Colors/Color.php',
+        'SVG\\Utilities\\Colors\\ColorLookup' => __DIR__ . '/..' . '/meyfa/php-svg/src/Utilities/Colors/ColorLookup.php',
+        'SVG\\Utilities\\SVGStyleParser' => __DIR__ . '/..' . '/meyfa/php-svg/src/Utilities/SVGStyleParser.php',
+        'SVG\\Utilities\\Units\\Angle' => __DIR__ . '/..' . '/meyfa/php-svg/src/Utilities/Units/Angle.php',
+        'SVG\\Utilities\\Units\\Length' => __DIR__ . '/..' . '/meyfa/php-svg/src/Utilities/Units/Length.php',
+        'SVG\\Writing\\SVGWriter' => __DIR__ . '/..' . '/meyfa/php-svg/src/Writing/SVGWriter.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',
