@@ -55,11 +55,7 @@ class companycontroller extends Controller
         'status'=>$request->get('status'),
         'stage'=>$request->get('stage'),
         'lead'=>$request->get('lead'),
-        'analyst'=>$request->get('analyst'),
-        $report->report_title =$request->input('report_title');
-        $report->content =$request->input('content');
-    
-
+        'analyst'=>$request->get('analyst'),    
        ]);
        return redirect ('/add_chart')->with('success','Company details saved!');
         //
