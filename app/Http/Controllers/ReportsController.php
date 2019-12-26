@@ -9,6 +9,12 @@ use App\Report;
 class ReportsController extends Controller
 {
 
+    // ********Access control for Reports********
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+
     public function index() {
       return view('reports.all');
     }

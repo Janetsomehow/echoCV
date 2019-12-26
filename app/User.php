@@ -7,6 +7,7 @@ use Illuminate\Notifications\Notifiable;
 
 use Illuminate\Database\Eloquent\Model;
 
+// class User extends Authenticatable implements MustVerifyEmail
 class User extends Authenticatable
 {
            use Notifiable;
@@ -61,7 +62,9 @@ class User extends Authenticatable
         return Storage::url('avatars/'.$this->id.'/'.$this->avatar);
     }
 
-   /**
+
+    /**
+
      * Add a mutator to ensure hashed passwords
      */
     public function setPasswordAttribute($password)

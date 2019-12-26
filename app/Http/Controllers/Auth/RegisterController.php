@@ -7,8 +7,12 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Image;
 use Avatar;
 use Storage;
+use App\Company;
+use Auth;
+use Request;
 
 class RegisterController extends Controller
 {
@@ -31,6 +35,29 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
+
+    // public function redirectTo()
+    // {
+    //     $loguser = Auth::user();
+    //     $company = Company::where('user_id', $loguser->id)->first();
+ 
+
+    //    if($loguser->type == 'client' && !is_null($company))
+    //             {
+    //                 return redirect()->to($company->uuid.'/home');
+    //             }
+
+    //             if($loguser->type == 'client' && is_null($company))
+    //             {
+    //                 return redirect()->to('/add_company');
+    //             }
+
+
+    //             if($loguser->type == 'echovc' )
+    //             {
+    //                 return redirect()->to('/home');
+    //             }
+    // }
 
     /**
      * Create a new controller instance.
@@ -64,17 +91,25 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create( array $data)
     {
 
-        // $avatar = Avatar::create($data['fname'] $data['lname'])->getImageObject()->encode('png');
-        // Storage::put('avatars/'.$user->id.'/avatar.png', (string) $avatar);
 
-        return User::create([
+
+        $user = User::create([
             'fname' => $data['fname'],
             'lname' => $data['lname'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'avatar' => 'avatar.png',
+            'type'=>'client', 
+            'permission'  => 'admin',
+            // 'password' => Hash::make($data['password']),
+            'password' => $data['password'],
         ]);
+
+         $avatar = Avatar::create($data['fname'] .''. $data['lname'])->getImageObject()->encode('png');
+        Storage::put('/public/avatars/'.$user->id.'/avatar.png', (string) $avatar);
+
+        return $user;
     }
 }
