@@ -48,7 +48,7 @@ class companycontroller extends Controller
             'analyst'=>'required',
 
        ]);
-       $company = new company ([
+       $company = company::create ([
         'name'=>$request->get('name'),
         'website'=>$request->get('website'),
         'country'=>$request->get('country'),
@@ -56,10 +56,12 @@ class companycontroller extends Controller
         'stage'=>$request->get('stage'),
         'lead'=>$request->get('lead'),
         'analyst'=>$request->get('analyst'),
+        $report->report_title =$request->input('report_title');
+        $report->content =$request->input('content');
+    
 
        ]);
-       $company->save();
-       return redirect ('/companies')->with('success','Company details saved!');
+       return redirect ('/add_chart')->with('success','Company details saved!');
         //
     }
 
