@@ -73,11 +73,13 @@
                 <p> Profile picture</p>
                 <div class="box">
                     {{-- <img src="{{ Avatar::create('Joko Widodo')->toBase64() }}" /> --}}
-                    <img src="{{asset('storage/avatars/'.$user->id.'/'.$user->avatar)}}" alt="">
+                    <img  id="preview_image" class="box-img" src="{{asset('storage/avatars/'.$user->id.'/'.$user->avatar)}}" alt="">
+                    <i id="loading" class="fa fa-spinner fa-spin fa-3x fa-fw" style="position: absolute;left: 40%;top: 40%;display: none"></i>
                 </div>
                 <div class="upload-btn">
-                    <button class="btn btn-default btn-upload" > Upload Picture </button>
-                    <input type="file"  accept="image/png, image/jpeg" name="avatar" title="Upload an image">
+                    <button Onclick="javascript:changeProfile()" class="btn btn-default btn-upload" > Upload Picture </button>
+                    {{-- href="javascript:changeProfile()" --}}
+                    <input type="file" id="file"  accept="image/png, image/jpeg" name="file" title="Upload an image" style="display: none">
                 </div>
             </div>
             
@@ -92,7 +94,72 @@
 
    
 
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-   
+   <script src="https://use.fontawesome.com/2c7a93b259.js"></script>
+<script>
+    function changeProfile() {
+        $('#file').click();
+    }
+    $('#file').change(function () {
+        if ($(this).val() != '') {
+            upload(this);
+
+        }
+    });
+    function upload(img) {
+        var form_data = new FormData();
+        form_data.append('file', img.files[0]);
+        form_data.append('_token', '{{csrf_token()}}');
+        $('#loading').css('display', 'block');
+        $.ajax({
+            url: "{{url('ajax-profile-upload')}}",
+            data: form_data,
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                if (data.fail) {
+                    $('#preview_image').attr('src', '{{asset('storage/avatars/'.$user->id.'/'.$user->avatar)}}');
+                    alert(data.errors['file']);
+                }
+                else {
+                    $('#file_name').val(data);
+                    $('#preview_image').attr('src', '{{asset('storage/avatars/'.$user->id)}}/' + data);
+                }
+                $('#loading').css('display', 'none');
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+                $('#preview_image').attr('src', '{{asset('storage/avatars/'.$user->id.'/'.$user->avatar)}}');
+            }
+        });
+    }
+    function removeFile() {
+        if ($('#file_name').val() != '')
+            if (confirm('Are you sure want to remove profile picture?')) {
+                $('#loading').css('display', 'block');
+                var form_data = new FormData();
+                form_data.append('_method', 'DELETE');
+                form_data.append('_token', '{{csrf_token()}}');
+                $.ajax({
+                    url: "ajax-remove-image/" + $('#file_name').val(),
+                    data: form_data,
+                    type: 'POST',
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        $('#preview_image').attr('src', '{{asset('images/noimage.jpg')}}');
+                        $('#file_name').val('');
+                        $('#loading').css('display', 'none');
+                    },
+                    error: function (xhr, status, error) {
+                        alert(xhr.responseText);
+                    }
+                });
+            }
+    }
+</script>
 </body>
 </html>
