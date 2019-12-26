@@ -34,12 +34,12 @@
 
         <section class="newMetr">
           <div class="newData">
-            <a href="#"class="">+ New data source</a>
+            <a href="/add_metrics" class="btn">+ New data source</a>
           </div><hr>
           <label for="">Custom</label>
           <div class="formMett custom">
             User provided metric
-            <a href="#"class="btn btn-default">Create</a>
+            <a href="/add_metrics" class="btn btn-default">Create</a>
           </div>
             <label for="">Link</label>
               <div class="formG">
