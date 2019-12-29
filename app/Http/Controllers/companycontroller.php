@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Company;
 use Illuminate\Http\Request;
 
 class companycontroller extends Controller
@@ -15,7 +15,7 @@ class companycontroller extends Controller
     {
        $company = company::all();
 
-       return view('add_company.index', compact('add_company'));
+       return view('companies.index', compact('companies'));
         //
     }
 
@@ -24,9 +24,9 @@ class companycontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function add_company()
     {
-       return view('companies/create') ;
+       return view('companies.add_company') ;
         //
     }
 
@@ -42,15 +42,22 @@ class companycontroller extends Controller
            'name'=>'required',
            'website'=>'required',
            'country'=>'required',
+           'status'=>'required',
+           'stage'=>'required',
+           'lead'=>'required',
+            'analyst'=>'required',
+
        ]);
-       $company = new company ([
+       $company = company::create ([
         'name'=>$request->get('name'),
         'website'=>$request->get('website'),
         'country'=>$request->get('country'),
-
+        'status'=>$request->get('status'),
+        'stage'=>$request->get('stage'),
+        'lead'=>$request->get('lead'),
+        'analyst'=>$request->get('analyst'),    
        ]);
-       $company->save();
-       return redirect ('/companies')->with('success','Company details saved!');
+       return redirect ('/add_chart')->with('success','Company details saved!');
         //
     }
 

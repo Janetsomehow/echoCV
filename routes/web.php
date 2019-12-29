@@ -43,7 +43,7 @@ Auth::routes();
 
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('company_store', 'companyController');
+Route::resource('companies', 'companyController');
 Route::resource('contact', 'ContactsController');
 Route::get('/reports', 'ReportsController@index');
 Route::get('/received_report', 'ReportsController@received');
