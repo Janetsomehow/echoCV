@@ -54,7 +54,8 @@ Route::get('/new_report', 'ReportsController@create');
 
 
 Route::get('/profile', 'ProfileController@profileindex');
-Route::match(['post'], 'ajax-profile-upload', 'ProfileController@ajaxImage');
+Route::post('ajax-profile-upload', 'ProfileController@ajaxImage');
+Route::post('/profile', 'ProfileController@profileupdate');
 
 
 
