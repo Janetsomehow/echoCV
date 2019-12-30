@@ -10,14 +10,14 @@
   <div class="col-md-8">
 <form action="companies.store" method="post">
 @csrf
-              <label for="name">Company Name</label>
-    <input type="text" class="form-control" id="companyname">
+    <label for="name">Company Name</label>
+    <input type="text" class="form-control" name="name" id="companyname">
     <label for="website">Company Website</label>
-    <input type="text" class="form-control" id="companyweb">
+    <input type="text" class="form-control" name="website" id="companyweb">
               <div class="bigSe">
                 <div>
                   <label for="country">Country</label>
-                  <select class="form-control">
+                  <select class="form-control" name="country">
                   <option selected>Select Country</option>
                     <option value=""></option>
                     <option value="First">First</option>
@@ -41,7 +41,7 @@
               <div class="form-row">
    <div class="col-6">
        <label for="Fund_stage">Fund Stage</label><br>
-       <select class="form-control" name="">
+       <select class="form-control" name="stage">
                     <option value=""></option>
                     <option value="First">First</option>
                     <option value="Second">Second</option>
@@ -50,7 +50,7 @@
    
     <div class="col-6">
        <label for="inv_status">Investment Status</label><br>
-       <select class="form-control" name="">
+       <select class="form-control" name="status">
                     <option value=""></option>
                     <option value="First">First</option>
                     <option value="Second">Second</option>

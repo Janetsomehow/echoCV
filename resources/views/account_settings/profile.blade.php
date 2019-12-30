@@ -106,12 +106,14 @@
 
                                    <label for="">New Password </label>
 
-                                <input type="password" name="new-password" placeholder="********" class="form-control">
+                                <input type="password" name="new_password" placeholder="********" class="form-control">
+
+                                 <label for="">Confirm Password </label>
+
+                                <input type="password" name="new_password_confirm" placeholder="********" class="form-control">
                                </div>
 
-                                <label for="">Confirm Password </label>
-
-                                <input type="password" name="new-password_confirm" placeholder="********" class="form-control">
+                               
                         </div>
 
                         <button class="btn btn-primary btn-profile"> Save</button>

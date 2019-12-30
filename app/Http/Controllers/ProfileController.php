@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Validator;
 use Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use Session;
+use Hash;
 
 class ProfileController extends Controller
 {
@@ -41,12 +42,14 @@ class ProfileController extends Controller
      		$validator = Validator::make($request->all(), [
 	            'fname' => ['required', 'string', 'max:255'],
 	            'lname' => ['required', 'string', 'max:255'],
+	            'phone_no' => ['nullable','numeric']
 	            ],
 	             [
 	                    'fname.required' => 'Your firstname is required',
 	                    'fname.max' => 'Your name can not exceed 255 character limit',
 	                    'lname.required' => 'Your last name is required',
-	                    'lname.max' => 'Your last name can not exceed 255 character limit',       
+	                    'lname.max' => 'Your last name can not exceed 255 character limit', 
+	                    'phone_no.numeric'  => 'You can add only number'
 	             ]
 	         );
      	}
@@ -61,46 +64,54 @@ class ProfileController extends Controller
     	// }
 
 
-     	if($request->has('fname') || $request->has('lname') || $request->has('phone_no') && $request->has('change-email'))
+     	if($request->has('change-email'))
      	{
 
      		$validator = Validator::make($request->all(), [
 	            'fname' => ['required', 'string', 'max:255'],
 	            'lname' => ['required', 'string', 'max:255'],
-	            'email' => ['email', 'string', 'max:255', 'unique:users'],
+	             'phone_no' => ['nullable','numeric'],
+	            'email' => ['required','email', 'string', 'max:255', 'unique:users'],
 	            ],
 	             [
 	                    'fname.required' => 'Your firstname is required',
 	                    'fname.max' => 'Your name can not exceed 255 character limit',
 	                    'lname.required' => 'Your last name is required',
-	                    'lname.max' => 'Your last name can not exceed 255 character limit',       
+	                    'lname.max' => 'Your last name can not exceed 255 character limit',     
+	                    'phone_no.numeric'  => 'You can add only number'  
 	             ]
 	         );
      	}
 
 
 
-     	if($request->has('fname') || $request->has('lname') || $request->has('phone_no') || $request->has('change-email') && $request->has('change-password'))
+     	if($request->has('change-password'))
      	{
 
 	     	if (!(Hash::check($request->get('current-password'), Auth::user()->password))) {
 
-	     		 toast('Your current password does not matches with the password you provided. Please try again.','error');
+	     		 toast('Your current password does not matches with the password you provided.','error');
 	            // The passwords matches
 	            return redirect()->back();
 	            
 	        }
 	        if(strcmp($request->get('current-password'), $request->get('new-password')) == 0){
 	            //Current password and new password are same
-	            return redirect()->back()->with("error","New Password cannot be same as your current password. Please choose a different password.");
+	     		 toast('New Password cannot be same as your current password.','error');
+
+	            // return redirect()->back()->with("error","New Password cannot be same as your current password. Please choose a different password.");
 	        }
 
      		$validator = Validator::make($request->all(), [
 	            'fname' => ['required', 'string', 'max:255'],
 	            'lname' => ['required', 'string', 'max:255'],
-	            'email' => ['email', 'string', 'max:255', 'unique:users'],
+	            // 'email' => ['email', 'string', 'max:255', 'unique:users'],
+	            'email' => ['email', 'string', 'max:255'],	        
+	            'phone_no' => ['nullable','numeric'],    
 	            'current-password' => 'required',
-                'new-password' => 'required|string|min:8|confirmed',
+                // 'new_password' => 'required|string|min:8|confirmed',
+                'new_password' => 'required|string|min:8',
+
 	            ],
 	             [
 	                    'fname.required' => 'Your firstname is required',
@@ -108,14 +119,15 @@ class ProfileController extends Controller
 	                    'lname.required' => 'Your last name is required',
 	                    'lname.max' => 'Your last name can not exceed 255 character limit',       
 	                    'current-password.required' => 'Your current password is required',
-	                    'new-password.required' => 'Your new password is required',
-	                    'new-password.min' => 'Your new password must be up to 8 characters',
-	                    'new-password.confirmed' => 'Your new password does not match',             
+	                    'new_password.required' => 'Your new password is required',
+	                    'new_password.min' => 'Your new password must be up to 8 characters',
+	                    'phone_no.numeric'  => 'You can add only number'  ,
+	                    // 'new_password.confirmed' => 'Your new password does not match',             
 	             ]
 	         );
      	}
 
-
+     		// dd($request->new_password);
 
 
      			if ($validator->fails()) 
@@ -139,7 +151,7 @@ class ProfileController extends Controller
 
 			    	if( $request->has('change-password'))
 			    	{
-			    	$user->password = $request->password;	
+			    	$user->password = $request->new_password;	
 			    	}
 
 			    	if($user->update())
