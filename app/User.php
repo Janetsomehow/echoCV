@@ -50,11 +50,15 @@ class User extends Authenticatable
         return $this->hasMany('File');
     }
 
+    // public function reports()
+    // {
+    //     return $this->hasMany('Report', 'user_id');
+    // }
+
     public function reports()
     {
-        return $this->hasMany('Report', 'user_id');
+        return $this->hasMany(Report::class);
     }
-
 
 
      public function getAvatarUrlAttribute()

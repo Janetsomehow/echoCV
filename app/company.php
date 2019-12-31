@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Company extends Model 
+class Company extends Model
 {
 
     protected $table = 'companies';
@@ -22,5 +22,10 @@ class Company extends Model
         'lead',
         'analyst',
     ];
+
+    public function reports()
+    {
+        return $this->hasOne(Report::class);
+    }
 
 }
