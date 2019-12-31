@@ -45,12 +45,11 @@ Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('companies', 'companyController');
 Route::resource('contact', 'ContactsController');
-Route::get('/reports', 'ReportsController@index');
+Route::resource('reports', 'ReportsController');
 Route::get('/received_report', 'ReportsController@received');
 Route::get('/sent_report', 'ReportsController@sent');
 Route::get('/scheduled_report', 'ReportsController@scheduled');
 Route::get('/new_report', 'ReportsController@create');
-
 
 
 Route::get('/profile', 'ProfileController@profileindex');

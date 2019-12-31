@@ -34,7 +34,7 @@
         <section class="message">
           <!-- Main screen tags -->
           <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist">
-            <li class="active" role="presentation">
+            <li role="presentation">
               <a class="repTitle"  href="/reports">
                 <img src="{{ asset('css/icons/repAll1.png') }}">ALL</a>
             </li>
@@ -42,7 +42,7 @@
               <a class="repTitle"  href="/sent_report">
                 <img src="{{ asset('css/icons/repSent.png') }}">SENT</a>
             </li>
-            <li role="presentation">
+            <li role="presentation" class="active">
               <a class="repTitle" href="/received_report">
                 <img src="{{ asset('css/icons/repRec.png') }}">RECEIVED</a>
             </li>

@@ -24,7 +24,8 @@
     </div>
     <main class="wholeContent">
       <h3 class="newRepNav">Reports</h3>
-      <form action="" method="post" enctype="multipart/form-data">
+      <form action="{{ route('reports.store') }}" method="post" enctype="multipart/form-data">
+        @csrf
         <section class="newReport">
           <a href="/reports" class="btn btn-default">Back</a>
           <a href="/reports" class="btn btnClose">Close</a>
@@ -41,7 +42,19 @@
         </section>
           <div class="repSec">
             <article class="repSec">
-              <input class="form-control" type="text" name="subject_title" placeholder="|Add a subject title">
+            <div class="d-flex justify-content-end">
+              <Select class="form-control" style="width:15vw">
+                <option value="">Receiver</option>
+            @if(count($usersmail) > 0)
+              @foreach ($usersmail as $usermail)
+                <option value="{{ $usermail->email}}">{{ $usermail->email }}</option>
+              @endforeach
+            @endif
+              </Select>
+            </div>
+              <input class="form-control" type="text" name="report_title" placeholder="|Add a subject title" required>
+              <input type="text" name="content" value="" placeholder="Content" required>
+              <input type="text" name="receiver" value="aa" required>
               <div class="repFiles">
                 <button type="button" name="button" class="mr-2" data-toggle="tooltip" data-placement="top" title="Chart" style="border:0">
                   <img src="{{ asset('css/icons/newRep1.png') }}">
@@ -65,7 +78,6 @@
               <button type="button" name="button" class="btn" >Add metrics request</button>
               <button type="button" name="button" class="btn" >Add file request</button>
             </div>
-
           </div>
         </form>
 
