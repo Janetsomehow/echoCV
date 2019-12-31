@@ -3,6 +3,13 @@
 namespace App\Http\Controllers;
 use App\Company;
 use Illuminate\Http\Request;
+use Auth;
+use Redirect;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
+use Storage;
+use RealRashid\SweetAlert\Facades\Alert;
+use Session;
 
 class companycontroller extends Controller
 {
@@ -45,9 +52,10 @@ class companycontroller extends Controller
            'status'=>'required',
            'stage'=>'required',
            'lead'=>'required',
-            'analyst'=>'required',
+           'analyst'=>'required',
 
        ]);
+
        $company = company::create ([
         'name'=>$request->get('name'),
         'website'=>$request->get('website'),
