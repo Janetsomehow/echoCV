@@ -128,7 +128,13 @@
   }
 
 
-</style>        
+</style>      
+
+    {{-- <link ‎href="https://fonts.adobe.com/fonts/europa" rel="stylesheet"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('css/report.css') }}"> --}}
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,600" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/files.css') }}">
+    {{-- <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">   --}}
 
 @stop
 @section('content')
@@ -136,7 +142,33 @@
 <div class="header">
 <div class="d-flex mt-4">
   <div class="p-2 header_file"><h2 >Files</h2></div>
-  <div class="ml-auto p-2"><a class="btn btn-primary upload-btn text-white  mb-1"> Upload file </a></div>
+  <div class="ml-auto p-2">
+    {{-- <a class="btn btn-primary upload-btn text-white  mb-1"> Upload file </a> --}}
+{{-- <div class="dropdown show">
+  <a class="btn btn-primary upload-btn text-white  mb-1 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown link
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#" data-target="#uploadModal" data-toggle="modal">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div> --}}
+
+<div class="dropdown">
+  <button class="btn btn-primary upload-btn text-white  mb-1 dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Upload File
+  </button>
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+    <small class="ml-1 text-secondary">Upload a file from</small>
+    <div class="dropdown-divider"></div>
+    <button class="dropdown-item" data-toggle="modal" role="button" style="font-size: 14px;" type="button"><img src="{{ asset('css/icons/fromdrive.png') }}" style="height: 16px; width: 16px; color:#717171; " /> Google Drive</button>
+     <button class="dropdown-item " style="font-size: 14px;" id="computer" data-target="#modalCenter"><img src="{{ asset('css/icons/laptop.png') }}" style="height: 16px; width: 16px; color:#717171;"/> Your computer</button>
+    {{-- <button class="dropdown-item" type="button">Something else here</button> --}}
+  </div>
+</div>
+  </div>
 </div>
 </div>
 
@@ -232,5 +264,74 @@
               </tbody>
             </table>
 </div>
+
+
+<!-- Modal HTML -->
+   <!-- Modal HTML -->
+    <div id="computer-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal Alignment Demo</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">OK, Got it!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 @stop
 
+
+
+
+@section('script')
+
+<script>
+$(document).ready(function(){
+    $("#computer").click(function(){
+        $("#computer-modal").modal("show");
+    });
+});
+</script>
+@stop
+
+
+ <!-- Modal -->
+ <div class="modal" tabindex="-1" role="dialog" id="uploadModal">
+                     <div class="modal-dialog " role="document">
+                       <div class="modal-content">
+                         <div class="modal-header">
+                           <h5 class="modal-title">File Upload</h5>
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                           </button>
+                         </div>
+                         <div class="modal-body">
+                           <div class="form">
+                              <form action="" class="form-group">
+                                 <div>
+                                    <label for="" aria-label> Name: </label>
+                                    <input type="text" class="form-control" placeholder="Name">
+                                 </div>
+
+                                 <div class="mt-4">
+                                    <label for="select_file"> Select File: </label>
+                                    <input type="file" class="form-control">
+                                 </div>
+                              </form>
+                           </div>
+                         </div>
+                         <div class="modal-footer">
+                           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                           <button type="button" class="btn btn-primary">Upload</button>
+                         </div>
+                       </div>
+                     </div>
+                   </div>

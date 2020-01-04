@@ -23,4 +23,16 @@ class Company extends Model
         'analyst',
     ];
 
+
+
+     public function user()
+    {
+        return $this->belongsTo('User');
+    }
+
+    public function files()
+    {
+        return $this->hasMany('Efile');
+    }
+
 }

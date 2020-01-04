@@ -72,4 +72,9 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($password);
     }
 
+     public function files()
+    {
+        return $this->hasMany('Efile');
+    }
+
 }
