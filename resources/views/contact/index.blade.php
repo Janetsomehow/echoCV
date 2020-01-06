@@ -78,6 +78,9 @@
         <a href="/contact/create" class="btn btn-default mobileBtn"></a>
 
       </main>
+      <div class="inputSearch">
+        <img src="{{ asset('css/icons/grsearch.png') }}" >
+      </div>
 
 
   </script>

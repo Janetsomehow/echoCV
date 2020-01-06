@@ -1,3 +1,7 @@
+<?php
+use Carbon\Carbon;
+
+?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -85,13 +89,17 @@
                     <td></td>
                   </thead>
                   <tbody class="repMainTable" style="width:100vw">
-                    <tr style="width:100%">
-                      <td><input type="checkbox" name="" value=""></td>
-                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                  @if(count($reports) > 0)
+                  @foreach ($reports as $report)
+                    <tr>
+                      <td class="tdt"><input type="checkbox" name="" value=""></td>
+                      <td data-search="{{ $report->report_title }}" class="tdRepTitle">{{ $report->report_title }}</td>
                       <td class="tdName">System Architect</td>
-                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
-                      <td class="tdTime">Timestamp</td>
+                      <td class="tdMsg">{{ $report->content }}</td>
+                      <td class="tdTime">{{ Carbon::parse($report->created_at)->diffForHumans() }}</td>
                     </tr>
+                  @endforeach
+                  @endif
                   </tbody>
                   <tbody class="repMobTable" style="width:100vw">
                     <tr style="display:flex!important; justify-content:flex-start;">
@@ -113,12 +121,11 @@
 
           </div>
 
-
-
-
         </section>
       </main>
-
+      <div class="inputSearch">
+        <img src="{{ asset('css/icons/grsearch.png') }}" >
+      </div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

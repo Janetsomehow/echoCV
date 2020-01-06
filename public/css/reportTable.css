@@ -77,6 +77,13 @@ div.dataTables_wrapper div.dataTables_filter input {
   background: #ffffff;
 }
 
+div.dataTables_wrapper div.dataTables_filter input::after {
+  content: " - Remember this";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
+
 div.dataTables_wrapper div.dataTables_info {
   /* padding-top: 8px; */
   white-space: nowrap;
@@ -193,6 +200,19 @@ div.dataTables_scrollFoot > table {
 .widget-wrapper {
   margin-left: 0;
 }
+
+.inputSearch {
+    position: absolute;
+    left: 33.8rem;
+    top: 8.5rem;
+    height: 2.2rem;
+}
+
+.inputSearch>img {
+    height: 100%;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 767px) {
   div.dataTables_wrapper div.dataTables_length,

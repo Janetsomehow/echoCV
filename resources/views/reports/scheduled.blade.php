@@ -111,11 +111,12 @@
 
           </div>
 
-
-
-
         </section>
+
       </main>
+      <div class="inputSearch" style="top: 9.7rem;">
+        <img src="{{ asset('css/icons/grsearch.png') }}" >
+      </div>
 
 
 
