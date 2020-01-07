@@ -93,8 +93,8 @@ use Carbon\Carbon;
                   @foreach ($reports as $report)
                     <tr>
                       <td class="tdt"><input type="checkbox" name="" value=""></td>
-                      <td data-search="Tiger Nixon" class="tdDept">{{ $report->user_id }}</td>
-                      <td class="tdName">System Architect</td>
+                      <td data-search="{{ $report->report_title }}" class="tdRepTitle">{{ $report->report_title }}</td>
+                      <td class="tdRepTitle">Bob From HNG Network</td>
                       <td class="tdMsg">{{ $report->content }}</td>
                       <td class="tdTime">{{ Carbon::parse($report->created_at)->diffForHumans() }}</td>
                     </tr>
@@ -121,6 +121,12 @@ use Carbon\Carbon;
           </div>
         </section>
       </main>
+
+      <div class="inputSearch">
+        <img src="{{ asset('css/icons/grsearch.png') }}" >
+      </div>
+
+<!-- report.js line 4940 - 5002 -->
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -187,6 +187,19 @@ div.dataTables_scrollFoot > table {
   border-top: none;
 }
 
+.inputSearch {
+    /* position: relative; */
+    position: absolute;
+    left: 33.8rem;
+    top: 8.9rem;
+    height: 2.2rem;
+}
+
+.inputSearch>img {
+    height: 100%;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 700px) {
   div.dataTables_wrapper div.dataTables_length,
   div.dataTables_wrapper div.dataTables_filter,

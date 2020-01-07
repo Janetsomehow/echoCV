@@ -30,7 +30,7 @@
         <form class="searchReport" action="" method="post">
           @csrf
           <input type="text" class="form-control form-group" placeholder="Search for metric">
-          <button type="button" name="button"><img src={{ asset('css/icons/grsearch.png') }} /></button>
+          <button type="button" name="button"><img src="{{ asset('css/icons/grsearch.png') }}" /></button>
         </form>
 
 
