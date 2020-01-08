@@ -700,9 +700,6 @@ tbody {
     width: 79vw;
   }
 
-  .inputSearch {
-      display: none;
-  }
 }
 
 
@@ -724,6 +721,8 @@ tbody {
   div.widget-wrapper {
     width: 76vw;
   }
+
+
 }
 
 @media (max-width: 780px){
