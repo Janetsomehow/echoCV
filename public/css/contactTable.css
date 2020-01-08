@@ -292,7 +292,14 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
   }
 
   div.dataTables_wrapper div.dataTables_filter input {
-    width: 60vw;
+    width: 55vw;
+  }
+
+  .inputSearch {
+    position: absolute;
+    left: 80vw;
+    top: 8.2rem;
+    height: 2.2rem;
   }
 
 }
