@@ -8,6 +8,7 @@ use App\Report;
 use Auth;
 use App\User;
 use App\Company;
+use Illuminate\Support\Facades\DB;
 
 class ReportsController extends Controller
 {
@@ -74,7 +75,11 @@ class ReportsController extends Controller
 
 
     public function received() {
-      return view('reports.received');
+      $receiverid = Auth::user()->email;
+
+      $reports = Report::where('receiver', '$receiverid')->get();
+      // $reports = DB::table('reports')->where('receiver', '$receiverid')->get();
+      return view('reports.received')->with('reports', $reports);
     }
 
     public function scheduled() {
@@ -82,8 +87,18 @@ class ReportsController extends Controller
     }
 
     public function sent() {
-      return view('reports.sent');
+      $senderid = Auth::user()->id;
+
+      $reports = Report::where('user_id', $senderid)->get();
+      // $reports = DB::table('reports')->where('user_id', $senderid)->get();
+      return view('reports.sent')->with('reports', $reports);
+
     }
+
+    public function real() {
+      return view('reports.reports1');
+    }
+
 
 
 }

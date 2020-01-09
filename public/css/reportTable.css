@@ -77,6 +77,13 @@ div.dataTables_wrapper div.dataTables_filter input {
   background: #ffffff;
 }
 
+div.dataTables_wrapper div.dataTables_filter input::after {
+  content: " - Remember this";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
+
 div.dataTables_wrapper div.dataTables_info {
   /* padding-top: 8px; */
   white-space: nowrap;
@@ -194,6 +201,19 @@ div.dataTables_scrollFoot > table {
   margin-left: 0;
 }
 
+.inputSearch {
+    position: absolute;
+    left: 33.8rem;
+    top: 8.5rem;
+    height: 2.2rem;
+}
+
+.inputSearch>img {
+    height: 100%;
+    cursor: pointer;
+}
+
+
 @media screen and (max-width: 767px) {
   div.dataTables_wrapper div.dataTables_length,
   div.dataTables_wrapper div.dataTables_filter,
@@ -287,8 +307,16 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
   }
 
   div.dataTables_wrapper div.dataTables_filter input {
-    width: 60vw;
+    width: 55vw;
   }
+
+
+    .inputSearch {
+      position: absolute;
+      left: 80vw;
+      top: 7.7rem;
+      height: 2.2rem;
+    }
 
 
 }
