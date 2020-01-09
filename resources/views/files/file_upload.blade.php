@@ -267,16 +267,27 @@
 
 
 <!-- Modal HTML -->
-   <!-- Modal HTML -->
-    <div id="computer-modal" class="modal fade" tabindex="-1">
+ <div id="computer-modal" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal Alignment Demo</h5>
+                    <h5 class="modal-title">File Upload</h5>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet.</p>
+                    <div class="form">
+                              <form action="" class="form-group">
+                                 <div>
+                                    <label for="" aria-label=""> Name: </label>
+                                    <input type="text" class="form-control" placeholder="Name">
+                                 </div>
+
+                                 <div class="mt-4">
+                                    <label for="select_file"> Select File: </label>
+                                    <input type="file" class="form-control">
+                                 </div>
+                              </form>
+                           </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -285,6 +296,8 @@
             </div>
         </div>
     </div>
+<!-- Modal HTML -->
+   
 
 @stop
 

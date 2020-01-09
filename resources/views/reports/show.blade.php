@@ -1,11 +1,17 @@
+<?php
+use Carbon\Carbon;
+
+?>
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Received Reports</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <title>All Reports</title>
 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
       <!-- Styles -->
@@ -25,7 +31,6 @@
   </div>
 
       <main class="wholeContent">
-
         <section class="header searchContact">
           <div class="rep">Reports</div>
           <a href="/new_report" class="btn btn-primary searchContact repTopBtn">New Report</a>
@@ -34,7 +39,7 @@
         <section class="message">
           <!-- Main screen tags -->
           <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist">
-            <li role="presentation">
+            <li class="active" role="presentation">
               <a class="repTitle"  href="/reports">
                 <img src="{{ asset('css/icons/repAll1.png') }}">ALL</a>
             </li>
@@ -42,7 +47,7 @@
               <a class="repTitle"  href="/sent_report">
                 <img src="{{ asset('css/icons/repSent.png') }}">SENT</a>
             </li>
-            <li role="presentation" class="active">
+            <li role="presentation">
               <a class="repTitle" href="/received_report">
                 <img src="{{ asset('css/icons/repRec.png') }}">RECEIVED</a>
             </li>
@@ -59,12 +64,12 @@
           <div class="repMobParent">
             <ul class="navbar-nav repStatus repMobile">
               <li class="nav-item dropdown repMobActive">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle repTitle" href="/received_report" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>RECEIVED
+                <a id="navbarDropdown" class="nav-link dropdown-toggle repTitle" href="/reports" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>ALL
                 </a>
                 <div class="dropdown-menu repMobDropdown" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item repTitle" href="/reports">ALL</a>
                   <a class="dropdown-item repTitle" href="/sent_report">SENT</a>
+                  <a class="dropdown-item repTitle" href="/received_report">RECEIVED</a>
                   <a class="dropdown-item repTitle" href="/scheduled_report">SCHEDULED</a>
                   <a class="dropdown-item repTitle" href="#">DRAFT</a>
                 </div>
@@ -85,13 +90,17 @@
                     <td></td>
                   </thead>
                   <tbody class="repMainTable" style="width:100vw">
-                    <tr style="width:100%">
-                      <td><input type="checkbox" name="" value=""></td>
-                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                  @if(count($reports) > 0)
+                  @foreach ($reports as $report)
+                    <tr>
+                      <td class="tdt"><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">{{ $report->user_id }}</td>
                       <td class="tdName">System Architect</td>
-                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
-                      <td class="tdTime">Timestamp</td>
+                      <td class="tdMsg">{{ $report->content }}</td>
+                      <td class="tdTime">{{ Carbon::parse($report->created_at)->diffForHumans() }}</td>
                     </tr>
+                  @endforeach
+                  @endif
                   </tbody>
                   <tbody class="repMobTable" style="width:100vw">
                     <tr style="display:flex!important; justify-content:flex-start;">
@@ -112,11 +121,8 @@
             </div>
 
           </div>
-
-
-
-
         </section>
+
       </main>
 
 

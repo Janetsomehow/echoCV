@@ -15,14 +15,24 @@ class Report extends Model
     ];
 
 
+    // public function user()
+    // {
+    //     return $this->belongsTo('User', 'user_id');
+    // }
+
     public function user()
     {
-        return $this->belongsTo('User', 'user_id');
+        return $this->belongsTo(User::class);
     }
+
+    // public function company()
+    // {
+    //     return $this->belongsTo('Company', 'company_id');
+    // }
 
     public function company()
     {
-        return $this->belongsTo('Company', 'company_id');
+        return $this->belongsTo(Company::class);
     }
 
     public function forms()

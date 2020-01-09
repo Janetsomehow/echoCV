@@ -18,6 +18,7 @@
         "laravolt/avatar": "^3.0",
         "lasserafn/php-initial-avatar-generator": "^4.0",
         "realrashid/sweet-alert": "^3.0",
+        "revolution/laravel-google-sheets": "^5.0",
         "webpatser/laravel-uuid": "^3.0"
     },
     "require-dev": {
