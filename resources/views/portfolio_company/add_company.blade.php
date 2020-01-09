@@ -1,20 +1,36 @@
 
 @extends('layouts.empty-sidbar')
  @section('content')
- <div class="header">
-<div class="d-flex">
+ <style> 
+    .page-wrapper{
+      position: absolute !important;
+      right: 35% !important;
+    }
+    h4{
+      position: relative;
+      right: 6rem;
+      font-size: 2rem;
+      top: 1.5rem;
+    }
+    .form-wrap{
+     position: relative;
+     left: 5rem;
+    }
+ </style>
+ <div class="page-wrapper">
+<div class="">
 
 <div class="p-2"><h4>Add Company</h4></div>
-<div class="mt-4">
+<div class="mt-5 form-wrap">
   <div class="row justify-content-center">
   <div class="col-md-8">
-<form action="companies.store" method="post">
+<form action="companies.store" class="form-group" method="post">
 @csrf
-              <label for="name">Company Name</label>
+    <label for="name">Company Name</label>
     <input type="text" class="form-control" id="companyname">
-    <label for="website">Company Website</label>
-    <input type="text" class="form-control" id="companyweb">
-              <div class="bigSe">
+    <label for="website " class="mt-3" >Company Website</label>
+    <input type="url" class="form-control" id="companyweb">
+              <div class="bigSe mt-3">
                 <div>
                   <label for="country">Country</label>
                   <select class="form-control">
@@ -26,7 +42,7 @@
                   </select>
                 </div>
                 <div>
-                  <label for="pcontact">Primary Contact</label>
+                  <label for="pcontact" class="mt-4">Primary Contact</label>
                   <select class="form-control" name="pcontact">
                   <option selected>Select Contact</option>
                     <option value=""></option>
@@ -36,7 +52,7 @@
                   </select>
                 </div>
 
-              <label for="tags">Tags</label>
+              <label for="tags" class="mt-4">Tags</label>
     <input type="text" class="form-control" name="tags" placeholder="type in one or more tags to select"><br>
               <div class="form-row">
    <div class="col-6">

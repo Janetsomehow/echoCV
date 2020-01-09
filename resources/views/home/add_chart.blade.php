@@ -17,6 +17,7 @@
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito:300,600" rel="stylesheet">
       <link ‎href="https://fonts.googleapis.com/css?family=europa:200,600" rel="stylesheet">
+      <script src="{{asset('js/sidebar.js')}}" defer></script>
 
   </head>
   <body>

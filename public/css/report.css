@@ -31,7 +31,12 @@ a:active, a:checked {
   display: flex;
   justify-content: flex-start;
 }
-
+div.dataTables_filter input {
+  border: 1px solid #000000;
+}
+div.dataTables_wrapper div.dataTables_length {
+  margin-top: 1rem;
+}
 .rep {
   position: relative;
   width: 7vw;
@@ -265,10 +270,7 @@ a.searchContact {
     display: none;
   }
 
-  .repMobile {
-    /* display: none; */
-  }
-
+  
   .repTitle {
       color: #333;
       font-weight: 500;
@@ -488,7 +490,7 @@ tbody {
    }
 
    .tdSchHead {
-      style="background:#fff;
+      background:#fff;
       margin-top:0.5rem;
       width:2.5rem;
       color:#333
@@ -945,10 +947,6 @@ border-bottom: 0 solid #ddd;
 /* Report */
 .repTopBtn {
   display: none;
-}
-
-.display {
-  /* top: 0; */
 }
 
 .repMainTable {
