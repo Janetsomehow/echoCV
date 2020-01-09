@@ -16,8 +16,8 @@ Route::get('/', function () { return view('auth.login'); });
 Route::get('/home', function () { return view('home.index'); });
 Route::get('/create', function () { return view('metrics.create'); });
 Route::get('/create1', function () { return view('metrics.'); });
-Route::get('/files', function () { return view('files.files'); });
-Route::get('/file_upload', function () { return view('files.file_upload'); });
+// Route::get('/files', function () { return view('files.files'); });
+// Route::get('/file_upload', function () { return view('files.file_upload'); });
 Route::get('/archives', function () { return view('archives.archives'); });
 Route::get('/archivelist', function () { return view('archives.archivelist'); });
 Route::get('/add_chart', function () { return view('home.add_chart'); });
@@ -55,6 +55,8 @@ Route::get('/new_report', 'ReportsController@create');
 Route::get('/profile', 'ProfileController@profileindex');
 Route::post('ajax-profile-upload', 'ProfileController@ajaxImage');
 Route::post('/profile', 'ProfileController@profileupdate');
+Route::get('/files', 'FileController@index')->name('file.index');
+Route::post('file/upload', 'FileController@store')->name('file.upload');
 
 
 
