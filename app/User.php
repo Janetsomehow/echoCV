@@ -45,10 +45,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-        public function files()
-    {
-        return $this->hasMany('File');
-    }
+    //     public function files()
+    // {
+    //     return $this->hasMany('File');
+    // }
 
     // public function reports()
     // {
@@ -76,4 +76,11 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($password);
     }
 
+
+     public function files()
+    {
+        return $this->hasMany('Efile');
+    }
+
 }
+
