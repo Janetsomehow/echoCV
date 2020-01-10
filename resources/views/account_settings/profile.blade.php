@@ -51,6 +51,7 @@
                      {{ csrf_field() }}
                         <div class="form-group ml-n3 col-md-12 input-style" >
                             <label for="">    First name</label>
+                            <input type="text" name="fname" placeholder="Bosun " class="form-control" value="{{$user->fname}}">
                              @error('fname')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -60,6 +61,7 @@
 
                         <div class="form-group ml-n3 col-md-12 input-style" >
                                 <label for="">    Last name</label>
+                                <input type="text" name="lname" placeholder="Osamudiamen" class="form-control" value="{{$user->lname}}">
                                  @error('lname')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -69,6 +71,7 @@
 
                         <div class="form-group ml-n3 col-md-12 input-style">
                                 <label for="">   Phone number</label>
+                                <input type="tel" name="phone_no" placeholder="+234 ***" value="{{$user->phone_no}}" id="phone" class="form-control">
                                  @error('phone_no')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -82,6 +85,7 @@
                              </a></label>
                                 
                                  <div id="change-email-box" style="display:none;">
+                                       <input type="email" value="{{$user->email}}" name="email" placeholder="bosunosas@something.com " class="form-control">
                                  @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -121,6 +125,7 @@
                 <p> Profile picture</p>
                 <div class="box">
                     {{-- <img src="{{ Avatar::create('Joko Widodo')->toBase64() }}" /> --}}
+                    <img  id="preview_image" class="box-img" src="{{asset('storage/avatars/'.$user->id.'/'.$user->avatar)}}" alt="">
                     <i id="loading" class="fa fa-spinner fa-spin fa-3x fa-fw" style="position: absolute;left: 40%;top: 40%;display: none"></i>
                 </div>
                 <div class="upload-btn">
@@ -211,7 +216,7 @@
             processData: false,
             success: function (data) {
                 if (data.fail) {
-
+                    $('#preview_image').attr('src', '{{asset('storage/avatars/'.$user->id.'/'.$user->avatar)}}');
                     // alert(data.errors['file']);
                     Swal.fire({
                       title: 'Error!',
@@ -222,6 +227,7 @@
                 }
                 else {
                     $('#file_name').val(data);
+                    $('#preview_image').attr('src', '{{asset('storage/avatars/'.$user->id)}}/' + data);
                     $('#loading').css('display', 'none');
                 const Toast = Swal.mixin({
                   toast: true,
@@ -245,6 +251,7 @@
             },
             error: function (xhr, status, error) {
                 alert(xhr.responseText);
+                $('#preview_image').attr('src', '{{asset('storage/avatars/'.$user->id.'/'.$user->avatar)}}');
             }
         });
     }
