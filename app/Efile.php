@@ -13,7 +13,7 @@ class Efile extends Model
      * @var array
      */
     protected $fillable = [
-        'source','user_id','company_id','status','path','size','name'
+        'source','user_id','company_id','status','path','size','name','storage'
     ];
 
     
