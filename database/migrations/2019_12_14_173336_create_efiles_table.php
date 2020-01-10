@@ -14,6 +14,7 @@ class CreateEfilesTable extends Migration {
 			$table->string('size')->nullable();
 			$table->string('type')->nullable();
 			$table->string('path')->nullable();
+			$table->string('storage')->nullable();
 			$table->enum('status', array('active', 'archive'))->nullable();
 			$table->string('source')->nullable();
 			$table->bigInteger('company_id')->nullable();
