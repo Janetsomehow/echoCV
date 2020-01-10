@@ -134,8 +134,8 @@ body{
 
 .text{
     position: relative;
-    left: -5rem;
-    top: 5.3rem;
+    left: 50%;
+    top: -3.5rem;
 }
 .head {
     position: relative;
@@ -153,6 +153,7 @@ body{
 .card{
     margin-bottom: 3rem;
     min-width: 21rem;
+    margin-left: 1rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     border: 1px solid #F4F4F4;
 }

@@ -17,7 +17,7 @@ Route::get('/home', function () { return view('home.index'); });
 Route::get('/create', function () { return view('metrics.create'); });
 Route::get('/create1', function () { return view('metrics.'); });
 // Route::get('/files', function () { return view('files.files'); });
-// Route::get('/file_upload', function () { return view('files.file_upload'); });
+Route::get('/file_upload', function () { return view('files.file_upload'); });
 Route::get('/archives', function () { return view('archives.archives'); });
 Route::get('/archivelist', function () { return view('archives.archivelist'); });
 Route::get('/add_chart', function () { return view('home.add_chart'); });
@@ -31,7 +31,7 @@ Route::get('/new_company', function () { return view('portfolio_company.new_comp
 Route::get('/add_company', function () { return view('portfolio_company.add_company'); });
 Route::get('/dashboard1', function () { return view('home.dashboard1'); });
 Route::get('/add_chart1', function () { return view('home.add_chart1'); });
-// Route::get('/profile', function () { return view('account_settings.profile'); });
+Route::get('/profile', function () { return view('account_settings.profile'); });
 Route::get('/permissions', function () { return view('account_settings.permissions'); });
 
 //close the middileware for client
@@ -52,9 +52,9 @@ Route::get('/scheduled_report', 'ReportsController@scheduled');
 Route::get('/new_report', 'ReportsController@create');
 
 
-Route::get('/profile', 'ProfileController@profileindex');
-Route::post('ajax-profile-upload', 'ProfileController@ajaxImage');
-Route::post('/profile', 'ProfileController@profileupdate');
+// Route::get('/profile', 'ProfileController@profileindex');
+// Route::post('ajax-profile-upload', 'ProfileController@ajaxImage');
+// Route::post('/profile', 'ProfileController@profileupdate');
 Route::get('/files', 'FileController@index')->name('file.index');
 Route::post('file/upload', 'FileController@store')->name('file.upload');
 

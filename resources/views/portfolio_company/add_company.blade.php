@@ -8,13 +8,14 @@
     }
     h4{
       position: relative;
-      right: 6rem;
+      /* right: 6rem; */
+      left: 6rem;
       font-size: 2rem;
       top: 1.5rem;
     }
     .form-wrap{
      position: relative;
-     left: 5rem;
+     left: 33%;
     }
  </style>
  <div class="page-wrapper">
@@ -24,15 +25,6 @@
 <div class="mt-5 form-wrap">
   <div class="row justify-content-center">
   <div class="col-md-8">
-<<<<<<< HEAD
-<form action="companies.store" class="form-group" method="post">
-@csrf
-    <label for="name">Company Name</label>
-    <input type="text" class="form-control" id="companyname">
-    <label for="website " class="mt-3" >Company Website</label>
-    <input type="url" class="form-control" id="companyweb">
-              <div class="bigSe mt-3">
-=======
 <form action="add_company" method="post">
 @csrf
     <label for="name">Company Name</label>
@@ -40,7 +32,6 @@
     <label for="website">Company Website</label>
     <input type="text" class="form-control" name="website" id="companyweb">
               <div class="bigSe">
->>>>>>> f4f45833c6f7e010adf77f0cf79ee92087befebe
                 <div>
                   <label for="country">Country</label>
                   <select class="form-control" name="country">
@@ -100,5 +91,6 @@
 </div>
 </div>
 </div>
+<div style="height: 10rem"></div>
 </div>
 @stop
