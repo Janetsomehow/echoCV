@@ -28,8 +28,8 @@
           </div>
         </li>
         <div class="mt-n5">
-          <li><a href="/home" id="link1"  onClick="setActiveLink(this.id);" class="sidebar-li home"><img src="{{ asset('css/icons/homelogo.png') }}" />HOME</a></li>
-          <li><a href="/dashboard" id="link2"  onClick="setActiveLink(this.id);" class="sidebar-li dashboard"><img src="{{ asset('css/icons/dash.png') }}" />DASHBOARD</a></li>
+          <li><a href="/home"   class="sidebar-li home"><img src="{{ asset('css/icons/homelogo.png') }}" />HOME</a></li>
+          <li><a href="/dashboard"    class="sidebar-li dashboard"><img src="{{ asset('css/icons/dash.png') }}" />DASHBOARD</a></li>
           <li><a href="/new_company" class="sidebar-li port"><img src="{{ asset('css/icons/port.png') }}" />PORTIFOLIO COMPANIES</a></li>
           <li><a href="/reports" class="sidebar-li report"><img src="{{ asset('css/icons/report.png') }}" />REPORTS</a></li>
           <li><a href="/create_metrics" class="sidebar-li metric"><img src="{{ asset('css/icons/metr.png') }}" />METRICS</a></li>
@@ -54,7 +54,7 @@
 
             <a class="dropdown-item" href="/home">Home</a>
             <a class="dropdown-item" href="/profile">Account setting</a>
-            <a class="dropdown-item" href="/home">Home</a>
+            {{-- <a class="dropdown-item" href="/home">Home</a> --}}
             {{-- <a class="dropdown-item"
                onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">
@@ -79,6 +79,7 @@
         if (e.id == setActive)
             e.className = "active";
     })
+    
 }
 
 </script>
