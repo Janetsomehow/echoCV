@@ -77,6 +77,17 @@ class User extends Authenticatable
     }
 
 
+    /**
+    *
+    *Get the users full name
+    *
+    */
+    public function getFullnameAttribute()
+    {
+       return $this->fname . ' '. $this->lname;
+    }
+
+
      public function files()
     {
         return $this->hasMany('Efile');

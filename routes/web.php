@@ -56,7 +56,7 @@ Route::get('/profile', 'ProfileController@profileindex');
 Route::post('ajax-profile-upload', 'ProfileController@ajaxImage');
 Route::post('/profile', 'ProfileController@profileupdate');
 Route::get('/files', 'FileController@index')->name('file.index');
-Route::post('file/upload', 'FileController@store')->name('file.upload');
+Route::post('/file/upload', 'FileController@store')->name('file.upload');
 
 
 
