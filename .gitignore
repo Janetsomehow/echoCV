@@ -5,9 +5,7 @@
 /.env
 .env
 /vendor
-/vendor/*
-vendor
-vendor/
+vendor/*
 .composer.lock
 .env.backup
 .phpunit.result.cache

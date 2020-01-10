@@ -103,7 +103,8 @@ class RegisterController extends Controller
             'avatar' => 'avatar.png',
             'type'=>'client', 
             'permission'  => 'admin',
-            'password' => Hash::make($data['password']),
+            // 'password' => Hash::make($data['password']),
+            'password' => $data['password'],
         ]);
 
          $avatar = Avatar::create($data['fname'] .''. $data['lname'])->getImageObject()->encode('png');

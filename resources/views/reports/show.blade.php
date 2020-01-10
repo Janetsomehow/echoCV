@@ -1,11 +1,17 @@
+<?php
+use Carbon\Carbon;
+
+?>
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Scheduled Reports</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <title>All Reports</title>
 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
       <!-- Styles -->
@@ -31,10 +37,11 @@
         </section>
 
         <section class="message">
-          <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist" style="margin-bottom:1.2rem;">
-            <li role="presentation">
+          <!-- Main screen tags -->
+          <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist">
+            <li class="active" role="presentation">
               <a class="repTitle"  href="/reports">
-                <img src="{{ asset('css/icons/repAll.png') }}">ALL</a>
+                <img src="{{ asset('css/icons/repAll1.png') }}">ALL</a>
             </li>
             <li role="presentation">
               <a class="repTitle"  href="/sent_report">
@@ -44,54 +51,58 @@
               <a class="repTitle" href="/received_report">
                 <img src="{{ asset('css/icons/repRec.png') }}">RECEIVED</a>
             </li>
-            <li class="active" role="presentation">
+            <li role="presentation">
               <a class="repTitle" href="/scheduled_report">
-                <img src="{{ asset('css/icons/repSch1.png') }}">SCHEDULED</a>
+                <img src="{{ asset('css/icons/repSch.png') }}">SCHEDULED</a>
             </li>
             <li role="presentation">
               <a class="repTitle" href="/new_report">
                 <img src="{{ asset('css/icons/repDra.png') }}">DRAFT</a>
             </li>
           </ul>
+          <!-- Mobile view tags -->
           <div class="repMobParent">
             <ul class="navbar-nav repStatus repMobile">
               <li class="nav-item dropdown repMobActive">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle repTitle" href="/scheduled_report" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>SCHEDULED
+                <a id="navbarDropdown" class="nav-link dropdown-toggle repTitle" href="/reports" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>ALL
                 </a>
                 <div class="dropdown-menu repMobDropdown" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item repTitle" href="/reports">ALL</a>
                   <a class="dropdown-item repTitle" href="/sent_report">SENT</a>
                   <a class="dropdown-item repTitle" href="/received_report">RECEIVED</a>
+                  <a class="dropdown-item repTitle" href="/scheduled_report">SCHEDULED</a>
                   <a class="dropdown-item repTitle" href="#">DRAFT</a>
                 </div>
               </li>
             </ul>
             <a href="/new_report" ><img src="{{ asset('css/icons/repMobCreate.png') }}" /></a>
           </div>
+
           <div class="tab-content">
             <div class="tab-pane active" id="SearchAreaTabs-1" role="tab-panel">
               <div class="widget-wrapper container-fluid table-responsive">
                 <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0">
-                  <thead class="tdSchHead">
+                  <thead style="background:transparent; color:transparent">
                     <td></td>
-                    <td>To</td>
-                    <td>Type</td>
-                    <td>Message</td>
-                    <td>Next send date</td>
-                    <td>Actions</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                   </thead>
                   <tbody class="repMainTable" style="width:100vw">
-                    <tr style="width:100%">
-                      <td><input type="checkbox" name="" value=""></td>
-                      <td data-search="Tiger Nixon" class="tdDept conEmailPhone">20 receipients</td>
-                      <td class="tdName">Monthly</td>
-                      <td class="tdName">Message.... Message.... </td>
-                      <td class="tdName">2 Nov 2020 12:00am</td>
-                      <td class="tdSettings"><img src="{{ asset('css/icons/repSchSettings.png') }}" /></td>
+                  @if(count($reports) > 0)
+                  @foreach ($reports as $report)
+                    <tr>
+                      <td class="tdt"><input type="checkbox" name="" value=""></td>
+                      <td data-search="Tiger Nixon" class="tdDept">{{ $report->user_id }}</td>
+                      <td class="tdName">System Architect</td>
+                      <td class="tdMsg">{{ $report->content }}</td>
+                      <td class="tdTime">{{ Carbon::parse($report->created_at)->diffForHumans() }}</td>
                     </tr>
+                  @endforeach
+                  @endif
                   </tbody>
-                  <tbody class="repMobTable tdSchBody" style="width:100vw">
+                  <tbody class="repMobTable" style="width:100vw">
                     <tr style="display:flex!important; justify-content:flex-start;">
                       <td class="tdt" style="display:flex!important; justify-content:flex-start; margin-top:1rem">
                         <input type="checkbox" name="" value=""></td>
@@ -110,13 +121,9 @@
             </div>
 
           </div>
-
         </section>
 
       </main>
-      <div class="inputSearch" style="top: 9.7rem;">
-        <img src="{{ asset('css/icons/grsearch.png') }}" >
-      </div>
 
 
 

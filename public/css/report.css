@@ -492,7 +492,7 @@ tbody {
    .tdSchHead {
       background:#fff;
       margin-top:0.5rem;
-      width:2.5rem;
+      width:2.7rem;
       color:#333
    }
 
@@ -504,12 +504,16 @@ tbody {
        width: 20%;
      }
 
+   .tdRepTitle {
+       width: 15%;
+     }
+
    .tdTime {
-       width: 10%;
+       width: 15%;
      }
 
    .tdMsg {
-     width: 43%;
+     width: 53%;
    }
 
  td {
@@ -676,7 +680,6 @@ tbody {
 }
 
 
-
 /* ----------------------- Mobile ----------------------*/
 
 @media (max-width: 1100px){
@@ -698,6 +701,7 @@ tbody {
   div.widget-wrapper {
     width: 79vw;
   }
+
 }
 
 
@@ -719,6 +723,8 @@ tbody {
   div.widget-wrapper {
     width: 76vw;
   }
+
+
 }
 
 @media (max-width: 780px){

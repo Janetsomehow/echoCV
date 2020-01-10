@@ -1,3 +1,7 @@
+<?php
+use Carbon\Carbon;
+
+?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -34,7 +38,7 @@
         <section class="message">
           <!-- Main screen tags -->
           <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist">
-            <li class="active" role="presentation">
+            <li role="presentation">
               <a class="repTitle"  href="/reports">
                 <img src="{{ asset('css/icons/repAll1.png') }}">ALL</a>
             </li>
@@ -42,7 +46,7 @@
               <a class="repTitle"  href="/sent_report">
                 <img src="{{ asset('css/icons/repSent.png') }}">SENT</a>
             </li>
-            <li role="presentation">
+            <li role="presentation" class="active">
               <a class="repTitle" href="/received_report">
                 <img src="{{ asset('css/icons/repRec.png') }}">RECEIVED</a>
             </li>
@@ -85,13 +89,17 @@
                     <td></td>
                   </thead>
                   <tbody class="repMainTable" style="width:100vw">
-                    <tr style="width:100%">
-                      <td><input type="checkbox" name="" value=""></td>
-                      <td data-search="Tiger Nixon" class="tdDept">T. Nixon</td>
+                  @if(count($reports) > 0)
+                  @foreach ($reports as $report)
+                    <tr>
+                      <td class="tdt"><input type="checkbox" name="" value=""></td>
+                      <td data-search="{{ $report->report_title }}" class="tdRepTitle">{{ $report->report_title }}</td>
                       <td class="tdName">System Architect</td>
-                      <td class="tdMsg">Message.... Message.... Message.... Message.... Message....</td>
-                      <td class="tdTime">Timestamp</td>
+                      <td class="tdMsg">{{ $report->content }}</td>
+                      <td class="tdTime">{{ Carbon::parse($report->created_at)->diffForHumans() }}</td>
                     </tr>
+                  @endforeach
+                  @endif
                   </tbody>
                   <tbody class="repMobTable" style="width:100vw">
                     <tr style="display:flex!important; justify-content:flex-start;">
@@ -113,12 +121,11 @@
 
           </div>
 
-
-
-
         </section>
       </main>
-
+      <div class="inputSearch">
+        <img src="{{ asset('css/icons/grsearch.png') }}" >
+      </div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -33,11 +33,11 @@ class RegisterController extends Controller
 		        'fname' => $request->fname,
 		        'lname'=> $request->lname,
 		        'email'=> $request->lname,
-		        'type'=>'client', 
+		        'type'=>'client',
 		        'permission'  => 'admin',
 		        'password' => Hash::make($request->password),
                 ]);
-        
+
         		auth()->login($user);
 
         $loguser = Auth::user();
@@ -59,20 +59,20 @@ class RegisterController extends Controller
         		{
         			return redirect()->to('/home');
         		}
-        
-        
+
+
     }
 
 
     	  public function login()
 	    {
-	        if (auth()->attempt(request(['email', 'password'])) == false) 
+	        if (auth()->attempt(request(['email', 'password'])) == false)
 	        {
             return back()->withErrors([
                 'message' => 'The email or password is incorrect, please try again'
             ]);
             }
-        
+
               $loguser = Auth::user();
 
               if($loguser->type == 'client' && !is_null($company))
@@ -94,7 +94,7 @@ class RegisterController extends Controller
 	     public function logout()
 	    {
 	        auth()->logout();
-	        
+
 	        return redirect()->to('/');
 	    }
 }

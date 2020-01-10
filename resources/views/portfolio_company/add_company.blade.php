@@ -24,6 +24,7 @@
 <div class="mt-5 form-wrap">
   <div class="row justify-content-center">
   <div class="col-md-8">
+<<<<<<< HEAD
 <form action="companies.store" class="form-group" method="post">
 @csrf
     <label for="name">Company Name</label>
@@ -31,9 +32,18 @@
     <label for="website " class="mt-3" >Company Website</label>
     <input type="url" class="form-control" id="companyweb">
               <div class="bigSe mt-3">
+=======
+<form action="add_company" method="post">
+@csrf
+    <label for="name">Company Name</label>
+    <input type="text" class="form-control" name="name" id="companyname">
+    <label for="website">Company Website</label>
+    <input type="text" class="form-control" name="website" id="companyweb">
+              <div class="bigSe">
+>>>>>>> f4f45833c6f7e010adf77f0cf79ee92087befebe
                 <div>
                   <label for="country">Country</label>
-                  <select class="form-control">
+                  <select class="form-control" name="country">
                   <option selected>Select Country</option>
                     <option value=""></option>
                     <option value="First">First</option>
@@ -57,7 +67,7 @@
               <div class="form-row">
    <div class="col-6">
        <label for="Fund_stage">Fund Stage</label><br>
-       <select class="form-control" name="">
+       <select class="form-control" name="stage">
                     <option value=""></option>
                     <option value="First">First</option>
                     <option value="Second">Second</option>
@@ -66,7 +76,7 @@
    
     <div class="col-6">
        <label for="inv_status">Investment Status</label><br>
-       <select class="form-control" name="">
+       <select class="form-control" name="status">
                     <option value=""></option>
                     <option value="First">First</option>
                     <option value="Second">Second</option>

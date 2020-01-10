@@ -59,7 +59,6 @@ var linechart = new Chart(ctx, {
 
 //get the bar chart canvas
 var sourceCanvas = document.querySelector('.barchart');
-document.write(ctx);
 var myChart = new Chart(sourceCanvas, {
     type: 'bar',
     data: {
