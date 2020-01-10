@@ -29,7 +29,7 @@
         </section>
         <form class="searchReport" action="" method="post">
           <input type="text" class="form-control form-group" placeholder="Search for metric">
-          <button type="button" name="button"><img src={{ asset('css/icons/grsearch.png') }} /></button>
+          <button type="button" name="button" style="border:none"><img src={{ asset('css/icons/grsearch.png') }} /></button>
         </form>
 
         <section class="newMetr">

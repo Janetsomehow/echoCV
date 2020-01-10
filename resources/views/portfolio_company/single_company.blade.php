@@ -62,9 +62,9 @@
                     
                   </ul>   
                   <div class="row toggle" style="">
-                    <p class="ml-3">Closed</p>
-                    <i class="fas ml-3 fa-toggle-on toggler" style=""></i>
-                    <p class="ml-3" style="color: #7AEF1F;">Open</p>
+                    <p class="">Closed</p>
+                    <i class="fas  fa-toggle-on toggler" style=""></i>
+                    <p class="" style="color: #7AEF1F;">Open</p>
                 </div>
      
             </div>
@@ -73,13 +73,13 @@
          
           <ul class="list-unstyled row mt-5">
             <li class=""><a href="" class="active"> Description</a></li>
-            <li class="ml-5"><a href=""> Comparison</a></li>
-            <li class="ml-5"><a href=""> Performance</a></li>
-            <li class="ml-5"><a href=""> Funding</a></li>
-            <li class="ml-5"><a href=""> Contact</a></li>
-            <li class="ml-5"><a href="">Files</a></li>
-            <li class="ml-5"><a href=""> Notes</a></li> 
-            <button class="btn btn-primary btn-share" style="margin-left: 5rem"> Share</button>
+            <li class="ml-4"><a href=""> Comparison</a></li>
+            <li class="ml-4"><a href=""> Performance</a></li>
+            <li class="ml-4"><a href=""> Funding</a></li>
+            <li class="ml-4"><a href=""> Contact</a></li>
+            <li class="ml-4"><a href="">Files</a></li>
+            <li class="ml-4"><a href=""> Notes</a></li> 
+            <button class="btn btn-primary btn-share btn-sm" style="margin-left: 1rem"> Share</button>
           </ul>
           
           <div class="details">

@@ -306,11 +306,11 @@ body{
   }
 
   .info{
-      margin-left: 1rem;
+      margin-left: -0.5rem;
   }
 
   .toggle{
-    margin-left: 11rem;
+    margin-left: 1rem;
     margin-top: 3.5rem;
   }
 
