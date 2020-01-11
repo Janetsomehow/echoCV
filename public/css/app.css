@@ -615,7 +615,8 @@ pre code {
 
 @media (max-width: 425px){
   .forget-link{
-    margin-left: -7.5rem !important ;
+    position: relative !important;
+    left: 180% !important;
   }
   .btn-signin{
     width: 21.9rem !important;
@@ -625,7 +626,8 @@ pre code {
 
 @media (max-width: 375px){
   .forget-link{
-    margin-left: -10.5rem !important;
+    position: inherit;
+    left: 140% !important;
   }
   .btn-signin{
     width: 19rem !important;
@@ -633,9 +635,9 @@ pre code {
 }
 
 @media (max-width: 320px ) {
-  .forget-link{
+  /* .forget-link{
     margin-left: -13.8rem !important;
-  }
+  } */
   .btn-signin{
     width: 15.8rem !important;
   }
