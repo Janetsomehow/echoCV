@@ -6,6 +6,25 @@
 
             <div class="col-md-10 mt-5 mb-5 p-5">
 
+            	 @if ($message = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ $message }}</strong>
+        </div>
+        <img src="uploads/{{ Session::get('file') }}">
+        @endif
+  
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <strong>Whoops!</strong> There were some problems with your input.
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
                <div class="empty text-center">
                  <img src="{{ asset('css/icons/files.png') }}" class="mx-auto d-block" />
                   <h3>No files</h3>
@@ -42,33 +61,48 @@ $(document).ready(function(){
 
         <!-- Modal HTML -->
  <div id="computer-modal" class="modal fade" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">File Upload</h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="form">
-                              <form action="" class="form-group">
+                               <div class="modal-dialog " role="document">
+                       <div class="modal-content">
+                         <div class="modal-header">
+                           <h5 class="modal-title">File Upload</h5>
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                           </button>
+                         </div>
+                         <div class="modal-body">
+                           <div class="form">
+                              <form   method="POST" action="{{ route('file.upload') }}" enctype="multipart/form-data">
+                                   @csrf
+
                                  <div>
-                                    <label for="" aria-label=""> Name: </label>
-                                    <input type="text" class="form-control" placeholder="Name">
+                                    <label for="" aria-label> Name: </label>
+                                    <input name="name" type="text" class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name">
+                                     @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
                                  </div>
 
                                  <div class="mt-4">
                                     <label for="select_file"> Select File: </label>
-                                    <input type="file" class="form-control">
+                                    <input name="file" type="file" class="form-control {{ $errors->has('file') ? ' is-invalid' : '' }}">
+                                     @if ($errors->has('file'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('file') }}</strong>
+                                    </span>
+                                @endif
                                  </div>
-                              </form>
+                             
                            </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">OK, Got it!</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                         </div>
+                                 <div class="modal-footer">
+                                   <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                   <button type="submit" class="btn btn-primary">Upload</button>
+                                 </div>
+                          </form>
+                       </div>
+                     </div>
+</div>
 <!-- Modal HTML -->
 
