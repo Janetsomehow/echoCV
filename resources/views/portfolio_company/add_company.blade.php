@@ -16,7 +16,25 @@
     .form-wrap{
      position: relative;
      left: 33%;
+
     }
+    @media (max-width: 425px){
+      h4{
+        position: relative;
+        left: 2.9rem;
+        top: 1.4rem;
+      }
+      .form-wrap{
+        position: relative;
+        left: 13%;
+        width: 130%;
+      }
+      label{
+        font-size: 1.1rem;
+        margin-top: 1.2rem;
+      }
+    }
+
  </style>
  <div class="page-wrapper">
 <div class="">
@@ -56,7 +74,7 @@
               <label for="tags" class="mt-4">Tags</label>
     <input type="text" class="form-control" name="tags" placeholder="type in one or more tags to select"><br>
               <div class="form-row">
-   <div class="col-6">
+   <div class="col-md-6 col-sm-12">
        <label for="Fund_stage">Fund Stage</label><br>
        <select class="form-control" name="stage">
                     <option value=""></option>
@@ -65,7 +83,7 @@
                     <option value="Third">Third</option>
                   </select>   </div>
    
-    <div class="col-6">
+    <div class="col-md-6 col-sm-12">
        <label for="inv_status">Investment Status</label><br>
        <select class="form-control" name="status">
                     <option value=""></option>
@@ -73,12 +91,12 @@
                     <option value="Second">Second</option>
                     <option value="Third">Third</option>
                   </select><br>   </div>
-   <div class="col-6">
+   <div class="col-md-6 col-sm-12">
        <label for="lead">Lead</label><br>
        <input type="text" class="form-control" name="lead">
    </div>
    
-    <div class="col-6">
+    <div class="col-md-6 col-sm-12">
        <label for="analyst">Analyst</label><br>
        <input type="text" class="form-control" name="analyst"><br>
    </div>
@@ -91,6 +109,6 @@
 </div>
 </div>
 </div>
-<div style="height: 10rem"></div>
+<div style="height: 5rem"></div>
 </div>
 @stop
