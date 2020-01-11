@@ -146,7 +146,7 @@ body{
 
 .text{
     position: relative;
-    left: 50%;
+    left: 55%;
     top: -3.5rem;
 }
 .head {
@@ -164,7 +164,7 @@ body{
 
 .card{
     margin-bottom: 3rem;
-    min-width: 21rem;
+    min-width: 18rem;
     margin-left: 1rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     border: 1px solid #F4F4F4;
@@ -340,7 +340,7 @@ body{
     color: #000000;
     
 }
-ul > li > a.active{
+ul > li > a.activer{
     border-bottom:2px solid #19B9FD;
 }
 

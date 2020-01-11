@@ -30,7 +30,7 @@
 
     <section class="title"> 
       <div class="back page-setup" >
-        <p style="color: #19B9FD;"> <i class="fas fa-chevron-left"> </i> Back to portfolio companies</p>
+        <p style="color: #19B9FD;"> <i class="fas fa-chevron-left"> </i><a href="../add_chart" style="color: #19B9FD;"> Back to portfolio companies </a></p>
         <hr class="ml-n5">
       </div>
 
@@ -56,9 +56,9 @@
                       <i class="fas fa-map-marker-alt"></i>
                       Abuja
                     </li>
-                    <li class="ml-5"><i class="fas fa-globe"></i> www.lifebank.org</li>
-                    <li class="ml-5"><i class="far fa-envelope"></i> hello@lifebank.ng</li>
-                    <li class="ml-5"><i class="far fa-envelope"></i> B2C, Healthcare</li>
+                    <li class="ml-3"><i class="fas fa-globe"></i> www.lifebank.org</li>
+                    <li class="ml-3"><i class="far fa-envelope"></i> hello@lifebank.ng</li>
+                    <li class="ml-3"><i class="far fa-envelope"></i> B2C, Healthcare</li>
                     
                   </ul>   
                   <div class="row toggle" style="">
@@ -71,15 +71,15 @@
 
           </div>
          
-          <ul class="list-unstyled row mt-5">
-            <li class=""><a href="" class="active"> Description</a></li>
+          <ul class="list-unstyled row mt-5 ml-n4">
+            <li class=""><a href="" class="activer"> Description</a></li>
             <li class="ml-4"><a href=""> Comparison</a></li>
             <li class="ml-4"><a href=""> Performance</a></li>
             <li class="ml-4"><a href=""> Funding</a></li>
             <li class="ml-4"><a href=""> Contact</a></li>
             <li class="ml-4"><a href="">Files</a></li>
-            <li class="ml-4"><a href=""> Notes</a></li> 
-            <button class="btn btn-primary btn-share btn-sm" style="margin-left: 1rem"> Share</button>
+            <li class="ml-3"><a href=""> Notes</a></li> 
+            <button class="btn btn-primary btn-share btn-sm" style="margin-left: 0.5rem; margin-top: .1rem; width: 4rem"> Share</button>
           </ul>
           
           <div class="details">
