@@ -1,11 +1,46 @@
 
 @extends('layouts.empty-sidbar')
  @section('content')
- <div class="header">
-<div class="d-flex">
+ <style> 
+    .page-wrapper{
+      position: absolute !important;
+      right: 35% !important;
+    }
+    h4{
+      position: relative;
+      /* right: 6rem; */
+      left: 6rem;
+      font-size: 2rem;
+      top: 1.5rem;
+    }
+    .form-wrap{
+     position: relative;
+     left: 33%;
+
+    }
+    @media (max-width: 425px){
+      h4{
+        position: relative;
+        left: 2.9rem;
+        top: 1.4rem;
+      }
+      .form-wrap{
+        position: relative;
+        left: 13%;
+        width: 130%;
+      }
+      label{
+        font-size: 1.1rem;
+        margin-top: 1.2rem;
+      }
+    }
+
+ </style>
+ <div class="page-wrapper">
+<div class="">
 
 <div class="p-2"><h4>Add Company</h4></div>
-<div class="mt-4">
+<div class="mt-5 form-wrap">
   <div class="row justify-content-center">
   <div class="col-md-8">
 <form action="add_company" method="post">
@@ -26,7 +61,7 @@
                   </select>
                 </div>
                 <div>
-                  <label for="pcontact">Primary Contact</label>
+                  <label for="pcontact" class="mt-4">Primary Contact</label>
                   <select class="form-control" name="pcontact">
                   <option selected>Select Contact</option>
                     <option value=""></option>
@@ -36,10 +71,10 @@
                   </select>
                 </div>
 
-              <label for="tags">Tags</label>
+              <label for="tags" class="mt-4">Tags</label>
     <input type="text" class="form-control" name="tags" placeholder="type in one or more tags to select"><br>
               <div class="form-row">
-   <div class="col-6">
+   <div class="col-md-6 col-sm-12">
        <label for="Fund_stage">Fund Stage</label><br>
        <select class="form-control" name="stage">
                     <option value=""></option>
@@ -48,7 +83,7 @@
                     <option value="Third">Third</option>
                   </select>   </div>
    
-    <div class="col-6">
+    <div class="col-md-6 col-sm-12">
        <label for="inv_status">Investment Status</label><br>
        <select class="form-control" name="status">
                     <option value=""></option>
@@ -56,12 +91,12 @@
                     <option value="Second">Second</option>
                     <option value="Third">Third</option>
                   </select><br>   </div>
-   <div class="col-6">
+   <div class="col-md-6 col-sm-12">
        <label for="lead">Lead</label><br>
        <input type="text" class="form-control" name="lead">
    </div>
    
-    <div class="col-6">
+    <div class="col-md-6 col-sm-12">
        <label for="analyst">Analyst</label><br>
        <input type="text" class="form-control" name="analyst"><br>
    </div>
@@ -74,5 +109,6 @@
 </div>
 </div>
 </div>
+<div style="height: 5rem"></div>
 </div>
 @stop
