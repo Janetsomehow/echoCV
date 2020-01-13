@@ -87,7 +87,7 @@ class FileController extends Controller
              if($files->count() > 0)
              {
 
-             	    return view('files.file_upload', compact('user', 'files'));
+             	    return view('files.file_upload');
              }
 
              else
@@ -103,7 +103,7 @@ class FileController extends Controller
     	 	  if($files->count() > 0)
              {
 
-             	    return view('files.file_upload', compact('user', 'files'));
+             	    return view('files.file_upload');
              }
 
              else
