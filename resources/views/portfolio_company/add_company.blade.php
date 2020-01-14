@@ -8,7 +8,7 @@
 <div class="mt-4">
   <div class="row justify-content-center">
   <div class="col-md-8">
-<form action="add_company" method="get">
+<form action="add_company" method="post">
 @csrf
     <label for="name">Company Name</label>
     <input type="text" class="form-control" name="name" id="companyname">
