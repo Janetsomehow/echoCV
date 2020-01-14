@@ -396,7 +396,7 @@ ul > li > a.activer{
 
   /* Single company */
 
-  @media(max-width: 360px){
+  @media(max-width: 420px){
       .page-setup{
           margin-left: 0;
       }
