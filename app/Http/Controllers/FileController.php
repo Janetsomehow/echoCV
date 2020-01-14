@@ -6,17 +6,73 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Efile;
 use App\Company;
+use Validator,Redirect,Response,File;
+
+use Intervention\Image\Exception\NotReadableException;
+use Storage;
+use RealRashid\SweetAlert\Facades\Alert;
+use App\User;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 
 
 class FileController extends Controller
 {
     
 
-    private $document_ext = ['doc', 'docx'];
+    private $document_ext = ['doc', 'docx','zip'];
     private $pdf_ext = ['pdf'];
     private $excel_ext = ['xls','xlsx'];
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+     /**
+     * Get type by extension
+     * @param  string $ext Specific extension
+     * @return string      Type
+     */
+    private function getType($ext)
+    {
+        if (in_array($ext, $this->pdf_ext)) {
+            return 'pdf';
+        }
+
+        if (in_array($ext, $this->excel_ext)) {
+            return 'excel';
+        }
+
+        // if (in_array($ext, $this->video_ext)) {
+        //     return 'video';
+        // }
+
+        if (in_array($ext, $this->document_ext)) {
+            return 'doc';
+        }
+    }
+
+    /**
+     * Get all extensions
+     * @return array Extensions of all file types
+     */
+    private function allExtensions()
+    {
+        return array_merge($this->pdf_ext, $this->excel_ext, $this->document_ext);
+    }
+
+    /**
+     * Get directory for the specific user
+     * @return string Specific user directory
+     */
+    private function getUserDir()
+    {
+        return Auth::user()->name . '_' . Auth::id();
+    }
+
 
 
     public function index()
@@ -26,12 +82,12 @@ class FileController extends Controller
 
     	if($user->type == 'client')
     	 {
-    	    $efiles = Efile::where('user_id', Auth::id())
+    	    $files = Efile::where('user_id', Auth::id())
                             ->orderBy('created_at', 'desc')->paginate(20);
-             if($efiles->count() > 0)
+             if($files->count() > 0)
              {
 
-             	    return view('files.file_upload', compact('user', 'efiles'));
+             	    return view('files.file_upload');
              }
 
              else
@@ -43,11 +99,11 @@ class FileController extends Controller
 
     	 else
     	 {
-    	 	$efiles = Efile::orderBy('created_at', 'desc')->paginate(20);
-    	 	  if($efiles->count() > 0)
+    	 	$files = Efile::orderBy('created_at', 'desc')->paginate(20);
+    	 	  if($files->count() > 0)
              {
 
-             	    return view('files.file_upload', compact('user', 'efiles'));
+             	    return view('files.file_upload');
              }
 
              else
@@ -62,44 +118,88 @@ class FileController extends Controller
 
     public function store(Request $request)
     {
-    	$user = Auth::user();
 
-    	 $max_size = (int)ini_get('upload_max_filesize') * 1000;
-        $all_ext = implode(',', $this->allExtensions());
+    	 // $request->validate([
+      //       'file' => 'required|mimes:doc,pdf,xlx,csv|max:2048',
+      //       'name' => 'required'
+      //   ]);
 
-        $this->validate($request, [
-            'name' => 'required|unique:files',
-            'file' => 'required|file|mimes:' . $all_ext . '|max:' . $max_size
-        ]);
+    	 request()->validate([
+         'file'  => 'required|mimes:doc,docx,pdf,txt|max:2048',
+       ]);
 
-         $model = new Efile();
+        // if ($validator->fails()) {
+        //     return redirect()->back()
+        //         ->withErrors($validator)
+        //         ->withInput();
+        //     }
+  
+      
+        	// Get filename with extension            
+        	$filenameWithExt = $request->file('file')->getClientOriginalName();
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);            
+           // Get just ext
+            $extension = $request->file('file')->getClientOriginalExtension();
+            //Filename to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;  
+             //Filename to store
+            $dbfileNameToStore = '/files'.$fileNameToStore;    
 
-        $file = $request->file('file');
-        $ext = $file->getClientOriginalExtension();
-        $type = $this->getType($ext);
-        $path = '/public/' . $this->getUserDir() . '/' . $type . '/' . $request['name'] . '.' . $ext;
-        $size = $file->getSize();
-        $filename = time().'-'.$request->name;
+            $file = $request->file('file');
+            $ext = $request->file('file')->getClientOriginalExtension();
+            $type = $this->getType($ext);
+            $size = $this->filesize_formatted($file);
+            $path = $request->file('file')->storeAs('files', $fileNameToStore, 'public');
+
+                $efile = new Efile();
+                $efile->name = $request->name;
+                $efile->type = $type;
+                $efile->storage = $fileNameToStore;
+                $efile->source = 'upload';
+                $efile->path = $path;
+                $efile->status = 'active';
+                $efile->size = $size;
+                $efile->user_id = Auth::id();
+                $efile->save();
 
 
-        if (Storage::putFileAs('/public/' . $this->getUserDir() . '/' . $type . '/', $file, $filename . '.' . $ext))
-         {
-           $model::create([
-		        'name' => $request->name,
-		        'type' => $type,
-		        // 'extension' => $ext,
-		        'source' => 'upload',
-		        'path' => $path,
-		        'size' => $size,
-		        'user_id' => $user->id,
-		    ]);
+               
 
-           toast('File Uploaded','success');
-			    		  return redirect()->back();
-
-           // return back()->with('success','')
-        }
+               toast('File Uploaded','success');
+   
+        return back()
+            ->with('success','You have successfully upload file.');
+       
     }
+
+
+
+        /**
+         * Formats filesize in human readable way.
+         *
+         * @param file $file
+         * @return string Formatted Filesize, e.g. "113.24 MB".
+         */
+        private function filesize_formatted($file)
+        {
+            $bytes = filesize($file);
+
+            if ($bytes >= 1073741824) {
+                return number_format($bytes / 1073741824, 2) . ' GB';
+            } elseif ($bytes >= 1048576) {
+                return number_format($bytes / 1048576, 2) . ' MB';
+            } elseif ($bytes >= 1024) {
+                return number_format($bytes / 1024, 2) . ' KB';
+            } elseif ($bytes > 1) {
+                return $bytes . ' bytes';
+            } elseif ($bytes == 1) {
+                return '1 byte';
+            } else {
+                return '0 bytes';
+            }
+        }
+
 
 
 

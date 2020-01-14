@@ -32,7 +32,7 @@ class Company extends Model
         return $this->belongsTo('User');
     }
 
-    public function files()
+    public function efiles()
     {
         return $this->hasMany('Efile');
     }

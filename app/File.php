@@ -10,9 +10,25 @@ class File extends Model
     protected $table = 'files';
     public $timestamps = true;
 
-    public function user()
+    /* The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'source','user_id','company_id','status','path','size','name','storage'
+    ];
+
+    
+
+     public function user()
     {
         return $this->belongsTo('User');
     }
 
+    public function company()
+    {
+        return $this->belongsTo('Company');
+    }
+
 }
+

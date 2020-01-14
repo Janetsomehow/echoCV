@@ -44,7 +44,9 @@ class companycontroller extends Controller
 
        ]);
 
-       $company = company::create ([
+
+
+       $company = Company::create ([
         'name'=>$request->get('name'),
         'website'=>$request->get('website'),
         'country'=>$request->get('country'),
@@ -55,7 +57,6 @@ class companycontroller extends Controller
        // $contact->fname =$request->input('fname');
  
        ]);
-       $company->save();
 
        return redirect ('/add_chart')->with('success','Company details saved!');
        return $request->all();
