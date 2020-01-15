@@ -69,6 +69,7 @@ div.dataTables_wrapper div.dataTables_filter input {
   height: 37px;
   padding-left: 0.7rem;
   border-radius: 5px;
+  border: 1px solid #bbb;
   /* background: rgba(40,44,42,0.8); */
   background: #ffffff;
 }
@@ -190,7 +191,7 @@ div.dataTables_scrollFoot > table {
 .inputSearch {
     /* position: relative; */
     position: absolute;
-    left: 33.8rem;
+    left: 36.5rem;
     top: 8.9rem;
     height: 2.2rem;
 }
@@ -297,7 +298,7 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 
   .inputSearch {
     position: absolute;
-    left: 80vw;
+    left: 75vw;
     top: 8.2rem;
     height: 2.2rem;
   }

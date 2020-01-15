@@ -1,10 +1,10 @@
 <style>
   .active{
     background-color: #293059;;
-  
+
   }
   .active:hover{
-    color: #F1651C;
+    color: #FFF;
   }
 </style>
 
@@ -63,7 +63,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background:#666; font-size:0.7rem">
 
             <a class="dropdown-item" href="/home">Home</a>
-            <a class="dropdown-item" href="/profile">Account setting</a>  
+            <a class="dropdown-item" href="/profile">Account setting</a>
             {{-- <a class="dropdown-item" href="/home">Home</a> --}}
             {{-- <a class="dropdown-item"
                onclick="event.preventDefault();
