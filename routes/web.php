@@ -43,13 +43,9 @@ Auth::routes();
 
 
 // Route::get('/home', 'HomeController@index')->name('home');
-<<<<<<< HEAD
-Route::resource('companies', 'companyController');
-Route::post('/portfolio_company', 'companyController@store');
-=======
-Route::resource('companies', 'CompanyController');
-Route::post('/add/company', 'CompanyController@store')->name('add.company');
->>>>>>> c3fca048a24a2dc6af9dcbbefabb646b063df279
+
+Route::resource('add_company', 'CompanyController');
+Route::post('/add_company', 'CompanyController@store')->name('add.company');
 Route::resource('contact', 'ContactsController');
 Route::resource('reports', 'ReportsController');
 Route::get('/received_report', 'ReportsController@received');

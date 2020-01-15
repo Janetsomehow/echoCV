@@ -34,9 +34,10 @@ class companycontroller extends Controller
     public function store(Request $request)
     {
        $request->validate([
-           'name'=>'required',
+           'c_name'=>'required',
            'website'=>'required',
            'country'=>'required',
+           'pcontact'=>'required',
            'status'=>'required',
            'stage'=>'required',
            'lead'=>'required',
@@ -47,9 +48,10 @@ class companycontroller extends Controller
 
 
        $company = Company::create ([
-        'name'=>$request->get('name'),
+        'c_name'=>$request->get('c_name'),
         'website'=>$request->get('website'),
         'country'=>$request->get('country'),
+        'pcontact'=>$request->get('pcontact'),
         'status'=>$request->get('status'),
         'stage'=>$request->get('stage'),
         'lead'=>$request->get('lead'),
