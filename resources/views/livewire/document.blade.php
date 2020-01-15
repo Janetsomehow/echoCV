@@ -78,26 +78,27 @@
 <div class="d-flex selected-text">
       
         <div class="p-2 bd-highlight ml-2">
-            <input style="margin-top: 5px;" type="checkbox" />
+            <input style="margin-top: 5px;" type="checkbox" name="deleteall" id="select_all"/>
         </div>
-        <div class="p-2 bd-highlight ml-1">
+        
+        <div class="p-2 bd-highlight ml-1" id="headtile" style=" display: none;">
         <img src="{{ asset('css/icons/trash.svg') }}" style="height: 18px; width: 14px; color:#717171; " />
         </div>
 
 
-        <div class="p-2 bd-highlight ml-1">
+        <div class="p-2 bd-highlight ml-1" id="headshare" style=" display: none;">
         <img src="{{ asset('css/icons/share.png') }}" style="height: 14px; width: 14px; color:#717171; " />
         </div>
 
 
-        <div class="mr-auto p-2 bd-highlight ml-2 "> <span  style="border-left: 2px solid #C4C4C4;
-    transform: rotate(-90deg);">  
-    <span class="ml-3">
-        2 selected
+        <div class="mr-auto p-2 bd-highlight ml-2 " id="headcount" style=" display: none;" > 
+        	<span  style="border-left: 2px solid #C4C4C4; transform: rotate(-90deg);">  
+    <span class="ml-3"  >
+        <em id="count-checked-checkboxes">0</em> selected
     </span>
     </span></div>
-      <div class="p-2 bd-highlight text-right">
-        <span>1-5 of 5</span></div>
+      <div class="p-2 bd-highlight text-right pull-right">
+        <span class=" text-right">1-5 of {{$this->files->count()}}</span></div>
 </div>
 
 <table class="table table-hover table-mobile table-borderless ">
@@ -107,11 +108,12 @@
                 <th>OWNER</th>
                 <th>FILE SIZE</th>
                 <th>LAST MODIFIED</th>
+                 <th></th>
               </thead>
               <tbody class="table-items">
               	@forelse($this->files as $i => $file)
                <tr>
-                  <td><input type="checkbox" /></td>
+                  <td><input type="checkbox" class="checkbox" name="" wire:model="delete({{$file->id}})"/></td>
                   <td><span> <img 
                   	@if($file->type == 'excel')
                   	src="{{ asset('css/icons/xls.png') }}"
