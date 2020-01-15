@@ -265,9 +265,6 @@ a.searchContact {
     display: none;
   }
 
-  .repMobile {
-    /* display: none; */
-  }
 
   .repTitle {
       color: #333;
@@ -282,6 +279,10 @@ a.searchContact {
 
   .repTitle>img {
     margin-right: 0.3rem;
+  }
+
+  .nav-tabs > li.active {
+      background: none;
   }
 
   .nav-tabs > li.active > a.repTitle {
@@ -488,14 +489,19 @@ tbody {
    }
 
    .tdSchHead {
-      style="background:#fff;
+      background:#fff;
       margin-top:0.5rem;
       width:2.7rem;
       color:#333
    }
 
    .tab-content {
-     margin-top: -10rem;
+     margin-top: -11rem;
+   }
+
+   #SearchAreaTabs-1:hover {
+     text-decoration: none;
+     color: #000;
    }
 
    .tdSender, .tdDept  {
@@ -970,10 +976,6 @@ border-bottom: 0 solid #ddd;
 /* Report */
 .repTopBtn {
   display: none;
-}
-
-.display {
-  /* top: 0; */
 }
 
 .repMainTable {

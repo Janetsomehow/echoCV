@@ -17,6 +17,7 @@
         "laravel/ui": "^1.1",
         "laravolt/avatar": "^3.0",
         "lasserafn/php-initial-avatar-generator": "^4.0",
+        "livewire/livewire": "^0.5.3",
         "realrashid/sweet-alert": "^3.0",
         "revolution/laravel-google-sheets": "^5.0",
         "webpatser/laravel-uuid": "^3.0"

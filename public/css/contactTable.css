@@ -69,6 +69,7 @@ div.dataTables_wrapper div.dataTables_filter input {
   height: 37px;
   padding-left: 0.7rem;
   border-radius: 5px;
+  border: 1px solid #bbb;
   /* background: rgba(40,44,42,0.8); */
   background: #ffffff;
 }

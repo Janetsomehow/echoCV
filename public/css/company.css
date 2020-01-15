@@ -7,6 +7,7 @@
     left: -20rem
 }
 
+
 .Twrapper{
     display: flex;
     justify-content: center;
@@ -18,8 +19,10 @@
         margin-top: 5rem !important;
     }
     .empty{
-        margin-left: -13.8rem;
+        width: 100%;
+        margin-left: -0.5rem;
     }
+  
     p.company-text{
         width: 70%;
         margin-left: 4.5rem;
@@ -73,6 +76,9 @@
     h3{
         font-size: 1.5rem !important;
     }
+    .company-img{
+        width: 100%;
+    }
 }
 
 @media (max-width: 375px){
@@ -81,6 +87,13 @@
     }
     h3{
         font-size: 1.5rem !important;
+    }
+    .empty{
+        width: 100%;
+        margin-left: -0.5rem;
+    }
+    p{
+        font-size: 1.1rem;
     }
 }
 
@@ -133,8 +146,8 @@ body{
 
 .text{
     position: relative;
-    left: -5rem;
-    top: 5.3rem;
+    left: 55%;
+    top: -3.5rem;
 }
 .head {
     position: relative;
@@ -152,6 +165,7 @@ body{
 .card{
     margin-bottom: 3rem;
     min-width: 21rem;
+    margin-left: 2rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     border: 1px solid #F4F4F4;
 }
@@ -304,11 +318,11 @@ body{
   }
 
   .info{
-      margin-left: 1rem;
+      margin-left: 0.5rem;
   }
 
   .toggle{
-    margin-left: 11rem;
+    margin-left: 1rem;
     margin-top: 3.5rem;
   }
 
@@ -326,7 +340,7 @@ body{
     color: #000000;
     
 }
-ul > li > a.active{
+ul > li > a.activer{
     border-bottom:2px solid #19B9FD;
 }
 
@@ -378,4 +392,64 @@ ul > li > a.active{
 
   .rounded-p{
       border-radius: 1.7rem !important;
+  }
+
+  /* Single company */
+
+  @media(max-width: 420px){
+      .page-setup{
+          margin-left: 0;
+      }
+      .reports-part{
+          display: none;
+      }
+      .notes{
+          display: none;
+      }
+      .files{
+          display: none;
+      }
+      .contact{
+          display: none;
+      }
+      .backText{
+          display: none;
+      }
+      .funding{
+          display: none;
+      }
+      .performance{
+          display: none;
+      }
+      .irr{
+          display: none;
+      }
+      .other{
+          display: none;
+      }
+      .list-table{
+          margin-top: 0rem !important;
+          padding: 1rem;
+      }
+      .info{
+          margin-left: 1.3rem;
+          margin-top: 2rem;
+      }
+      .life-bank{
+          margin: 1em;
+      }
+      .open{
+        position: relative;
+        left: 4rem;
+      }
+      .life-section{
+          position: relative;
+          top: 5rem;
+      }
+      .life-img{
+        margin-left: 1.5rem;
+        width: 80%;
+        margin-top: 3rem;
+        border-radius: 5px;
+      }
   }

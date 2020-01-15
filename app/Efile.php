@@ -4,13 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class File extends Model 
+class Efile extends Model
 {
-
-    protected $table = 'files';
-    public $timestamps = true;
-
-    /* The attributes that are mass assignable.
+    
+        /**
+     * The attributes that are mass assignable.
      *
      * @var array
      */
@@ -30,5 +28,5 @@ class File extends Model
         return $this->belongsTo('Company');
     }
 
-}
 
+}

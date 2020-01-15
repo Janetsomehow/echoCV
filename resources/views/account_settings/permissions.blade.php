@@ -76,11 +76,14 @@
                         <div class="manage mt-5">
                             <h4 class="font-weight-bold"> Manage users </h4>
                             <div class="table ">
-                                <table class="  table-responsive table-borderless table-hover" style="margin-top: -4rem">
-                                    <thead>
+                                <table class=" table-responsive table-borderless table-hover" width="700" style="margin-top: -4rem;">
+                                    
+                                    <thead >
                                         <tr>
-                                            <th> Name </th>
-                                            <th> Email </th>
+                                            <th colspan="3"> Name </th>
+                                            <th></th>
+                                            <th colspan="3"> Email </th>
+                                            <th></th>
                                             <th> Permissions </th>
                                         </tr>
 
@@ -89,8 +92,12 @@
                                     <tbody> 
                                         <tr >
                                             {{-- <th scope="row">1</th> --}}
-                                            <td>Anne Thompson</td>
-                                            <td>annethompson@echocv.com</td>
+                                            
+                                            <td colspan="3">Anne Thompson</td>
+                                            <td colspan=""></td>
+                                            
+                                            <td colspan="3">annethompson@echocv.com</td>
+                                            <td></td>
                                             <td>
                                                 <div class="form-group">
                                                         <select class="form-control" id="exampleFormControlSelect1">
@@ -103,8 +110,10 @@
 
                                         <tr >
                                             {{-- <th scope="row">1</th> --}}
-                                            <td>John Samuel</td>
-                                            <td>john.samuel@echocv.com</td>
+                                            <td colspan="3">John Samuel</td>
+                                            <td></td>
+                                            <td colspan="3">john.samuel@echocv.com</td>
+                                            <td></td>
                                             <td>
                                                 <div class="form-group">
                                                     <select class="form-control" id="exampleFormControlSelect1">
@@ -117,8 +126,10 @@
 
                                         <tr >
                                             {{-- <th scope="row">1</th> --}}
-                                            <td>Anne Thompson</td>
-                                            <td>annethompson@echocv.com</td>
+                                            <td colspan="3">Anne Thompson</td>
+                                            <td></td>
+                                            <td colspan="3">annethompson@echocv.com</td>
+                                            <td></td>
                                             <td> 
                                                 <div class="form-group">
                                                     <select class="form-control" id="exampleFormControlSelect1">

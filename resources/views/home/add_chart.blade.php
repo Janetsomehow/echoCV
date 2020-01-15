@@ -17,6 +17,7 @@
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito:300,600" rel="stylesheet">
       <link ‎href="https://fonts.googleapis.com/css?family=europa:200,600" rel="stylesheet">
+      <script src="{{asset('js/sidebar.js')}}" defer></script>
 
   </head>
   <body>
@@ -65,7 +66,7 @@
         {{-- cards --}}
         <div class="row ml-2 mt-5 col-md-12 col-sm-12 carder">
             
-                <div class="card col-md-2 col-sm-6" >
+                <div class="card col-md-3 col-sm-6" >
                     <img src="{{ asset('css/icons/sony.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> Sony </p>
@@ -77,7 +78,7 @@
                    
                 </div>
 
-                <div class="card col-md-2 ml-4 col-sm-12">
+                <div class="card col-md-3  col-sm-12">
                     <img src="{{ asset('css/icons/netflix.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left">  Netlix </p>
@@ -89,7 +90,7 @@
                    
                 </div>
 
-                <div class="card col-md-2 ml-4" >
+                <div class="card col-md-3 " >
                     <img src="{{ asset('css/icons/macd.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> McDonald's </p>
@@ -101,7 +102,7 @@
                    
                 </div>
 
-                <div class="card col-md-2 ml-4" >
+                <div class="card col-md-3 " >
                     <img src="{{ asset('css/icons/ninten.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> Nintendo </p>
@@ -113,7 +114,7 @@
                    
                 </div>
 
-                <div class="card col-md-2 " >
+                <div class="card col-md-3 " >
                     <img src="{{ asset('css/icons/master.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> MasterCard </p>
@@ -125,7 +126,7 @@
                    
                 </div>
 
-                <div class="card col-md-2 ml-4" >
+                <div class="card col-md-3 " >
                     <img src="{{ asset('css/icons/electric.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> General Electric </p>
@@ -137,7 +138,7 @@
                    
                 </div>
 
-                <div class="card col-md-2 ml-4" >
+                <div class="card col-md-3 " >
                     <img src="{{ asset('css/icons/pizza.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> Pizza Hut </p>
@@ -149,7 +150,7 @@
                    
                 </div>
 
-                <div class="card col-md-2 ml-4" >
+                <div class="card col-md-3 " >
                     <img src="{{ asset('css/icons/mit.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> Mitsubishi </p>
@@ -161,7 +162,7 @@
                    
                 </div>
 
-                <div class="card col-md-2 " >
+                <div class="card col-md-3 " >
                     <img src="{{ asset('css/icons/life.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> LifeBank </p>
@@ -173,7 +174,7 @@
                    
                 </div>
 
-                <div class="card col-md-2 ml-4" >
+                <div class="card col-md-3 " >
                     <img src="{{ asset('css/icons/ibm.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"><I></I></p>

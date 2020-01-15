@@ -28,6 +28,10 @@ html {
   color: #cccccc;
 }
 
+/* #menuLinks a .active{
+  background-color: red;
+} */
+
 .logo {
   position: absolute;
   width: 4.5rem;
