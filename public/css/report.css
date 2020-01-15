@@ -565,11 +565,10 @@ tbody {
 
  .display {
    /* top: 12rem; */
-    margin-top:-0.5rem;
+    margin-top: 1rem;
     padding: 0;
     width:100%!important;
  }
-
 
 
 /* ========================Contact folder ========================*/
@@ -640,6 +639,26 @@ tbody {
 .actionBtn {
   display: flex;
   justify-content: space-between;
+}
+
+.btnDelAll {
+  position: absolute;
+  border: 0;
+  background: #fff;
+  margin-right: 1rem;
+  outline: none;
+  top: 9rem;
+  left: 3rem;
+}
+
+.btnArc {
+  position: absolute;
+  border: 0;
+  background: #fff;
+  margin-right: 1rem;
+  outline: none;
+  top: 9rem;
+  left: 5rem;
 }
 
 .btnDelCon {

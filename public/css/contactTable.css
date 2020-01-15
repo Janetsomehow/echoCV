@@ -190,7 +190,7 @@ div.dataTables_scrollFoot > table {
 .inputSearch {
     /* position: relative; */
     position: absolute;
-    left: 33.8rem;
+    left: 36.5rem;
     top: 8.9rem;
     height: 2.2rem;
 }
@@ -297,7 +297,7 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 
   .inputSearch {
     position: absolute;
-    left: 80vw;
+    left: 75vw;
     top: 8.2rem;
     height: 2.2rem;
   }

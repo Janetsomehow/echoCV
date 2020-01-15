@@ -4,7 +4,9 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Contacts</title>
+      <link rel="icon" href="{{ asset('css/icons/echoVC.png') }}" />
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
       <!-- Styles -->
@@ -17,11 +19,9 @@
       <!-- Scripts -->
 
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-confirmation/1.0.5/bootstrap-confirmation.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <script src="{{ asset('js/jquery.contact.js') }}" defer></script>
       <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -38,16 +38,13 @@
           <div class="rep">Contacts</div>
           <a href="/contact/create" class="btn btn-primary searchContact conTopBtn">Create Contact</a>
         </section>
-
         <section class="contactMain">
           <div class="widget-wrapper container-fluid" style="padding:0; margin:0">
             <div class="section-wrap-b table-responsive">
-              <button class="btnDelAll delete-all" data-url=""><img src="{{ asset('css/icons/metricdel.png') }}"/></button>
-              <button class="btnArc" data-url=""><img src="{{ asset('css/icons/arch.png') }}"/></button>
               <table id="mySearchableData" class="display table table-hover table-responsive">
                 <thead class="tdHead">
                   <tr>
-                    <td class="tdt"><input type="checkbox" id="check_all"></td>
+                    <td></td>
                     <td class="tdOthers">NAME</td>
                     <td class="tdCop">COMPANY</td>
                     <td class="tdOthers">EMAIL</td>
@@ -59,8 +56,8 @@
                 <tbody class="tdBody">
                   @if(count($contacts) > 0)
                   @foreach ($contacts as $contact)
-                  <tr id="tr_{{$contact->id}}">
-                      <td class="tdt"><input type="checkbox" class="checkbox" data-id="{{$contact->id}}""></td>
+                  <tr>
+                      <td class="tdt"><input type="checkbox" id="check_all" name="" value="{{ $contact->id }}"></td>
                       <td data-search="{{ $contact->fname }} {{ $contact->lname }}" class="tdName">
                         <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
                         {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}</td>
@@ -68,10 +65,8 @@
                       <td class="tdOthers">{{ $contact->email }}</td>
                       <td data-order="" class="tdOthers">{{ $contact->phoneNo }}</td>
                       <td class="tdOthers tdTags">{{ $contact->tags }}</td>
-
-                      <td class="tdSettings">
-                        <a class="btn btn-danger btn-xs" href="/contact/{{ $contact->id }}"></a>
-                      </td>
+                      <td class="tdSettings"><a class="" href="/contact/{{ $contact->id }}">
+                        <img src="{{ asset('css/icons/repSchSettings.png') }}" /></a></td>
                   </tr>
                   @endforeach
                   @endif
@@ -166,10 +161,8 @@
   ShipmentFilter.ddStatus.value=99;
   }
 
-</script>
 
-<!-- //To select row and delete -->
-<script type="text/javascript">
+//To select row and delete
 
 $(document).ready(function () {
        $('#check_all').on('click', function(e) {
@@ -201,12 +194,12 @@ $(document).ready(function () {
                alert("Please select atleast one record to delete.");
            }  else {
 
-               if(confirm("Are you sure, you want to delete the selected contacts?")){
+               if(confirm("Are you sure, you want to delete the selected categories?")){
                    var strIds = idsArr.join(",");
 
                    $.ajax({
-                       url: "{{ route('contact.multiple-delete') }}",
-                       type: 'POST',
+                       url: "{{ route('contact.index') }}",
+                       type: 'DELETE',
                        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                        data: 'ids='+strIds,
                        success: function (data) {
@@ -239,6 +232,8 @@ $(document).ready(function () {
        });
 
    });
+
+
 
 </script>
 
