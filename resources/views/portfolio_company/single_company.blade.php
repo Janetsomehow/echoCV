@@ -30,15 +30,15 @@
 
     <section class="title"> 
       <div class="back page-setup" >
-        <p style="color: #19B9FD;"> <i class="fas fa-chevron-left"> </i><a href="../add_chart" style="color: #19B9FD;"> Back to portfolio companies </a></p>
+        <p style="color: #19B9FD;" class="backText" > <i class="fas fa-chevron-left"> </i><a href="../add_chart" style="color: #19B9FD;"> Back to portfolio companies </a></p>
         <hr class="ml-n5">
       </div>
 
       <div class="row page-setup">
-        <div class="col-8">
-          <div class="row">
+        <div class="col-md-8 col-sm-12 ">
+          <div class="row life-section">
             <img src="{{ asset('css/icons/life.png') }}" class="life-img" alt="">
-            <div class="col">
+            <div class="col life-bank col-sm-12">
               <h3> LifeBank</h3>
               <p>
                 LifeBank is a smart blood system saving lives in Lagos by speeding up blood donations and deliveries
@@ -56,30 +56,31 @@
                       <i class="fas fa-map-marker-alt"></i>
                       Abuja
                     </li>
-                    <li class="ml-3"><i class="fas fa-globe"></i> www.lifebank.org</li>
-                    <li class="ml-3"><i class="far fa-envelope"></i> hello@lifebank.ng</li>
-                    <li class="ml-3"><i class="far fa-envelope"></i> B2C, Healthcare</li>
+                    <li class="ml-3 other"><i class="fas fa-globe"></i> www.lifebank.org</li>
+                    <li class="ml-3 other"><i class="far fa-envelope"></i> hello@lifebank.ng</li>
+                    <li class="ml-3"><i class="fas fa-tags"></i> B2C, Healthcare</li>
                     
                   </ul>   
                   <div class="row toggle" style="">
-                    <p class="">Closed</p>
-                    <i class="fas  fa-toggle-on toggler" style=""></i>
-                    <p class="" style="color: #7AEF1F;">Open</p>
+                    <p class="other">Closed</p>
+                    <i class="fas other fa-toggle-on toggler" style=""></i>
+                    <p class="open" style="color: #7AEF1F;">Open</p>
                 </div>
      
             </div>
 
           </div>
          
-          <ul class="list-unstyled row mt-5 ml-n4">
+          <ul class="list-unstyled row mt-5 ml-n3 list-table shadow">
             <li class=""><a href="" class="activer"> Description</a></li>
             <li class="ml-4"><a href=""> Comparison</a></li>
             <li class="ml-4"><a href=""> Performance</a></li>
-            <li class="ml-4"><a href=""> Funding</a></li>
-            <li class="ml-4"><a href=""> Contact</a></li>
-            <li class="ml-4"><a href="">Files</a></li>
-            <li class="ml-3"><a href=""> Notes</a></li> 
-            <button class="btn btn-primary btn-share btn-sm" style="margin-left: 0.5rem; margin-top: .1rem; width: 4rem"> Share</button>
+              <li class="funded mt-3"><a href=""> Funding</a></li>
+              <li class="ml-4 mt-3"><a href=""> Contact</a></li>
+              <li class="ml-4 mt-3"><a href="">Files</a></li>
+              <li class="ml-4 mt-3"><a href=""> Notes</a></li> 
+            
+            {{-- <button class="btn btn-primary btn-share btn-sm" style="margin-left: 0.5rem; margin-top: .1rem; width: 4rem"> Share</button> --}}
           </ul>
           
           <div class="details">
@@ -105,18 +106,19 @@
                
               </div>
               <div class="row">
-                <div class="col-6 ml-n3">
+                <div class="col-md-6 col-sm-12 ml-n3">
                   <h5 class=" text-capitalize"> Pizza Hut</h5>
-                  <div class="row col-8">
-                    <p> IRR</p>
-                    <p class="ml-auto"> AVG. HP</p>
-    
+                  <div class="irr">
+                    <div class="row col-8 ">
+                      <p> IRR</p>
+                      <p class="ml-auto"> AVG. HP</p>
+      
+                    </div>
+                    <div class="row col-8">
+                      <h5> 21.5%</h5>
+                      <h5 class="ml-auto"> 14%</h5>
+                    </div>
                   </div>
-                  <div class="row col-8">
-                    <h5> 21.5%</h5>
-                    <h5 class="ml-auto"> 14%</h5>
-                  </div>
-
                   <div class="row ml-1 mt-3">
                     <h5>Investments</h5>
                     <i class="fas fa-chevron-down ml-auto"> </i>
@@ -178,7 +180,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 ml-3">
+                <div class="col-6 funding ml-3">
                   <h5 class=" text-capitalize"> Johnson & Johnson</h5>
                   <div class="row col-8">
                     <p> IRR</p>
@@ -220,12 +222,12 @@
                     </script>
                 </div>
               </div>
-              <div class="row mt-5">
+              <div class="row mt-5 performance">
                 <h5 class="text-uppercase float-left"> Performance </h5>
                 <p class="ml-auto "> Edit <i class="fas fa-pencil-alt"> </i></p>
                
               </div>
-              <div class="row">
+              <div class="row other">
                 <div class="col-6 ml-n3"  >
                     <div class="row col-8">
                       <p> IRR</p>
@@ -342,51 +344,52 @@
 
             </div>
 
-            <div class="funding mt-5">
-              <h4 class="text-uppercase"> funding </h4>
-                
-            </div>
-              <div class="row" >
-                  <div class="col-6  ml-1">
-                    <div class="row col-12">
-                      <p class="text-uppercase text-muted"> Series A</p>
-                      <p class="capitalize ml-auto text-muted"> January 20, 2019</p>
-                    </div>
+            <div class="funding">
+              <div class=" mt-5">
+                <h4 class="text-uppercase"> funding </h4>
+                  
+              </div>
+                <div class="row" >
+                    <div class="col-6  ml-1">
+                      <div class="row col-12">
+                        <p class="text-uppercase text-muted"> Series A</p>
+                        <p class="capitalize ml-auto text-muted"> January 20, 2019</p>
+                      </div>
 
-                    <div class="row col-12">
-                      <p class="text-capitalize"> Commited</p>
-                      <p class="capitalize ml-auto"> $342,000</p>
-                    </div>
+                      <div class="row col-12">
+                        <p class="text-capitalize"> Commited</p>
+                        <p class="capitalize ml-auto"> $342,000</p>
+                      </div>
 
-                    <div class="row col-12">
-                      <p class="text-capitalize">Tranche1:</p>
-                      <p class="mx-auto"> 5 Dec 2019</p>
-                      <p class="capitalize ml-auto"> $342,000</p>
-                    </div>    
-                  </div> 
+                      <div class="row col-12">
+                        <p class="text-capitalize">Tranche1:</p>
+                        <p class="mx-auto"> 5 Dec 2019</p>
+                        <p class="capitalize ml-auto"> $342,000</p>
+                      </div>    
+                    </div> 
 
-                  <div class="col-5 mr-1" >
-                    <div class="row col-12">
-                      <p class="text-uppercase text-muted"> Series A</p>
-                      <p class="capitalize ml-auto text-muted"> January 20, 2019</p>
+                    <div class="col-5 mr-1" >
+                      <div class="row col-12">
+                        <p class="text-uppercase text-muted"> Series A</p>
+                        <p class="capitalize ml-auto text-muted"> January 20, 2019</p>
+                      </div>
+                      <div class="col-12 row">
+                        <p class="text-capitalize"> Commited</p>
+                        <p class="capitalize ml-auto"> $57,000</p>
+                      </div>
+                      <div class="col-12 row">
+                        <p class="text-capitalize">Tranche1:</p>
+                        <p class="mx-auto"> 21 Jul 2019</p>
+                        <p class="capitalize ml-auto"> $25,000</p>
+                      </div>
+                      <div class="col-12 row">
+                        <p class="text-capitalize">Tranche2:</p>
+                        <p class="mx-auto"> 1 Sep 2019</p>
+                        <p class="capitalize ml-auto"> $32,500</p>
+                      </div>
+
                     </div>
-                    <div class="col-12 row">
-                      <p class="text-capitalize"> Commited</p>
-                      <p class="capitalize ml-auto"> $57,000</p>
-                    </div>
-                    <div class="col-12 row">
-                      <p class="text-capitalize">Tranche1:</p>
-                      <p class="mx-auto"> 21 Jul 2019</p>
-                      <p class="capitalize ml-auto"> $25,000</p>
-                    </div>
-                    <div class="col-12 row">
-                      <p class="text-capitalize">Tranche2:</p>
-                      <p class="mx-auto"> 1 Sep 2019</p>
-                      <p class="capitalize ml-auto"> $32,500</p>
-                    </div>
-                    
-                  </div>
- 
+                </div>
               </div>
 
               <div class="contact mt-4">
@@ -410,7 +413,7 @@
                     <div class="row">
                       
                       <div> <button class="btn btn-info rounded-circle p-4"  type="button" > AA</button> </div>
-                      <div class="col">
+                      <div class="col contact">
                         <p> Ayodeji Ariakwe</p>
                         <p> Medical Consultant</p>
                         <p>ayodeji.arikawe@something.com</p>
@@ -458,7 +461,7 @@
        
         
 
-        <div class="col-4 ">
+        <div class="col-4 reports-part">
           <div class="col ">
             <h4 class="ml-n3"> Recent Reports</h4>
             <div class="row">

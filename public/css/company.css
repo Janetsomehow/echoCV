@@ -164,8 +164,8 @@ body{
 
 .card{
     margin-bottom: 3rem;
-    min-width: 18rem;
-    margin-left: 1rem;
+    min-width: 21rem;
+    margin-left: 2rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     border: 1px solid #F4F4F4;
 }
@@ -318,7 +318,7 @@ body{
   }
 
   .info{
-      margin-left: -0.5rem;
+      margin-left: 0.5rem;
   }
 
   .toggle{
@@ -392,4 +392,64 @@ ul > li > a.activer{
 
   .rounded-p{
       border-radius: 1.7rem !important;
+  }
+
+  /* Single company */
+
+  @media(max-width: 420px){
+      .page-setup{
+          margin-left: 0;
+      }
+      .reports-part{
+          display: none;
+      }
+      .notes{
+          display: none;
+      }
+      .files{
+          display: none;
+      }
+      .contact{
+          display: none;
+      }
+      .backText{
+          display: none;
+      }
+      .funding{
+          display: none;
+      }
+      .performance{
+          display: none;
+      }
+      .irr{
+          display: none;
+      }
+      .other{
+          display: none;
+      }
+      .list-table{
+          margin-top: 0rem !important;
+          padding: 1rem;
+      }
+      .info{
+          margin-left: 1.3rem;
+          margin-top: 2rem;
+      }
+      .life-bank{
+          margin: 1em;
+      }
+      .open{
+        position: relative;
+        left: 4rem;
+      }
+      .life-section{
+          position: relative;
+          top: 5rem;
+      }
+      .life-img{
+        margin-left: 1.5rem;
+        width: 80%;
+        margin-top: 3rem;
+        border-radius: 5px;
+      }
   }
