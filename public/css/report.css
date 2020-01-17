@@ -432,6 +432,26 @@ div.custom {
   background: #eee;
 }
 
+.btnModalmetr {
+  border: 1px solid #D5DCE6;
+  background:linear-gradient(359.61deg, #F5F6F9 10.29%, #FFFFFF 99.27%);
+  font-size: 0.8rem;
+}
+
+.btnModalme {
+  font-size: 0.8rem;
+}
+
+.modalHeader, .modalFooter {
+  border: 0;
+}
+
+.modalFooter {
+  justify-content:flex-start!important;
+  padding:1.5rem!important;
+}
+
+
 
 /* ============================Table ========================*/
 
@@ -473,6 +493,10 @@ tbody {
 
  .tdName, .tdOthers {
      width: 18vw;
+   }
+
+ .tdTags {
+     max-width: 18vw;
    }
 
  .tdCop {
@@ -532,7 +556,7 @@ tbody {
      background: #b5dcf5;
      color: #1A73E8;
      display: inline-block;
-     width: 4vw;
+     max-width: 4rem;
      /* height: 2vh; */
      margin-left: 1vw;
      border-radius: 5px;
@@ -571,7 +595,7 @@ tbody {
 
  .display {
    /* top: 12rem; */
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     padding: 0;
     width:100%!important;
  }
@@ -653,18 +677,17 @@ tbody {
   background: #fff;
   margin-right: 1rem;
   outline: none;
-  top: 9rem;
+  top: 9.5rem;
   left: 3rem;
 }
 
-.btnArc {
-  position: absolute;
+.btnConTable, .btnConTable1 {
   border: 0;
   background: #fff;
-  margin-right: 1rem;
-  outline: none;
-  top: 9rem;
-  left: 5rem;
+}
+
+.btnConTable1 {
+  border-right: 1px solid #333;
 }
 
 .btnDelCon {

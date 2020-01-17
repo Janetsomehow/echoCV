@@ -33,11 +33,6 @@
           <button type="button" name="button" style="border:none"><img src="{{ asset('css/icons/grsearch.png') }}" /></button>
         </form>
 
-
-
-
-
-
         <section class="newMetr">
           <!-- <ul class="nav nav-tabs nav-lg newData" role="tablist">
             <li class="active" role="presentation">
@@ -50,7 +45,7 @@
           <label for="">Custom</label>
           <div class="formMett custom">
             User provided metric
-            <a href="/add_metrics" class="btn btn-default">Create</a>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="open">Create</button>
           </div>
             <label for="">Link</label>
               <div class="formG">
@@ -77,6 +72,59 @@
               </div>
         </section>
       </main>
+
+      <!-- Modal to create new metrics -->
+    <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <form method="post" action="{{ route('contact.store') }}">
+                @csrf
+                <div class="modal-content">
+                  <div class="modal-header modalHeader">
+                    <h5 class="modal-title">Create Metric</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="row mr-2">
+                        <div class="form-group col-md-12 ml-2">
+                          <label for="name">Name</label>
+                          <input type="text" class="form-control" name="name" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                         <div class="form-group col-md-12 ml-2">
+                           <label for="description">Description</label>
+                           <textarea name="description" rows="4" cols="56" style="border:1px solid #ccc; border-radius:3px" required></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 ml-2 mb-2 d-flex btnModalme">
+                          <label for="">Upload Source:</label>
+                          <!-- <input type="file" class="ml-4" name="tags"> -->
+                          <input type="file" id="myFile" class="ml-4" style="width: 85px;" onchange="this.style.width = '100%';" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="d-flex col-md-12 mr-2 ml-2 mt-3 btnModalme">
+                          <div class="mt-2">Unit:</div>
+                          <button type="submit" class="btn btnModalmetr ml-4 mr-2">Percent</button>
+                          <button type="submit" class="btn btnModalmetr">Number</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer modalFooter">
+                    <button type="submit" class="btn btn-save" style="background:#ddd; float:left!important">Save</button>
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
 
 
       <div class="wrapper">

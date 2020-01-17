@@ -47,6 +47,7 @@ Auth::routes();
 Route::resource('add_company', 'CompanyController');
 Route::post('/add_company', 'CompanyController@store')->name('add.company');
 Route::resource('contact', 'ContactsController');
+Route::get('/contacts', 'ContactsController@home');
 Route::delete('contact', ['as'=>'contact.multiple-delete','uses'=>'ContactsController@deleteMultiple']);
 Route::resource('reports', 'ReportsController');
 Route::get('/received_report', 'ReportsController@received');

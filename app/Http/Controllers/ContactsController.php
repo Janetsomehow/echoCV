@@ -22,12 +22,16 @@ class ContactsController extends Controller
      */
     public function index(Request $request)
     {
-        //
         // $contacts = Contact::orderBy('created_at', 'desc')->paginate(10);
         // $contacts = Contact::orderBy('created_at', 'desc');
         $contacts = Contact::all();
         return view('contact.index')->with('contacts', $contacts);
+    }
 
+    public function home(Request $request)
+    {
+        $contacts = Contact::all();
+        return view('contact.index1')->with('contacts', $contacts);
     }
 
     /**
@@ -71,7 +75,7 @@ class ContactsController extends Controller
     // $contact->user_id = auth()->user()->id;
     $contact->save();
 
-    return redirect('/contact')->with('success', 'Contact Successful Created');
+    return redirect('/contacts')->with('success', 'Contact Successful Created');
     }
 
     /**
@@ -135,7 +139,7 @@ class ContactsController extends Controller
 
       $contact->save();
 
-      return redirect('/contact')->with('success', 'Contact Successful Updated');
+      return redirect('/contacts')->with('success', 'Contact Successful Updated');
     }
 
     /**
@@ -149,7 +153,7 @@ class ContactsController extends Controller
       $contact = Contact::find($id);
       $contact->delete();
 
-      return redirect('/contact')->with('success', 'Contact Removed');
+      return redirect('/contacts')->with('success', 'Contact Removed');
     }
 
     /**
@@ -161,6 +165,6 @@ class ContactsController extends Controller
         $ids = $request->ids;
         Contact::whereIn('id', explode(",",$ids))->delete();
 
-        return response()->json(['status'=>true,'message'=>"All contacts deleted successfully."]);
+        return response()->json(['status'=>true,'message'=>"Contact(s) deleted successfully."]);
     }
 }

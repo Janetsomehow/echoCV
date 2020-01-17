@@ -50,8 +50,9 @@ div.dataTables_wrapper div.dataTables_length select {
 
 div.dataTables_wrapper div.dataTables_filter {
   text-align: right;
-	margin-left: 1.5rem;
-  position: absolute;margin-top: 0.5rem;
+	margin-left: 1rem;
+  position: absolute;
+  margin-top: 0.5rem;
 }
 
 div.dataTables_wrapper div.dataTables_filter label {
@@ -191,7 +192,7 @@ div.dataTables_scrollFoot > table {
 .inputSearch {
     /* position: relative; */
     position: absolute;
-    left: 36.5rem;
+    left: 22rem;
     top: 8.9rem;
     height: 2.2rem;
 }
@@ -256,8 +257,9 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 .dataTables_paginate a {
 	/* color: white!important; */
 	padding: 5px 10px;
-  background: #eee;
+  background: #fff;
   color: #333;
+  border: 0;
 }
 
 .dataTables_paginate a:hover {
@@ -298,8 +300,8 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 
   .inputSearch {
     position: absolute;
-    left: 75vw;
-    top: 8.2rem;
+    left: 65vw;
+    top: 9rem;
     height: 2.2rem;
   }
 
