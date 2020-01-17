@@ -22,7 +22,7 @@ class companycontroller extends Controller
     {
        $company = company::all();
 
-       return view('add_company.index');
+       return view('add_company');
         //
     }
 

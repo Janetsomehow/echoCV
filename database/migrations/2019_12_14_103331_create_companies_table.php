@@ -11,7 +11,7 @@ class CreateCompaniesTable extends Migration {
 		$table->engine = 'MYISAM';
 			$table->increments('id');
 			$table->uuid('uuid')->nullable();
-			$table->string('name');
+			$table->string('c_name');
 			$table->string('website')->nullable();
 			$table->bigInteger('user_id')->unsigned()->nullable();
 			$table->bigInteger('country_id')->unsigned();
