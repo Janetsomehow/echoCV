@@ -78,6 +78,17 @@
               <button type="button" name="button" class="btn" >Add metrics request</button>
               <button type="button" name="button" class="btn" >Add file request</button>
             </div>
+            <div class="d-flex container-fluid mt-5 mb-5">
+              <button type="button" name="button" class="mr-2" data-toggle="tooltip" data-placement="top" title="Chart" style="border:0">
+                <img src="{{ asset('css/icons/newRep1.png') }}">
+                <input type="file" name="" value="">
+              </button>
+              <button type="button" name="button" class="btn" >
+                <input type="file" name="" value="">
+              </button>
+              <input type="file" name="" value="">
+            </div>
+
           </div>
         </form>
 
