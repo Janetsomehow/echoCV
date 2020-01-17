@@ -9,7 +9,7 @@
     h4{
       position: relative;
       /* right: 6rem; */
-      left: 0rem;
+      left: 6rem;
       font-size: 2rem;
       top: 1.5rem;
     }
