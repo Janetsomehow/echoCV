@@ -43,9 +43,12 @@ Auth::routes();
 
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('companies', 'CompanyController');
-Route::post('/add/company', 'CompanyController@store')->name('add.company');
+
+Route::resource('add_company', 'CompanyController');
+Route::post('/add_company', 'CompanyController@store')->name('add.company');
 Route::resource('contact', 'ContactsController');
+Route::get('/contacts', 'ContactsController@home');
+Route::delete('contact', ['as'=>'contact.multiple-delete','uses'=>'ContactsController@deleteMultiple']);
 Route::resource('reports', 'ReportsController');
 Route::get('/received_report', 'ReportsController@received');
 Route::get('/sent_report', 'ReportsController@sent');
@@ -58,7 +61,6 @@ Route::get('/new_report', 'ReportsController@create');
 // Route::post('/profile', 'ProfileController@profileupdate');
 Route::get('/files', 'FileController@index')->name('file.index');
 Route::post('/file/upload', 'FileController@store')->name('file.upload');
-
 
 
 

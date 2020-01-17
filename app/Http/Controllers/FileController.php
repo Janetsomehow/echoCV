@@ -150,7 +150,7 @@ class FileController extends Controller
             $ext = $request->file('file')->getClientOriginalExtension();
             $type = $this->getType($ext);
             $size = $this->filesize_formatted($file);
-            $path = $request->file('file')->storeAs('files', $fileNameToStore, 'public');
+            $path = $request->file('file')->storeAs('files/'.$type, $fileNameToStore, 'public');
 
                 $efile = new Efile();
                 $efile->name = $request->name;

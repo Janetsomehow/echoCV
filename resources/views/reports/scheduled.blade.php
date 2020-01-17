@@ -70,7 +70,7 @@
             <a href="/new_report" ><img src="{{ asset('css/icons/repMobCreate.png') }}" /></a>
           </div>
           <div class="tab-content">
-            <div class="tab-pane active" id="SearchAreaTabs-1" role="tab-panel">
+            <div class="tab-pane active" id="SearchAreaTabs-1" role="tab-panel" style="background:transparent!important">
               <div class="widget-wrapper container-fluid table-responsive">
                 <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0">
                   <thead class="tdSchHead">

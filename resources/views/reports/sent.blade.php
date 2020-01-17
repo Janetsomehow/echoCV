@@ -40,11 +40,11 @@ use Carbon\Carbon;
           <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist">
             <li role="presentation">
               <a class="repTitle"  href="/reports">
-                <img src="{{ asset('css/icons/repAll1.png') }}">ALL</a>
+                <img src="{{ asset('css/icons/repAll.png') }}">ALL</a>
             </li>
             <li role="presentation" class="active">
               <a class="repTitle"  href="/sent_report">
-                <img src="{{ asset('css/icons/repSent.png') }}">SENT</a>
+                <img src="{{ asset('css/icons/repSent1.png') }}">SENT</a>
             </li>
             <li role="presentation">
               <a class="repTitle" href="/received_report">
@@ -78,7 +78,7 @@ use Carbon\Carbon;
           </div>
 
           <div class="tab-content">
-            <div class="tab-pane active" id="SearchAreaTabs-1" role="tab-panel">
+            <div class="tab-pane active" id="SearchAreaTabs-1" role="tab-panel" style="background:transparent!important">
               <div class="widget-wrapper container-fluid table-responsive">
                 <table id="mySearchableData" class="display table table-hover table-responsive" cellspacing="0">
                   <thead style="background:transparent; color:transparent">
