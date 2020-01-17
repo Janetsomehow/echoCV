@@ -36,7 +36,8 @@
           <div class="newData">
             <a href="#"class="btn">+ New data source</a>
           </div><hr>
-          <div>Google Sheets<a class="metricDel" href="#" style="display:none"><img src={{ asset('css/icons/metricdel.png') }} /></a>
+          <div>Google Sheets<a class="metricDel" href="#" style="display:none">
+            <img src={{ asset('css/icons/metricdel.png') }} /></a>
           </div>
 
 
@@ -59,7 +60,7 @@
 
               <div class="bigSe">
                 <div class="">
-                  <label for="">Select rows (date and time period)</label>
+                  <label for="">Select rows(date and time period)</label>
                   <select class="form-control smallSe" name="">
                     <option value=""></option>
                     <option value="First">Daily</option>

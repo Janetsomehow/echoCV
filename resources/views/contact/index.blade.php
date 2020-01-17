@@ -24,15 +24,17 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-confirmation/1.0.5/bootstrap-confirmation.min.js"></script>
       <script src="{{ asset('js/jquery.contact.js') }}" defer></script>
       <script src="{{ asset('js/app.js') }}" defer></script>
+      <meta name="csrf-token" content="{{ csrf_token() }}">
 
   </head>
   <body>
-    <div class="wrapper">
 
-  @include('layouts.sidebar')
+    <div class="" style="margin-left:13rem">
+      @include('inc.messages')
     </div>
+
       <main class="wholeContent">
-        @include('inc.messages')
+
 
         <section class="header searchContact">
           <div class="rep">Contacts</div>
@@ -60,18 +62,23 @@
                   @if(count($contacts) > 0)
                   @foreach ($contacts as $contact)
                   <tr id="tr_{{$contact->id}}">
-                      <td class="tdt"><input type="checkbox" class="checkbox" data-id="{{$contact->id}}""></td>
-                      <td data-search="{{ $contact->fname }} {{ $contact->lname }}" class="tdName">
-                        <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
-                        {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}</td>
-                      <td data-search="{{ $contact->company }}" class="tdCop">{{ $contact->company }}</td>
-                      <td class="tdOthers">{{ $contact->email }}</td>
-                      <td data-order="" class="tdOthers">{{ $contact->phoneNo }}</td>
-                      <td class="tdOthers tdTags">{{ $contact->tags }}</td>
+                        <td class="tdt"><input type="checkbox" class="checkbox" data-id="{{$contact->id}}"></td>
+                        <td data-search="{{ $contact->fname }} {{ $contact->lname }}" class="tdName">
+                          <img src="https://via.placeholder.com/150x150/54de2b/FFFFFF.png?text={{ ucwords($contact->fname[0]) }}{{ ucwords($contact->lname[0]) }}" />
+                          {{ ucwords($contact->fname) }} {{ ucwords($contact->lname) }}</td>
+                        <td data-search="{{ $contact->company }}" class="tdCop">{{ $contact->company }}</td>
+                        <td class="tdOthers">{{ $contact->email }}</td>
+                        <td data-order="" class="tdOthers">{{ $contact->phoneNo }}</td>
+                        <td class="tdOthers tdTags">{{ $contact->tags }}</td>
 
-                      <td class="tdSettings">
-                        <a class="btn btn-danger btn-xs" href="/contact/{{ $contact->id }}"></a>
-                      </td>
+                        <td class="tdSettings">
+                      <form class="" action="{{ route('contact.destroy', $contact->id) }}" method="post" style="display:inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-xs" data-toggle="confirmation" data-placement="left" name="button"></button>
+                      </form>
+
+                        </td>
                   </tr>
                   @endforeach
                   @endif
@@ -81,13 +88,17 @@
           </div>
         </section><br><br>
         <a href="/contact/create" class="btn btn-default mobileBtn"></a>
-
+        <div class="inputSearch">
+          <img src="{{ asset('css/icons/grsearch.png') }}" >
+        </div>
       </main>
-      <div class="inputSearch">
-        <img src="{{ asset('css/icons/grsearch.png') }}" >
-      </div>
 
 
+      <script type="text/javascript">
+      $('table').on('click', 'tr', function() {
+        window.location = '/contact/show';
+      });
+      </script>
   <!--searchable table start -->
   <script type="text/javascript" language="javascript" class="init">
   //	$('#mydata').dataTable();
@@ -196,6 +207,7 @@ $(document).ready(function () {
                idsArr.push($(this).attr('data-id'));
            });
 
+
            if(idsArr.length <=0)
            {
                alert("Please select atleast one record to delete.");
@@ -228,8 +240,6 @@ $(document).ready(function () {
                }
            }
        });
-
-
 
        $('[data-toggle=confirmation]').confirmation({
            rootSelector: '[data-toggle=confirmation]',
