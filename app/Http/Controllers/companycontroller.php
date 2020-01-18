@@ -18,11 +18,11 @@ class companycontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function create()
     {
        $company = company::all();
 
-       return view('add_company');
+       return view('add_company.create');
         //
     }
 
@@ -34,7 +34,7 @@ class companycontroller extends Controller
      */
     public function store(Request $request)
     {
-       $request->validate([
+       $this->validate($request, [
            'c_name'=>'required',
            'website'=>'required',
            'country'=>'required',
@@ -61,7 +61,7 @@ class companycontroller extends Controller
  
        ]);
 
-       return redirect ('/add_chart')->with('success','Company details saved!');
+       return redirect ('/company_list')->with('success','Company details saved!');
        return $request->all();
         //
         /*   $company = new company;
