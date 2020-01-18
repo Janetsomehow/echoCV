@@ -43,7 +43,7 @@
 <div class="mt-5 form-wrap">
   <div class="row justify-content-center">
   <div class="col-md-8">
-<form action="/add_company" method="post">
+<form action="CompanyController" method="post">
 
 
 

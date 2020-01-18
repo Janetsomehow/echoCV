@@ -22,13 +22,14 @@ class companycontroller extends Controller
     {
        $company = company::all();
 
-       return view('add_company.index', compact('companies'));
+       return view('add_company');
         //
     }
 
     /**
      * Show the form for creating a new resource.
      *
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)

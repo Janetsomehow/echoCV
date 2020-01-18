@@ -13,13 +13,13 @@ class Company extends Model
 
 
     protected $fillable =[
-        'name',
+        'c_name',
         'website',
         'country',
         'p_contact',
         'tags',
-        'fund_stage',
-        'inv_status',
+        'stage',
+        'status',
         'lead',
         'analyst',
     ];

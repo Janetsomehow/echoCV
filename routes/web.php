@@ -20,17 +20,14 @@ Route::get('/create1', function () { return view('metrics.'); });
 Route::get('/file_upload', function () { return view('files.file_upload'); });
 Route::get('/archives', function () { return view('archives.archives'); });
 Route::get('/archivelist', function () { return view('archives.archivelist'); });
-Route::get('/add_chart', function () { return view('home.add_chart'); });
+Route::get('/company_list', function () { return view('portfolio_company.company_list'); });
 Route::get('/create_metrics', function () { return view('metrics.create'); });
 Route::get('/add_metrics', function () { return view('metrics.add'); });
-Route::get('/add_company', function () { return view('portfolio_company.add_company'); });
 Route::get('/single_company', function () { return view('portfolio_company.single_company'); });
-// Route::get('/single_company', function () { return view('portfolio_company.single_company'); });
 Route::get('/dashboard', function () { return view('home.dashboard'); });
 Route::get('/new_company', function () { return view('portfolio_company.new_company'); });
 Route::get('/add_company', function () { return view('portfolio_company.add_company'); });
 Route::get('/dashboard1', function () { return view('home.dashboard1'); });
-Route::get('/add_chart1', function () { return view('home.add_chart1'); });
 Route::get('/profile', function () { return view('account_settings.profile'); });
 Route::get('/permissions', function () { return view('account_settings.permissions'); });
 
@@ -62,9 +59,13 @@ Route::get('/new_report', 'ReportsController@create');
 Route::get('/files', 'FileController@index')->name('file.index');
 Route::post('/file/upload', 'FileController@store')->name('file.upload');
 
-
-
-
+Route::get('metrics/{type}', 'MetricsController@index');
+Route::get('666', 'ChartController@index');
+Route::get('graph', 'ChartController@graph');
+Route::get('bar', 'ChartController@bar');
+Route::get('select/{type}', 'ChartController@select');
+Route::get('chart-line', 'ChartController@chartLine');
+Route::get('chart-line-ajax', 'ChartController@chartLineAjax');
 
 
 // Route::group(['middleware' => ['web','auth','admin','verified']], function () {
