@@ -21,30 +21,27 @@
     <div class="wrapper">
       @include('layouts.sidebar')
     </div>
-        <div class="wholeContent">
-          <div class="rep d-flex">
+        <main class="wholeContent">
+          <section class="rep d-flex">
             <div class="mr-5">
               Metrics
             </div>
-            <form method="post" action="">
-              @csrf
-              <select class="form-control" name="chartType" style="width:10rem">
-                <option value="">Chart Type</option>
-                <option value="line">Line</option>
-                <option value="pie">Pie</option>
-                <option value="donut">Doughnut</option>
-                <option value="bar">Bar</option>
-                <option value="dot">Dot lines</option>
-              </select>
-            </form>
 
-          </div>
+            <div class="d-flex align-self-center" style="font-size:1rem; margin-left:20vw">
+              <div class="mr-3" onclick="window.location='/metrics/line'">Line</div>
+              <div class="mr-3" onclick="window.location='/metrics/pie'">Pie</div>
+              <div class="mr-3" onclick="window.location='/metrics/bar'">Bar</div>
+              <div class="mr-3" onclick="window.location='/metrics/dot'" style="width:4rem">Dot Line</div>
+              <div class="mr-3" onclick="window.location='/metrics/donut'">Doughnut</div>
+            </div>
+
+          </section>
 
           <div class="container mt-5">
             {!! $chart->container() !!}
           </div>
 
-        </div>
+        </main>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>

@@ -18,8 +18,10 @@ class ChartController extends Controller
         $api = url('/chart-line-ajax');
 
         $chart = new UserLineChart;
-        $chart->labels(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])->load($api);
-
+        $chart->labels(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']);
+        $chart->dataset('Users by trimester', 'line', [100, 25, 13])
+            ->color('#51C1C0')
+            ->backgroundcolor('#51C1C0');
         return view('chartLine', compact('chart'));
     }
 

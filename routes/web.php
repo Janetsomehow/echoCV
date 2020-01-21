@@ -59,13 +59,20 @@ Route::get('/new_report', 'ReportsController@create');
 Route::get('/files', 'FileController@index')->name('file.index');
 Route::post('/file/upload', 'FileController@store')->name('file.upload');
 
-Route::get('metrics/{type}', 'MetricsController@index');
+// Route::resource('metrics', 'MetricsController');
+Route::get('metrics/{chartType}', 'MetricsController@index');
 Route::get('666', 'ChartController@index');
-Route::get('graph', 'ChartController@graph');
+Route::get('graph33', 'ChartController@graph');
 Route::get('bar', 'ChartController@bar');
 Route::get('select/{type}', 'ChartController@select');
 Route::get('chart-line', 'ChartController@chartLine');
 Route::get('chart-line-ajax', 'ChartController@chartLineAjax');
+Route::resource('graph', 'GraphController');
+Route::get('graph/build/{ChartType}', 'GraphController@build');
+
+Route::get('import-export', 'GraphController@importExport');
+Route::post('import', 'GraphController@import')->name('import');
+Route::get('export', 'GraphController@export');
 
 
 // Route::group(['middleware' => ['web','auth','admin','verified']], function () {
