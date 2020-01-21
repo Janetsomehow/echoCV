@@ -9,7 +9,7 @@ use App\Charts\UserLineChart;
 class MetricsController extends Controller
 {
 
-        public function index($type)
+        public function index($chartType)
           {
             $chart = new UserLineChart;
             $borderColors = [
@@ -40,9 +40,10 @@ class MetricsController extends Controller
                 "rgba(233, 30, 99, 0.2)",
                 "rgba(205, 220, 57, 0.2)"
           ];
-            switch ($type)
+            switch ($chartType)
             {
               case 'bar':
+                $chart->title('EchoVC Mertics', 30, "rgb(255, 99, 132)", true, 'Nunito');
                 $chart->labels(['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']);
                 $chart->dataset('EchoVC Mertics', 'bar',  [93, 25, 61, 70, 45, 83, 73, 45, 81, 50, 65, 18])
                 ->color($borderColors)
@@ -50,18 +51,21 @@ class MetricsController extends Controller
                 break;
               case 'pie':
                 // $chart->minimalist(true);  //This shows the graph line
+                $chart->title('EchoVC Mertics', 30, "rgb(255, 99, 132)", true, 'Nunito');
                 $chart->labels(['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']);
                 $chart->dataset('EchoVC Mertics', 'pie',  [93, 25, 61, 70, 45, 83, 73, 45, 81, 50, 65, 18])
                 ->color($borderColors)
                 ->backgroundcolor($fillColors);
                 break;
               case 'donut':
+                $chart->title('EchoVC Mertics', 30, "rgb(255, 99, 132)", true, 'Nunito');
                 $chart->labels(['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']);
                 $chart->dataset('EchoVC Mertics', 'doughnut',  [93, 25, 61, 70, 45, 83, 73, 45, 81, 50, 65, 18])
                 ->color($borderColors)
                 ->backgroundcolor($fillColors);
                 break;
               case 'line':
+                $chart->title('EchoVC Mertics', 30, "rgb(255, 99, 132)", true, 'Nunito');
                 $chart->labels(['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']);
                 $chart->dataset('EchoVC Mertics', 'line',  [93, 25, 61, 70, 45, 83, 73, 45, 81, 50, 65, 18])
                 ->color("rgb(255, 99, 132)")
@@ -71,13 +75,14 @@ class MetricsController extends Controller
                 ->dashed([10]);
                 break;
               case 'area':
+                $chart->title('EchoVC Mertics', 30, "rgb(255, 99, 132)", true, 'Nunito');
                 $chart->labels(['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']);
                 $chart->dataset('EchoVC Mertics', 'area', [93, 25, 61, 70, 45, 83, 73, 45, 81, 50, 65, 18])
                 ->color($borderColors)
                 ->backgroundcolor($fillColors);
                 break;
               case 'dot':
-                $chart->title('Users by Months', 30, "rgb(255, 99, 132)", true, 'Helvetica Neue');
+                $chart->title('EchoVC Mertics', 30, "rgb(255, 99, 132)", true, 'Nunito');
                 $chart->barwidth(0.0);
                 $chart->displaylegend(false);
                 $chart->labels(['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']);
@@ -89,6 +94,7 @@ class MetricsController extends Controller
                     ->dashed([10]);
                 break;
               case 'geo':
+                $chart->title('EchoVC Mertics', 30, "rgb(255, 99, 132)", true, 'Nunito');
                 $chart->labels(['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']);
                 $chart->dataset('EchoVC Mertics', 'geo',  [93, 25, 61, 70, 45, 83, 73, 45, 81, 50, 65, 18])
                 ->color($borderColors)
@@ -100,21 +106,9 @@ class MetricsController extends Controller
           }
           // return view('chartLine', compact('chart'));
           return view('metrics.index')->with('chart', $chart);
-      }
+        }
 
-      public function store(Request $request)
-      {
-      //   $this->validate($request, [
-      //     'fname' => 'required',
-      //   ]);
-      //
-      //
-      // //Create Contact
-      // $contact = new Contact;
-      // $contact->tags =$request->input('tags');
-      // // $contact->user_id = auth()->user()->id;
-      // $contact->save();
-      //
-      // return redirect('/contacts')->with('success', 'Contact Successful Created');
-      }
+
+
+
 }
