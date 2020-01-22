@@ -1,0 +1,13 @@
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    
+  }
+
+  
+    .cal {
+      display: inline-block;
+      margin-left: 1rem;
+    }
