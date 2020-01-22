@@ -17,8 +17,8 @@ return [
     | https://developers.google.com/console
     |
     */
-    'client_id' => env('GOOGLE_CLIENT_ID', '697206933855-qequamb86uqcg083rdg9c8cqocum01i7.apps.googleusercontent.com'),
-    'client_secret' => env('GOOGLE_CLIENT_SECRET', 'SIsy2bEhEsg8m1D16vJgCS23'),
+    'client_id' => env('GOOGLE_CLIENT_ID', '697206933855-phm86h18k52ekv51te6qsf26bg16o0c3.apps.googleusercontent.com'),
+    'client_secret' => env('GOOGLE_CLIENT_SECRET', 'rf-Jhxnebl23g6wboVMmdz9Z'),
     'redirect_uri' => env('GOOGLE_REDIRECT', ''),
     'scopes'           => [\Google_Service_Sheets::DRIVE, \Google_Service_Sheets::SPREADSHEETS],
     'access_type'      => 'online',
@@ -56,7 +56,7 @@ return [
         | Path to service account json file
         */
         // 'file' => env('GOOGLE_SERVICE_ACCOUNT_JSON_LOCATION', ''),
-        'file'    => storage_path('credentials.json'),
+        'file'    => storage_path('metrics.json'),
     ],
 
     /*
