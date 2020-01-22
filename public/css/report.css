@@ -168,10 +168,11 @@ a.searchContact {
   height: 100%;
   margin-left: 0.4rem;
   border-radius: 4px;
+  margin-top: -0.1rem;
 }
 
 .searchReport button img {
-  height: 101%;
+  height: 98%;
   cursor: pointer;
 }
 
