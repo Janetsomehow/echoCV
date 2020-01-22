@@ -58,6 +58,7 @@ Route::get('/new_report', 'ReportsController@create');
 // Route::post('/profile', 'ProfileController@profileupdate');
 Route::get('/files', 'FileController@index')->name('file.index');
 Route::post('/file/upload', 'FileController@store')->name('file.upload');
+Route::delete('/delete/file/', 'FileController@delete')->name('file.delete');
 
 
 

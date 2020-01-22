@@ -1,5 +1,6 @@
 @extends('layouts.sidbar')
 @section('styles')
+<link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <style type="text/css" media="screen">
  /* @import('https://fonts.googleapis.com/css?family=Nunito:400,600'); */
     .selected-text{
@@ -145,10 +146,88 @@
 
 @stop
 
+ @section('modal')
+       <!-- Modal HTML -->
+<div id="computer-modal" class="modal fade" tabindex="-1">
+                <div class="modal-dialog " role="document">
+                       <div class="modal-content">
+                         <div class="modal-header">
+                           <h5 class="modal-title">File Upload</h5>
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                           </button>
+                         </div>
+                         <div class="modal-body">
+                           <div class="form">
+                              <form   method="POST" action="{{ route('file.upload') }}" enctype="multipart/form-data">
+                                   @csrf
 
+                                 <div>
+                                    <label for="" aria-label> Name: </label>
+                                    <input name="name" type="text" class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name">
+                                     @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                                 </div>
+
+                                 <div class="mt-4">
+                                    <label for="select_file"> Select File: </label>
+                                    <input name="file" type="file" class="form-control {{ $errors->has('file') ? ' is-invalid' : '' }}">
+                                     @if ($errors->has('file'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('file') }}</strong>
+                                    </span>
+                                @endif
+                                 </div>
+                             
+                           </div>
+                         </div>
+                                 <div class="modal-footer">
+                                   <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                   <button type="submit" class="btn btn-primary">Upload</button>
+                                 </div>
+                          </form>
+                       </div>
+                </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal modal-danger fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Delete Confirmation</h4>
+      </div>
+      <form action="{{route('file.delete')}}" method="post">
+          {{method_field('delete')}}
+          {{csrf_field()}}
+        <div class="modal-body">
+        <p class="text-center">
+          Are you sure you want to delete this?
+        </p>
+            <input type="hidden" name="category_id" id="cat_id" value="">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">No, Cancel</button>
+          <button type="submit" class="btn btn-warning">Yes, Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+@stop
 
 
 @section('script')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
 
 <script>
 $(document).ready(function(){
@@ -157,6 +236,41 @@ $(document).ready(function(){
     });
 });
 
+// function docdelete() {
+//   event.preventDefault();
+//   var delete_id = $(this).attr('data-value');
+//   // $('button[name="delete_dividend"]').val(delete_id);
+
+//   bootbox.confirm({
+//     title: "Delete Document?",
+//     message: "Are you sure? This cannot be undone.",
+//      centerVertical: true,
+//       className: 'rubberBand animated',
+//     buttons: {
+//       confirm: {
+//             label: '<i class="fa fa-check"></i> Confirm',
+//              className: 'btn-danger'
+//         },
+//         cancel: {
+//             label: '<i class="fa fa-times"></i> Cancel',
+//              className: 'btn-default'
+//         }
+        
+//     },
+//     callback: function (result) {
+//         // console.log('This was logged in the callback: ' + result);
+//         if (result) {
+//           console.log("user confirmed");
+//         } else {
+//             console.log("user declined");
+//         }
+//     }
+// });
+
+   
+// }
+
+// onclick="confirm('Are you sure?') || event.stopImmediatePropagation()"
 
 //select all checkboxes
 $("#select_all").change(function(){  //"select all" change 
@@ -239,56 +353,22 @@ $('.checkbox').change(function(){ //".checkbox" change
 
    
 });
+
+
+
+function docdelete(id) {
+ $('#delete').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) 
+      // var cat_id = button.data('catid') 
+      var cat_id = id;
+      console.log(cat_id)
+      var modal = $(this)
+      modal.find('.modal-body #cat_id').val(cat_id);
+})
+}
 </script>
 @stop
 
 
 
-  @section('modal')
-       <!-- Modal HTML -->
-<div id="computer-modal" class="modal fade" tabindex="-1">
-                <div class="modal-dialog " role="document">
-                       <div class="modal-content">
-                         <div class="modal-header">
-                           <h5 class="modal-title">File Upload</h5>
-                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                             <span aria-hidden="true">&times;</span>
-                           </button>
-                         </div>
-                         <div class="modal-body">
-                           <div class="form">
-                              <form   method="POST" action="{{ route('file.upload') }}" enctype="multipart/form-data">
-                                   @csrf
-
-                                 <div>
-                                    <label for="" aria-label> Name: </label>
-                                    <input name="name" type="text" class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name">
-                                     @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                                 </div>
-
-                                 <div class="mt-4">
-                                    <label for="select_file"> Select File: </label>
-                                    <input name="file" type="file" class="form-control {{ $errors->has('file') ? ' is-invalid' : '' }}">
-                                     @if ($errors->has('file'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('file') }}</strong>
-                                    </span>
-                                @endif
-                                 </div>
-                             
-                           </div>
-                         </div>
-                                 <div class="modal-footer">
-                                   <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                   <button type="submit" class="btn btn-primary">Upload</button>
-                                 </div>
-                          </form>
-                       </div>
-                </div>
-</div>
-
-@stop
+ 
