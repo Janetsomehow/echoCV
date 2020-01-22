@@ -11379,7 +11379,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Next",
+				"sNext": ">",
 
 
 				/**
@@ -11402,7 +11402,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Previous"
+				"sPrevious": "<"
 			},
 
 			/**
@@ -11457,7 +11457,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": " _START_ - _END_ of _TOTAL_ entries",
+			"sInfo": " _START_ - _END_ of _TOTAL_",
 
 
 			/**
@@ -11478,7 +11478,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			"sInfoEmpty": "Showing 0 to 0 of 0",
 
 
 			/**
@@ -14403,8 +14403,8 @@
 		/* Features */
 		"sWrapper": "dataTables_wrapper",
 		"sFilter": "dataTables_filter",
-		"sInfo": "dataTables_info",
 		"sPaging": "dataTables_paginate paging_", /* Note that the type is postfixed */
+		"sInfo": "dataTables_info",
 		"sLength": "dataTables_length",
 		"sProcessing": "dataTables_processing",
 

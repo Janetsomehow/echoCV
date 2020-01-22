@@ -12,7 +12,7 @@ use App\Exports\ExportGraph;
 use App\Imports\ImportGraph;
 use Maatwebsite\Excel\Facades\Excel;
 
-class MetricsController extends Controller
+class GraphController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -248,7 +248,7 @@ class MetricsController extends Controller
     public function index()
     {
         $graphs = Graph::all();
-        return view('metrics.create')->with('graphs', $graphs);
+        return view('graph.build')->with('graphs', $graphs);
     }
 
 
@@ -266,7 +266,7 @@ class MetricsController extends Controller
    */
    public function export()
    {
-       return Excel::download(new ExportGraph, 'users.xlsx');
+       return Excel::download(new ExportGraph, 'metrics.xlsx');
    }
 
    /**
@@ -276,6 +276,6 @@ class MetricsController extends Controller
    {
 
        Excel::import(new ImportGraph, request()->file('file'));
-       return back()->with('success', 'Excel Sheet Successful Uploaded');
+       return back()->with('success', 'Data Successful Uploaded');
    }
 }

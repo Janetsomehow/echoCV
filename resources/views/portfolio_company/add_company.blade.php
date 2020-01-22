@@ -43,7 +43,7 @@
 <div class="mt-5 form-wrap">
   <div class="row justify-content-center">
   <div class="col-md-8">
-<form action="/add/company" method="post">
+<form action="CompanyController" method="post">
 
 
 
@@ -70,7 +70,7 @@
 
 
 @csrf
-    <label for="name">Company Name</label>
+    <label for="c_name">Company Name</label>
     <input type="text" class="form-control" name="name" id="companyname">
     <label for="website">Company Website</label>
     <input type="text" class="form-control" name="website" id="companyweb">
@@ -100,7 +100,7 @@
     <input type="text" class="form-control" name="tags" placeholder="type in one or more tags to select"><br>
               <div class="form-row">
    <div class="col-md-6 col-sm-12">
-       <label for="Fund_stage">Fund Stage</label><br>
+       <label for="stage">Fund Stage</label><br>
        <select class="form-control" name="stage">
                     <option value=""></option>
                     <option value="First">First</option>
@@ -109,7 +109,7 @@
                   </select>   </div>
    
     <div class="col-md-6 col-sm-12">
-       <label for="inv_status">Investment Status</label><br>
+       <label for="status">Investment Status</label><br>
        <select class="form-control" name="status">
                     <option value=""></option>
                     <option value="First">First</option>

@@ -1,10 +1,10 @@
 <style>
   .active{
     background-color: #293059;;
-  
+
   }
   .active:hover{
-    color: #F1651C;
+    color: #FFF;
   }
 </style>
 
@@ -43,7 +43,7 @@
           <li><a href="/new_company" class="sidebar-li port"><img src="{{ asset('css/icons/port.png') }}" />PORTIFOLIO COMPANIES</a></li>
           <li><a href="/reports" class="sidebar-li report"><img src="{{ asset('css/icons/report.png') }}" />REPORTS</a></li>
           <li><a href="/create_metrics" class="sidebar-li metric"><img src="{{ asset('css/icons/metr.png') }}" />METRICS</a></li>
-          <li><a href="/contact" class="sidebar-li contact"><img src="{{ asset('css/icons/contact.png') }}" />CONTACTS</a></li>
+          <li><a href="/contacts" class="sidebar-li contact"><img src="{{ asset('css/icons/contact.png') }}" />CONTACTS</a></li>
           <li><a href="/files" class="sidebar-li file"><img src="{{ asset('css/icons/file.png') }}" />FILES</a></li>
           <li><a href="/archives" class="sidebar-li archive"><img src="{{ asset('css/icons/arch.png') }}" />ARCHIVES</a></li>
 
@@ -62,6 +62,7 @@
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background:#666; font-size:0.7rem">
 
+<<<<<<< HEAD
             <a class="dropdown-item" href="#">Help</a>
              <a class="dropdown-item" href="/home">Home</a>
               <a class="dropdown-item" href="#">Settings</a>
@@ -80,6 +81,7 @@
 
     </nav>
     </section>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

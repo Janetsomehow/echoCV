@@ -34,7 +34,7 @@
       </section>
       <section class="eachContact">
         <div class="actionBtn">
-          <a href="/contact" class="btnBack">&times;</a>
+          <a href="/contacts" class="btnBack">&times;</a>
           <form action="{{ route('contact.destroy', $contacts->id) }}" method="POST" class="formDelCon">
             <button type="button" class="btnDelCon" data-toggle="modal" data-target="#myModal" id="open">
               <img src="{{ asset('css/icons/contactEdit.png') }}"/></button>

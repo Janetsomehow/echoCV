@@ -22,33 +22,23 @@ class companycontroller extends Controller
     {
        $company = company::all();
 
-       return view('companies.index', compact('companies'));
+       return view('add_company');
         //
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
-     */
-    public function add_company()
-    {
-       return view('companies.add_company') ;
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
        $request->validate([
-           'name'=>'required',
+           'c_name'=>'required',
            'website'=>'required',
            'country'=>'required',
+           'pcontact'=>'required',
            'status'=>'required',
            'stage'=>'required',
            'lead'=>'required',
@@ -59,24 +49,38 @@ class companycontroller extends Controller
 
 
        $company = Company::create ([
-        'name'=>$request->get('name'),
+        'c_name'=>$request->get('c_name'),
         'website'=>$request->get('website'),
         'country'=>$request->get('country'),
+        'pcontact'=>$request->get('pcontact'),
         'status'=>$request->get('status'),
         'stage'=>$request->get('stage'),
         'lead'=>$request->get('lead'),
-        'analyst'=>$request->get('analyst'),    
+        'analyst'=>$request->get('analyst'),   
+       // $contact->fname =$request->input('fname');
+ 
        ]);
 
-
        return redirect ('/add_chart')->with('success','Company details saved!');
+       return $request->all();
         //
+        /*   $company = new company;
+        $company -> name = request ('name')
+        $company -> website = request ('website')
+        $company -> country = request ('country')
+        $company -> status = request ('status')
+        $company -> stage = request ('stage')
+        $company -> lead = request ('lead')
+        $company -> analyst = request ('analyst')
+
+              $company->save();
+        */
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -88,7 +92,7 @@ class companycontroller extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response    
      */
     public function edit($id)
     {

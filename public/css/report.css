@@ -31,12 +31,7 @@ a:active, a:checked {
   display: flex;
   justify-content: flex-start;
 }
-div.dataTables_filter input {
-  border: 1px solid #000000;
-}
-div.dataTables_wrapper div.dataTables_length {
-  margin-top: 1rem;
-}
+
 .rep {
   position: relative;
   width: 7vw;
@@ -173,10 +168,11 @@ a.searchContact {
   height: 100%;
   margin-left: 0.4rem;
   border-radius: 4px;
+  margin-top: -0.1rem;
 }
 
 .searchReport button img {
-  height: 101%;
+  height: 98%;
   cursor: pointer;
 }
 
@@ -270,7 +266,7 @@ a.searchContact {
     display: none;
   }
 
-  
+
   .repTitle {
       color: #333;
       font-weight: 500;
@@ -284,6 +280,10 @@ a.searchContact {
 
   .repTitle>img {
     margin-right: 0.3rem;
+  }
+
+  .nav-tabs > li.active {
+      background: none;
   }
 
   .nav-tabs > li.active > a.repTitle {
@@ -433,6 +433,26 @@ div.custom {
   background: #eee;
 }
 
+.btnModalmetr {
+  border: 1px solid #D5DCE6;
+  background:linear-gradient(359.61deg, #F5F6F9 10.29%, #FFFFFF 99.27%);
+  font-size: 0.8rem;
+}
+
+.btnModalme {
+  font-size: 0.8rem;
+}
+
+.modalHeader, .modalFooter {
+  border: 0;
+}
+
+.modalFooter {
+  justify-content:flex-start!important;
+  padding:1.5rem!important;
+}
+
+
 
 /* ============================Table ========================*/
 
@@ -476,6 +496,10 @@ tbody {
      width: 18vw;
    }
 
+ .tdTags {
+     max-width: 18vw;
+   }
+
  .tdCop {
      width: 10vw;
    }
@@ -497,7 +521,12 @@ tbody {
    }
 
    .tab-content {
-     margin-top: -10rem;
+     margin-top: -11rem;
+   }
+
+   #SearchAreaTabs-1:hover {
+     text-decoration: none;
+     color: #000;
    }
 
    .tdSender, .tdDept  {
@@ -528,7 +557,7 @@ tbody {
      background: #b5dcf5;
      color: #1A73E8;
      display: inline-block;
-     width: 4vw;
+     max-width: 4rem;
      /* height: 2vh; */
      margin-left: 1vw;
      border-radius: 5px;
@@ -567,11 +596,10 @@ tbody {
 
  .display {
    /* top: 12rem; */
-    margin-top:-0.5rem;
+    margin-top: 1.5rem;
     padding: 0;
     width:100%!important;
  }
-
 
 
 /* ========================Contact folder ========================*/
@@ -642,6 +670,25 @@ tbody {
 .actionBtn {
   display: flex;
   justify-content: space-between;
+}
+
+.btnDelAll {
+  position: absolute;
+  border: 0;
+  background: #fff;
+  margin-right: 1rem;
+  outline: none;
+  top: 9.5rem;
+  left: 3rem;
+}
+
+.btnConTable, .btnConTable1 {
+  border: 0;
+  background: #fff;
+}
+
+.btnConTable1 {
+  border-right: 1px solid #333;
 }
 
 .btnDelCon {

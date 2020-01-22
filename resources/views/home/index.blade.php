@@ -9,7 +9,7 @@
                   <h3>Build your Dashboard</h3>
                   <p>Your latest activity and report will automatically
                   be shown here. Click the button below to create a chart</p>
-                  <a class="btn btn-primary" href="/add_chart"> New chart</a>
+                  <a class="btn btn-primary" href="/company_list"> New chart</a>
                </div>
             </div>
 

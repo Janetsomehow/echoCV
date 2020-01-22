@@ -47,9 +47,6 @@
   <body>
 
       <main class="wholeContent">
-        <div class="">
-          @include('inc.messages')
-        </div>
         <section class="header">
           <div class="rep">Metrics</div>
         </section>
@@ -116,7 +113,7 @@
               <!-- <tr onClick="window.open('/graph/build/bar');"> -->
               <!-- <tr  class='clickable-row' data-href='http://127.0.0.1:8000/graph/build/bar'> -->
               <!-- <tr id="contain" data-href='/graph/build/bar'> -->
-              <tr data-href='/graph/build/bar'>
+              <tr data-href='/graph/build/bar/{{$graph->id}}'>
                 <th>{{ $graph->id}}</th>
                 <td>{{ $graph->name}}</td>
                 <td>{{ $graph->desc}}</td>
@@ -252,60 +249,62 @@
           </div>
 
 
-      <!-- Excel modal -->
+
+                <!-- Excel modal -->
           <div class="modal" tabindex="-1" role="dialog" id="excelModal" aria-labelledby="details-l" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <form action="{{ route('import') }}" method="POST" name="importform" enctype="multipart/form-data">
-                @csrf
-                <div class="modal-content">
-                  <div class="modal-header modalHeader">
-                    <h5 class="modal-title">Add an Excel File</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="container">
-                      <!-- <div class="row mr-2">
-                        <div class="form-group col-md-12 ml-2">
-                          <label for="name">Name</label>
-                          <input type="text" class="form-control" name="name">
+                  <div class="modal-dialog" role="document">
+                    <form action="{{ route('import') }}" method="POST" name="importform" enctype="multipart/form-data">
+                      @csrf
+                      <div class="modal-content">
+                        <div class="modal-header modalHeader">
+                          <h5 class="modal-title">Add an Excel File</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="container">
+                            <!-- <div class="row mr-2">
+                              <div class="form-group col-md-12 ml-2">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" name="name">
+                              </div>
+                            </div>
+                            <div class="row">
+                               <div class="form-group col-md-12 ml-2">
+                                 <label for="desc">Description</label>
+                                 <input type="text" class="form-control" name="desc">
+                              </div>
+                            </div> -->
+                            <div class="row">
+                              <div class="col-md-12 ml-2 mb-2 d-flex btnModalme">
+                                <label for="">Upload Source:</label>
+                                <!-- <input type="file" class="ml-4" name="tags"> -->
+                                <input type="file" name="file" class="ml-4 form-control" style="width: 85px;" onchange="this.style.width = '100%';" />
+                              </div>
+                            </div>
+                            <!-- <div class="row">
+                              <div class="d-flex col-md-12 mr-2 ml-2 mt-3 btnModalme">
+                                <div class="mt-2">Unit:</div>
+                                <button type="button" value="percent1" class="btn btnModalmetr ml-4 mr-2">Percent</button>
+                                <button type="submit" class="btn btnModalmetr">Number</button>
+                                <input type="" name="percent" value="percent" class="btn btnModalmetr" placeholder="Percent"/>
+                              </div>
+                            </div> -->
+                          </div>
+                        </div>
+                        <div class="modal-footer modalFooter">
+                          <button class="btn btn-save" style="background:#ddd; float:left!important">Save</button>
+                          <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
                         </div>
                       </div>
-                      <div class="row">
-                         <div class="form-group col-md-12 ml-2">
-                           <label for="desc">Description</label>
-                           <input type="text" class="form-control" name="desc">
-                        </div>
-                      </div> -->
-                      <div class="row">
-                        <div class="col-md-12 ml-2 mb-2 d-flex btnModalme">
-                          <label for="">Upload Source:</label>
-                          <!-- <input type="file" class="ml-4" name="tags"> -->
-                          <input type="file" name="file" id="myFile" class="ml-4" style="width: 85px;" onchange="this.style.width = '100%';" />
-                        </div>
-                      </div>
-                      <!-- <div class="row">
-                        <div class="d-flex col-md-12 mr-2 ml-2 mt-3 btnModalme">
-                          <div class="mt-2">Unit:</div>
-                          <button type="button" value="percent1" class="btn btnModalmetr ml-4 mr-2">Percent</button>
-                          <button type="submit" class="btn btnModalmetr">Number</button>
-                          <input type="" name="percent" value="percent" class="btn btnModalmetr" placeholder="Percent"/>
-                        </div>
-                      </div> -->
-                    </div>
-                  </div>
-                  <div class="modal-footer modalFooter">
-                    <button class="btn btn-save" style="background:#ddd; float:left!important">Save</button>
-                    <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+                    </form>
                   </div>
                 </div>
-              </form>
-            </div>
-          </div>
 
       <div class="wrapper">
-        @include('layouts.sidebar')
+
+    @include('layouts.sidebar')
       </div>
 
       <script type="text/javascript">
