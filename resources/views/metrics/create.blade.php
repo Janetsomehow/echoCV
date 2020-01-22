@@ -98,43 +98,12 @@
           </div>
         </section>
 
-        @if(count($graphs) > 0)
-        <div class="container" style="margin-top:22rem">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>S/N</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Field1</th>
-                <th>value1</th>
-                <th>Date Added</th>
-              </tr>
-            </thead>
-            <tbody>
-              @foreach ($graphs as $graph)
-              <!-- <tr onClick="window.open('/graph/build/bar');"> -->
-              <!-- <tr  class='clickable-row' data-href='http://127.0.0.1:8000/graph/build/bar'> -->
-              <!-- <tr id="contain" data-href='/graph/build/bar'> -->
-              <tr data-href='/graph/build/bar'>
-                <th>{{ $graph->id}}</th>
-                <td>{{ $graph->name}}</td>
-                <td>{{ $graph->desc}}</td>
-                <td>{{ $graph->aaa}}</td>
-                <td>{{ $graph->aaa1 }}{{ $graph->percent }}</td>
-                <td>{{ $graph->created_at}}</td>
-              </tr>
-              @endforeach
-            </tbody>
-          </table>
-        </div>
-        @endif
       </main>
 
       <!-- Modal to create new metrics -->
           <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
             <div class="modal-dialog" role="document">
-              <form method="post" action="{{ route('graph.store') }}">
+              <form method="post" action="{{ route('create_metrics.store') }}">
                 @csrf
                 <div class="modal-content">
                   <div class="modal-header modalHeader">
