@@ -15,12 +15,24 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <style>
+
+      .btn-excel {
+        margin-top: -0.5rem;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .btn-excel:focus {
+        box-shadow: 0 0 0 0 rgba(0,0,0,0)!important;
+      }
+
       thead {
         background: #fff;
       }
 
       td {
-        padding: 0
+        padding: 0;
+        border: 1px solid #dee2e6!important;
       }
 
       input {
@@ -51,12 +63,12 @@
           </ul> -->
           <div class="newData">
             <a href="/add_metrics" class="">+ New data source</a>
-            <!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#excelModal" id="open">Import Excel</button> -->
+            <button type="button" class="btn btn-excel" data-toggle="modal" data-target="#excelModal" id="open">+ Import Excel</button>
           </div><hr>
           <label for="">Custom</label>
           <div class="formMett custom">
-            User provided metric
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="open">Create</button>
+              User provided metric
+              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="open">Create</button>
           </div>
           <label for="">Link</label>
           <div class="formG">
@@ -82,6 +94,38 @@
             </div>
           </div>
         </section>
+
+        @if(count($graphs) > 0)
+        <div class="container" style="margin-top:22rem">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>S/N</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Field1</th>
+                <th>value1</th>
+                <th>Date Added</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach ($graphs as $graph)
+              <!-- <tr onClick="window.open('/graph/build/bar');"> -->
+              <!-- <tr  class='clickable-row' data-href='http://127.0.0.1:8000/graph/build/bar'> -->
+              <!-- <tr id="contain" data-href='/graph/build/bar'> -->
+              <tr data-href='/graph/build/bar/{{$graph->id}}'>
+                <th>{{ $graph->id}}</th>
+                <td>{{ $graph->name}}</td>
+                <td>{{ $graph->desc}}</td>
+                <td>{{ $graph->aaa}}</td>
+                <td>{{ $graph->aaa1 }}{{ $graph->percent }}</td>
+                <td>{{ $graph->created_at}}</td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        @endif
       </main>
 
       <!-- Modal to create new metrics -->
@@ -187,10 +231,9 @@
                       </div>
                       <div class="row mt-5">
                         <div class="d-flex col-md-12 mr-2 ml-2 mt-3 btnModalme">
-                          <div class="mt-2">Unit:</div>
-                          <input type="" name="percent" value="percent" class="btn btnModalmetr" placeholder="Percent"/>
-                          <button type="button" value="percent" class="btn btnModalmetr ml-4 mr-2">Percent</button>
-                          <button type="submit" class="btn btnModalmetr">Number</button>
+                          <div class="mt-2 mr-4">Unit:</div>
+                          <p class="mt-2">Percent</p> <input type="radio" name="percent" value="%" class="btn btnModalmetr mt-3 ml-2" />
+                          <p class="mt-2 ml-3">Number</p> <input type="radio" name="numb" value="Number" class="btn btnModalmetr mt-3 ml-2" />
                         </div>
                       </div>
                     </div>
@@ -208,48 +251,47 @@
 
 
                 <!-- Excel modal -->
-                <div class="modal" tabindex="-1" role="dialog" id="excelModal" aria-labelledby="details-l" aria-hidden="true">
+          <div class="modal" tabindex="-1" role="dialog" id="excelModal" aria-labelledby="details-l" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <form action="{{ route('import') }}" method="POST" name="importform" enctype="multipart/form-data">
                       @csrf
                       <div class="modal-content">
                         <div class="modal-header modalHeader">
-                          <h5 class="modal-title">Create Metric</h5>
+                          <h5 class="modal-title">Add an Excel File</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
                           <div class="container">
-                            <div class="row mr-2">
+                            <!-- <div class="row mr-2">
                               <div class="form-group col-md-12 ml-2">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control" name="name" required>
+                                <input type="text" class="form-control" name="name">
                               </div>
                             </div>
                             <div class="row">
                                <div class="form-group col-md-12 ml-2">
                                  <label for="desc">Description</label>
-                                 <textarea name="desc" rows="4" cols="56" style="border:1px solid #ccc; border-radius:3px" required></textarea>
+                                 <input type="text" class="form-control" name="desc">
                               </div>
-                            </div>
+                            </div> -->
                             <div class="row">
                               <div class="col-md-12 ml-2 mb-2 d-flex btnModalme">
                                 <label for="">Upload Source:</label>
                                 <!-- <input type="file" class="ml-4" name="tags"> -->
-                                <input type="file" id="myFile" class="ml-4" style="width: 85px;" onchange="this.style.width = '100%';" />
+                                <input type="file" name="file" class="ml-4 form-control" style="width: 85px;" onchange="this.style.width = '100%';" />
                               </div>
                             </div>
-                            <div class="row">
+                            <!-- <div class="row">
                               <div class="d-flex col-md-12 mr-2 ml-2 mt-3 btnModalme">
                                 <div class="mt-2">Unit:</div>
                                 <button type="button" value="percent1" class="btn btnModalmetr ml-4 mr-2">Percent</button>
                                 <button type="submit" class="btn btnModalmetr">Number</button>
                                 <input type="" name="percent" value="percent" class="btn btnModalmetr" placeholder="Percent"/>
                               </div>
-                            </div>
+                            </div> -->
                           </div>
-
                         </div>
                         <div class="modal-footer modalFooter">
                           <button class="btn btn-save" style="background:#ddd; float:left!important">Save</button>
@@ -260,11 +302,20 @@
                   </div>
                 </div>
 
-
-
       <div class="wrapper">
 
     @include('layouts.sidebar')
       </div>
+
+      <script type="text/javascript">
+          // $("#contain").on('click-row.bs.table', function (e, row, $element) {
+          //   window.location = $element.data('href');
+          // });
+          jQuery(document).ready(function($) {
+              $('*[data-href]').on('click', function() {
+                  window.location = $(this).data("href");
+              });
+          });
+      </script>
   </body>
 </html>

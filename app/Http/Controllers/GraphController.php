@@ -247,8 +247,8 @@ class GraphController extends Controller
 
     public function index()
     {
-        //
-        return view('graph.build');
+        $graphs = Graph::all();
+        return view('graph.build')->with('graphs', $graphs);
     }
 
 
@@ -257,7 +257,8 @@ class GraphController extends Controller
    */
    public function importExport()
    {
-      return view('import');
+      $graphs = Graph::all();
+      return view('import')->with('graphs', $graphs);
    }
 
    /**
@@ -265,51 +266,16 @@ class GraphController extends Controller
    */
    public function export()
    {
-       return Excel::download(new ExportGraph, 'users.xlsx');
+       return Excel::download(new ExportGraph, 'metrics.xlsx');
    }
 
    /**
    * @return \Illuminate\Support\Collection
    */
-   public function import(Request $request)
+   public function import()
    {
 
-     $this->validate($request, [
-       'name' => 'required',
-       'desc' => 'required'
-     ]);
-
-
-         //Create ExcelMetrics
-         $graph = new Graph;
-         $graph->name =$request->input('name');
-         $graph->desc =$request->input('desc');
-         $graph->percent =$request->input('percent');
-         $graph->numb =$request->input('numb');
-         // $graph->save();
-
-
-       // Excel::import(new ImportGraph, request()->file('file'));
-       Excel::import(new ImportGraph, request()->file('file'), \Maatwebsite\Excel\Excel::XLSX);
-
-
-       if($request->hasFile('submission')){
-                  $filenameWithExt = $request->file('submission')->getClientOriginalName();
-                  $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-                  $extension = $request->file('submission')->getClientOriginalExtension();
-                  $fileNameToStore= $filename.'_'.time().'.'.$extension;
-                  $path = $request->file('submission')->storeAs('public/submissions', $fileNameToStore);
-              }
-
-              $submission = new Submission;
-              $submission->score = 0;
-              $submission->course_content_id = $request->input('content');
-              $submission->user_id = auth()->user()->id;
-              $submission->file = $fileNameToStore;
-              $submission->save();
-              return back()->with('success', 'Assignment submitted');
-
-
-       return back();
+       Excel::import(new ImportGraph, request()->file('file'));
+       return back()->with('success', 'Data Successful Uploaded');
    }
 }

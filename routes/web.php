@@ -21,7 +21,7 @@ Route::get('/file_upload', function () { return view('files.file_upload'); });
 Route::get('/archives', function () { return view('archives.archives'); });
 Route::get('/archivelist', function () { return view('archives.archivelist'); });
 Route::get('/company_list', function () { return view('portfolio_company.company_list'); });
-Route::get('/create_metrics', function () { return view('metrics.create'); });
+// Route::get('/create_metrics', function () { return view('metrics.create'); });
 Route::get('/add_metrics', function () { return view('metrics.add'); });
 Route::get('/single_company', function () { return view('portfolio_company.single_company'); });
 Route::get('/dashboard', function () { return view('home.dashboard'); });
@@ -68,6 +68,7 @@ Route::get('select/{type}', 'ChartController@select');
 Route::get('chart-line', 'ChartController@chartLine');
 Route::get('chart-line-ajax', 'ChartController@chartLineAjax');
 Route::resource('graph', 'GraphController');
+Route::resource('create_metrics', 'MetricsController');
 Route::get('graph/build/{ChartType}', 'GraphController@build');
 
 Route::get('import-export', 'GraphController@importExport');
