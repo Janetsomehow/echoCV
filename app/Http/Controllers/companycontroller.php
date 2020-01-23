@@ -18,18 +18,17 @@ class companycontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function index()
     {
        $company = company::all();
 
-       return view('add_company.create');
+       return view('add_company');
         //
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
