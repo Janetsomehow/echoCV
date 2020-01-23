@@ -164,6 +164,8 @@ return [
         Laravolt\Avatar\ServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         PulkitJalan\Google\GoogleServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+
 
         /*
          * Package Service Providers...
@@ -231,6 +233,7 @@ return [
         'Avatar'    => Laravolt\Avatar\Facade::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
         'Google' => PulkitJalan\Google\Facades\Google::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 
