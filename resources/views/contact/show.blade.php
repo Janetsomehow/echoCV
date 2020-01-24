@@ -19,7 +19,14 @@
 
       <!-- Scripts -->
       <script src="{{ asset('js/app.js') }}" defer></script>
+      <style media="screen">
 
+      .btnDelCon:focus, .btnDelCon:focus {
+        box-shadow: 0 0 0 0 rgba(0,0,0,0)!important;
+        outline: 0px auto -webkit-focus-ring-color;
+      }
+
+      </style>
   </head>
   <body>
     <div class="wrapper">
