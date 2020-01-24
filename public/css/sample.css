@@ -11,3 +11,32 @@
       display: inline-block;
       margin-left: 1rem;
     }
+
+    body{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .btn-secondary{
+      background: linear-gradient(359.66deg, #F5F6F9 10.29%, #FFFFFF 99.27%) !important;
+/* secondary button border */
+
+      border: 1px solid #D5DCE6 !important;
+      box-sizing: border-box !important;
+      border-radius: 4px !important;
+      color: #000000;
+    }
+
+    .not-desktop-content{
+      display: none;
+    }
+  @media only screen and (min-width: 961px){
+    .not-mobile-content{
+      display: none;
+    }
+
+    .align-form{
+      margin-left: -1em;
+    }
+
+  }
