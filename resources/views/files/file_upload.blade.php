@@ -135,6 +135,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,600" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/files.css') }}">
     {{-- <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">   --}}
+    
 
 @stop
 @section('content')
