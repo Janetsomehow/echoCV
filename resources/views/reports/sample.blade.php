@@ -26,14 +26,26 @@
     <main class="wholeContent">
 
       <section class="page ">
+        <div class="d-flex justify-content-end top mobileHide" >
+          <button type="submit" name="button" class="btn btn-default mobileHide">Save & Close</button>
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="submit" class="btn btn-primary btnNow mobileHide "  data-toggle="tooltip" data-placement="left" title="Send report now">Send now</button>
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn btn-primary  mobileHide  dropdown-toggle" aria-haspopup="true"
+              aria-expanded="false" data-toggle="tooltip" data-placement="top" title="Schedule report"></button>
+            </div>
+          </div>
+        </div>
         <div class="d-flex justify-content-center ">
          
-          <select name="" id="" class="form-control mobileHide mt-5" style="width: 50%">
+          <select name="" id="" class="form-control mobileHide mt-5 shadow" style="width: 50%">
             <option value="">
               To: greg.lorem, melissa.ark, oakculture
             </option>
           </select>
+          
         </div>
+
         <div class="desktopView  col-md-6 mx-auto">
           <div class="heading container mt-4 ">
             <h3> August Investor Update</h3>

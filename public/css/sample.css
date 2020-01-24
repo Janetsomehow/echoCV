@@ -30,6 +30,9 @@
     .hed{
       display: none;
     }
+    .mobileHide{
+      display: none;
+    }
   
     .not-desktop-content{
       display: none;
@@ -41,6 +44,15 @@
     }
     .mobileHide{
       display: block;
+    }
+    .desktopView{
+      background-color:  #FDFDFD;
+      padding: 1rem;
+    }
+
+    .top{
+      position: relative;
+      top: 1rem;
     }
 
     .align-form{
