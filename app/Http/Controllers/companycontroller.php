@@ -29,12 +29,11 @@ class companycontroller extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-       $request->validate([
+       $this->validate($request, [
            'c_name'=>'required',
            'website'=>'required',
            'country'=>'required',
@@ -61,7 +60,7 @@ class companycontroller extends Controller
  
        ]);
 
-       return redirect ('/add_chart')->with('success','Company details saved!');
+       return redirect ('/company_list')->with('success','Company details saved!');
        return $request->all();
         //
         /*   $company = new company;
