@@ -25,14 +25,22 @@
     </div>
     <main class="wholeContent">
 
-      <section class="page">
+      <section class="page ">
+        <div class="d-flex justify-content-center ">
+         
+          <select name="" id="" class="form-control mobileHide mt-5" style="width: 50%">
+            <option value="">
+              To: greg.lorem, melissa.ark, oakculture
+            </option>
+          </select>
+        </div>
         <div class="desktopView  col-md-6 mx-auto">
           <div class="heading container mt-4 ">
             <h3> August Investor Update</h3>
             <p class="not-mobile-content"> To: <span class="text-info "> Jane Magnesys for Netflix</span></p>
             
           </div>
-          <hr class="shadow not-mobile-content">
+          <hr class="shadow not-mobile-content">  
 
           <div class="container sample-content">
             <p class="text-wrap">
@@ -134,7 +142,7 @@
             
         
         </div>
-        <div class="container ">
+        <div class="container mobileHide">
           <div class="col">
             <div class="row">
                 <p> Section title</p>
@@ -175,16 +183,40 @@
                 <input type="text" class="form-control mt-4" placeholder="Enter Value" >
               </div>
               
-              <div class="base-kpi row ml-n4 mt-3">
-                <p class="text-info"> <i class="fas fa-plus"></i> Add KPI</p>
-                 <i class="fas fa-trash-alt"></i>
-              </div>
+            </div>
+            <div class="base-kpi row ml-n4 mt-3">
+              <p class="text-info"> <i class="fas fa-plus"></i> Add KPI</p>
+               <i class="fas fa-trash-alt ml-auto"></i>
             </div>
 
-            
+            <div class="row">
+              <p> Section title</p>
+              <p class="ml-auto"> Required </p>
+            </div>
+            <div class="form-group align-form  ">
+              <input type="text" placeholder="Pitch deck" style="font-size: 1.3rem" class="p-4 form-control">
+            </div>  
+            <div class="form-group align-form">
+              <p> Upload prompt</p>
+              <textarea name="" id="" class="form-control text-wrap" placeholder="dfdf" >
+                
+              </textarea>
+            </div>
+
+            <div class="upload ml-n3 mobileHide">
+              <button class="btn btn-secondary">
+                Upload file
+              </button>
+              <i class="fas mt-2 fa-trash-alt float-right"></i>
+            </div>
+
+        </div>
+          
+          <div class="row btns-in-row mt-5 ml-5 pl-5 mobileHide">
+            <button class="btn btn-secondary "> Add text request</button>
+            <button class="btn btn-secondary ml-2"> Add metrics request</button>
+            <button class="btn btn-secondary ml-2"> Add file request</button>
           </div>
-          
-          
         </div>
 
       </div>

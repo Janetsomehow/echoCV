@@ -27,16 +27,28 @@
       color: #000000;
     }
 
+    .hed{
+      display: none;
+    }
+  
     .not-desktop-content{
       display: none;
     }
+    
   @media only screen and (min-width: 961px){
     .not-mobile-content{
       display: none;
     }
+    .mobileHide{
+      display: block;
+    }
 
     .align-form{
       margin-left: -1em;
+    }
+
+    .btns-in-row{
+      margin-left: 1rem;
     }
 
   }
