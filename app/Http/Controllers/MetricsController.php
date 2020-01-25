@@ -47,14 +47,27 @@ class MetricsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function chartLine()
+     {
+         $api = url('/chart-line-ajax');
+
+         $chart = new UserLineChart;
+         $chart->labels(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])->load($api);
+
+         return view('chartLine', compact('chart'));
+     }
+
     public function build($chartType)
     {
+
       $graphs = Graph::all();
       // dd($graphs);
 
       if(count($graphs) > 0){
         foreach($graphs as $graph){
           $chart = new UserLineChart;
+          $api = url('/metrics/show/bar');
           $borderColors = [
               "rgba(25, 99, 132, 1.0)",
               "rgba(22, 160, 133, 1.0)",
@@ -167,8 +180,9 @@ class MetricsController extends Controller
           }
         }
       }
-      
+
     // return view('metrics.show')->with('chart', $chart, 'graph', $graph);
+    // return $chart->api();
     return view('metrics.show')->with(compact('chart', 'graphs'));
     }
 

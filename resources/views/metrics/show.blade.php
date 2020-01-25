@@ -43,7 +43,7 @@
           Metrics
         </div>
         <div class="d-flex align-self-center" style="font-size:1rem; margin-left:17vw">
-          <div class="mr-3" onclick="window.location='/metrics/show/line'">Line</div>
+          <div class="mr-3" onclick="window.location='/metrics/show/line/{{ $chart->id }}'">Line</div>
           <div class="mr-3" onclick="window.location='/metrics/show/pie'">Pie</div>
           <div class="mr-3" onclick="window.location='/metrics/show/bar'">Bar</div>
           <div class="mr-3" onclick="window.location='/metrics/show/dot'" style="width:4rem">Dot Line</div>
@@ -51,8 +51,16 @@
         </div>
         <div onclick="window.location='/create_metrics'" style="margin-left:20vw">Back</div>
       </section>
+
       <div class="container mt-5">
+        <!-- {!! $chart->id !!} -->
+
+        <!-- {!! $chart->api() !!} -->
+
+        <!-- {{ $chart->id }}_refresh(url) -->
+
         {!! $chart->container() !!}
+
       </div>
 
       <!-- Table for each metric -->
@@ -75,7 +83,7 @@
             <!-- <tr  class='clickable-row' data-href='http://127.0.0.1:8000/graph/build/bar'> -->
             <!-- <tr id="contain" data-href='/graph/build/bar'> -->
             <!-- <tr data-href='/graph/build/bar'> -->
-            <tr onclick="window.location='/metrics/show/bar';">
+            <tr onclick="window.location='/metrics/show/bar/';">
               <th>{{ $graph->id }}</th>
               <td>{{ $graph->name }}</td>
               <td>{{ $graph->desc }}</td>
@@ -91,6 +99,7 @@
       <br><br><br>
     </main>
 
+<script src="https://unpkg.com/vue"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
     {!! $chart->script() !!}
