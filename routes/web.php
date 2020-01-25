@@ -63,7 +63,7 @@ Route::post('/file/upload', 'FileController@store')->name('file.upload');
 
 
 Route::resource('create_metrics', 'MetricsController');
-Route::get('metrics/show/{ChartType}', 'MetricsController@build');
+Route::get('metrics/show/{ChartType}/', 'MetricsController@build');
 Route::get('import-export', 'MetricsController@importExport');
 Route::post('import', 'MetricsController@import')->name('import');
 Route::get('export', 'MetricsController@export');
