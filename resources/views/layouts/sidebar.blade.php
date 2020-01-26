@@ -60,9 +60,8 @@
               {{-- <span class="caret"></span> --}}
             </a>
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background:#666; font-size:0.7rem">
+            <div class="dropdown-menu text-white" aria-labelledby="dropdownMenuLink" style="background:#666; font-size:0.7rem">
 
-<<<<<<< HEAD
             <a class="dropdown-item" href="#">Help</a>
              <a class="dropdown-item" href="/home">Home</a>
               <a class="dropdown-item" href="#">Settings</a>
