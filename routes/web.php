@@ -30,6 +30,7 @@ Route::get('/add_company', function () { return view('portfolio_company.add_comp
 Route::get('/dashboard1', function () { return view('home.dashboard1'); });
 Route::get('/profile', function () { return view('account_settings.profile'); });
 Route::get('/permissions', function () { return view('account_settings.permissions'); });
+Route::get('/sample_reports', function () { return view('reports.sample'); });
 
 //close the middileware for client
 // });
@@ -60,21 +61,19 @@ Route::get('/files', 'FileController@index')->name('file.index');
 Route::post('/file/upload', 'FileController@store')->name('file.upload');
 Route::delete('/delete/file/', 'FileController@delete')->name('file.delete');
 
-// Route::resource('metrics', 'MetricsController');
-Route::get('metrics/{chartType}', 'MetricsController@index');
-Route::get('666', 'ChartController@index');
-Route::get('graph33', 'ChartController@graph');
-Route::get('bar', 'ChartController@bar');
-Route::get('select/{type}', 'ChartController@select');
-Route::get('chart-line', 'ChartController@chartLine');
-Route::get('chart-line-ajax', 'ChartController@chartLineAjax');
-Route::resource('graph', 'GraphController');
-Route::resource('create_metrics', 'MetricsController');
-Route::get('graph/build/{ChartType}', 'GraphController@build');
 
-Route::get('import-export', 'GraphController@importExport');
-Route::post('import', 'GraphController@import')->name('import');
-Route::get('export', 'GraphController@export');
+
+Route::resource('create_metrics', 'MetricsController');
+Route::get('metrics/show/{ChartType}/', 'MetricsController@build');
+Route::get('import-export', 'MetricsController@importExport');
+Route::post('import', 'MetricsController@import')->name('import');
+Route::get('export', 'MetricsController@export');
+
+
+
+//For google sheets
+Route::get('google_test', 'MetricsController');
+Route::post('post', 'PostController')->name('post.store');
 
 
 // Route::group(['middleware' => ['web','auth','admin','verified']], function () {
