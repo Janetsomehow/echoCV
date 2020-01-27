@@ -5,12 +5,32 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Auth;
 use App\Efile;
+use Validator,Redirect,Response,File;
+use Intervention\Image\Exception\NotReadableException;
+use Storage;
 
 class Document extends Component
 {
 
 	public $search = '';
 	// public $files = [];
+
+
+	public function delete($id)
+	{
+
+		 $document = Efile::where('id',$id)->first();
+        //delete the file from the server
+
+        // Storage::delete($document->path);
+        $storagePath  = Storage::disk('public')->getDriver()->getAdapter()->getPathPrefix();
+		if(file_exists($storagePath.$document->path)){
+		 unlink($storagePath.$document->path);
+		}
+		
+        $document->delete($id);
+
+	}
 
 
 
