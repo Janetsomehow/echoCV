@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Account Settings</title>
+    <title>Archives</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     {{-- <link ‎href="https://fonts.adobe.com/fonts/europa" rel="stylesheet"> --}}
     <link rel="stylesheet" href="{{ asset('css/report.css') }}">
@@ -13,12 +13,17 @@
     <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
     {{-- <link rel="stylesheet" href="{{ asset('css/account.css') }}" rel="stylesheet"> --}}
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <style>
+      .center{
+        margin-left: 1rem;
+      }
+    </style>
 </head>
 <body>
 
       <section class="onboard"> 
             <div class="header row mt-4">
-                  <h3 class="account_header font-weight-bolder mr-auto"> Archive</h3>
+                  <h3 class="account_header mr-auto"> Archive</h3>
                   <button class="mt-n1 btn btn-primary ml-auto btn-upload" data-target="#uploadModal" data-toggle="modal"> Upload File</button>
               </div>
 
