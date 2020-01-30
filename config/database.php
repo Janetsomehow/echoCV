@@ -42,6 +42,14 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
+        'modes'  => [
+            'ONLY_FULL_GROUP_BY',
+            'STRICT_TRANS_TABLES',
+            'NO_ZERO_IN_DATE',
+            'NO_ZERO_DATE',
+            'ERROR_FOR_DIVISION_BY_ZERO',
+            'NO_ENGINE_SUBSTITUTION',
+        ],
 
         'mysql' => [
             'driver' => 'mysql',
@@ -50,7 +58,7 @@ return [
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'XhOA8fRBNb'),
             'username' => env('DB_USERNAME', 'XhOA8fRBNb'),
-            'password' => env('DB_PASSWORD', 'gkmetZ020o '),
+            'password' => env('DB_PASSWORD', 'gkmetZ020o'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
