@@ -10,8 +10,9 @@ use Illuminate\Support\Facades\Validator;
 use Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use Session;
+use Countries;
 
-class companycontroller extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,9 +23,25 @@ class companycontroller extends Controller
     {
        $company = company::all();
 
-       return view('add_company');
+       //return view('add_company.index');
+       return view('portfolio_company.add_company',compact('add_company'));
         //
     }
+
+    /**
+     * Show the form to create the company resource
+     * 
+     * @return \just the blade view
+     * */
+
+     public function create()
+     {
+         $company= Company::all();
+
+         return view('portfolio_company.add_company',[
+            'company' => $company,
+         ]);
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -60,7 +77,7 @@ class companycontroller extends Controller
  
        ]);
 
-       return redirect ('/company_list')->with('success','Company details saved!');
+       return redirect ('add_company')->with('success','Company details saved!');
        return $request->all();
         //
         /*   $company = new company;

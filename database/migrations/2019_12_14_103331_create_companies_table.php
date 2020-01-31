@@ -14,7 +14,7 @@ class CreateCompaniesTable extends Migration {
 			$table->string('c_name');
 			$table->string('website')->nullable();
 			$table->bigInteger('user_id')->unsigned()->nullable();
-			$table->bigInteger('country_id')->unsigned();
+			$table->bigInteger('country')->unsigned();
 			$table->bigInteger('contact_id')->unsigned();
 			$table->enum('status', array('open', 'close'))->nullable();
 			$table->enum('stage', array('seed', 'seriesA', 'seriesB', 'seriesC'))->nullable();

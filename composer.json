@@ -20,8 +20,11 @@
         "lasserafn/php-initial-avatar-generator": "^4.0",
         "livewire/livewire": "^0.5.3",
         "maatwebsite/excel": "^3.1",
+        "pragmarx/countries": "^0.7.0",
+        "pragmarx/tracker": "^3.5",
         "realrashid/sweet-alert": "^3.0",
         "revolution/laravel-google-sheets": "^5.0",
+        "webpatser/laravel-countries": "dev-master",
         "webpatser/laravel-uuid": "^3.0"
     },
     "require-dev": {

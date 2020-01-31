@@ -17,6 +17,7 @@
         <link href="{{ asset('css/home.css') }}" rel="stylesheet">
            @livewireAssets
         @yield('styles')
+
 </head>
 <body>
 
@@ -42,9 +43,6 @@
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!--chart js-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
-
     @yield('script')
-
-
 </body>
 </html>
