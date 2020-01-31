@@ -52,10 +52,11 @@
             @endif
               </Select>
             </div>
-              <input class="form-control" type="text" name="report_title" placeholder="|Add a subject title" required>
-              <input type="text" name="content" value="" placeholder="Content" required>
-              <input type="text" name="receiver" value="aa" required>
-              <div class="repFiles">
+             
+              <input class="form-control border mb-3" style="font-size: 2.3em" type="text" name="report_title" placeholder="| Add a subject title" required>
+              <input type="text" name="content" value="" class="border p-4" placeholder="Content" required>
+              <input type="text" class="border mt-3" name="receiver" value="" required>
+              <div class="repFiles d-flex justify-content-center">
                 <button type="button" name="button" class="mr-2" data-toggle="tooltip" data-placement="top" title="Chart" style="border:0">
                   <img src="{{ asset('css/icons/newRep1.png') }}">
                 </button>
@@ -73,20 +74,23 @@
                 </button>
               </div>
             </article>
-            <div class="container repMobNewbtn">
-              <button type="button" name="button" class="btn" data-toggle="modal" data-target="#myModal" id="open">Add text request</button>
+            <div class="container d-flex justify-content-center  " >
+              <button type="button" name="button" class="btn " data-toggle="modal" data-target="#myModal" id="open">Add text request</button>
               <button type="button" name="button" class="btn" >Add metrics request</button>
               <button type="button" name="button" class="btn" >Add file request</button>
             </div>
-            <div class="d-flex container-fluid mt-5 mb-5">
+            <div class="d-flex justify-content-center no-display container-fluid mt-5 mb-5">
               <button type="button" name="button" class="mr-2" data-toggle="tooltip" data-placement="top" title="Chart" style="border:0">
                 <img src="{{ asset('css/icons/newRep1.png') }}">
+                <input type="file" name="" value="">
+              </button>
+
+              <button type="button" name="button" class="btn" >
                 <input type="file" name="" value="">
               </button>
               <button type="button" name="button" class="btn" >
                 <input type="file" name="" value="">
               </button>
-              <input type="file" name="" value="">
             </div>
 
           </div>

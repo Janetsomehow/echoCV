@@ -15,6 +15,7 @@
         <!-- Styles -->
 
         @livewireAssets
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
         <link href="{{ asset('css/home.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('css/company.css')}}">
