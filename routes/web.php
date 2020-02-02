@@ -59,11 +59,12 @@ Route::get('/new_report', 'ReportsController@create');
 // Route::post('/profile', 'ProfileController@profileupdate');
 Route::get('/files', 'FileController@index')->name('file.index');
 Route::post('/file/upload', 'FileController@store')->name('file.upload');
+Route::delete('/delete/file/', 'FileController@delete')->name('file.delete');
 
 
 
 Route::resource('create_metrics', 'MetricsController');
-Route::get('metrics/show/{ChartType}', 'MetricsController@build');
+Route::get('metrics/show/{ChartType}/', 'MetricsController@build');
 Route::get('import-export', 'MetricsController@importExport');
 Route::post('import', 'MetricsController@import')->name('import');
 Route::get('export', 'MetricsController@export');

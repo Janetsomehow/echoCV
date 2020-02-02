@@ -251,7 +251,7 @@
                         <div class="col-md-12 ml-2 mb-2 d-flex btnModalme">
                           <label for="">Upload Source:</label>
                           <!-- <input type="file" class="ml-4" name="tags"> -->
-                          <input type="file" name="file" id="myFile" class="ml-4" style="width: 85px;" onchange="this.style.width = '100%';" />
+                          <input type="file" name="file" id="myFile" class="ml-4" style="width: 85px;" onchange="this.style.width = '100%';" required/>
                         </div>
                       </div>
                       <!-- <div class="row">

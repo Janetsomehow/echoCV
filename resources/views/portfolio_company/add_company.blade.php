@@ -71,7 +71,7 @@
 
 @csrf
     <label for="c_name">Company Name</label>
-    <input type="text" class="form-control" name="name" id="companyname">
+    <input type="text" class="form-control" name="c_name" id="companyname">
     <label for="website">Company Website</label>
     <input type="text" class="form-control" name="website" id="companyweb">
               <div class="bigSe">
@@ -81,8 +81,8 @@
                   </select>
                 </div>
                 <div>
-                  <label for="pcontact" class="mt-4">Primary Contact</label>
-                  <select class="form-control" name="pcontact">
+                  <label for="contact_id" class="mt-4">Primary Contact</label>
+                  <select class="form-control" name="contact_id">
                   <option selected>Select Contact</option>
                     <option value=""></option>
                     <option value="First">First</option>

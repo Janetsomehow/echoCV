@@ -174,6 +174,29 @@ class FileController extends Controller
     }
 
 
+    public function delete(Request $request)
+    {
+        $id =$request->category_id;
+
+         $document = Efile::where('id',$id)->first();
+        //delete the file from the server
+
+        // Storage::delete($document->path);
+        $storagePath  = Storage::disk('public')->getDriver()->getAdapter()->getPathPrefix();
+        if(file_exists($storagePath.$document->path)){
+         unlink($storagePath.$document->path);
+        }
+        
+        $document->delete($id);
+
+               toast('File Uploaded','success');
+   
+        return back()
+            ->with('success','You have successfully upload file.');
+
+    }
+
+
 
         /**
          * Formats filesize in human readable way.
