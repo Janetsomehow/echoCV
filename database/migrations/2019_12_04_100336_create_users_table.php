@@ -5,8 +5,8 @@ use Illuminate\Database\Schema\Blueprint;
 use App\Role;
 // use Hash;
 use Carbon\Carbon;
-use \Avatar as Avatar;
-use \Storage as storage; 
+use  Avatar;
+use Storage; 
 
 class CreateUsersTable extends Migration {
 
