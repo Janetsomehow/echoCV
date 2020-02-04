@@ -4,9 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 // use Hash;
 use Carbon\Carbon;
-use Avatar;
-use Storage;
-use App\Role;
+
+
 
 class CreateUsersTable extends Migration {
 
@@ -36,7 +35,7 @@ class CreateUsersTable extends Migration {
             'fname' => 'Eniola',
             'lname' => 'James',
             // 'type' => 'echovc',
-            'avatar' => 'avatar',
+            'avatar' => 'avatar.png',
             'email' => 'admin@echovc.com',
             'email_verified_at' => Carbon::now(),
             'password' =>  Hash::make('password'),
@@ -44,8 +43,8 @@ class CreateUsersTable extends Migration {
             //$2y$10$7c/JJ6v8qgHKmITv1fC1KuYeDyY8fsoUhqpHvWAoaveFQsFwbncj6
         ));
 
-        $avatar = Avatar::create($user['fname'] .''. $user['lname'])->getImageObject()->encode('png');
-        Storage::put('/public/avatars/'.$user->id.'/avatar.png', (string) $avatar);
+        // $avatar = Avatar::create($user['fname'] .''. $user['lname'])->getImageObject()->encode('png');
+        // Storage::put('/public/avatars/'.$user->id.'/avatar.png', (string) $avatar);
 
        //  DB::table('users')->insert(array(
        //      'name' => 'Teacher',
