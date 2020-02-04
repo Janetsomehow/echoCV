@@ -1139,4 +1139,14 @@ border-bottom: 0 solid #ddd;
   .newrep .btn {
     margin-left: 21vw;
   }
+
+  .no-display{
+    display: none !important;
+  }
+
+  select{
+    width: 30% !important;
+    margin-right: 2em;
+    margin-bottom: 2em;
+  }
 }
