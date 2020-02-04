@@ -32,7 +32,7 @@ class Admin
          // }
          else
          {
-            abort('404')
+            abort('404');
          }
     }
 }

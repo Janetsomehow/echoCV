@@ -17,7 +17,7 @@ class UserController extends Controller
     {
         // Return a view here
         Users::paginate(5);
-        return view(string);
+        return view('string');
         
     }
 

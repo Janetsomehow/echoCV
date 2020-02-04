@@ -32,8 +32,8 @@ class CreateUsersTable extends Migration {
 		**/
 
 		$user = DB::table('users')->insert(array(
-            'fname' => 'Eniola',
-            'lname' => 'James',
+            'fname' => 'Super',
+            'lname' => 'Admin',
             // 'type' => 'echovc',
             'avatar' => 'avatar.png',
             'email' => 'admin@echovc.com',
