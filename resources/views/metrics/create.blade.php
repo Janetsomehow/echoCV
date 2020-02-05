@@ -22,7 +22,7 @@
         color: #666;
       }
 
-      .btn-excel:focus {
+      .btn-excel:focus, .btn-default:focus {
         box-shadow: 0 0 0 0 rgba(0,0,0,0)!important;
       }
 
@@ -56,7 +56,7 @@
         <form class="searchReport" action="" method="post">
           @csrf
           <input type="text" class="form-control form-group" placeholder="Search for metric">
-          <button type="button" name="button" style="border:none"><img src="{{ asset('css/icons/grsearch.png') }}" /></button>
+          <button type="button" name="button" style="border:none"><img src="{{ asset('css/icons/grsearch.svg') }}" /></button>
         </form>
         <section class="newMetr">
           <!-- <ul class="nav nav-tabs nav-lg newData" role="tablist">
@@ -66,7 +66,7 @@
           </ul> -->
           <div class="newData">
             <a href="/add_metrics" class="">+ New data source</a>
-            <button type="button" class="btn btn-excel" data-toggle="modal" data-target="#excelModal" id="open">+ Import Excel</button>
+            <!-- <button type="button" class="btn btn-excel" data-toggle="modal" data-target="#excelModal" id="open">+ Import Excel</button> -->
           </div><hr>
           <label for="">Custom</label>
           <div class="formMett custom">
@@ -76,22 +76,22 @@
           <label for="">Link</label>
           <div class="formG">
             <div class="formMett ">
-              <img src="{{ asset('css/icons/sheet.png') }}" />
+              <img src="{{ asset('css/icons/sheet.svg') }}" />
               Google Sheets
               <a href="https://docs.google.com/spreadsheets/d/16u3yZw1eoOy9COCwcOmXm0536liRLjTj1Fbw_eXdjj0/"class="btn btn-default">Link</a>
             </div>
             <div class="formMett ">
-              <img src="{{ asset('css/icons/xero.png') }}" />
+              <img src="{{ asset('css/icons/xero.svg') }}" />
               Xero
               <a href="https://login.xero.com/identity/user/login"class="btn btn-default">Link</a>
             </div>
             <div class="formMett ">
-              <img src="{{ asset('css/icons/airtable.png') }}" />
+              <img src="{{ asset('css/icons/airtable.svg') }}" />
               Airtable
               <a href="https://airtable.com/login"class="btn btn-default">Link</a>
             </div>
             <div class="formMett ">
-              <img src="{{ asset('css/icons/trello.png') }}" />
+              <img src="{{ asset('css/icons/trello.svg') }}" />
               Trello
               <a href="https://trello.com/en/login"class="btn btn-default">Link</a>
             </div>
@@ -103,7 +103,8 @@
       <!-- Modal to create new metrics -->
           <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
             <div class="modal-dialog" role="document">
-              <form method="post" action="{{ route('create_metrics.store') }}">
+
+              <form method="post" action="{{ route('import') }}" name="importform" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-content">
                   <div class="modal-header modalHeader">
@@ -123,85 +124,18 @@
                       <div class="row mr-2">
                         <div class="form-group col-md-12 ml-2">
                           <label for="desc">Description</label>
-                          <input type="text" class="form-control" name="desc" required>
+                          <!-- <input type="text" class="form-control" name="desc" required> -->
+                          <textarea class="form-control" name="desc" rows="3" cols="60" required></textarea>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-md-12">
-                          <table class="table table-bordered table-responsive" style="margin-top:-5rem">
-                            <thead>
-                              <tr>
-                                <th></th>
-                                <th>Date</th>
-                                <th>Value</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <th><input type="text" name="aaa" value=""></th>
-                                <th><input type="number" name="aaa1" value=""></th>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <th><input type="text" name="bbb" value=""></th>
-                                <th><input type="number" name="bbb1" value=""></th>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <th><input type="text" name="ccc" value=""></th>
-                                <th><input type="number" name="ccc1" value=""></th>
-                              </tr>
-                              <tr>
-                                <th scope="row">4</th>
-                                <th><input type="text" name="ddd" value=""></th>
-                                <th><input type="number" name="ddd1" value=""></th>
-                              </tr>
-                              <tr>
-                                <th scope="row">5</th>
-                                <th><input type="text" name="eee" value=""></th>
-                                <th><input type="number" name="eee1" value=""></th>
-                              </tr>
-                              <tr>
-                                <th scope="row">6</th>
-                                <th><input type="text" name="fff" value=""></th>
-                                <th><input type="number" name="fff1" value=""></th>
-                              </tr>
-                              <tr>
-                                <th scope="row">7</th>
-                                <th><input type="text" name="ggg" value=""></th>
-                                <th><input type="number" name="ggg1" value=""></th>
-                              </tr>
-                              <tr>
-                                <th scope="row">8</th>
-                                <th><input type="text" name="hhh" value=""></th>
-                                <th><input type="number" name="hhh1" value=""></th>
-                              </tr>
-                              <tr>
-                                <th scope="row">9</th>
-                                <th><input type="text" name="iii" value=""></th>
-                                <th><input type="number" name="iii1" value=""></th>
-                              </tr>
-                              <tr>
-                                <th scope="row">10</th>
-                                <th><input type="text" name="jjj" value=""></th>
-                                <th><input type="number" name="jjj1" value=""></th>
-                              </tr>
-                              <tr>
-                                <th scope="row">11</th>
-                                <th><input type="text" name="kkk" value=""></th>
-                                <th><input type="number" name="kkk1" value=""></th>
-                              </tr>
-                              <tr>
-                                <th scope="row">12</th>
-                                <th><input type="text" name="lll" value=""></th>
-                                <th><input type="number" name="lll1" value=""></th>
-                              </tr>
-                            </tbody>
-                          </table>
+                        <div class="col-md-12 ml-2 mb-2 d-flex btnModalme">
+                          <label for="">Upload Source:</label>
+                          <!-- <input type="file" class="ml-4" name="tags"> -->
+                          <input type="file" name="file" id="myFile" class="ml-4" style="width: 85px;" onchange="this.style.width = '100%';" required/>
                         </div>
                       </div>
-                      <div class="row mt-5">
+                      <div class="row mt-1">
                         <div class="d-flex col-md-12 mr-2 ml-2 mt-3 btnModalme">
                           <div class="mt-2 mr-4">Unit:</div>
                           <p class="mt-2">Percent</p> <input type="radio" name="percent" value="%" class="btn btnModalmetr mt-3 ml-2" />
@@ -220,58 +154,6 @@
             </div>
           </div>
 
-
-      <!-- Excel modal -->
-          <div class="modal" tabindex="-1" role="dialog" id="excelModal" aria-labelledby="details-l" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <form action="{{ route('import') }}" method="POST" name="importform" enctype="multipart/form-data">
-                @csrf
-                <div class="modal-content">
-                  <div class="modal-header modalHeader">
-                    <h5 class="modal-title">Add an Excel File</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="container">
-                      <!-- <div class="row mr-2">
-                        <div class="form-group col-md-12 ml-2">
-                          <label for="name">Name</label>
-                          <input type="text" class="form-control" name="name">
-                        </div>
-                      </div>
-                      <div class="row">
-                         <div class="form-group col-md-12 ml-2">
-                           <label for="desc">Description</label>
-                           <input type="text" class="form-control" name="desc">
-                        </div>
-                      </div> -->
-                      <div class="row">
-                        <div class="col-md-12 ml-2 mb-2 d-flex btnModalme">
-                          <label for="">Upload Source:</label>
-                          <!-- <input type="file" class="ml-4" name="tags"> -->
-                          <input type="file" name="file" id="myFile" class="ml-4" style="width: 85px;" onchange="this.style.width = '100%';" required/>
-                        </div>
-                      </div>
-                      <!-- <div class="row">
-                        <div class="d-flex col-md-12 mr-2 ml-2 mt-3 btnModalme">
-                          <div class="mt-2">Unit:</div>
-                          <button type="button" value="percent1" class="btn btnModalmetr ml-4 mr-2">Percent</button>
-                          <button type="submit" class="btn btnModalmetr">Number</button>
-                          <input type="" name="percent" value="percent" class="btn btnModalmetr" placeholder="Percent"/>
-                        </div>
-                      </div> -->
-                    </div>
-                  </div>
-                  <div class="modal-footer modalFooter">
-                    <button class="btn btn-save" style="background:#ddd; float:left!important">Save</button>
-                    <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
 
       <div class="wrapper">
         @include('layouts.sidebar')

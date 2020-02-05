@@ -40,23 +40,23 @@ use Carbon\Carbon;
           <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist">
             <li role="presentation">
               <a class="repTitle"  href="/reports">
-                <img src="{{ asset('css/icons/repAll.png') }}">ALL</a>
+                <img src="{{ asset('css/icons/repAll.svg') }}">ALL</a>
             </li>
             <li role="presentation">
               <a class="repTitle"  href="/sent_report">
-                <img src="{{ asset('css/icons/repSent.png') }}">SENT</a>
+                <img src="{{ asset('css/icons/repSent.svg') }}">SENT</a>
             </li>
             <li role="presentation" class="active">
               <a class="repTitle" href="/received_report">
-                <img src="{{ asset('css/icons/repRec1.png') }}">RECEIVED</a>
+                <img src="{{ asset('css/icons/repRec1.svg') }}">RECEIVED</a>
             </li>
             <li role="presentation">
               <a class="repTitle" href="/scheduled_report">
-                <img src="{{ asset('css/icons/repSch.png') }}">SCHEDULED</a>
+                <img src="{{ asset('css/icons/repSch.svg') }}">SCHEDULED</a>
             </li>
             <li role="presentation">
               <a class="repTitle" href="/new_report">
-                <img src="{{ asset('css/icons/repDra.png') }}">DRAFT</a>
+                <img src="{{ asset('css/icons/repDra.svg') }}">DRAFT</a>
             </li>
           </ul>
           <!-- Mobile view tags -->
@@ -124,7 +124,7 @@ use Carbon\Carbon;
         </section>
       </main>
       <div class="inputSearch">
-        <img src="{{ asset('css/icons/grsearch.png') }}" >
+        <img src="{{ asset('css/icons/grsearch.svg') }}" >
       </div>
 
 

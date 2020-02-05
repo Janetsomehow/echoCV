@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Revolution\Google\Sheets\Facades\Sheets;
-use App\Http\Requests\MetricsRequest;
+use App\Http\Requests\PostRequest;
 
 class PostController extends Controller
 {
@@ -16,7 +16,7 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(MetricsRequest $request)
+    public function __invoke(PostRequest $request)
     {
         /**
          * Service Account demo
@@ -29,8 +29,12 @@ class PostController extends Controller
         ];
 
         Sheets::spreadsheet(config('sheets.post_spreadsheet_id'))
-              ->sheetById(config('sheets.post_sheet_id'))
+              ->sheet(config('sheets.post_sheet_id'))
               ->append([$append]);
+
+              // Sheets::spreadsheet(config('sheets.post_spreadsheet_id'))
+              // ->sheetById(config('sheets.post_sheet_id'))
+              // ->append([$append]);
 
         return back();
     }
