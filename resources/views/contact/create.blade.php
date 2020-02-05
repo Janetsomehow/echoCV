@@ -32,6 +32,10 @@
     <section class="onboard">
       <div class="rep">Contacts</div>
       <div class="newrep">
+        <!-- <img src="{{ asset('css/icons/contactcentre.svg') }}" class="mx-auto d-block" />
+        <h3 class="centreCon">Contacts</h3>
+        <p class="text-contact">Add contacts to make sharing easier. You can also use tags -->
+
         <svg width="400" height="300" viewBox="0 0 135 103" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
           <path d="M91.9895 15.2425C94.7974 12.4364 94.7974 7.88688 91.9895 5.08082C89.1815 2.27476 84.629 2.27476 81.821 5.08082L25.2167 61.6473C22.4088 64.4533 22.4088 69.0029 25.2167 71.8089C28.0247 74.615 32.5772 74.615 35.3852 71.8089L91.9895 15.2425Z" fill="#BFEBFE"/>
@@ -132,7 +136,7 @@
           </clipPath>
           </defs>
           </svg>
-          
+
      <div class="cen text-center">
           <h3 class="mt-3 text-center">Contacts</h3>
         <p class="text-wrap ">Add contacts to make sharing easier. You can also use tags
@@ -143,7 +147,7 @@
     </section>
 
       <!-- Modal to create new contact -->
-    <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
+          <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <form method="post" action="{{ route('contact.store') }}">
                 @csrf

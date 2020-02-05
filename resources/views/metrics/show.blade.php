@@ -39,32 +39,43 @@
         @include('inc.messages')
       </div>
       <section class="rep d-flex">
-        <div class="mr-5">
+        <div class="mr-5" onclick="window.location='/create_metrics'" >
           Metrics
         </div>
-        <div class="d-flex align-self-center" style="font-size:1rem; margin-left:17vw">
-          <div class="mr-3" onclick="window.location='/metrics/show/line/{{ $chart->id }}'">Line</div>
-          <div class="mr-3" onclick="window.location='/metrics/show/pie'">Pie</div>
-          <div class="mr-3" onclick="window.location='/metrics/show/bar'">Bar</div>
-          <div class="mr-3" onclick="window.location='/metrics/show/dot'" style="width:4rem">Dot Line</div>
-          <div class="mr-3" onclick="window.location='/metrics/show/donut'">Doughnut</div>
-        </div>
-        <div onclick="window.location='/create_metrics'" style="margin-left:20vw">Back</div>
       </section>
 
-      <div class="container mt-5">
-        <!-- {!! $chart->id !!} -->
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col-md-9" style="height:20rem">
+            <!-- {!! $chart->id !!} -->
+            <!-- {!! $chart->api() !!} -->
+            <!-- {{ $chart->id }}_refresh(url) -->
+            {!! $chart->container() !!}
+          </div>
+          <div class="col-md-3">
 
-        <!-- {!! $chart->api() !!} -->
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-9" style="height:12rem">
+            {!! $chart1->container() !!}
+          </div>
+          <div class="col-md-3">
 
-        <!-- {{ $chart->id }}_refresh(url) -->
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-9" style="height:15rem">
+            {!! $chart2->container() !!}
+          </div>
+          <div class="col-md-3">
 
-        {!! $chart->container() !!}
-
+          </div>
+        </div>
       </div>
 
       <!-- Table for each metric -->
-      @if(count($graphs) > 0)
+      <!-- @if(count($graphs) > 0)
       <div class="container">
         <table class="table table-bordered">
           <thead>
@@ -78,12 +89,13 @@
             </tr>
           </thead>
           <tbody>
-            @foreach($graphs as $graph)
+            @foreach($graphs as $graph) -->
             <!-- <tr onClick="window.open('/graph/build/bar');"> -->
             <!-- <tr  class='clickable-row' data-href='http://127.0.0.1:8000/graph/build/bar'> -->
             <!-- <tr id="contain" data-href='/graph/build/bar'> -->
             <!-- <tr data-href='/graph/build/bar'> -->
-            <tr onclick="window.location='/metrics/show/bar/';">
+
+            <!-- <tr onclick="window.location='/metrics/show/bar/';">
               <th>{{ $graph->id }}</th>
               <td>{{ $graph->name }}</td>
               <td>{{ $graph->desc }}</td>
@@ -95,14 +107,16 @@
           </tbody>
         </table>
       </div>
-      @endif
+      @endif -->
       <br><br><br>
     </main>
 
 <script src="https://unpkg.com/vue"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
-    {!! $chart->script() !!}
+      {!! $chart->script() !!}
+      {!! $chart1->script() !!}
+      {!! $chart2->script() !!}
     <script type="text/javascript">
 
       var original_api_url = {{ $chart->id }}_api_url;

@@ -34,23 +34,23 @@
           <ul class="nav nav-tabs nav-lg repStatus repMain" role="tablist" style="margin-bottom:1.2rem;">
             <li role="presentation">
               <a class="repTitle"  href="/reports">
-                <img src="{{ asset('css/icons/repAll.png') }}">ALL</a>
+                <img src="{{ asset('css/icons/repAll.svg') }}">ALL</a>
             </li>
             <li role="presentation">
               <a class="repTitle"  href="/sent_report">
-                <img src="{{ asset('css/icons/repSent.png') }}">SENT</a>
+                <img src="{{ asset('css/icons/repSent.svg') }}">SENT</a>
             </li>
             <li role="presentation">
               <a class="repTitle" href="/received_report">
-                <img src="{{ asset('css/icons/repRec.png') }}">RECEIVED</a>
+                <img src="{{ asset('css/icons/repRec.svg') }}">RECEIVED</a>
             </li>
             <li class="active" role="presentation">
               <a class="repTitle" href="/scheduled_report">
-                <img src="{{ asset('css/icons/repSch1.png') }}">SCHEDULED</a>
+                <img src="{{ asset('css/icons/repSch1.svg') }}">SCHEDULED</a>
             </li>
             <li role="presentation">
               <a class="repTitle" href="/new_report">
-                <img src="{{ asset('css/icons/repDra.png') }}">DRAFT</a>
+                <img src="{{ asset('css/icons/repDra.svg') }}">DRAFT</a>
             </li>
           </ul>
           <div class="repMobParent">
@@ -115,7 +115,7 @@
 
       </main>
       <div class="inputSearch" style="top: 9.7rem;">
-        <img src="{{ asset('css/icons/grsearch.png') }}" >
+        <img src="{{ asset('css/icons/grsearch.svg') }}" >
       </div>
 
 

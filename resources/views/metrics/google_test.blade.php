@@ -10,7 +10,6 @@
 </head>
 <body>
   <div class="container">
-    <a href="https://github.com/kawax/google-sheets-project">GitHub</a>
     <h1>Google Sheets for Laravel Demo</h1>
     {{--    <a href="{{ route('login') }}" class="btn btn-primary">Login with Google</a>--}}
     <div class="row">
