@@ -14,16 +14,16 @@ class CreateForeignKeys extends Migration {
 						->onDelete('restrict')
 						->onUpdate('restrict');
 			});
-		Schema::table('companies', function(Blueprint $table) {
-			$table->foreign('user_id')->references('id')->on('users')
-						->onDelete('cascade')
-						->onUpdate('restrict');
-		});
-		Schema::table('companies', function(Blueprint $table) {
-			$table->foreign('contact_id')->references('id')->on('users')
-						->onDelete('restrict')
-						->onUpdate('restrict');
-		});
+		// Schema::table('companies', function(Blueprint $table) {
+		// 	$table->foreign('user_id')->references('id')->on('users')
+		// 				->onDelete('cascade')
+		// 				->onUpdate('restrict');
+		// });
+		// Schema::table('companies', function(Blueprint $table) {
+		// 	$table->foreign('contact_id')->references('id')->on('users')
+		// 				->onDelete('restrict')
+		// 				->onUpdate('restrict');
+		// });
 		Schema::table('charts', function(Blueprint $table) {
 			$table->foreign('metric_id')->references('id')->on('metrics')
 						->onDelete('restrict')
@@ -88,12 +88,12 @@ class CreateForeignKeys extends Migration {
 
 	public function down()
 	{
-		Schema::table('companies', function(Blueprint $table) {
-			$table->dropForeign('companies_user_id_foreign');
-		});
-		Schema::table('companies', function(Blueprint $table) {
-			$table->dropForeign('companies_contact_id_foreign');
-		});
+		// Schema::table('companies', function(Blueprint $table) {
+		// 	$table->dropForeign('companies_user_id_foreign');
+		// });
+		// Schema::table('companies', function(Blueprint $table) {
+		// 	$table->dropForeign('companies_contact_id_foreign');
+		// });
 		Schema::table('charts', function(Blueprint $table) {
 			$table->dropForeign('charts_metric_id_foreign');
 		});
