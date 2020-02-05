@@ -135,7 +135,7 @@ return [
     */
 
     'providers' => [
-
+        
         /*
          * Laravel Framework Service Providers...
          */
@@ -165,6 +165,8 @@ return [
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         PulkitJalan\Google\GoogleServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+       // PragmaRX\Countries\ServiceProvider::class,
+
 
 
         /*
@@ -194,7 +196,6 @@ return [
     */
 
     'aliases' => [
-
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
@@ -203,7 +204,7 @@ return [
         'Broadcast' => Illuminate\Support\Facades\Broadcast::class,
         'Bus' => Illuminate\Support\Facades\Bus::class,
         'Cache' => Illuminate\Support\Facades\Cache::class,
-        'Config' => Illuminate\Support\Facades\Config::class,
+        'Config' => Illuminate\Support\Facades\Config::class,     
         'Cookie' => Illuminate\Support\Facades\Cookie::class,
         'Crypt' => Illuminate\Support\Facades\Crypt::class,
         'DB' => Illuminate\Support\Facades\DB::class,
@@ -234,7 +235,8 @@ return [
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
         'Google' => PulkitJalan\Google\Facades\Google::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-
+        //'Countries'=> PragmaRX\Countries\Facade::class,
+        
     ],
 
 ];

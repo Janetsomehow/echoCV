@@ -75,10 +75,10 @@
             <li class=""><a href="" class="activer"> Description</a></li>
             <li class="ml-4"><a href=""> Comparison</a></li>
             <li class="ml-4"><a href=""> Performance</a></li>
-              <li class="funded mt-3"><a href=""> Funding</a></li>
-              <li class="ml-4 mt-3"><a href=""> Contact</a></li>
-              <li class="ml-4 mt-3"><a href="">Files</a></li>
-              <li class="ml-4 mt-3"><a href=""> Notes</a></li> 
+              <li class="funded ml-4"><a href=""> Funding</a></li>
+              <li class="ml-4 "><a href=""> Contact</a></li>
+              <li class="ml-4 "><a href="">Files</a></li>
+              <li class="ml-4 "><a href=""> Notes</a></li> 
             
             {{-- <button class="btn btn-primary btn-share btn-sm" style="margin-left: 0.5rem; margin-top: .1rem; width: 4rem"> Share</button> --}}
           </ul>

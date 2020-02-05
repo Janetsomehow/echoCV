@@ -43,7 +43,7 @@
 <div class="mt-5 form-wrap">
   <div class="row justify-content-center">
   <div class="col-md-8">
-<form action="CompanyController@store" method="post">
+<form action="/add_company" method="post">
 
 
 
@@ -71,23 +71,18 @@
 
 @csrf
     <label for="c_name">Company Name</label>
-    <input type="text" class="form-control" name="name" id="companyname">
+    <input type="text" class="form-control" name="c_name" id="companyname">
     <label for="website">Company Website</label>
     <input type="text" class="form-control" name="website" id="companyweb">
               <div class="bigSe">
                 <div>
                   <label for="country">Country</label>
-                  <select class="form-control" name="country">
-                  <option selected>Select Country</option>
-                    <option value=""></option>
-                    <option value="First">First</option>
-                    <option value="Second">Second</option>
-                    <option value="Third">Third</option>
+                  <select class="form-control" name="country" id="country_id">
                   </select>
                 </div>
                 <div>
-                  <label for="pcontact" class="mt-4">Primary Contact</label>
-                  <select class="form-control" name="pcontact">
+                  <label for="contact_id" class="mt-4">Primary Contact</label>
+                  <select class="form-control" name="contact_id">
                   <option selected>Select Contact</option>
                     <option value=""></option>
                     <option value="First">First</option>
@@ -136,4 +131,19 @@
 </div>
 <div style="height: 5rem"></div>
 </div>
+<script>
+$.ajax({
+        url: 'https://restcountries.eu/rest/v2/all'
+    }).done(res => {
+        let options = `<option  selected disabled> Select Country</option>`
+        let countries = res
+        for (let i = 0, length = countries.length; i < length; i++) {
+            options += `<option value='${countries[i].name}'> ${countries[i].name } </option>`
+        }
+        $('#country_id').html(options)
+
+    }).fail(err => {
+        console.log(err)
+    })
+    </script>
 @stop

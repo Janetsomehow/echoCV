@@ -102,7 +102,7 @@
               <div class="cal"><p> Jun 2019</p></div>
               <div class="cal"><p> Jul 2019</p></div>
               <div class="cal"><p> Aug 2019</p></div>
-              <div class="cal"><p> Sep 2019</p></div>
+       emote        <div class="cal"><p> Sep 2019</p></div>
               <div class="cal"><p> Oct 2019</p></div>
               <div class="cal"><p> Nov 2019</p></div>
               <div class="cal"><p> Dec 2019</p></div>

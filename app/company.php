@@ -16,7 +16,7 @@ class Company extends Model
         'c_name',
         'website',
         'country',
-        'p_contact',
+        'pcontact',
         'tags',
         'stage',
         'status',

@@ -11,6 +11,7 @@
       <!-- Styles -->
       <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
       <link href="{{ asset('css/report.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <link href="{{ asset('css/dataTables.bootstrap.css') }}" rel="stylesheet">
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">

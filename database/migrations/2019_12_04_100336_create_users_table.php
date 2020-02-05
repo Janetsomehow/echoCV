@@ -5,6 +5,8 @@ use Illuminate\Database\Schema\Blueprint;
 // use Hash;
 use Carbon\Carbon;
 
+
+
 class CreateUsersTable extends Migration {
 
 	public function up()
@@ -18,7 +20,6 @@ class CreateUsersTable extends Migration {
             $table->string('password');
             $table->string('avatar')->default('avatar.png')->nullable();
             $table->string('phone_no')->nullable();            
-            $table->enum('type', array('echovc', 'client'))->nullable();
             $table->enum('permission', array('view', 'edit', 'admin'))->default('admin')->nullable();
             $table->rememberToken();
 			$table->timestamps();
@@ -30,17 +31,20 @@ class CreateUsersTable extends Migration {
 		*
 		**/
 
-		DB::table('users')->insert(array(
-            'fname' => 'Eniola',
-            'lname' => 'James',
-            'type' => 'echovc',
-            'avatar' => 'avatar',
-            'email' => 'admin@domain.com',
+		$user = DB::table('users')->insert(array(
+            'fname' => 'Super',
+            'lname' => 'Admin',
+            // 'type' => 'echovc',
+            'avatar' => 'avatar.png',
+            'email' => 'admin@echovc.com',
             'email_verified_at' => Carbon::now(),
             'password' =>  Hash::make('password'),
-
+            'permission' => 'admin',
             //$2y$10$7c/JJ6v8qgHKmITv1fC1KuYeDyY8fsoUhqpHvWAoaveFQsFwbncj6
         ));
+
+        // $avatar = Avatar::create($user['fname'] .''. $user['lname'])->getImageObject()->encode('png');
+        // Storage::put('/public/avatars/'.$user->id.'/avatar.png', (string) $avatar);
 
        //  DB::table('users')->insert(array(
        //      'name' => 'Teacher',
