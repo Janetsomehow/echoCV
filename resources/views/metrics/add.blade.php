@@ -29,15 +29,18 @@
         </section>
         <form class="searchReport" action="" method="post">
           <input type="text" class="form-control form-group" placeholder="Search for metric">
-          <button type="button" name="button" style="border:none"><img src={{ asset('css/icons/grsearch.png') }} /></button>
+          <button type="button" name="button" style="border:none"><img src={{ asset('css/icons/grsearch.svg') }} /></button>
         </form>
 
         <section class="newMetr">
           <div class="newData">
-            <a href="#"class="btn">+ New data source</a>
-          </div><hr>
-          <div>Google Sheets<a class="metricDel" href="#" style="display:none">
-            <img src={{ asset('css/icons/metricdel.png') }} /></a>
+            <a href="#" class="btn">+ New data source</a>
+            <a class="btn btn-excel">
+              <img src="{{ asset('css/icons/sheet.svg') }}" />
+            Google Sheets</a>
+          </div><hr class="mt-0">
+          <div>Google Sheets<a class="metricDel" href="#">
+            <img src={{ asset('css/icons/metricdel.svg') }} /></a>
           </div>
 
 
