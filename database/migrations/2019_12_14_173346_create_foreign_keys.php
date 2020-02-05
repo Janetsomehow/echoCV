@@ -88,12 +88,12 @@ class CreateForeignKeys extends Migration {
 
 	public function down()
 	{
-		Schema::table('companies', function(Blueprint $table) {
-			$table->dropForeign('companies_user_id_foreign');
-		});
-		Schema::table('companies', function(Blueprint $table) {
-			$table->dropForeign('companies_contact_id_foreign');
-		});
+		// Schema::table('companies', function(Blueprint $table) {
+		// 	$table->dropForeign('companies_user_id_foreign');
+		// });
+		// Schema::table('companies', function(Blueprint $table) {
+		// 	$table->dropForeign('companies_contact_id_foreign');
+		// });
 		Schema::table('charts', function(Blueprint $table) {
 			$table->dropForeign('charts_metric_id_foreign');
 		});
