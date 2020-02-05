@@ -31,7 +31,7 @@
     <section class="onboard">
       <div class="rep">Contacts</div>
       <div class="newrep">
-        <img src="{{ asset('css/icons/contactcentre.png') }}" class="mx-auto d-block" />
+        <img src="{{ asset('css/icons/contactcentre.svg') }}" class="mx-auto d-block" />
         <h3 class="centreCon">Contacts</h3>
         <p class="text-contact">Add contacts to make sharing easier. You can also use tags
             for easier grouping</p>
@@ -41,7 +41,7 @@
     </section>
 
       <!-- Modal to create new contact -->
-    <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
+          <div class="modal" tabindex="-1" role="dialog" id="myModal" aria-labelledby="details-l" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <form method="post" action="{{ route('contact.store') }}">
                 @csrf

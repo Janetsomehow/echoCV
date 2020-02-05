@@ -99,6 +99,9 @@ class ReportsController extends Controller
       return view('reports.reports1');
     }
 
+    public function sample() {
+      return view('reports.sample');
+    }
 
 
 }

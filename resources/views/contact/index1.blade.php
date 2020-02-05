@@ -43,8 +43,8 @@
         <div class="widget-wrapper container-fluid" style="padding:0; margin:0">
           <div class="section-wrap-b table-responsive">
             <div class="d-flex justify-content-flex-start btnDelAll">
-              <button class="delete-all mr-3 btnConTable" data-url=""><img src="{{ asset('css/icons/metricdel.png') }}"/></button>
-              <button class="pr-4 btnConTable1" data-url=""><img src="{{ asset('css/icons/conArch.png') }}"/></button>
+              <button class="delete-all mr-3 btnConTable" data-url=""><img src="{{ asset('css/icons/metricdel.svg') }}"/></button>
+              <button class="pr-4 btnConTable1" data-url=""><img src="{{ asset('css/icons/conArch.svg') }}"/></button>
               <div class=""></div>
             </div>
 
@@ -81,7 +81,7 @@
       </section><br><br>
       <a href="/contact/create" class="btn btn-default mobileBtn"></a>
       <div class="inputSearch">
-        <img src="{{ asset('css/icons/grsearch.png') }}" >
+        <img src="{{ asset('css/icons/grsearch.svg') }}" >
       </div>
     </main>
 

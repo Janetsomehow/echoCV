@@ -4,19 +4,15 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Revolution\Google\Sheets\Traits\GoogleSheets;
 
 use Illuminate\Database\Eloquent\Model;
 
 // class User extends Authenticatable implements MustVerifyEmail
 class User extends Authenticatable
 {
-           use Notifiable;
-
-    protected $table = 'users';
-    public $timestamps = true;
-
-
-
+    use Notifiable;
+    use GoogleSheets;
 
     /**
      * The attributes that are mass assignable.
@@ -93,5 +89,20 @@ class User extends Authenticatable
         return $this->hasMany('Efile');
     }
 
-}
 
+    /**
+     * Get the Access Token
+     *
+     * @return string|array
+     */
+    protected function sheetsAccessToken()
+    {
+        return [
+            'access_token'  => $this->access_token,
+            'refresh_token' => $this->refresh_token,
+            'expires_in'    => 3600,
+            'created'       => $this->updated_at->getTimestamp(),
+        ];
+    }
+
+}
