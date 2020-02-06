@@ -6,7 +6,7 @@ return [
     | Google application name
     |----------------------------------------------------------------------------
     */
-    'application_name' => env('GOOGLE_APPLICATION_NAME', 'EchoVC'),
+    'application_name' => env('GOOGLE_APPLICATION_NAME', ''),
 
     /*
     |----------------------------------------------------------------------------
@@ -21,9 +21,12 @@ return [
     'client_secret' => env('GOOGLE_CLIENT_SECRET', 'rf-Jhxnebl23g6wboVMmdz9Z'),
     'redirect_uri' => env('GOOGLE_REDIRECT', ''),
     'scopes'           => [\Google_Service_Sheets::DRIVE, \Google_Service_Sheets::SPREADSHEETS],
-    'access_type'      => 'online',
-    'approval_prompt'  => 'auto',
-    'prompt'           => 'consent', //"none", "consent", "select_account" default:none
+    // 'access_type'      => 'online',
+    // 'approval_prompt'  => 'auto',
+    // 'prompt'           => 'consent', //"none", "consent", "select_account" default:none
+    'access_type'      => 'offline',
+    'approval_prompt'  => 'force',
+    'prompt'           => 'consent',
 
     /*
     |----------------------------------------------------------------------------
@@ -49,14 +52,15 @@ return [
         /*
         | Enable service account auth or not.
         */
-        // 'enable' => env('GOOGLE_SERVICE_ENABLED', false),
-        'enable'  => env('GOOGLE_SERVICE_ENABLED', true),
+        'enable' => env('GOOGLE_SERVICE_ENABLED', false),
+        // 'enable'  => env('GOOGLE_SERVICE_ENABLED', true),
 
         /*
         | Path to service account json file
         */
         // 'file' => env('GOOGLE_SERVICE_ACCOUNT_JSON_LOCATION', ''),
-        'file'    => storage_path('metrics.json'),
+        // 'file'    => storage_path('metrics.json'),
+        'file'   => env('GOOGLE_SERVICE_ACCOUNT_JSON_LOCATION', storage_path('sheets-service-account.json')),
     ],
 
     /*

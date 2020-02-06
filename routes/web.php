@@ -53,6 +53,8 @@ Route::get('/received_report', 'ReportsController@received');
 Route::get('/sent_report', 'ReportsController@sent');
 Route::get('/scheduled_report', 'ReportsController@scheduled');
 Route::get('/new_report', 'ReportsController@create');
+Route::get('/sample_report', 'ReportsController@sample');
+Route::get('/real_report', 'ReportsController@real');
 
 
 // Route::get('/profile', 'ProfileController@profileindex');
@@ -65,7 +67,7 @@ Route::delete('/delete/file/', 'FileController@delete')->name('file.delete');
 
 
 Route::resource('create_metrics', 'MetricsController');
-Route::get('metrics/show/{ChartType}/', 'MetricsController@build');
+Route::get('metrics/show/', 'MetricsController@build');
 Route::get('import-export', 'MetricsController@importExport');
 Route::post('import', 'MetricsController@import')->name('import');
 Route::get('export', 'MetricsController@export');

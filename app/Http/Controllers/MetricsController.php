@@ -27,19 +27,34 @@ class MetricsController extends Controller
      public function __invoke(Request $request)
      {
 
-         $sheets = Sheets::spreadsheet(config('sheets.post_spreadsheet_id'))
-                        ->sheetById(config('sheets.post_sheet_id'))
-                        ->all();
+        //  $sheets = Sheets::spreadsheet(config('sheets.post_spreadsheet_id'))
+        //                 ->sheetById(config('sheets.post_sheet_id'))
+        //                 ->all();
+        //
+        // $posts = array();
+        // foreach ($sheets AS $data) {
+        //     $posts[] = array(
+        //         'name' => $data[0],
+        //         'message' => $data[1],
+        //         'created_at' => $data[2],
+        //     );
+        // }
 
-        $posts = array();
-        foreach ($sheets AS $data) {
-            $posts[] = array(
-                'name' => $data[0],
-                'message' => $data[1],
-                'created_at' => $data[2],
-            );
-        }
-         return view('metrics.google_test')->with(compact('posts'));
+        $sheets = Sheets::spreadsheet(config('sheets.post_spreadsheet_id'))
+                        ->sheet(config('sheets.post_sheet_id'))
+                        ->get();
+
+        //$header = $sheets->pull(0);
+        $header = [
+            'name',
+            'message',
+            'created_at',
+        ];
+
+        $posts = Sheets::collection($header, $sheets);
+        $posts = $posts->reverse()->take(10);
+
+        return view('metrics.google_test')->with(compact('posts'));
      }
 
     /**
@@ -48,17 +63,8 @@ class MetricsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function chartLine()
-     {
-         $api = url('/chart-line-ajax');
 
-         $chart = new UserLineChart;
-         $chart->labels(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])->load($api);
-
-         return view('chartLine', compact('chart'));
-     }
-
-    public function build($chartType)
+    public function build()
     {
 
       $graphs = Graph::all();
@@ -67,6 +73,8 @@ class MetricsController extends Controller
       if(count($graphs) > 0){
         foreach($graphs as $graph){
           $chart = new UserLineChart;
+          $chart1 = new UserLineChart;
+          $chart2 = new UserLineChart;
           $api = url('/metrics/show/bar');
           $borderColors = [
               "rgba(25, 99, 132, 1.0)",
@@ -96,10 +104,9 @@ class MetricsController extends Controller
               "rgba(233, 30, 99, 0.2)",
               "rgba(205, 220, 57, 0.2)"
           ];
-          switch ($chartType)
-          {
 
-            case 'bar':
+              // Bar
+              $chart->displaylegend(true);
               $chart->title($graph->name, 30, "rgb(255, 99, 132)", true, 'Nunito');
               $chart->labels([$graph->aaa, $graph->bbb, $graph->ccc, $graph->ddd, $graph->eee, $graph->fff,
               $graph->ggg, $graph->hhh, $graph->iii, $graph->jjj, $graph->kkk, $graph->lll]);
@@ -107,83 +114,34 @@ class MetricsController extends Controller
               $graph->eee1, $graph->fff1, $graph->ggg1, $graph->hhh1, $graph->iii1, $graph->jjj1, $graph->kkk1, $graph->lll1])
               ->color($borderColors)
               ->backgroundcolor($fillColors);
-              break;
-            case 'pie':
-              $chart->minimalist(true);  //This shows the graph line
-              $chart->displaylegend(true);
-              $chart->title($graph->name, 30, "rgb(255, 99, 132)", true, 'Nunito');
-              $chart->labels([$graph->aaa, $graph->bbb, $graph->ccc, $graph->ddd, $graph->eee, $graph->fff,
+
+              // Doughnut
+              $chart1->minimalist(true);  //This shows the graph line
+              // $chart1->displaylegend(true);
+              // $chart1->title($graph->name, 30, "rgb(255, 99, 132)", true, 'Nunito');
+              $chart1->labels([$graph->aaa, $graph->bbb, $graph->ccc, $graph->ddd, $graph->eee, $graph->fff,
               $graph->ggg, $graph->hhh, $graph->iii, $graph->jjj, $graph->kkk, $graph->lll]);
-              $chart->dataset('EchoVC Mertics', 'pie',  [$graph->aaa1, $graph->bbb1, $graph->ccc1, $graph->ddd1,
+              $chart1->dataset('EchoVC Mertics', 'doughnut',  [$graph->aaa1, $graph->bbb1, $graph->ccc1, $graph->ddd1,
               $graph->eee1, $graph->fff1, $graph->ggg1, $graph->hhh1, $graph->iii1, $graph->jjj1, $graph->kkk1, $graph->lll1])
               ->color($borderColors)
               ->backgroundcolor($fillColors);
-              break;
-            case 'donut':
-              $chart->minimalist(true);  //This shows the graph line
-              $chart->displaylegend(true);
-              $chart->title($graph->name, 30, "rgb(255, 99, 132)", true, 'Nunito');
-              $chart->labels([$graph->aaa, $graph->bbb, $graph->ccc, $graph->ddd, $graph->eee, $graph->fff,
+
+              // Line
+              // $chart2->title($graph->name, 30, "rgb(255, 99, 132)", true, 'Nunito');
+              $chart2->labels([$graph->aaa, $graph->bbb, $graph->ccc, $graph->ddd, $graph->eee, $graph->fff,
               $graph->ggg, $graph->hhh, $graph->iii, $graph->jjj, $graph->kkk, $graph->lll]);
-              $chart->dataset('EchoVC Mertics', 'doughnut',  [$graph->aaa1, $graph->bbb1, $graph->ccc1, $graph->ddd1,
-              $graph->eee1, $graph->fff1, $graph->ggg1, $graph->hhh1, $graph->iii1, $graph->jjj1, $graph->kkk1, $graph->lll1])
-              ->color($borderColors)
-              ->backgroundcolor($fillColors);
-              break;
-            case 'line':
-              $chart->title($graph->name, 30, "rgb(255, 99, 132)", true, 'Nunito');
-              $chart->labels([$graph->aaa, $graph->bbb, $graph->ccc, $graph->ddd, $graph->eee, $graph->fff,
-              $graph->ggg, $graph->hhh, $graph->iii, $graph->jjj, $graph->kkk, $graph->lll]);
-              $chart->dataset('EchoVC Mertics', 'line',  [$graph->aaa1, $graph->bbb1, $graph->ccc1, $graph->ddd1,
+              $chart2->dataset('EchoVC Mertics', 'line',  [$graph->aaa1, $graph->bbb1, $graph->ccc1, $graph->ddd1,
               $graph->eee1, $graph->fff1, $graph->ggg1, $graph->hhh1, $graph->iii1, $graph->jjj1, $graph->kkk1, $graph->lll1])
               ->color("rgb(255, 99, 132)")
               ->backgroundcolor("rgb(255, 199, 231)")
               ->fill(true)
-              ->linetension(0.5)
-              ->dashed([10]);
-              break;
-            case 'area':
-              $chart->title($graph->name, 30, "rgb(255, 99, 132)", true, 'Nunito');
-              $chart->labels([$graph->aaa, $graph->bbb, $graph->ccc, $graph->ddd, $graph->eee, $graph->fff,
-              $graph->ggg, $graph->hhh, $graph->iii, $graph->jjj, $graph->kkk, $graph->lll]);
-              $chart->dataset('EchoVC Mertics', 'area',  [$graph->aaa1, $graph->bbb1, $graph->ccc1, $graph->ddd1,
-              $graph->eee1, $graph->fff1, $graph->ggg1, $graph->hhh1, $graph->iii1, $graph->jjj1, $graph->kkk1, $graph->lll1])
-              ->color($borderColors)
-              ->backgroundcolor($fillColors);
-              break;
-            case 'dot':
-              $chart->title($graph->name, 30, "rgb(255, 99, 132)", true, 'Nunito');
-              $chart->barwidth(0.0);
-              $chart->displaylegend(false);
-              $chart->labels([$graph->aaa, $graph->bbb, $graph->ccc, $graph->ddd, $graph->eee, $graph->fff,
-              $graph->ggg, $graph->hhh, $graph->iii, $graph->jjj, $graph->kkk, $graph->lll]);
-              $chart->dataset('EchoVC Mertics', 'line',  [$graph->aaa1, $graph->bbb1, $graph->ccc1, $graph->ddd1,
-              $graph->eee1, $graph->fff1, $graph->ggg1, $graph->hhh1, $graph->iii1, $graph->jjj1, $graph->kkk1, $graph->lll1])
-              ->color($borderColors)
-              ->backgroundcolor($fillColors)
-                  ->fill(false)
-                  ->linetension(0)
-                  ->dashed([10]);
-              break;
-            case 'geo':
-              $chart->title($graph->name, 30, "rgb(255, 99, 132)", true, 'Nunito');
-              $chart->labels([$graph->aaa, $graph->bbb, $graph->ccc, $graph->ddd, $graph->eee, $graph->fff,
-              $graph->ggg, $graph->hhh, $graph->iii, $graph->jjj, $graph->kkk, $graph->lll]);
-              $chart->dataset('EchoVC Mertics', 'line',  [$graph->aaa1, $graph->bbb1, $graph->ccc1, $graph->ddd1,
-              $graph->eee1, $graph->fff1, $graph->ggg1, $graph->hhh1, $graph->iii1, $graph->jjj1, $graph->kkk1, $graph->lll1])
-              ->color($borderColors)
-              ->backgroundcolor($fillColors);
-              break;
-            default:
-            // code...
-            break;
-          }
-        }
+              ->linetension(0.5);
+            }
       }
 
     // return view('metrics.show')->with('chart', $chart, 'graph', $graph);
     // return $chart->api();
-    return view('metrics.show')->with(compact('chart', 'graphs'));
+    return view('metrics.show')->with(compact('chart', 'chart1', 'chart2', 'graphs'));
     }
 
     /**
@@ -214,35 +172,12 @@ class MetricsController extends Controller
     $graph = new Graph;
     $graph->name =$request->input('name');
     $graph->desc =$request->input('desc');
-    $graph->aaa =$request->input('aaa');
-    $graph->aaa1 =$request->input('aaa1');
-    $graph->bbb =$request->input('bbb');
-    $graph->bbb1 =$request->input('bbb1');
-    $graph->ccc =$request->input('ccc');
-    $graph->ccc1 =$request->input('ccc1');
-    $graph->ddd =$request->input('ddd');
-    $graph->ddd1 =$request->input('ddd1');
-    $graph->eee =$request->input('eee');
-    $graph->eee1 =$request->input('eee1');
-    $graph->fff =$request->input('fff');
-    $graph->fff1 =$request->input('fff1');
-    $graph->ggg =$request->input('ggg');
-    $graph->ggg1 =$request->input('ggg1');
-    $graph->hhh =$request->input('hhh');
-    $graph->hhh1 =$request->input('hhh1');
-    $graph->iii =$request->input('iii');
-    $graph->iii1 =$request->input('iii1');
-    $graph->jjj =$request->input('jjj');
-    $graph->jjj1 =$request->input('jjj1');
-    $graph->kkk =$request->input('kkk');
-    $graph->kkk1 =$request->input('kkk1');
-    $graph->lll =$request->input('lll');
-    $graph->lll1 =$request->input('lll1');
     $graph->percent =$request->input('percent');
     $graph->numb =$request->input('numb');
+    Excel::import(new ImportGraph, request()->file('file'));
     $graph->save();
 
-    return redirect('/metrics/show/bar')->with('success', 'Metrics Successful Created');
+    return redirect('/metrics/show/')->with('success', 'Metrics Successful Created with Excel Sheet');
     }
 
     /**
@@ -254,7 +189,7 @@ class MetricsController extends Controller
     public function show($id)
     {
       $graphs = Graph::all();
-      dd($graphs);
+      // dd($graphs);
       return view('metrics.show')->with('graphs', $graphs);
     }
 
@@ -319,10 +254,27 @@ class MetricsController extends Controller
    /**
    * @return \Illuminate\Support\Collection
    */
-   public function import()
+   public function import(Request $request)
    {
-
        Excel::import(new ImportGraph, request()->file('file'));
-       return redirect('/metrics/show/bar')->with('success', 'Excel Sheet Successful Uploaded');
+       return redirect('/metrics/show/')->with('success', 'Excel Sheet Successful Uploaded');
+
+     //   $this->validate($request, [
+     //     'name' => 'required',
+     //     'desc' => 'required'
+     //   ]);
+     //
+     //
+     // //Create Metrics
+     // $graph = new Graph;
+     // $graph->name =$request->input('name');
+     // $graph->desc =$request->input('desc');
+     // $graph->percent =$request->input('percent');
+     // $graph->numb =$request->input('numb');
+     // // dd($graph->name);
+     // $graph->save();
+     // Excel::import(new ImportGraph, request()->file('file'));
+     //
+     // return redirect('/metrics/show/')->with('success', 'Metrics Successful Created with Excel Sheet');
    }
 }

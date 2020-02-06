@@ -98,18 +98,17 @@
        <label for="stage">Fund Stage</label><br>
        <select class="form-control" name="stage">
                     <option value=""></option>
-                    <option value="First">First</option>
-                    <option value="Second">Second</option>
-                    <option value="Third">Third</option>
+                    <option value="seed">seed</option>
+                    <option value="SeriesA">SeriesA</option>
+                    <option value="SeriesB">SeriesB</option>
                   </select>   </div>
    
     <div class="col-md-6 col-sm-12">
        <label for="status">Investment Status</label><br>
        <select class="form-control" name="status">
                     <option value=""></option>
-                    <option value="First">First</option>
-                    <option value="Second">Second</option>
-                    <option value="Third">Third</option>
+                    <option value="First">open</option>
+                    <option value="Second">closed</option>
                   </select><br>   </div>
    <div class="col-md-6 col-sm-12">
        <label for="lead">Lead</label><br>
