@@ -1,4 +1,4 @@
-@extends('layouts.empty-sidbar')
+@extends('layouts.sidbar')
 
 
 
@@ -54,9 +54,9 @@
                    <p >No files have been uploaded yet</p>
                   {{-- <a class="btn btn-primary" href="/file_upload">Upload file</a> --}}
                   <div class="dropdown">
-	  <button class="btn btn-primary upload-btn text-white  mb-1 dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  <a href="#" class="btn btn-primary upload-btn text-white  mb-1 dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	    Upload File
-	  </button>
+	  </a>
 	  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
 	    <small class="ml-1 text-secondary">Upload a file from</small>
 	    <div class="dropdown-divider"></div>
@@ -129,4 +129,7 @@ $(document).ready(function(){
 </div>
 <!-- Modal HTML -->
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
+
