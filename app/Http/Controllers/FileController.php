@@ -174,9 +174,9 @@ class FileController extends Controller
     }
 
 
-    public function delete(Request $request)
+    public function delete(Request $request, $id)
     {
-        $id =$request->category_id;
+        // $id =$request->category_id;
 
          $document = Efile::where('id',$id)->first();
         //delete the file from the server

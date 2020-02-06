@@ -39,7 +39,7 @@ class Document extends Component
     {
 
 
-    	if(Auth::user()->type == 'client')
+    	if(Auth::user()->permission == 'edit')
     	 {
 
     	 	$this->files = Efile::where('user_id', Auth::id())
@@ -47,7 +47,7 @@ class Document extends Component
             ->paginate(20);
     	 }
 
-    	if(Auth::user()->type == 'echovc'){
+    	if(Auth::user()->permission == 'admin'){
 
     		$this->files = Efile::orderBy('created_at', 'desc')->orWhere('name', 'like', '%' . $this->search . '%')
             ->paginate(20);

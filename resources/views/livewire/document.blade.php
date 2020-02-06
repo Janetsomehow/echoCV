@@ -132,7 +132,9 @@
                   <td class="mobileHide">{{$file->size}}</td>
                   <td class="mobileHide">Aug 19</td>
                   <td>
-                  	<a  onclick="docdelete({{$file->id}})" data-catid={{$file->id}} data-toggle="modal" data-target="#delete" ><img  src="{{ asset('css/icons/trash.svg') }}" style="height: 18px; width: 14px; color:#717171; " /></a></td>
+                  	<a  onclick="docdelete({{$file->id}})" data-catid={{$file->id}} data-toggle="modal" data-target="#delete" ><img  src="{{ asset('css/icons/trash.svg') }}" style="height: 18px; width: 14px; color:#717171; " /></a>
+                    <button id="delete_{{$file->id}}" style="display:none;" wire:click="delete({{$file->id}})"></button>
+                    </td>
                </tr>
                @empty
 
