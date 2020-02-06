@@ -32,6 +32,7 @@ Route::get('/profile', function () { return view('account_settings.profile'); })
 Route::get('/permissions', function () { return view('account_settings.permissions'); });
 Route::get('/sample_reports', function () { return view('reports.sample'); });
 Route::get('/new_user', function () { return view('invites.new_user'); });
+Route::get('/deleteFileModal', function () { return view('inc.deleteFileModal'); });
 
 //close the middileware for client
 // });
