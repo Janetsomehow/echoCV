@@ -2,10 +2,9 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use App\Role;
 // use Hash;
 use Carbon\Carbon;
-
-
 
 class CreateUsersTable extends Migration {
 
