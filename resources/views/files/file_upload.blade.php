@@ -377,7 +377,7 @@ function docdelete(id) {
       // var cat_id = button.data('catid') 
       var cat_id = id;
       
-     console.log(cat_id)
+    // console.log(cat_id)
   //    var modal = $(this)
  //     modal.find('.modal-body #cat_id').val(cat_id);
    
@@ -396,9 +396,11 @@ function docdelete(id) {
   //  document.getElementById("action-button").innerHTML = codeBlock;
      $("#deleteRecord").click(function(){
     var idf = $(this).data("id");
+    //alert(cat_id);
     var token = $(this).data("token");
-    {{--  var id = $(this).data("id");  --}}
-    $("#delete_"+idf).click();
+    
+    $("#delete_"+cat_id).click();
+    console.log(id);
    // $.ajax(
    // {
     //    url: "/delete/file/"+idf,
