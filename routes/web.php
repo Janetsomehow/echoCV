@@ -31,7 +31,7 @@ Route::get('/dashboard1', function () { return view('home.dashboard1'); });
 Route::get('/profile', function () { return view('account_settings.profile'); });
 Route::get('/permissions', function () { return view('account_settings.permissions'); });
 Route::get('/sample_reports', function () { return view('reports.sample'); });
-Route::get('/deleteFileSwal', function () { return view('inc.deleteFileSwal'); });
+Route::get('/new_user', function () { return view('invites.new_user'); });
 
 //close the middileware for client
 // });

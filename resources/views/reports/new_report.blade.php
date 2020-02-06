@@ -6,7 +6,7 @@
       <title>New Report</title>
       <link href="{{ asset('css/contactTable.css') }}" rel="stylesheet">
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
       <!-- Styles -->
       <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
       <link href="{{ asset('css/sample.css') }}" rel="stylesheet">
@@ -30,6 +30,9 @@
   }
   .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
      height: 60vh;
+  }
+  .btn-secondary:hover{
+    color: #000000;
   }
   </style>
   <body>
