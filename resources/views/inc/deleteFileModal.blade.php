@@ -43,7 +43,7 @@
     -->
     <!-- Button trigger modal -->
   <div class="buttons">  
-    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
       Launch delete modal
     </button>
   </div>
@@ -64,7 +64,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal"> Yes, delete update </button>
-        <button type="button" class="btn btn-default btn-test ">No, keep update</button>
+        <button type="button" class="btn btn-default btn-test " class="close" data-dismiss="modal" aria-label="Close">No, keep update</button>
       </div>
     </div>
   </div>
