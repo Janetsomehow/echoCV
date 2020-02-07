@@ -46,7 +46,7 @@
       <hr>
 
       <div class="body">
-        <div class="col-10 row justify-content-center">
+        <div class="col-10 mt-5 pt-5 row justify-content-center">
           <div class="col-5 ml-5  ">
             <div class=" ml-1 mt-3">
               <h4>Coca-Cola</h4>
@@ -70,10 +70,11 @@
                             data: [300000, 370000, 370000, 600000],
                             backgroundColor: [
                               // RGBA(253,6,6,1)
-                                'rgba(256, 006, 006, 1)',
-                                'rgba(256, 006, 006, 1)',
-                                'rgba(256, 006, 006, 1)',
-                                'rgba(256, 006, 006, 1)'
+                                'rgba(122, 239, 31, 1)',
+                                'rgba(122, 239, 31, 1)',
+                                 'rgba(122, 239, 31, 1)',
+                                 'rgba(122, 239, 31, 1)'
+                                 
                                 // 'rgba(256, 46, 36, 1)'
                               
                             ],
@@ -86,10 +87,10 @@
                             label: 'Investment',
                             data: [100000, 400000, 440000, 780000],
                             backgroundColor: [
-                                'rgba(041,047, 089, 1)',
-                                'rgba(041,047, 089, 1)',
-                                'rgba(041,047, 089, 1)',
-                                'rgba(041,047, 089, 1)',
+                                'RGB(25,185,253, 1)',
+                                'RGB(25,185,253, 1)',
+                                'RGB(25,185,253, 1)',
+                                'RGB(25,185,253, 1)',
                               
                             ],
               
@@ -111,7 +112,7 @@
                 </script>
             </div>
           </div>
-          <div class="col-5 ml-5">
+          <div class="col-5 ml-auto" >
             <div class="row ml-1 mt-5">
               <p>TVPI</p>
               <i class="fas fa-chevron-down ml-auto"> </i>
@@ -140,6 +141,41 @@
                 }
               })
               </script>
+          </div>
+          <div class="col-5  mt-5 mr-auto ml-5" >
+            <p> Customer Success</p>
+            <div>
+              <canvas id="barChart" height="400" width="400"> </canvas>
+                <script>
+                  var canvas = document.getElementById("barChart");
+                  var ctx = canvas.getContext('2d');
+
+                  var data = {
+                        datasets: [
+                          {
+                              fill: true,
+                              backgroundColor: [
+                                'RGB(25,185,253)'],
+                              data: [100],
+                              label: '100%',
+                              borderColor:	['RGB(25,185,253)'],
+                              borderWidth: [2]
+                          }
+                      ]
+                  };
+                  var options = {
+                        rotation: -0.7 * Math.PI
+                  };
+
+
+                  // Chart declaration:
+                  var myBarChart = new Chart(ctx, {
+                      type: 'doughnut',
+                      data: data,
+                      options: options
+                  });
+                </script>
+            </div>
           </div>
         </div>
           </div>
