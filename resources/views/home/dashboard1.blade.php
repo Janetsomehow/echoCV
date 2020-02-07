@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
       <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
       <!-- Styles -->
-      <link href="{{ asset('css/report.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
       <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
       
@@ -27,6 +27,10 @@
       @include('layouts.sidebar')
     </div>
     
+    <div class="">
+      <button class="btn btn-primary"> Add Chart</button>
+      <button class="btn btn-primary"> Share</button>
+    </div>
   
 </body>
 </html>
