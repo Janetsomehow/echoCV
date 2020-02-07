@@ -1,41 +1,26 @@
-.heading{
-    margin-left: 2.9rem;
-    width: 85vw;
-    margin-top: .9rem;
+.btn-dashboard{
+    background: linear-gradient(359.57deg, #F5F6F9 10.29%, #FFFFFF 99.27%);
+/* secondary button */
+
+    border: 1px solid #D5DCE6;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
-.heading p {
-    font-size: 1.3em;
+.activate{
+    border-bottom: 2px solid #19B9FD ;
 }
 
-.select-dash{
-    width: 95vw;
-    margin-left: .5em;
+.wholeContent{
+    width: 85.5%;
 }
 
-.quarterly {
-    width: 86vw;
-    margin-left: 1.5rem;
+hr{
+    position: relative;
+    top: 4px;
 }
 
-.btn-collapse{
- font-size: 1em;   
-}
-
-@media  (min-width: 768px){
-    .heading{
-        display:none;
-    }
-    .selecteer{
-        display: none;
-    }
-    .select-dash{
-        clear: both;
-        width: 100% auto;
-        /* margin-top: 1em; */
-    }
-    .headMobile{
-        display: none;
-    }
-
+.list-inline-item{
+    position: relative;
+    top: 20px;
 }
