@@ -4,8 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 // use Hash;
 use Carbon\Carbon;
-
-
+// use Avatar;
+// use Storage;
 
 class CreateUsersTable extends Migration {
 

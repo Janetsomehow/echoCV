@@ -3,6 +3,25 @@
 <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <style type="text/css" media="screen">
  /* @import('https://fonts.googleapis.com/css?family=Nunito:400,600'); */
+     .buttons{
+      display: flex;
+      justify-content: center;
+      margin-top: 20%;
+    }
+    .btn-secondary{
+      background: linear-gradient(180deg, #D54444 0%, #AD0C0C 100%) !important;
+      border: none !important;
+
+    }
+    .modal-footer.delete{
+      border-top: none !important;
+    }
+    .modal-header.delete{
+      border-bottom: none !important;
+    }
+    .btn-test:hover{
+      background: #DDDDDD !important;
+    }
     .selected-text{
         font-family: 'Nunito', sans-serif;
         font-weight: 300;
@@ -198,7 +217,34 @@
 
 
 <!-- Modal -->
-<div class="modal modal-danger fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+<!-- Modal -->
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete update?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> 
+          Are you sure you want to delete this update?
+        </p>
+      </div>
+      <div class="modal-footer" id="action-button">
+      <button  type="button"  data-token="{{ csrf_token() }}" id="deleteRecord" class="btn btn-secondary deleteRecord" data-dismiss="modal"> Yes, delete file </button>
+      <button type="button" class="btn btn-default btn-test " class="close" data-dismiss="modal" aria-label="Close">No, keep file</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{{--  <div class="modal modal-danger fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -222,13 +268,16 @@
       </form>
     </div>
   </div>
-</div>
+</div>  --}}
 
 @stop
 
 
 @section('script')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+{{--  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>  --}}
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
 
 <script>
 $(document).ready(function(){
@@ -237,41 +286,6 @@ $(document).ready(function(){
     });
 });
 
-// function docdelete() {
-//   event.preventDefault();
-//   var delete_id = $(this).attr('data-value');
-//   // $('button[name="delete_dividend"]').val(delete_id);
-
-//   bootbox.confirm({
-//     title: "Delete Document?",
-//     message: "Are you sure? This cannot be undone.",
-//      centerVertical: true,
-//       className: 'rubberBand animated',
-//     buttons: {
-//       confirm: {
-//             label: '<i class="fa fa-check"></i> Confirm',
-//              className: 'btn-danger'
-//         },
-//         cancel: {
-//             label: '<i class="fa fa-times"></i> Cancel',
-//              className: 'btn-default'
-//         }
-        
-//     },
-//     callback: function (result) {
-//         // console.log('This was logged in the callback: ' + result);
-//         if (result) {
-//           console.log("user confirmed");
-//         } else {
-//             console.log("user declined");
-//         }
-//     }
-// });
-
-   
-// }
-
-// onclick="confirm('Are you sure?') || event.stopImmediatePropagation()"
 
 //select all checkboxes
 $("#select_all").change(function(){  //"select all" change 
@@ -359,13 +373,64 @@ $('.checkbox').change(function(){ //".checkbox" change
 
 function docdelete(id) {
  $('#delete').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget) 
+     // var button = $(event.relatedTarget) 
       // var cat_id = button.data('catid') 
       var cat_id = id;
-      console.log(cat_id)
-      var modal = $(this)
-      modal.find('.modal-body #cat_id').val(cat_id);
-})
+      
+    // console.log(cat_id)
+  //    var modal = $(this)
+ //     modal.find('.modal-body #cat_id').val(cat_id);
+   
+      var target = document.getElementById("deleteRecord");
+      var att  = document.createAttribute("data-id");
+      att.value = cat_id;                           // Set the value of the class attribute
+      target.setAttributeNode(att);    
+        
+
+// Storing HTML code block in a variable
+  //  var codeBlock = ' <button  type="button" data-token="{{ csrf_token() }}" id="deleteRecord"' +' wire:click="delete('+ cat_id + ')" class="btn btn-secondary deleteRecord" data-dismiss="modal"> Yes, delete file </button>' +
+                     
+  //                      '<button type="button" class="btn btn-default btn-test " class="close" data-dismiss="modal" aria-label="Close">No, keep file</button>';
+    
+    // Inserting the code block to wrapper element
+  //  document.getElementById("action-button").innerHTML = codeBlock;
+     $("#deleteRecord").click(function(){
+    var idf = $(this).data("id");
+    //alert(cat_id);
+    var token = $(this).data("token");
+    
+    $("#delete_"+cat_id).click();
+    console.log(id);
+   // $.ajax(
+   // {
+    //    url: "/delete/file/"+idf,
+  //      type: 'post',
+  //      data: {
+   //         "id": id,
+   //         "_token": token,
+   //     },
+    //    success: function (){
+    //        console.log("it Works");
+   //     }
+  //  }).done((response)=>{ 
+
+  //      $('body').html(response);
+
+   // }).fail((message)=>{
+   //     {{--  $('#likeCount_'+id).html(response);  --}}
+  //      Toastify({
+  //          text: "An error occur",
+   //         duration: 3000,                                           
+  //          gravity: "top", // `top` or `bottom`
+  //          position: 'left', // `left`, `center` or `right`
+  //          backgroundColor: "#FF8500",
+  //          stopOnFocus: true, // Prevents dismissing of toast on hover
+  //          onClick: function(){} // Callback after click
+  //      }).showToast();
+ //   });
+   
+});
+});
 }
 </script>
 @stop
