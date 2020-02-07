@@ -35,6 +35,12 @@
         <button class="btn btn-primary">Add Chart </button>
         <button class="btn btn-dashboard ml-2">Share </button>
       </div>
+
+      <div class="mobile-dashboard-header not-desktop-content row mt-4 ml-5 d-flex justify-content-between">
+        <h3> Dashboard</h3>
+        <p class=""><a href="" class="text-info "> Go Back</a></p>
+      </div>
+
       <div class="dashboards mt-4 ml-2 ">
         
           <ul class="row list-unstyled ">
@@ -43,11 +49,28 @@
             <li class="ml-3 list-inline-item"> <i class="fas fa-plus"></i> </li>
           </ul>
       </div>
+
+      <div class="mobile-dashboard-body  mt-3 row ">
+        <div class="btn-group ml-4">
+          <button type="button" class="btn  btn-share">Dashboard 1</button>
+          <button type="button" class="btn btn-share dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+            
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+            <a class="dropdown-item" href="#">Dashboard 2</a>
+           
+          </div>
+        </div>
+        
+          <button class="btn btn-primary ml-5 "> Add Chart </button>
+          <button class="btn btn-share ml-2"> <i class="fas fa-share-alt"></i></button>
+      </div>
+
       <hr>
 
       <div class="body">
-        <div class="col-10 mt-5 pt-5 row justify-content-center">
-          <div class="col-5 ml-5  ">
+        <div class="col-md-10 col-sm-12 mt-5 pt-5 row justify-content-center">
+          <div class="col-md-5 col-sm-6 ml-5  ">
             <div class=" ml-1 mt-3">
               <h4>Coca-Cola</h4>
               <div class="row " style="margin-left: .1em">
@@ -112,7 +135,8 @@
                 </script>
             </div>
           </div>
-          <div class="col-5 ml-auto" >
+
+          <div class="col-md-5 col-sm-6 tvpi  ml-auto" >
             <div class="row ml-1 mt-5">
               <p>TVPI</p>
               <i class="fas fa-chevron-down ml-auto"> </i>
@@ -142,7 +166,7 @@
               })
               </script>
           </div>
-          <div class="col-5  mt-5 mr-auto ml-5" >
+          <div class="col-5 customer  mt-5 mr-auto ml-5" >
             <p> Customer Success</p>
             <div>
               <canvas id="barChart" height="400" width="400"> </canvas>
