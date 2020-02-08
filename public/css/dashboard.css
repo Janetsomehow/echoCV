@@ -1,0 +1,41 @@
+.heading{
+    margin-left: 2.9rem;
+    width: 85vw;
+    margin-top: .9rem;
+}
+
+.heading p {
+    font-size: 1.3em;
+}
+
+.select-dash{
+    width: 95vw;
+    margin-left: .5em;
+}
+
+.quarterly {
+    width: 86vw;
+    margin-left: 1.5rem;
+}
+
+.btn-collapse{
+ font-size: 1em;   
+}
+
+@media  (min-width: 768px){
+    .heading{
+        display:none;
+    }
+    .selecteer{
+        display: none;
+    }
+    .select-dash{
+        clear: both;
+        width: 100% auto;
+        /* margin-top: 1em; */
+    }
+    .headMobile{
+        display: none;
+    }
+
+}

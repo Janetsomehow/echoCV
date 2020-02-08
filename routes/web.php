@@ -31,6 +31,8 @@ Route::get('/dashboard1', function () { return view('home.dashboard1'); });
 Route::get('/profile', function () { return view('account_settings.profile'); });
 Route::get('/permissions', function () { return view('account_settings.permissions'); });
 Route::get('/sample_reports', function () { return view('reports.sample'); });
+Route::get('/new_user', function () { return view('invites.new_user'); });
+Route::get('/deleteFileModal', function () { return view('inc.deleteFileModal'); });
 
 //close the middileware for client
 // });
@@ -61,7 +63,7 @@ Route::get('/real_report', 'ReportsController@real');
 // Route::post('/profile', 'ProfileController@profileupdate');
 Route::get('/files', 'FileController@index')->name('file.index');
 Route::post('/file/upload', 'FileController@store')->name('file.upload');
-Route::delete('/delete/file/', 'FileController@delete')->name('file.delete');
+Route::post('/delete/file/{id}', 'FileController@delete')->name('file.delete');
 
 
 
