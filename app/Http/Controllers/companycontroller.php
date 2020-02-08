@@ -37,9 +37,13 @@ class CompanyController extends Controller
      public function create()
      {
          $company= Company::all();
+         $contacts = Contact::all()->where('company', $company->id
+         )->pluck('fname','lname', 'id');
+
 
          return view('portfolio_company.add_company',[
             'company' => $company,
+            'contacts' => $contacts,
          ]);
      }
 
