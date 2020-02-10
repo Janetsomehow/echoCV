@@ -83,11 +83,14 @@
                 <div>
                   <label for="contact_id" class="mt-4">Primary Contact</label>
                   <select class="form-control" name="contact_id">
+                  @if (count($contacts) > 0) 
                   <option selected>Select Contact</option>
+                  
                    @foreach ($contacts as $contact)
-                    <option value="{{$contact->id}}">$contact->fname $contact->lname
+                    <option value="{{ $contact->id }}">{{$contact->fname}} {{$contact->lname}}
                     </option>
                     @endforeach
+                    @endif
                   </select>
                 </div>
 

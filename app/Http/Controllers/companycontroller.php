@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Company;
+use App\Contact;
 use Illuminate\Http\Request;
 use Auth;
 use Redirect;
@@ -37,14 +38,14 @@ class CompanyController extends Controller
      public function create()
      {
          $company= Company::all();
-         $contacts = Contact::all()->where('company', $company->id
-         )->pluck('fname','lname', 'id');
-
-
-         return view('portfolio_company.add_company',[
+         $contacts = Contact::all();
+         
+        return view('portfolio_company.add_company', [
             'company' => $company,
             'contacts' => $contacts,
-         ]);
+        ]);
+
+         
      }
 
     /**
@@ -72,7 +73,7 @@ class CompanyController extends Controller
         'c_name'=>$request->get('c_name'),
         'website'=>$request->get('website'),
         'country'=>$request->get('country'),
-        'contact_id'=>$request->get('contact_id'),
+        'contact_id'=>1,
         'status'=>$request->get('status'),
         'stage'=>$request->get('stage'),
         'lead'=>$request->get('lead'),

@@ -57,7 +57,7 @@ class ContactsController extends Controller
         'lname' => 'required',
         'email' => 'required',
         'phoneNo' => 'required',
-        'company_id' => 'required',
+        'company' => 'required',
         'title' => 'required',
         'tags' => 'required'
       ]);
@@ -69,7 +69,7 @@ class ContactsController extends Controller
     $contact->lname =$request->input('lname');
     $contact->email =$request->input('email');
     $contact->phoneNo =$request->input('phoneNo');
-    $contact->company =$request->input('company_id');
+    $contact->company =$request->input('company');
     $contact->title =$request->input('title');
     $contact->tags =$request->input('tags');
     // $contact->user_id = auth()->user()->id;
@@ -132,7 +132,7 @@ class ContactsController extends Controller
       $contact->lname =$request->input('lname');
       $contact->email =$request->input('email');
       $contact->phoneNo =$request->input('phoneNo');
-      $contact->company =$request->input('company_id');
+      $contact->company =$request->input('company');
       $contact->title =$request->input('title');
       $contact->tags =$request->input('tags');
       // $contact->user_id = auth()->user()->id;
