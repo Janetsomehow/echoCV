@@ -12,11 +12,12 @@ class Company extends Model
     public $timestamps = true;
 
 
-    protected $fillable =[
+    protected $fillable = [
         'c_name',
         'website',
         'country',
-        'pcontact',
+        'user_id',
+        'contact_id',
         'tags',
         'stage',
         'status',
@@ -27,7 +28,7 @@ class Company extends Model
 
 
 
-     public function user()
+    public function user()
     {
         return $this->belongsTo('User');
     }
@@ -42,6 +43,4 @@ class Company extends Model
     {
         return $this->hasOne(Report::class);
     }
-
 }
-
