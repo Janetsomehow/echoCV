@@ -3,7 +3,7 @@
  @section('content')
  <style> 
     .page-wrapper{
-      position: absolute !important;
+      position: absolute;
       right: 35% !important;
     }
     h4{
@@ -15,7 +15,7 @@
     }
     .form-wrap{
      position: relative;
-     left: 33%;
+     /*left: 33%;*/
 
     }
     @media (max-width: 425px){
@@ -36,7 +36,7 @@
     }
 
  </style>
- <div class="page-wrapper">
+ <div class="">
 <div class="">
 
 <div class="p-2"><h4>Add Company</h4></div>
@@ -83,11 +83,14 @@
                 <div>
                   <label for="contact_id" class="mt-4">Primary Contact</label>
                   <select class="form-control" name="contact_id">
+                  @if (count($contacts) > 0) 
                   <option selected>Select Contact</option>
-                    <option value=""></option>
-                    <option value="First">First</option>
-                    <option value="Second">Second</option>
-                    <option value="Third">Third</option>
+                  
+                   @foreach ($contacts as $contact)
+                    <option value="{{ $contact->id }}">{{$contact->fname}} {{$contact->lname}}
+                    </option>
+                    @endforeach
+                    @endif
                   </select>
                 </div>
 
@@ -107,8 +110,8 @@
        <label for="status">Investment Status</label><br>
        <select class="form-control" name="status">
                     <option value=""></option>
-                    <option value="First">open</option>
-                    <option value="Second">closed</option>
+                    <option value="open">open</option>
+                    <option value="closed">closed</option>
                   </select><br>   </div>
    <div class="col-md-6 col-sm-12">
        <label for="lead">Lead</label><br>
@@ -144,5 +147,6 @@ $.ajax({
     }).fail(err => {
         console.log(err)
     })
+
     </script>
 @stop

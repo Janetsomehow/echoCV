@@ -70,7 +70,7 @@
                     <img src="{{ asset('css/icons/sony.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> Sony </p>
-                        <p class="float-right" style="color:  #7AEF1F"> Open </p>
+                        <p class="float-right" style="color:  #7AEF1F" onclick="myFunction(this)"> Open </p>
                    </div>  
                    
                    <p> Lead: Maria</p>
@@ -82,7 +82,7 @@
                     <img src="{{ asset('css/icons/netflix.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left">  Netlix </p>
-                        <p class="float-right" style="color:  #7AEF1F"> Open </p>
+                        <p class="float-right" style="color:  #7AEF1F" onclick="myFunction(this)"> Open </p>
                    </div>  
                    
                    <p> Lead: Matthew</p>
@@ -94,7 +94,7 @@
                     <img src="{{ asset('css/icons/macd.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> McDonald's </p>
-                        <p class="float-right" style="color:  #7AEF1F"> Open </p>
+                        <p class="float-right" style="color:  #7AEF1F" onclick="myFunction(this)"> Open </p>
                    </div>  
                    
                    <p> Lead: Matthew</p>
@@ -106,7 +106,7 @@
                     <img src="{{ asset('css/icons/ninten.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> Nintendo </p>
-                        <p class="float-right" style="color:  #7AEF1F"> Open </p>
+                        <p class="float-right" style="color:  #7AEF1F" onclick="myFunction(this)"> Open </p>
                    </div>  
                    
                    <p> Lead: Mark</p>
@@ -118,7 +118,7 @@
                     <img src="{{ asset('css/icons/master.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> MasterCard </p>
-                        <p class="float-right" style="color:  #7AEF1F"> Open </p>
+                        <p class="float-right" style="color:  #7AEF1F" onclick="myFunction(this)"> Open </p>
                    </div>  
                    
                    <p> Lead: Fisayo</p>
@@ -130,7 +130,7 @@
                     <img src="{{ asset('css/icons/electric.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> General Electric </p>
-                        <p class="float-right" style="color:  #7AEF1F"> Open </p>
+                        <p class="float-right" style="color:  #7AEF1F" onclick="myFunction(this)"> Open </p>
                    </div>  
                    
                    <p> Lead: Matthew</p>
@@ -142,7 +142,7 @@
                     <img src="{{ asset('css/icons/pizza.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> Pizza Hut </p>
-                        <p class="float-right" style="color:  #7AEF1F"> Open </p>
+                        <p class="float-right" style="color:  #7AEF1F" onclick="myFunction(this)"> Open </p>
                    </div>  
                    
                    <p> Lead: Matthew</p>
@@ -154,7 +154,7 @@
                     <img src="{{ asset('css/icons/mit.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> Mitsubishi </p>
-                        <p class="float-right" style="color:  #7AEF1F"> Open </p>
+                        <p class="float-right" style="color:  #7AEF1F" onclick="myFunction(this)"> Open </p>
                    </div>  
                    
                    <p> Lead: Damilola</p>
@@ -166,7 +166,7 @@
                     <img src="{{ asset('css/icons/life.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"> LifeBank </p>
-                        <p class="float-right" style="color:  #7AEF1F"> Open </p>
+                        <p class="float-right" style="color:  #7AEF1F" onclick="myFunction(this)"> Open </p>
                    </div>  
                    
                    <p> Lead: Tsendai</p>
@@ -178,7 +178,7 @@
                     <img src="{{ asset('css/icons/ibm.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
                         <p class="float-left"><I></I></p>
-                        <p class="float-right" style="color:  #7AEF1F"> Open </p>
+                        <p class="float-right" style="color:  #7AEF1F" onclick="myFunction(this)"> Open </p>
                    </div>  
                    
                    <p> Lead: Olutosin</p>
@@ -190,6 +190,25 @@
             
         </div>
     </section>
+    <script>
+function myFunction(evt) {
+  // evt.innerHTML = 'Closed';
+    //evt.style.color="red";
+    if (evt.innerHTML === 'Closed') {
+        
+   evt.style.color = "red";
+}
+   else if
+    (evt.innerHTML === 'open'){
+    evt.style.color = "green";
+
+        }
+else{
+    return false;
+}
+
+}
+</script>
 
     </body>
 </html>
