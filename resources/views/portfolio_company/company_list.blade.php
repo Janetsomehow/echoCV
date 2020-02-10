@@ -191,17 +191,22 @@
         </div>
     </section>
     <script>
-function myFunction() {
-    if (evt.innerHTML == 'Closed') {
+function myFunction(evt) {
+  // evt.innerHTML = 'Closed';
+    //evt.style.color="red";
+    if (evt.innerHTML === 'Closed') {
         
-    evt.style.color = "red";
-
-   else {
+   evt.style.color = "red";
+}
+   else if
+    (evt.innerHTML === 'open'){
     evt.style.color = "green";
 
         }
+else{
+    return false;
+}
 
-    }
 }
 </script>
 
