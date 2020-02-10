@@ -32,9 +32,32 @@
     
     <main class="wholeContent mt-2  "> 
       <div class="dashboard-header float-right" >  
-        <button class="btn btn-primary">Add Chart </button>
-        <button class="btn btn-dashboard ml-2">Share </button>
+        <a href="/add_chart" class="btn btn-primary">Add Chart </a>
+        <button type="button" class="btn btn-dashboard ml-2" data-toggle="modal" data-target="#exampleModal">Share </button>
       </div>
+
+      <!-- Share modal -->
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Share with others?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="text" class="form-control" placeholder="Enter name or email address">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-data" data-dismiss="modal"> Share </button>
+              <button type="button" class="btn btn-default btn-test "  style="color: #333333" class="close" data-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of share modal -->
 
       <div class="mobile-dashboard-header not-desktop-content row mt-4 ml-5 d-flex justify-content-between">
         <h3> Dashboard</h3>
