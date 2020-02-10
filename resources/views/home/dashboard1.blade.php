@@ -63,7 +63,7 @@
         </div>
         
           <button class="btn btn-primary ml-5 "> Add Chart </button>
-          <button class="btn btn-share ml-2"> <i class="fas fa-share-alt"></i></button>
+          <button class="btn btn-share ml-1"> <i class="fas fa-share-alt"></i></button>
       </div>
 
       <hr>
