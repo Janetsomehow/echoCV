@@ -35,6 +35,8 @@ Route::get('/permissions', function () { return view('account_settings.permissio
 Route::get('/sample_reports', function () { return view('reports.sample'); });
 Route::get('/new_user', function () { return view('invites.new_user'); });
 Route::get('/deleteFileModal', function () { return view('inc.deleteFileModal'); });
+Route::get('/email_invite', function () { return view('email.email_invite'); });
+Route::get('/investor_update', function () { return view('email.investor_update'); });
 
 //close the middileware for client
 // });
