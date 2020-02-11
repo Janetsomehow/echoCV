@@ -42,6 +42,11 @@
         border: thick solid  #FFFFFF; 
         height: 100vh;
     }
+
+    .add-header a:hover{
+        opacity: 0.6;
+        padding-left: 5px;
+    }
 </style>
 <body>
     <div class="wrapper">

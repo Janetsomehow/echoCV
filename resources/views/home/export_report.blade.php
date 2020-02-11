@@ -37,6 +37,12 @@
         background: #EEEEEE;
     }
 
+    .side-section{
+        box-shadow: -2px 0px 4px rgba(0, 0, 0, 0.15);
+        border: thick solid  #FFFFFF; 
+        height: 100vh;
+    }
+
     .add-header a:hover{
         opacity: 0.6;
         padding-left: 5px;
