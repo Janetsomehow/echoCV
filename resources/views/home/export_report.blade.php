@@ -37,11 +37,11 @@
         background: #EEEEEE;
     }
 
-    .side-section{
-        box-shadow: -2px 0px 4px rgba(0, 0, 0, 0.15);
-        border: thick solid  #FFFFFF; 
-        height: 100vh;
+    .add-header a:hover{
+        opacity: 0.6;
+        padding-left: 5px;
     }
+   
 </style>
 <body>
     <div class="wrapper">
@@ -122,7 +122,7 @@
                 </div>
             </div>
             {{-- <div class="verticalLine"></div>             --}}
-            <div class="col-5 ml-n3 pl-2 m-3 pt-4 mt-n2 side-section" style="">
+            <div class="col-5 ml-n3 pl-2 m-3 pt-4 mt-n2" style="border: thick solid  #FFFFFF; height: 100vh">
                 <div class="add-header " >  
                     <a href="/add_chart" class="exact-class" >Metric </a>
                     <a href="/export_report" class="ml-3" >Export </a>
@@ -137,70 +137,41 @@
                 <div class="form mt-4">
                     <form action="" class="form-group">
                         <div class="form-group">
-                            <label for=""> Chart title</label>
-                            <input type="text" placeholder="Sales and Exit" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for=""> Chart title</label>
-                            <select name="" id="" class="form-control">
-                                <option value=""> Column</option>
-                                <option value=""> Bar</option>
-                                <option value=""> Funnel</option>
-                                <option value=""> Pie</option>
-                                <option value=""> Spline</option>
+                            <label for="">Size</label>
+                            <select name="" id="" class="form-control mt-n2">
+                                <option value=""> Powerpoint (16:1) </option>
+                                <option value=""> Standard (600 x 400) </option>
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <div class="row ml-1 ">
-                                <p class=""> Metric</p>
-                                <p class="ml-auto mr-3 text-info">New metric</p>
-                            </div>
-                            <select name="" id="" class="form-control mt-n3" >
-                                <option value="" > Search available metrics </option>
-                            </select>
-                        </div>
-{{-- 
-                        <div class="card text-center">
-                            <div class="card-header">
-                              <ul class="nav">
-                                <li class="nav-item">
-                                  <a class="nav-link active" href="#">Active</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#">Link</a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="card-body text-left">
-                                <p> Investment KPI</p>
-                            </div>
-                        </div> --}}
+                        <p class="mt-4"> Format</p>
+                        <div class="form-check mt-n2">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">
+                              Microsoft Excel (.xlxs)
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                              PNG
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+                            <label class="form-check-label" for="exampleRadios3">
+                              PDF
+                            </label>
+                          </div>
 
-                        <div class="card" style="background:  #EEEEEE;">
-                            <div class="card-header ">
-                                <div class="d-flex justify-content-end">
-                                    <i class="fas fa-cog"></i>
-                                    <i class="fas fa-times ml-2"></i>
-                                </div>
-                            </div>
-                            <div class="card-body mt-n4">
-                              Investment KPI
-                            </div>
-                        </div>
+                          <div class="form-check mt-4">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Save to Google drive as CSV file
+                            </label>
+                          </div>
 
-                        <div class="card mt-3" style="background:  #EEEEEE;">
-                            <div class="card-header ">
-                                <div class="d-flex justify-content-end">
-                                    <i class="fas fa-cog"></i>
-                                    <i class="fas fa-times ml-2"></i>
-                                </div>
-                            </div>
-                            <div class="card-body mt-n4">
-                              Exit KPI
-                            </div>
-                        </div>
+                          <button class="btn btn-dashboard mt-4 "> Export</button>
                     </form>
                 </div>
             </div>
