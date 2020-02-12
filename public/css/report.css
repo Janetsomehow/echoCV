@@ -452,6 +452,13 @@ div.custom {
   padding:1.5rem!important;
 }
 
+.sheetsTop {
+  position: absolute;
+  margin-top: 9rem;
+  margin-left: 1.2rem;
+  cursor: pointer;
+}
+
 
 
 /* ============================Table ========================*/
@@ -719,6 +726,7 @@ tbody {
 .conEmailPhone {
   color: #19B9FD;
 }
+
 
 /* For modal */
   .modal-backdrop
