@@ -69,7 +69,7 @@
                 <div class="card col-md-3 col-sm-6" >
                     <img src="{{ asset('css/icons/sony.png') }}" class="card-img-top mt-3" alt="...">
                    <div class="mt-2">
-                        <p class="float-left"> Sony </p>
+                        <p class="float-left"> {{$c_name}} </p>
                         <p class="float-right" style="color:  #7AEF1F" onclick="myFunction(this)"> Open </p>
                    </div>  
                    
@@ -194,12 +194,12 @@
 function myFunction(evt) {
   // evt.innerHTML = 'Closed';
     //evt.style.color="red";
-    if (evt.innerHTML === 'Closed') {
+    if (evt.target.innerHTML === 'Closed') {
         
    evt.style.color = "red";
 }
    else if
-    (evt.innerHTML === 'open'){
+    (evt.target.innerHTML === 'open')
     evt.style.color = "green";
 
         }
