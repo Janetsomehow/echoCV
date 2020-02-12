@@ -81,6 +81,9 @@
                   .catch( error => {
                           console.error( error );
                   } );
+                  image: {
+                      toolbar: [ 'imageTextAlternative' ]
+                  }
                       
                  
                 const textRequest = document.getElementById('textRequest') 
