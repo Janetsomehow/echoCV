@@ -27,7 +27,7 @@
       <main class="wholeContent">
         <section class="header searchContact">
           <div class="rep">Reports</div>
-          <a href="/new_report" class="btn btn-primary searchContact repTopBtn">New Report</a>
+          <a href="/reports/create" class="btn btn-primary searchContact repTopBtn">New Report</a>
         </section>
 
         <section class="message">
@@ -49,7 +49,7 @@
                 <img src="{{ asset('css/icons/repSch1.svg') }}">SCHEDULED</a>
             </li>
             <li role="presentation">
-              <a class="repTitle" href="/new_report">
+              <a class="repTitle" href="/draft_report">
                 <img src="{{ asset('css/icons/repDra.svg') }}">DRAFT</a>
             </li>
           </ul>
@@ -63,7 +63,7 @@
                 <a class="dropdown-item repTitle" href="/reports">ALL</a>
                   <a class="dropdown-item repTitle" href="/sent_report">SENT</a>
                   <a class="dropdown-item repTitle" href="/received_report">RECEIVED</a>
-                  <a class="dropdown-item repTitle" href="#">DRAFT</a>
+                  <a class="dropdown-item repTitle" href="/draft_report">DRAFT</a>
                 </div>
               </li>
             </ul>
