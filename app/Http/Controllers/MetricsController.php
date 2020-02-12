@@ -167,7 +167,6 @@ class MetricsController extends Controller
         'desc' => 'required'
       ]);
 
-
     //Create Metrics
     $graph = new Graph;
     $graph->name =$request->input('name');
@@ -277,4 +276,25 @@ class MetricsController extends Controller
      //
      // return redirect('/metrics/show/')->with('success', 'Metrics Successful Created with Excel Sheet');
    }
+
+   public function sheets()
+   {
+       return view('metrics.sheets');
+   }
+
+   public function spreadsheets()
+   {
+       return view('metrics.spreadsheets');
+   }
+
+   public function kpi()
+   {
+       return view('metrics.kpi');
+   }
+
+   public function kpis()
+   {
+       return view('metrics.kpi_value');
+   }
+
 }
