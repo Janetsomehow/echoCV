@@ -1,41 +1,112 @@
-.heading{
-    margin-left: 2.9rem;
-    width: 85vw;
-    margin-top: .9rem;
+.btn-dashboard{
+    background: linear-gradient(359.57deg, #F5F6F9 10.29%, #FFFFFF 99.27%);
+/* secondary button */
+
+    border: 1px solid #D5DCE6;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
-.heading p {
-    font-size: 1.3em;
+.activate{
+    border-bottom: 2px solid #19B9FD ;
 }
 
-.select-dash{
-    width: 95vw;
-    margin-left: .5em;
+.wholeContent{
+    width: 85.5%;
 }
 
-.quarterly {
-    width: 86vw;
-    margin-left: 1.5rem;
+hr{
+    position: relative;
+    top: 4px;
 }
 
-.btn-collapse{
- font-size: 1em;   
+.list-inline-item{
+    position: relative;
+    top: 20px;
+}
+.mobile-dashboard-header{
+    visibility: hidden;
 }
 
-@media  (min-width: 768px){
-    .heading{
-        display:none;
+.dashboards{
+    margin-left: .5em !important;
+    margin-top: -2.95em !important;
+}
+
+.modal-footer{
+    border-top: none !important;
+  }
+  .modal-header{
+    border-bottom: none !important;
+  }
+  .verticalLine {
+    border-left: thick solid #f8f8f8;
+    height: 100vh;
+    box-shadow: -2px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 4px 4px 0px;
+  }
+
+  .btn-data{
+    background: #CCCCCC;
+    border-radius: 4px;
+    color: #898989;
+  }
+
+.mobile-dashboard-body{
+    display: none;
+    margin-top: 0px !important;
+}
+
+@media (max-width: 425px){
+    .body{
+        width:100%;
     }
-    .selecteer{
+
+    .mobile-dashboard-header{
+        visibility: visible;
+    }
+
+    .mobile-dashboard-body{
+        display: block;
+    }
+
+    .customer{
         display: none;
     }
-    .select-dash{
-        clear: both;
-        width: 100% auto;
-        /* margin-top: 1em; */
-    }
-    .headMobile{
-        display: none;
+
+    .tvpi{
+        width: 100%;
+        margin-left: 4em !important;
+        margin-bottom: 8em;
     }
 
+    .dashboard-header{
+        display: none;
+    }
+    h3{
+        font-size: 2em !important;
+        margin-top: -.1em;
+    }
+
+    p > a.text-info{
+        font-size: 1.2em !important;
+    }
+    .dashboards{
+        display: none;
+    }
+    .btn-share{
+        background: linear-gradient(359.33deg, #F5F6F9 10.29%, #FFFFFF 99.27%);
+/* secondary button */
+
+        border: 1px solid #D5DCE6;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+    .wholeContent{
+        width: 90% !important;
+    }
+
+    hr{
+        width: 120%;
+    }
 }

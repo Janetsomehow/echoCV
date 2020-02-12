@@ -26,10 +26,14 @@ Route::get('/dashboard', function () { return view('home.dashboard'); });
 Route::get('/new_company', function () { return view('portfolio_company.new_company'); });
 Route::get('/add_company', function () { return view('portfolio_company.add_company'); });
 Route::get('/dashboard1', function () { return view('home.dashboard1'); });
+Route::get('/add_chart', function () { return view('home.add_chart'); });
+Route::get('/export_report', function () { return view('home.export_report'); });
 Route::get('/profile', function () { return view('account_settings.profile'); });
 Route::get('/permissions', function () { return view('account_settings.permissions'); });
 Route::get('/new_user', function () { return view('invites.new_user'); });
 Route::get('/deleteFileModal', function () { return view('inc.deleteFileModal'); });
+Route::get('/email_invite', function () { return view('email.email_invite'); });
+Route::get('/investor_update', function () { return view('email.investor_update'); });
 
 //close the middileware for client
 // });

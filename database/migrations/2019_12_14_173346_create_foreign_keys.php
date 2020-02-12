@@ -20,7 +20,7 @@ class CreateForeignKeys extends Migration {
 						->onUpdate('restrict');
 		});
 		Schema::table('companies', function(Blueprint $table) {
-			$table->foreign('contact_id')->references('id')->on('users')
+			$table->foreign('contact_id')->references('id')->on('users') //wrong
 						->onDelete('restrict')
 						->onUpdate('restrict');
 		});
