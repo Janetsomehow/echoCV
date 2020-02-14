@@ -63,7 +63,10 @@
                   </ul>   
                   <div class="row toggle" style="">
                     <p class="other">Closed</p>
-                    <i class="fas other fa-toggle-on toggler" style=""></i>
+                    <label class="switch mt-1 ml-2">
+                      <input type="checkbox" checked>
+                      <span class="slider round"></span>
+                    </label>
                     <p class="open" style="color: #7AEF1F;">Open</p>
                 </div>
      
