@@ -12,6 +12,7 @@
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
       <link href="{{ asset('css/report.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/sample.css') }}" rel="stylesheet">
       <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
       
       <!-- Fonts -->
@@ -70,10 +71,34 @@
 
                     <hr>
 
-
+                    
+                <div class="monthly">
+                    <h3> Monthly metrics</h3>
+                    <p class="text-wrap">
+                        Ea sunt reprehenderit eiusmod pariatur aliqua 
+                        ad esse eiusmod eiusmod irure et. Cupidatat aliquip 
+                        ipsum aliquip officia ex amet deserunt amet pariatur 
+                        nisi quis nulla mollit. Ea culpa laborum sunt
+                    </p>
                 </div>
+                <div class="kpi headed row align-form">
+                    <div class=" col-elements">
+                       <p>KPI name</p>
+                       <p class="lead">Number of Walk-ins </p>
+                       <p class="lead">Total Net Profit </p>
+                    </div>
+      
+      
+                    <div class="ml-auto text-right"> 
+                      <p class="">KPI Value</p>
+                      <input type="text" class="form-control " placeholder="Enter Value" >
+                      <input type="text" class="form-control mt-4" placeholder="Enter Value" >
+                    </div>
+                    
+                  </div>
+      
 
-                <button class="btn btn-primary"> Open</button>
+
             </div>
         </div>    
     </main> 

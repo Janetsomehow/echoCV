@@ -35,6 +35,7 @@ Route::get('/new_user', function () { return view('invites.new_user'); });
 Route::get('/deleteFileModal', function () { return view('inc.deleteFileModal'); });
 Route::get('/email_invite', function () { return view('email.email_invite'); });
 Route::get('/investor_update', function () { return view('email.investor_update'); });
+Route::get('/portco', function () { return view('email.portco'); });
 
 //close the middileware for client
 // });

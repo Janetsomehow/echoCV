@@ -65,13 +65,57 @@
           <h1> Add Some Text</h1>
         </div>
         <div class="container d-flex justify-content-center mt-3 pt-1  " >
-          <button type="button" name="button" class="btn btn-secondary" id="textRequest" data-toggle="modal" data-target="#myModal" id="open">Add text request</button>
+          <button type="button" name="button" class="btn btn-secondary" id="textRequest" data-toggle="modal" data-target="#addText" id="open">Add text request</button>
           <button type="button" name="button" class="btn btn-secondary ml-3" id="metricRequest" data-toggle="modal" data-target="#myModal" id="open">Add metrics request</button>
-          <button type="button" name="button" class="btn btn-secondary ml-3" >Add file request</button>
+          <button type="button" name="button" class="btn btn-secondary ml-3" data-toggle="modal" data-target="#uploadModal">Add file request</button>
         </div>
         </main> 
 
+           <!-- add file request -->
+      <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Upload File </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <label for=""> Name: </label>
+              <input type="text" class="form-control mb-4" placeholder="Name of file">
+              <input type="file" class="form-control">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal"  class="close" data-dismiss="modal"> Cancel </button>
+              <button type="button" class="btn btn-primary ">Upload</button>
+            </div>
+          </div>
+        </div>
+      </div>
    
+      <!-- add text request -->
+      <div class="modal fade" id="addText" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"> Add Text</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for=""> Message: </label>
+            <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal"  class="close" data-dismiss="modal"> Cancel </button>
+            <button type="button" class="btn btn-primary ">Upload</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
         <script>
                 ClassicEditor
                   .create( document.querySelector( '#editor' ) )
@@ -84,55 +128,7 @@
                   image: {
                       toolbar: [ 'imageTextAlternative' ]
                   }
-                      
-                 
-                const textRequest = document.getElementById('textRequest') 
-                const metricRequest = document.getElementById('metricRequest')
-
-                textRequest.addEventListener('click', (e) => {
-                  Swal.fire({
-                    title: 'Select File',
-                    input: 'text',
-                    inputAttributes: {
-                      accept: 'image/*',
-                      'aria-label': 'Upload your profile picture'
-                    }
-                  })
-                  if (file) {
-                    const reader = new FileReader()
-                    reader.onload = (e) => {
-                      Swal.fire({
-                        title: 'Your uploaded picture',
-                        imageUrl: e.target.result,
-                        imageAlt: 'The uploaded picture'
-                      })
-                    }
-                    reader.readAsDataURL(file)
-                  }
-                }) 
-
-                
-                metricRequest.addEventListener('click', (e) => {
-                  Swal.fire({
-                    title: 'Select File',
-                    input: 'file',
-                    inputAttributes: {
-                      accept: 'image/*',
-                      'aria-label': 'Upload your profile picture'
-                    }
-                  })
-                  if (file) {
-                    const reader = new FileReader()
-                    reader.onload = (e) => {
-                      Swal.fire({
-                        title: 'Your uploaded picture',
-                        imageUrl: e.target.result,
-                        imageAlt: 'The uploaded picture'
-                      })
-                    }
-                    reader.readAsDataURL(file)
-                  }
-                })
+                    
         </script>
   </body>
 </html>

@@ -349,7 +349,8 @@
               </button>
             </div>
             <div class="modal-body">
-                <input type="text" placeholder="add text request" class="form-control">
+              <label for=""> Message: </label>
+              <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger"  class="close" data-dismiss="modal"> Cancel </button>
